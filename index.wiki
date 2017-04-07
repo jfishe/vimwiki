@@ -1,0 +1,15 @@
+=Vim Configuration=
+==Bundles==
+* ale
+* calendar-vim
+* FastFold
+* quicktex
+* SimpylFold
+* vim-colors-solarized
+* vim-latex
+* vim-pandoc
+* vim-pandoc-syntax
+* vim-unimpaired
+* vimwiki
+* YouCompleteMe
+
