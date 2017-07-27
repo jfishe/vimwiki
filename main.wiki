@@ -1,1 +1,2 @@
-[[Vim Configuration]]
+= John D. Fisher's home wiki =
+* [[Windows 10 Configuration]]
