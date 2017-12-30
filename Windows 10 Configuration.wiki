@@ -1,5 +1,5 @@
 = Windows 10 Configuration =
-
+:Win10:
 == Windows Update Fails ==
 [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
 recommends repairing the Windows Update database, which may need to be run
@@ -56,6 +56,7 @@ pinned folders.
   }}}
 
 == Chocolatey ==
+:choco:
 [[https://chocolatey.org/|Chocolatey]] can serve as a package manager for Windows. The package
 [[https://chocolatey.org/packages/choco-package-list-backup|choco-package-list-backup]] creates the packages.config file after
 configuring where to save the backup by editing variables
@@ -65,3 +66,40 @@ If any --params were passed to choco install, these need to be manually added
 location).  https://github.com/chocolatey/choco/wiki/CommandsInstall describes the packageParameters
 key that would need to be added to packages.config to replicate the previous
 installation.
+
+== Windows Subsystem for Linux ==
+=== WSL X11 Setup ===
+From [[https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx|graphical programs on windows subsystem on linux aspx]] do the following to get X11 on WSL:
+
+From WSL Ubuntu:
+{{{ bash
+sudo apt-get remove  openssh-server
+sudo apt-get install  openssh-server
+}}}
+
+The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the following:
+
+* Change - PermitRootLogin no
+* Add - AllowUsers yourusername
+* Change - PasswordAuthentication yes
+* Add - UsePrivilegeSeparation no
+* Change - ListenAddress 0.0.0.0
+* Change - Port 2200
+
+{{{ bash
+sudo service ssh --full-restart
+}}}
+
+From Windows PowerShell (Admin):
+{{{ Powershell
+choco install Xming -y
+}}}
+
+From Windows Start-Menu, start Xming. When Windows Defender prompts, grant access to private networks.
+
+From WSL Ubuntu:
+{{{ bash
+sudo apt-get install x11-apps
+export DISPLAY=:0
+xeyes # to test
+}}}
