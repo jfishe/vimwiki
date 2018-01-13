@@ -103,3 +103,12 @@ sudo apt-get install x11-apps
 export DISPLAY=:0
 xeyes # to test
 }}}
+
+=== Git Credentials ===
+The git-credential configuration for Linux requires support servers which don't
+seem to run on WSL. However [[https://stackoverflow.com/questions/45925964/how-to-use-git-credential-store-on-wsl-ubuntu-on-windows#comment81823871_47350274|Stack Overflow]] provides the following solution.
+
+{{{ bash
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
+}}}
+
