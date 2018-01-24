@@ -112,3 +112,15 @@ seem to run on WSL. However [[https://stackoverflow.com/questions/45925964/how-t
 git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 }}}
 
+=== Git lfs ===
+Default Ubuntu doesn't support git-lfs. It can be installed from
+[[https://github.com/git-lfs/git-lfs/wiki/Installation|git lfs Installation]].
+
+{{{ bash
+sudo apt-get install software-properties-common to install add-apt-repository (or sudo apt-get install python-software-properties if you are on Ubuntu <= 12.04)
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs instal
+}}}
