@@ -1,2 +1,5 @@
 = John D. Fisher's home wiki =
+= Contents =
+- [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
+
 * [[Windows 10 Configuration]]
