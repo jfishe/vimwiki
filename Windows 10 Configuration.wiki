@@ -2,6 +2,17 @@
 
 :Win10:
 
+= Contents =
+* [[#Windows 10 Configuration|Windows 10 Configuration]]
+    * [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
+    * [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
+    * [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
+    * [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+    * [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+        * [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
+        * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
+        * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+
 == Windows Update Fails ==
 
 [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
