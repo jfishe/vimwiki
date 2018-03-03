@@ -1,18 +1,21 @@
 = Windows 10 Configuration =
+
 :Win10:
+
 == Windows Update Fails ==
+
 [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
 recommends repairing the Windows Update database, which may need to be run
 several times until no errors are found:
 
-  * Open Windows `Powershell (Admin)`:
+* Open Windows `Powershell (Admin)`:
 
   {{{ Powershell
   cd $env:windir\diagnostics\system\windowsupdate\
   Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
   }}}
 
-  * Open `cmd.exe` with admin. rights:
+* Open `cmd.exe` with admin. rights:
 
   {{{ DOS
   net stop wuauserv
@@ -22,30 +25,31 @@ several times until no errors are found:
   wuauclt /detectnow /reportnow
   }}}
 
-
 == NumLock on Startup ==
-    1. On the Logon/Lock screen, press the NumLock key on the keyboard to turn it on.
-    2. The Login screen contains a power button in the bottom right corner. Use
-       it to reboot Windows.
-    3. If that does not work:
-        1. Win-R regedit
-        2. `HKEY_USERS\.DEFAULT\Control Panel\Keyboard`
-        3. Default InitialKeyboardIndicators should be `2147483658` (`0x8000000A`).
-        4. Set InitialKeyboardIndicators to `2147483650` i.e., `0x80000002` if Windows
-           does not save NumLock status after reboot.
-        5. `HKEY_CURRENT_USER\Control Panel\Keyboard` does the following:
-           | InitialKeyboardIndicators value | Purpose                                                 |
-           |---------------------------------|---------------------------------------------------------|
-           | 0                               | Turn all indicators off (NumLock, CapsLock, ScrollLock) |
-           | 1                               | Turn CapsLock on                                        |
-           | 2                               | Turn NumLock on                                         |
-           | 3                               | Turn CapsLock and NumLock on                            |
-           | 4                               | Turn ScrollLock on                                      |
-           | 5                               | Turn CapsLock and ScrollLock on                         |
-           | 6                               | Turn NumLock and ScrollLock on                          |
-           | 7                               | Turn all indicators on (NumLock, CapsLock, ScrollLock)  |
+
+1. On the Logon/Lock screen, press the NumLock key on the keyboard to turn it on.
+2. The Login screen contains a power button in the bottom right corner. Use
+   it to reboot Windows.
+3. If that does not work:
+    1. Win-R regedit
+    2. `HKEY_USERS\.DEFAULT\Control Panel\Keyboard`
+    3. Default InitialKeyboardIndicators should be `2147483658` (`0x8000000A`).
+    4. Set InitialKeyboardIndicators to `2147483650` i.e., `0x80000002` if Windows
+       does not save NumLock status after reboot.
+    5. `HKEY_CURRENT_USER\Control Panel\Keyboard` does the following:
+       | InitialKeyboardIndicators value | Purpose                                                 |
+       |---------------------------------|---------------------------------------------------------|
+       | 0                               | Turn all indicators off (NumLock, CapsLock, ScrollLock) |
+       | 1                               | Turn CapsLock on                                        |
+       | 2                               | Turn NumLock on                                         |
+       | 3                               | Turn CapsLock and NumLock on                            |
+       | 4                               | Turn ScrollLock on                                      |
+       | 5                               | Turn CapsLock and ScrollLock on                         |
+       | 6                               | Turn NumLock and ScrollLock on                          |
+       | 7                               | Turn all indicators on (NumLock, CapsLock, ScrollLock)  |
 
 == Explorer Quick Access ==
+
 There are situations where nothing would work and invalid pinned shortcut in
 Quick access get stuck and not removable. According to [[http://www.winhelponline.com/blog/fix-quick-access-reset-pinned-shortcuts-stuck-not-working-windows-10/|winhelponline]],
 deleting the following file will reset the Quick Access menu to its default
@@ -56,7 +60,9 @@ pinned folders.
   }}}
 
 == Chocolatey ==
+
 :choco:
+
 [[https://chocolatey.org/|Chocolatey]] can serve as a package manager for Windows. The package
 [[https://chocolatey.org/packages/choco-package-list-backup|choco-package-list-backup]] creates the packages.config file after
 configuring where to save the backup by editing variables
@@ -68,10 +74,13 @@ key that would need to be added to packages.config to replicate the previous
 installation.
 
 == Windows Subsystem for Linux ==
+
 === WSL X11 Setup ===
+
 From [[https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx|graphical programs on windows subsystem on linux aspx]] do the following to get X11 on WSL:
 
 From WSL Ubuntu:
+
 {{{ bash
 sudo apt-get remove  openssh-server
 sudo apt-get install  openssh-server
@@ -91,6 +100,7 @@ sudo service ssh --full-restart
 }}}
 
 From Windows PowerShell (Admin):
+
 {{{ Powershell
 choco install Xming -y
 }}}
@@ -98,6 +108,7 @@ choco install Xming -y
 From Windows Start-Menu, start Xming. When Windows Defender prompts, grant access to private networks.
 
 From WSL Ubuntu:
+
 {{{ bash
 sudo apt-get install x11-apps
 export DISPLAY=:0
@@ -105,6 +116,7 @@ xeyes # to test
 }}}
 
 === Git Credentials ===
+
 The git-credential configuration for Linux requires support servers which don't
 seem to run on WSL. However [[https://stackoverflow.com/questions/45925964/how-to-use-git-credential-store-on-wsl-ubuntu-on-windows#comment81823871_47350274|Stack Overflow]] provides the following solution.
 
@@ -113,6 +125,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 }}}
 
 === Git lfs ===
+
 Default Ubuntu doesn't support git-lfs. It can be installed from
 [[https://github.com/git-lfs/git-lfs/wiki/Installation|git lfs Installation]].
 
