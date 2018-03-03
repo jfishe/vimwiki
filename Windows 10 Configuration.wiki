@@ -7,14 +7,14 @@ several times until no errors are found:
 
   * Open Windows `Powershell (Admin)`:
 
-  {{{ class="PowerShell"
+  {{{ Powershell
   cd $env:windir\diagnostics\system\windowsupdate\
   Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
   }}}
 
   * Open `cmd.exe` with admin. rights:
 
-  {{{ class="DOSBATCH"
+  {{{ DOS
   net stop wuauserv
   del /f /s /q C:\Windows\SoftwareDistribution\DataStore\*.*
   del /f /s /q C:\Windows\SoftwareDistribution\Download\*.*
@@ -51,7 +51,7 @@ Quick access get stuck and not removable. According to [[http://www.winhelponlin
 deleting the following file will reset the Quick Access menu to its default
 pinned folders.
 
-  {{{ class="DOSBATCH"
+  {{{ DOS
   cmd.exe /c del "%AppData%\Microsoft\Windows\Recent\AutomaticDestinations\f01b4d95cf55d32a.automaticDestinations-ms"
   }}}
 
