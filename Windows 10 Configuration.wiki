@@ -1,17 +1,19 @@
 = Windows 10 Configuration =
-
 :Win10:
 
 = Contents =
-* [[#Windows 10 Configuration|Windows 10 Configuration]]
-    * [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-    * [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-    * [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-    * [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-    * [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-        * [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-        * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-        * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+- [[#Windows 10 Configuration|Windows 10 Configuration]]
+    - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
+    - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
+    - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
+    - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+    - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
+    - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
+    - [[#Windows 10 Configuration#PowerShell|PowerShell]]
 
 == Windows Update Fails ==
 
@@ -147,4 +149,31 @@ sudo apt-get update
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 git lfs instal
+}}}
+
+== Console Colorscheme ==
+
+* https://github.com/Microsoft/Console/tree/master/tools/ColorTool 
+* https://github.com/mbadolato/iTerm2-Color-Schemes
+
+== Google Chrome ==
+
+To prevent Chrome from auto-launching on login:
+
+{{{
+REG QUERY HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v GoogleChromeAutoLaunch*
+Alt-R
+regedit
+Delete Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\GoogleChromeAutoLaunch_*
+}}}
+
+* https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows
+* https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/
+
+== PowerShell ==
+* [[https://github.com/PowerShell/Plaster/|Plaster]] template engine.
+* List module commands:
+
+{{{PowerShell
+Get-Command -Module <ModuleName>
 }}}
