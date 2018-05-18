@@ -153,8 +153,15 @@ git lfs instal
 
 == Console Colorscheme ==
 
-* https://github.com/Microsoft/Console/tree/master/tools/ColorTool 
-* https://github.com/mbadolato/iTerm2-Color-Schemes
+* [[https://github.com/Microsoft/Console/tree/master/tools/ColorTool|Microsoft Console ColorTool]]
+  contains the source for ColorTool. Visual Studio is needed to compile.
+* [[https://github.com/mbadolato/iTerm2-Color-Schemes|iTerm2 Color Schemes]]
+  contains the itermcolors files used below.
+* Set PSReadlineOption for `Number` and `Member` `ForegroundColor` to `Black`.
+  The default is white on white.
+* ColorTool doesn't change Default colors. Set manually.
+* Put ColorTool.exe and `Solarized Dark Higher Contrast.itermcolors` and
+  `Solarized Light.itermcolors` in `Documents\WindowsPowerShell`.
 
 == Google Chrome ==
 
