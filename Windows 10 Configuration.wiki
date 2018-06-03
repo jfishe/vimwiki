@@ -3,30 +3,18 @@
 
 = Contents =
 - [[#Windows 10 Configuration|Windows 10 Configuration]]
-  - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-  - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-  - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-  - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-  - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
-  - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
-  - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-  - [[#Windows 10 Configuration#PowerShell|PowerShell]]
+    - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
+    - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
+    - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
+    - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+    - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
+    - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
+    - [[#Windows 10 Configuration#PowerShell|PowerShell]]
 
-* [[#Windows 10 Configuration|Windows 10 Configuration]]
-  * [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-  * [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-  * [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-  * [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-  * [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-    * [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-    * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-    * [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
-  * [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
-  * [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-  * [[#Windows 10 Configuration#PowerShell|PowerShell]]
 
 == Windows Update Fails ==
 
@@ -201,6 +189,13 @@ Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
 * [[https://github.com/PowerShell/Plaster/|Plaster]] template engine.
 * List module commands:
 
-{{{PowerShell
+{{{ powershell
 Get-Command -Module <ModuleName>
+Get-PSRepository
+
+# Hide dotfiles
+Get-ChildItem "$env:USERPROFILE" | # -recurse -force |
+    Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
+    Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
+
 }}}
