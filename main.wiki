@@ -1,3 +1,7 @@
 = John D. Fisher's home wiki =
 
 * [[Windows 10 Configuration]]
+
+$$
+E = mc^2
+$$
