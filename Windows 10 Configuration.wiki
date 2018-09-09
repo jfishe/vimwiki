@@ -13,18 +13,30 @@
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
     - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
     - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-    - [[#Windows 10 Configuration#PowerShell|PowerShell]]
+    - [[#Windows 10 Configuration#Powershell|Powershell]]
 
 
 == Windows Update Fails ==
 
-[[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
+- Windows 10 Insider Preview 10.0.17738.1000 (RS5_RELEASE)
+  [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/windows-10-insider-preview-100177381000-rs5release/33da6c23-c9db-4096-8d68-38ee39d51b89|Install Error-SOLVED]]
+    - Open cmd.exe as Adminstrator
+
+{{{ dos
+Sfc.exe /Scannow
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
+Dism.exe /online /Cleanup-Image /restorehealth
+}}}
+
+    - restart the computer
+
+- [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
 recommends repairing the Windows Update database, which may need to be run
 several times until no errors are found:
 
-* Open Windows `Powershell (Admin)`:
+* Open Windows `powershell (Admin)`:
 
-{{{ Powershell
+{{{ powershell
 cd $env:windir\diagnostics\system\windowsupdate\
 Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
 }}}
@@ -38,6 +50,10 @@ del /f /s /q C:\Windows\SoftwareDistribution\Download\*.*
 net start wuauserv
 wuauclt /detectnow /reportnow
 }}}
+
+- If Windows Update becomes stuck in a re-boot and install loop, upgrade to a
+  later ISO from
+  [Windows Insider Preview Downloads](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced).
 
 == NumLock on Startup ==
 
@@ -112,9 +128,9 @@ The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the fol
 sudo service ssh --full-restart
 }}}
 
-From Windows PowerShell (Admin):
+From Windows powershell (Admin):
 
-{{{ Powershell
+{{{ powershell
 choco install Xming -y
 }}}
 
@@ -161,13 +177,14 @@ git lfs instal
   The default is white on white.
 * ColorTool doesn't change Default colors. Set manually.
 * Put ColorTool.exe and `Solarized Dark Higher Contrast.itermcolors` and
-  `Solarized Light.itermcolors` in `Documents\WindowsPowerShell`.
+  `Solarized Light.itermcolors` in `Documents\Windowspowershell`.
 
 == Google Chrome ==
 
 To prevent Chrome from auto-launching on login, open Settings-System-Continue running background apps when Google Chrome is closed. The no startup window switch doesn't appear to work.
 
-{{{ dosbatch
+{{{ DOS
+copy 
 REG QUERY HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v GoogleChromeAutoLaunch*
 Alt-R
 regedit
@@ -185,11 +202,11 @@ Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
 * https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows
 * https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/
 
-== PowerShell ==
-* [[https://github.com/PowerShell/Plaster/|Plaster]] template engine.
+== Powershell ==
+* [[https://github.com/powershell/Plaster/|Plaster]] template engine.
 * List module commands:
 
-{{{ powershell
+{{{powershell
 Get-Command -Module <ModuleName>
 Get-PSRepository
 
@@ -197,5 +214,4 @@ Get-PSRepository
 Get-ChildItem "$env:USERPROFILE" | # -recurse -force |
     Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
     Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
-
 }}}
