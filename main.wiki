@@ -1,3 +1,8 @@
 = John D. Fisher's home wiki =
 
 * [[Windows 10 Configuration]]
+
+== Sweet Home 3D ==
+
+- Furniture, textures and licenses from v5.7.1 archived in [[C:/Users/fishe/Documents/SweetHome3D|Sweet Home 3D]]
+- To load either copy to the appropriate directory in `%APPDATA%\eTeks\Sweet Home 3D` or double-click on individual files to import.
