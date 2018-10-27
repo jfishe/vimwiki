@@ -12,4 +12,5 @@
 - Best looking but missing some unicode fonts: [[https://adobe-fonts.github.io/source-code-pro/|Adobe Monospaced font family for user interface and coding environments]]
 - [[http://www.alanwood.net/unicode/fonts.html|Large, multi-script Unicode fonts for Windows computers]]
 - Most complete but not easy to read: [[https://savannah.gnu.org/projects/unifont|Unifont - Summary]]
-- Explains how to use fontforge, which requires X11 server, such as Xming: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
+- Explains how to use `fontforge`, which requires `X11 server`, such as `Xming`: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
+- Built-in font `NSimSum` works within the WSL console and thus Vim.
