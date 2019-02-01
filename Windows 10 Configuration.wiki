@@ -8,6 +8,7 @@
     - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
     - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
@@ -226,4 +227,15 @@ Get-PSRepository
 Get-ChildItem "$env:USERPROFILE" | # -recurse -force |
     Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
     Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
+}}}
+
+## Symlinks
+
+Windows reserves certain file extensions, like .COM, .PRN, etc. This can
+create problems with symlinks being misunderstood from `cmd.exe` and
+Explorer. Solve by ending the link name with `.` when using mklink. The `.`
+does not show up in the actual link name so bash, etc. are not impacted.
+
+{{{ DOS
+mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPages\remodel_richland.droppages.com
 }}}
