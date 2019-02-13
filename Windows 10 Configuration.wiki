@@ -3,18 +3,18 @@
 
 = Contents =
 - [[#Windows 10 Configuration|Windows 10 Configuration]]
-    - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-    - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-    - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-    - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
-    - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
-    - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-    - [[#Windows 10 Configuration#Powershell|Powershell]]
+  - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
+  - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
+  - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
+  - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+  - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+  - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
+  - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
+  - [[#Windows 10 Configuration#Powershell|Powershell]]
 
 
 == Windows Update Fails ==
@@ -116,10 +116,16 @@ UID and GID should be set per the user, so that files are not owned by root.
 === Share Environment Vars between WSL and Windows ===
 
 [[https://blogs.msdn.microsoft.com/commandline/2017/12/22/share-environment-vars-between-wsl-and-windows/|Share Environment Vars between WSL and Windows]]
+The following is useful to link vim, git and other settings files on the
+Windows side.
+
+`WLSENV=USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p`
 
 === WSL X11 Setup ===
 
-From [[https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx|graphical programs on windows subsystem on linux aspx]] do the following to get X11 on WSL:
+From
+[[https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx|graphical programs on windows subsystem on linux aspx]]
+do the following to get X11 on WSL:
 
 From WSL Ubuntu:
 
@@ -141,13 +147,20 @@ The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the fol
 sudo service ssh --full-restart
 }}}
 
-From Windows powershell (Admin):
+Install X410 from Microsoft Store or Xming.
+
+For Xming, from Windows PowerShell (Admin):
 
 {{{ powershell
 choco install Xming -y
 }}}
 
-From Windows Start-Menu, start Xming. When Windows Defender prompts, grant access to private networks.
+From Windows Start-Menu, start Xming. When Windows Defender prompts, grant
+access to private networks.
+
+To start on login, `Win-R shell:startup` opens the startup folder and drag the
+Xming/X410 icon to the startup folder. Link should appear in the icon when it
+is over the startup folder.
 
 From WSL Ubuntu:
 
@@ -197,7 +210,7 @@ git lfs instal
 To prevent Chrome from auto-launching on login, open Settings-System-Continue running background apps when Google Chrome is closed. The no startup window switch doesn't appear to work.
 
 {{{ DOS
-copy 
+copy
 REG QUERY HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v GoogleChromeAutoLaunch*
 Alt-R
 regedit
