@@ -106,12 +106,29 @@ installation.
 == Windows Subsystem for Linux ==
 
 [[https://blogs.msdn.microsoft.com/commandline/2018/02/07/automatically-configuring-wsl/|Automatically Configuring WSL]]
-provides guidance on `/etc/wsl.conf`. Umask, fmask and dmask should be left at
-defaults or Windows programs may not be executable from WSL.
+provides guidance on `/etc/wsl.conf`. Changes to wsl.conf do not take affect
+until reboot or `Restart-Service -Name "LxssManager"`.
 
 Umask may be set in `~/.profile` to reasonable values for user created files.
 
 UID and GID should be set per the user, so that files are not owned by root.
+
+fmask should be abbreviated form to avoid a bug in some WSL versions that
+convert 0011 into 0111. Case should be off so that Windows programs can be
+executed from WSL.
+
+{{{ ini
+[automount]
+enabled = true
+# root = /mnt/
+options = "metadata,uid=1000,gid=1000,umask=22,fmask=11,case=off"
+mountFsTab = false
+
+#Let’s enable DNS – even though these are turned on by default, we’ll specify her
+[network]
+generateHosts = true
+generateResolvConf = true
+}}}
 
 === Share Environment Vars between WSL and Windows ===
 
@@ -122,6 +139,9 @@ Windows side.
 `WLSENV=USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p`
 
 === WSL X11 Setup ===
+
+Note clipboard my not share immediately with Windows. Workaround: copy
+something into clipboard from X11; then sharing should work.
 
 From
 [[https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx|graphical programs on windows subsystem on linux aspx]]
