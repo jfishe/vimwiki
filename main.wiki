@@ -1,6 +1,7 @@
 = John D. Fisher's home wiki =
 
 * [[Windows 10 Configuration]]
+* [[Oh-my-zsh]]
 
 == Sweet Home 3D ==
 
