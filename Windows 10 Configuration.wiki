@@ -8,7 +8,9 @@
     - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
     - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
+        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Access WSL Files from Windows|Access WSL Files from Windows]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
         - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
@@ -105,6 +107,8 @@ installation.
 
 == Windows Subsystem for Linux ==
 
+=== WSL Configuration ===
+
 [[https://blogs.msdn.microsoft.com/commandline/2018/02/07/automatically-configuring-wsl/|Automatically Configuring WSL]]
 provides guidance on `/etc/wsl.conf`. Changes to wsl.conf do not take affect
 until reboot or `Restart-Service -Name "LxssManager"`.
@@ -138,6 +142,10 @@ Windows side.
 
 `WLSENV=USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p`
 
+=== Access WSL Files from Windows ===
+
+Linux files for a running WSL distro are located at `\\wsl$\<distro_name>`.
+
 === WSL X11 Setup ===
 
 Note clipboard my not share immediately with Windows. Workaround: copy
@@ -154,7 +162,8 @@ sudo apt-get remove  openssh-server
 sudo apt-get install  openssh-server
 }}}
 
-The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the following:
+The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
+following:
 
 * Change - PermitRootLogin no
 * Add - AllowUsers yourusername
