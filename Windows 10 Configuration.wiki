@@ -3,20 +3,21 @@
 
 = Contents =
 - [[#Windows 10 Configuration|Windows 10 Configuration]]
-    - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-    - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-    - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-    - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Access WSL Files from Windows|Access WSL Files from Windows]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-        - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
-    - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
-    - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-    - [[#Windows 10 Configuration#Powershell|Powershell]]
+  - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
+  - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
+  - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
+  - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+  - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Access WSL Files from Windows|Access WSL Files from Windows]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix|Whitewater Foundry Fedora Remix]]
+  - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
+  - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
+  - [[#Windows 10 Configuration#Powershell|Powershell]]
 
 
 == Windows Update Fails ==
@@ -220,6 +221,14 @@ sudo apt-get update
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 git lfs instal
+}}}
+
+=== Whitewater Foundry Fedora Remix ===
+
+If the `gpg` keys do not work with `dnf`:
+
+{{{ bash
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
 }}}
 
 == Console Colorscheme ==
