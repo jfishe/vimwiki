@@ -15,6 +15,7 @@
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix|Whitewater Foundry Fedora Remix]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin|Whitewater Foundry Pengwin]]
   - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
   - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
   - [[#Windows 10 Configuration#Powershell|Powershell]]
@@ -229,6 +230,14 @@ If the `gpg` keys do not work with `dnf`:
 
 {{{ bash
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
+}}}
+
+=== Whitewater Foundry Pengwin ===
+
+If the `gpg` keys do not work with `apt-get`:
+
+{{{ bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <PUBKEY>
 }}}
 
 == Console Colorscheme ==
