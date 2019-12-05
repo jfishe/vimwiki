@@ -21,3 +21,8 @@
 - Explains how to use `fontforge`, which requires `X11 server`, such as
   `Xming`: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
 - Built-in font `NSimSum` works within the WSL console and thus Vim.
+
+== WiFi ==
+
+- To get WiFi security key content, type
+  `netsh wlan show profile WiFi-name key=clear`.
