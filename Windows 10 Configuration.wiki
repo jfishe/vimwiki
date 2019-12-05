@@ -19,7 +19,7 @@
   - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
   - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
   - [[#Windows 10 Configuration#Powershell|Powershell]]
-
+  - [[#Windows 10 Configuration#SSH Configuration|SSH Configuration]]
 
 == Windows Update Fails ==
 
@@ -299,3 +299,12 @@ does not show up in the actual link name so bash, etc. are not impacted.
 {{{ DOS
 mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPages\remodel_richland.droppages.com
 }}}
+
+== SSH Configuration ==
+
+- Python 3 version of
+  [[https://gist.github.com/4298b5f4eb7cc064b09e9d865dd490c9.git|duebbert/msysgit2unix-socket.py]]
+- Ubuntu setup
+  [[https://gist.github.com/6a152ad2030e8dcb6d8608027588e4a8.git|duebbert/ssh_ubuntu_windows.md]]
+- SSH configuration is working on WSL but no longer on Ubuntu.
+- Agent does not return the correct rsa signature.
