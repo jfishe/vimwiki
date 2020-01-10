@@ -26,3 +26,17 @@
 
 - To get WiFi security key content, type
   `netsh wlan show profile WiFi-name key=clear`.
+
+== Git ==
+
+[[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
+
+{{{ bash
+git pull --rebase|-r # Normal to avoid merge commits.
+git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
+git config --global pull.rebase preserve
+
+# if you're on Git 2.18 or later
+git pull --rebase=merges
+git config --global pull.rebase merges
+}}}
