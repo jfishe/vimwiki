@@ -1,7 +1,7 @@
 = Windows 10 Configuration =
 :Win10:
 
-= Contents =
+%% Contents
 - [[#Windows 10 Configuration|Windows 10 Configuration]]
   - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
   - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
@@ -58,7 +58,7 @@ wuauclt /detectnow /reportnow
 
 - If Windows Update becomes stuck in a re-boot and install loop, upgrade to a
   later ISO from
-  [Windows Insider Preview Downloads](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced).
+  [[https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced|Windows Insider Preview Downloads]].
 
 == NumLock on Startup ==
 
@@ -103,7 +103,7 @@ configuring where to save the backup by editing variables
 in [[file:C:/ProgramData/chocolatey/bin/choco-package-list-backup.ps1|choco-package-list-backup.ps1]] to select a backup location.
 If any --params were passed to choco install, these need to be manually added
 (note the script overwrites the file without prompting, so save to a different
-location).  https://github.com/chocolatey/choco/wiki/CommandsInstall describes the packageParameters
+location).  [[https://github.com/chocolatey/choco/wiki/CommandsInstall]] describes the packageParameters
 key that would need to be added to packages.config to replicate the previous
 installation.
 
@@ -272,8 +272,8 @@ Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
 }}}
 
 * Get-Help Registry
-* https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows
-* https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/
+* [[https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows]]
+* [[https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/]]
 
 == Powershell ==
 * [[https://github.com/powershell/Plaster/|Plaster]] template engine.
