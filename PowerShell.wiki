@@ -1,0 +1,6 @@
+= PowerShell and pwsh =
+
+== Template ==
+
+- [[https://github.com/questionmark/PowerShellTemplate|Questionmark Computing PowerShell Template]]
+  list best practices for Module design and style.
