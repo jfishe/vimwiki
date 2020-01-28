@@ -1,8 +1,11 @@
 = John D. Fisher's home wiki =
 
-- [[Windows 10 Configuration]]
-- [[Oh-my-zsh]]
-- [[PowerShell|PowerShell and pwsh]]
+- [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
+    - [[#John D. Fisher's home wiki#Sweet Home 3D|Sweet Home 3D]]
+    - [[#John D. Fisher's home wiki#Fonts|Fonts]]
+    - [[#John D. Fisher's home wiki#WiFi|WiFi]]
+    - [[#John D. Fisher's home wiki#Git|Git]]
+    - [[#John D. Fisher's home wiki#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
 
 == Sweet Home 3D ==
 
@@ -26,6 +29,7 @@
   `netsh wlan show profile WiFi-name key=clear`.
 
 == Git ==
+:git:
 
 [[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
 
@@ -38,3 +42,9 @@ git config --global pull.rebase preserve
 git pull --rebase=merges
 git config --global pull.rebase merges
 }}}
+
+== Motorola H17 Bluetooth Headset ==
+:motorola:bluetooth:
+
+[[https://support.motorola.com/uk/en/solution/ms36639|Restore to Factory Settings]]::
+:: With your headset on, press and hold both Volume buttons and Call button for 10 seconds until the indicator light is steady blue.
