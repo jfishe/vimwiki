@@ -7,7 +7,9 @@
     - [[#John D. Fisher's home wiki#Git|Git]]
     - [[#John D. Fisher's home wiki#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
 
-== Sweet Home 3D ==
+== Computer ==
+
+=== Sweet Home 3D ===
 
 - Furniture, textures and licenses from v5.7.1 archived in
   [[file:~/userprofile/Documents/SweetHome3D/|Sweet Home 3D]]
@@ -15,7 +17,7 @@
   `%APPDATA%\eTeks\Sweet Home 3D` or double-click on individual files to
   import.
 
-== Fonts ==
+=== Fonts ===
 
 - [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
   explains how to use `fontforge`, which requires `X11 server`, such as `X410`.
@@ -23,12 +25,12 @@
 - [[https://github.com/jfishe/dotfiles#fonts-for-gvim|Fonts for Gvim]] in the
   [[https://github.com/jfishe/dotfiles|dotfiles]] repository lists several nice fonts.
 
-== WiFi ==
+=== WiFi ===
 
 - To get WiFi security key content, type
   `netsh wlan show profile WiFi-name key=clear`.
 
-== Git ==
+=== Git ===
 :git:
 
 [[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
@@ -43,8 +45,88 @@ git pull --rebase=merges
 git config --global pull.rebase merges
 }}}
 
-== Motorola H17 Bluetooth Headset ==
+== Electronics ==
+
+=== Motorola H17 Bluetooth Headset ===
 :motorola:bluetooth:
 
 [[https://support.motorola.com/uk/en/solution/ms36639|Restore to Factory Settings]]::
 :: With your headset on, press and hold both Volume buttons and Call button for 10 seconds until the indicator light is steady blue.
+
+== DIY ==
+:diy:
+
+=== Cat Scratching Pole Sisal Rope Replacement ===
+:cat:toy:
+
+==== Tools and Supplies ====
+
+- Sisal rope 3/8 inch
+
+  100 feet of 1/4 inch rope will wrap a 4x4 (standard lumber dimensions--i.e.,
+  3.75 inches on a side) that is 20 inches long. Most cat poles range from 18
+  to 20 inches per pole. Presumably 60 feet of 3/8 inch rope will also work.
+
+- Steel coat hanger to pull end of rope back through wrapped rope. Steel coat hangers with cardboard
+  bottoms work best because the hanger already has a tight u-bend.
+
+  Disassemble and bend into a tight U-shape, creating a giant needle to pull
+  the rope back through the wrapped rope-stack, on the finished pole. You may
+  need to spread the u-bend with a flat bladed screw driver to thread the sisal
+  rope.
+
+  Bend the u-bend's end so that it protrudes horizontally from the rest of the
+  coat hanger--i.e., 90°. The protruding part should be approximately one inch
+  to thread the rope when the coat hanger is tightly wrapped to the pole.
+
+- Leather work gloves unless you have tough hands
+- Needle nose pliers to pull staples and pull sisal rope through the coat
+  hanger's u-bend.
+- Hammer to pull nails and tamp down rope during wrapping
+- Scissors and/or box cutter to remove old carpet or rope and to trim new rope.
+- Large, one-handed, quick release clamp to hold rope in place when you let go.
+
+==== Instructions ====
+
+1. Place one end of rope at bottom of pole and extend rope until it reaches the top
+2. Form a loop and cinch tight. The dangling rope should be under the loop or
+   tie with half-hitch.
+3. Thread to bottom end of the rope through the coat hanger and clamp the coat
+   hanger at the bottom. Ensure at least one inch of coat hanger protrudes away
+   from the pole. The coat hanger will hold the rope in place while you wrap
+   the pole.
+4. Wrap the remaining rope around pole, pulling upwards to tighten the rope-stack.
+5. Continue wrapping until you reach the top of the coat hanger. Make sure the
+   end remains exposed, so you can pull it out at the end.
+6. If you need a break, move the clamp to hold the rope tightly in place.
+7. Remove the bottom rope from the coat hanger: it remains at the bottom; the
+   coat hanger just held it in place while you started wrapping.
+8. If you run out of rope, clamp the rope to hold the rope-stack tight.
+  1. You may need to re-position the coat hanger so you can pull the rope
+     through six to twelve inches of the rope-stack.
+  2. Thread the coat hanger with the last 1-1/2 inches of the final 12 inches
+     of the existing rope and the beginning of a new roll of rope. Use
+     needle-nose pliers to thread the rope.
+  3. Pull both ropes back through the rope stack. Ensure the rope is tight.
+  4. Re-position the coat hanger at the bottom of the pole and continue wrapping.
+9. When you reach the bottom of the pole, clamp the end to hold it in place.
+  1. Leave roughly 12 inches of rope to pull back through with the coat hanger.
+  2. Use needle-nose pliers to thread 1-1/2 inches of the rope through the coat hanger.
+  3. Pull the rope back through the rope stack. Ensure the rope is tight.
+10. Trim the ends of the rope(s) so they are covered by the rope stack.
+11. Invite your kitties to test your handiwork.
+
+==== Lessons Learned ====
+
+- Counter sink any structural nails or staples, such as those pinning the pole
+  together. Many poles use 2x4 lumber stapled together to make a 4x4. Exposed
+  nails and staples can injure cats' paws.
+- Wrap the coat hanger in the rope-stack, rather than trying to thread it
+  through afterwards.
+- Use the coat hanger to hold the loose end of the rope during wrapping. This
+  helps with tension in the rope and keeps the loose end in place.
+- Remove carpet from the pole if practical. The rope is easier to wrap without
+  having to maintain tension against the carpet. Sliding rope up to maintain a
+  tight rope-stack is also easier without the added friction of the carpet.
+- Most instructions recommend 3/8 inch sisal rope. 1/4 inch also works but
+  requires greater lengths.
