@@ -80,9 +80,13 @@ git config --global pull.rebase merges
   to thread the rope when the coat hanger is tightly wrapped to the pole.
 
 - Leather work gloves unless you have tough hands
-- Needle nose pliers to pull staples and pull sisal rope through the coat
+- Pliers to pull staples and pull sisal rope through the coat
   hanger's u-bend.
-- Hammer to pull nails and tamp down rope during wrapping
+
+  Vice-grips work best for pulling the coat hanger,
+  needle-nose pliers best for threading the coat hanger.
+
+- Hammer to pull nails and counter sink structural nails and staples.
 - Scissors and/or box cutter to remove old carpet or rope and to trim new rope.
 - Large, one-handed, quick release clamp to hold rope in place when you let go.
 
