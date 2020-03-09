@@ -45,6 +45,11 @@ git pull --rebase=merges
 git config --global pull.rebase merges
 }}}
 
+== Vim Releases ==
+:vim:install:
+
+- [[https://github.com/vim/vim-win32-installer/releases|Vim Win32 Installer]] includes 64 bit vim with `python3_dynamic`.
+
 == Electronics ==
 
 === Motorola H17 Bluetooth Headset ===
