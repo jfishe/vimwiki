@@ -108,10 +108,21 @@ key that would need to be added to packages.config to replicate the previous
 installation.
 
 == Windows Subsystem for Linux ==
+:WSL:Ubuntu:WSL2:
+
+1. Microsoft Documents provides
+   [[https://aka.ms/wsl2-install|Installation Instructions for WSL 2 ]].
+   For information on key differences with WSL 2 refer to Microsoft
+   Documentation for [[https://aka.ms/wsl2|WSL 2]].
+1. Create/update `/etc/wsl.conf` per [[#WSL Configuration|WSL Configuration]].
+2. Set `root` password.
+3. Setup `$WSLENV` per [[#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]].
+4. Install `rc file (dotfile) management` and clone/update `~/.dotfiles` per [[https://github.com/jfishe/dotfiles]]
+5. Configure `sshd_config` per [[#Configure SSH|Configure SSH]]
 
 === WSL Configuration ===
 
-[[https://blogs.msdn.microsoft.com/commandline/2018/02/07/automatically-configuring-wsl/|Automatically Configuring WSL]]
+[[https://docs.microsoft.com/en-us/windows/wsl/wsl2-install|Automatically Configuring WSL]]
 provides guidance on `/etc/wsl.conf`. Changes to wsl.conf do not take affect
 until reboot or `Restart-Service -Name "LxssManager"`.
 
@@ -142,11 +153,63 @@ generateResolvConf = true
 The following is useful to link vim, git and other settings files on the
 Windows side.
 
-`WLSENV=USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p`
+%% todo: Explain the environment variables.
+
+`WT_SESSION:USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p:WT_PROFILE_ID`
 
 === Access WSL Files from Windows ===
 
 Linux files for a running WSL distro are located at `\\wsl$\<distro_name>`.
+
+=== Windows Firewall Rules for SSH ===
+
+[[https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/|Enable Port 22 in Windows Firewall]]
+provides the steps. Other directions from the website maybe dated for more
+recent versions of WSL.
+
+1. Open Windows Firewall Advance Settings.
+2. Click on New Rule… under Inbound Rules to create a new firewall rule.
+3. Under Rule Type select Port.
+4. Click Next to Continue.
+5. Under Protocol and Ports select Specific local Ports and enter
+   `2200,2201,2202`, depending on the WSL distros installed. Do not include Port 22; the rule `OpenSSH
+   SSH Server (sshd)` manages Port 22 on Windows.
+6. Click Next to Continue.
+7. Under Action select Allow the connection
+8. Under Profile make sure to only select Domain and Private.
+9. Click Next to Continue.
+10. Under Name:
+  1. Name: WSL SSH
+  2. Description: Open SSH ports for Windows and WSL
+  3. Click Finish
+
+=== Configure SSH in each WSL Distro ===
+:ssh:
+
+The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
+following:
+
+* Change - PermitRootLogin no
+* Add -    AllowUsers yourusername
+* Change - PasswordAuthentication yes # setup ssh keys and change to no
+* Change - ListenAddress 0.0.0.0
+* Add -    UsePrivilegeSeparation no # can be left at yes
+* Change - Port 2200 # change to 2201, etc. for other WSL distros on same machine.
+* Add -
+  * Port 2200 # for Ubuntu
+  * Port 2201 # for Pengwin
+  * Port 2202 # for fedoraremix
+
+{{{ bash
+sudo service ssh --full-restart
+}}}
+
+[[https://brianketelsen.com/posts/remote-ssh-connections-to-wsl2]]
+
+{{{ powershell
+netsh interface portproxy add v4tov4 listenport=2200 listenaddress=0.0.0.0 connectport=2200 connectaddress=172.26.0.1
+}}}
+
 
 === WSL X11 Setup ===
 
@@ -162,20 +225,6 @@ From WSL Ubuntu:
 {{{ bash
 sudo apt-get remove  openssh-server
 sudo apt-get install  openssh-server
-}}}
-
-The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
-following:
-
-* Change - PermitRootLogin no
-* Add - AllowUsers yourusername
-* Change - PasswordAuthentication yes # setup ssh keys and change to no
-* Add - UsePrivilegeSeparation no # can be left at yes
-* Change - ListenAddress 0.0.0.0
-* Change - Port 2200 # change to 2201, etc. for other WSL distros on same machine.
-
-{{{ bash
-sudo service ssh --full-restart
 }}}
 
 Install X410 from Microsoft Store or Xming.
@@ -197,7 +246,15 @@ From WSL Ubuntu:
 
 {{{ bash
 sudo apt-get install x11-apps
-export DISPLAY=:0
+
+if [[ ! -z "$WSL_INTEROP" ]] ; then
+  # For WSL2, determine the IP address of the Hyper-V VM.
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+else
+  # Otherwise localhost works.
+  export DISPLAY=:0
+fi
+
 xeyes # to test
 }}}
 
@@ -225,6 +282,7 @@ git lfs instal
 }}}
 
 === Whitewater Foundry Fedora Remix ===
+:Fedora:
 
 If the `gpg` keys do not work with `dnf`:
 
@@ -233,6 +291,7 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
 }}}
 
 === Whitewater Foundry Pengwin ===
+:Debian:Pengwin:
 
 If the `gpg` keys do not work with `apt-get`:
 
@@ -307,4 +366,10 @@ mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPag
 - Ubuntu setup
   [[https://gist.github.com/6a152ad2030e8dcb6d8608027588e4a8.git|duebbert/ssh_ubuntu_windows.md]]
 - SSH configuration is working on WSL but no longer on Ubuntu.
-- Agent does not return the correct rsa signature.
+- Agent does not return the correct RSA signature.
+
+== HP Envy BIOS Settings ==
+:BIOS:HP:
+
+Pres `F10` repeatedly during boot.
+
