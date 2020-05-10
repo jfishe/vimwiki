@@ -1,11 +1,26 @@
 = John D. Fisher's home wiki =
 
 - [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
-    - [[#John D. Fisher's home wiki#Sweet Home 3D|Sweet Home 3D]]
-    - [[#John D. Fisher's home wiki#Fonts|Fonts]]
-    - [[#John D. Fisher's home wiki#WiFi|WiFi]]
-    - [[#John D. Fisher's home wiki#Git|Git]]
-    - [[#John D. Fisher's home wiki#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
+  - [[#John D. Fisher's home wiki#Computer|Computer]]
+    - [[#John D. Fisher's home wiki#Computer#Sweet Home 3D|Sweet Home 3D]]
+    - [[#John D. Fisher's home wiki#Computer#Fonts|Fonts]]
+    - [[#John D. Fisher's home wiki#Computer#WiFi|WiFi]]
+    - [[#John D. Fisher's home wiki#Computer#Git|Git]]
+    - [[#John D. Fisher's home wiki#Computer#Programming|Programming]]
+  - [[#John D. Fisher's home wiki#Electronics|Electronics]]
+    - [[#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
+  - [[#John D. Fisher's home wiki#DIY|DIY]]
+    - [[#John D. Fisher's home wiki#DIY#Cat Scratching Pole Sisal Rope Replacement|Cat Scratching Pole Sisal Rope Replacement]]
+      - [[#John D. Fisher's home wiki#DIY#Cat Scratching Pole Sisal Rope Replacement#Tools and Supplies|Tools and Supplies]]
+      - [[#John D. Fisher's home wiki#DIY#Cat Scratching Pole Sisal Rope Replacement#Instructions|Instructions]]
+      - [[#John D. Fisher's home wiki#DIY#Cat Scratching Pole Sisal Rope Replacement#Lessons Learned|Lessons Learned]]
+
+== Projects ==
+
+- [[Oh-my-zsh]]
+- [[PowerShell]]
+- [[Windows 10 Configuration]]
+- [[Linux]]
 
 == Computer ==
 

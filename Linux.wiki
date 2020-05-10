@@ -1,0 +1,13 @@
+= Linux Notes =
+:Linux:WSL:
+
+== Ubuntu, Debian and Pengwin ==
+:Ubuntu:Pengwin:
+
+- `lsb_release -a` per [[https://help.ubuntu.com/community/CheckingYourUbuntuVersion|Checking your Ubuntu Version]]
+- `cat /etc/*release` works for most distributions.
+
+== Fedora and Red Hat ==
+:Fedora:RHEL:
+
+- `cat /etc/os-release` provides detailed version information.
