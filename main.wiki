@@ -1,12 +1,13 @@
 = John D. Fisher's home wiki =
 
 - [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
+  - [[#John D. Fisher's home wiki#Projects|Projects]]
   - [[#John D. Fisher's home wiki#Computer|Computer]]
     - [[#John D. Fisher's home wiki#Computer#Sweet Home 3D|Sweet Home 3D]]
     - [[#John D. Fisher's home wiki#Computer#Fonts|Fonts]]
     - [[#John D. Fisher's home wiki#Computer#WiFi|WiFi]]
     - [[#John D. Fisher's home wiki#Computer#Git|Git]]
-    - [[#John D. Fisher's home wiki#Computer#Programming|Programming]]
+  - [[#John D. Fisher's home wiki#Vim Releases|Vim Releases]]
   - [[#John D. Fisher's home wiki#Electronics|Electronics]]
     - [[#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
   - [[#John D. Fisher's home wiki#DIY|DIY]]

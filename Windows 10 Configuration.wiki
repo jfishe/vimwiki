@@ -1,16 +1,20 @@
 = Windows 10 Configuration =
 :Win10:
 
-%% Contents
+= Contents =
 - [[#Windows 10 Configuration|Windows 10 Configuration]]
   - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
   - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
   - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
   - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
   - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Access WSL Files from Windows|Access WSL Files from Windows]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro|Configure SSH in each WSL Distro]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH|Windows Firewall Rules for SSH]]
+      - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent|Add Unix socket access to Windows OpenSSH for KeeAgent]]
+      - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd|Automatically Start WSL sshd]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
@@ -19,7 +23,7 @@
   - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
   - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
   - [[#Windows 10 Configuration#Powershell|Powershell]]
-  - [[#Windows 10 Configuration#SSH Configuration|SSH Configuration]]
+  - [[#Windows 10 Configuration#HP Envy BIOS Settings|HP Envy BIOS Settings]]
 
 == Windows Update Fails ==
 
