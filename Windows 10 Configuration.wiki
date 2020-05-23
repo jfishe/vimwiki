@@ -22,7 +22,7 @@
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin|Whitewater Foundry Pengwin]]
   - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
   - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-  - [[#Windows 10 Configuration#Powershell|Powershell]]
+  - [[#Windows 10 Configuration#Symlinks|Symlinks]]
   - [[#Windows 10 Configuration#HP Envy BIOS Settings|HP Envy BIOS Settings]]
 
 == Windows Update Fails ==
@@ -403,21 +403,7 @@ Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
 * [[https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows]]
 * [[https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/]]
 
-== Powershell ==
-* [[https://github.com/powershell/Plaster/|Plaster]] template engine.
-* List module commands:
-
-{{{powershell
-Get-Command -Module <ModuleName>
-Get-PSRepository
-
-# Hide dotfiles
-Get-ChildItem "$env:USERPROFILE" | # -recurse -force |
-    Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
-    Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
-}}}
-
-## Symlinks
+== Symlinks ==
 
 Windows reserves certain file extensions, like .COM, .PRN, etc. This can
 create problems with symlinks being misunderstood from `cmd.exe` and
