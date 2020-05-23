@@ -114,11 +114,24 @@ installation.
    [[https://aka.ms/wsl2-install|Installation Instructions for WSL 2 ]].
    For information on key differences with WSL 2 refer to Microsoft
    Documentation for [[https://aka.ms/wsl2|WSL 2]].
-1. Create/update `/etc/wsl.conf` per [[#WSL Configuration|WSL Configuration]].
-2. Set `root` password.
-3. Setup `$WSLENV` per [[#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]].
-4. Install `rc file (dotfile) management` and clone/update `~/.dotfiles` per [[https://github.com/jfishe/dotfiles]]
-5. Configure `sshd_config` per [[#Configure SSH|Configure SSH]]
+2. Create/update `/etc/wsl.conf` per [[#WSL Configuration|WSL Configuration]].
+3. Set `root` password.
+4. Setup `$WSLENV` per [[#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]].
+5. Install `rc file (dotfile) management` and clone/update `~/.dotfiles` per [[https://github.com/jfishe/dotfiles]]
+6. Configure `sshd_config` per [[#Configure SSH in each WSL Distro|Configure SSH in each WSL Distro]]:
+  1. Open private network access with [[#Windows Firewall Rules for SSH|Windows Firewall Rules for SSH]].
+  2. [[#Add Unix socket access to Windows OpenSSH for KeeAgent|Add Unix socket access to Windows OpenSSH for KeeAgent]].
+  3. [[#Automatically Start WSL sshd|Automatically Start WSL sshd]].
+
+=== Share Environment Vars between WSL and Windows ===
+
+[[https://blogs.msdn.microsoft.com/commandline/2017/12/22/share-environment-vars-between-wsl-and-windows/|Share Environment Vars between WSL and Windows]]
+The following is useful to link vim, git and other settings files on the
+Windows side.
+
+%% todo: Explain the environment variables.
+
+`WT_SESSION:USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p:WT_PROFILE_ID`
 
 === WSL Configuration ===
 
@@ -147,19 +160,29 @@ generateHosts = true
 generateResolvConf = true
 }}}
 
-=== Share Environment Vars between WSL and Windows ===
-
-[[https://blogs.msdn.microsoft.com/commandline/2017/12/22/share-environment-vars-between-wsl-and-windows/|Share Environment Vars between WSL and Windows]]
-The following is useful to link vim, git and other settings files on the
-Windows side.
-
-%% todo: Explain the environment variables.
-
-`WT_SESSION:USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p:WT_PROFILE_ID`
-
 === Access WSL Files from Windows ===
 
 Linux files for a running WSL distro are located at `\\wsl$\<distro_name>`.
+
+=== Configure SSH in each WSL Distro ===
+:ssh:
+
+The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
+following:
+
+* Change - PermitRootLogin no
+* Add -    AllowUsers yourusername
+* Change - PasswordAuthentication yes # setup ssh keys and change to no
+* Change - ListenAddress 0.0.0.0
+* Add -    UsePrivilegeSeparation no # can be left at yes
+* Add -
+  * Port 2200 # for Ubuntu
+  * Port 2201 # for Pengwin
+  * Port 2202 # for fedoraremix
+
+{{{ bash
+sudo service ssh --full-restart
+}}}
 
 === Windows Firewall Rules for SSH ===
 
@@ -183,33 +206,75 @@ recent versions of WSL.
   2. Description: Open SSH ports for Windows and WSL
   3. Click Finish
 
-=== Configure SSH in each WSL Distro ===
+==== Add Unix socket access to Windows OpenSSH for KeeAgent ====
 :ssh:
 
-The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
-following:
-
-* Change - PermitRootLogin no
-* Add -    AllowUsers yourusername
-* Change - PasswordAuthentication yes # setup ssh keys and change to no
-* Change - ListenAddress 0.0.0.0
-* Add -    UsePrivilegeSeparation no # can be left at yes
-* Change - Port 2200 # change to 2201, etc. for other WSL distros on same machine.
-* Add -
-  * Port 2200 # for Ubuntu
-  * Port 2201 # for Pengwin
-  * Port 2202 # for fedoraremix
+At the moment WSL cannot access Windows named pipes, so [[https://github.com/dlech/KeeAgent/issues/159#issuecomment-409512544|Philipp Scheit]]
+proposed using `socat` and [[https://github.com/jstarks/npiperelay|John Starks]] created `npiperelay` with the following
+build instructions, modified for my use. `~/.dotfiles/install.sh` automates,
+removing the dependency on the symlink to `%USERPROFILE%`, but requiring
+`%WSLENV%` to include `USERPROFILE/p`.
 
 {{{ bash
-sudo service ssh --full-restart
+# Perform once to create npiperelay.exe in %USERPROFILE%\go\bin.
+GOOS=windows go get -d github.com/jstarks/npiperelay
+GOOS=windows go build -o $HOME/userprofile/go/bin/npiperelay.exe \
+  github.com/jstarks/npiperelay
+
+# Perform once on each WSL distro.
+sudo ln -s $HOME/userprofile/go/bin/npiperelay.exe \
+  /usr/local/bin/npiperelay.exe
+
+# Add to ~/.profile
+if [ ! -f /tmp/ssh-agent-pipe ]; then
+  socat UNIX-LISTEN:/tmp/ssh-agent-pipe,fork,group=fishe,umask=007 \
+    EXEC:"npiperelay.exe -ep -s //./pipe/openssh-ssh-agent",nofork &
+  export SSH_AUTH_SOCK=/tmp/ssh-agent-pipe
+fi
 }}}
 
-[[https://brianketelsen.com/posts/remote-ssh-connections-to-wsl2]]
+==== Automatically Start WSL sshd ====
+:ssh:
 
-{{{ powershell
-netsh interface portproxy add v4tov4 listenport=2200 listenaddress=0.0.0.0 connectport=2200 connectaddress=172.26.0.1
-}}}
+WSL does not support `systemd`, so `sshd` does not start automatically on boot.
+[[https://github.com/WhitewaterFoundry/Pengwin|WhitewaterFoundry / Pengwin]] provides a solution by starting `sshd` in
+the login scripts. This requires no password `sudo` for `sshd` to avoid
+entering a password every time the login scripts run.
 
+1. Create `/usr/bin/start-ssh` with the following content.
+
+ {{{ bash
+ #!/bin/bash
+
+ sshd_status=$(service ssh status)
+ if [[ ${sshd_status} = *"is not running"* ]]; then
+   service ssh --full-restart > /dev/null 2>&1
+ fi
+ }}}
+
+2. Create `/etc/profile.d/start-ssh` with the following content.
+
+  {{{ bash
+  sudo /usr/bin/start-ssh
+  }}}
+
+3. Allow users to start `sshd` without `sudo` password, by creating
+   `/etc/sudoers.d/start-ssh` with the following content.
+
+  {{{ bash
+  sudo /usr/bin/start-ssh
+  }}}
+
+4. Set permissions and owner.
+
+  {{{ bash
+  sudo chmod 700 /usr/bin/start-ssh
+  sudo chmod 644 /etc/profile.d/start-ssh.sh
+  sudo chmod 0440 /etc/sudoers.d/start-ssh
+  sudo chown root.root /usr/bin/start-ssh
+  sudo chown root.root /etc/profile.d/start-ssh.sh
+  sudo chown root.root /etc/sudoers.d/start-ssh
+  }}}
 
 === WSL X11 Setup ===
 
@@ -358,15 +423,6 @@ does not show up in the actual link name so bash, etc. are not impacted.
 {{{ DOS
 mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPages\remodel_richland.droppages.com
 }}}
-
-== SSH Configuration ==
-
-- Python 3 version of
-  [[https://gist.github.com/4298b5f4eb7cc064b09e9d865dd490c9.git|duebbert/msysgit2unix-socket.py]]
-- Ubuntu setup
-  [[https://gist.github.com/6a152ad2030e8dcb6d8608027588e4a8.git|duebbert/ssh_ubuntu_windows.md]]
-- SSH configuration is working on WSL but no longer on Ubuntu.
-- Agent does not return the correct RSA signature.
 
 == HP Envy BIOS Settings ==
 :BIOS:HP:
