@@ -1,5 +1,6 @@
 = John D. Fisher's home wiki =
 
+%% = Contents =
 - [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
   - [[#John D. Fisher's home wiki#Projects|Projects]]
   - [[#John D. Fisher's home wiki#Computer|Computer]]
@@ -60,6 +61,17 @@ git config --global pull.rebase preserve
 git pull --rebase=merges
 git config --global pull.rebase merges
 }}}
+
+==== Remove Submodule ====
+:git:submodule:
+
+1. Delete the section referring to the submodule from the `.gitmodules` file
+2. Stage the changes via git add `.gitmodules`
+3. Delete the relevant section of the submodule from `.git/config`.
+4. Run `git rm --cached path_to_submodule` (no trailing slash).
+5. Run `rm -rf .git/modules/path_to_submodule`
+6. Commit the changes with `git commit -m "Removed submodule"`
+7. Delete the now un-tracked submodule files `rm -rf path_to_submodule`
 
 == Vim Releases ==
 :vim:install:
