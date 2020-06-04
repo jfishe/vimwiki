@@ -9,7 +9,7 @@
 - [[https://poshcode.gitbooks.io/powershell-practice-and-style/|The PowerShell Best Practices and Style Guide]]
 - [[https://github.com/powershell/Plaster/|Plaster]] template engine.
 
-== Powershell ==
+== Powershell Commands ==
 :powershell:
 
 - List module commands: `Get-Command -Module <ModuleName>`
@@ -20,3 +20,61 @@
       Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
       Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
   }}}
+
+== OpenSSH ==
+:ssh:
+
+As of OpenSSH 0.0.22.0 Universal Installer, a script is distributed that allows
+setting the default shell for openssh. You could call it with code like this:
+
+{{{ powershell
+    If (Test-Path "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1")
+      {& "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1" [PARAMETERS]}
+}}}
+
+Learn more with this: `Get-Help "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1"`
+Or here: https://github.com/DarwinJS/ChocoPackages/blob/master/openssh/readme.md
+
+== PowerShell Configuration ==
+:oh-my-posh:posh-git:
+
+[[https://github.com/JanDeDobbeleer/oh-my-posh|JanDeDobbeleer / oh-my-posh]]
+provides instructions for installing posh-git and oh-my-posh. The `Honukai` theme
+works well with `conda` environments and doesn't clobber terminal colors. A
+prompt function is no longer required.
+
+Add the following to `~\Documents\PowerShell\posh-gitrc.ps1`:
+
+{{{ powershell
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Honukai
+}}}
+
+== PowerShell Modules and Scripts ==
+
+=== Required by PROFILE ===
+
+- `posh-git`
+- `oh-my-posh`
+- `PSReadLine`
+- `PSBashCompletions` :WindowsPowerShell: only. See `WslInterop`.
+- `WslInterop` :PowerShellCore:
+
+=== Build Tools ===
+
+- PowerShell-Beautifier
+- Pester
+- Plaster
+- platyPS
+- PSDeploy
+- PSScriptAnalyzer
+
+=== Maintenance ===
+
+- moduleclean.ps1
+
+== Todo ==
+:todo:
+
+- Convert `moduleclean.ps1` to installable script.
