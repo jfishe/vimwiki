@@ -8,7 +8,7 @@
     - [[#John D. Fisher's home wiki#Computer#Fonts|Fonts]]
     - [[#John D. Fisher's home wiki#Computer#WiFi|WiFi]]
     - [[#John D. Fisher's home wiki#Computer#Git|Git]]
-  - [[#John D. Fisher's home wiki#Vim Releases|Vim Releases]]
+      - [[#John D. Fisher's home wiki#Computer#Git#Remove Submodule|Remove Submodule]]
   - [[#John D. Fisher's home wiki#Electronics|Electronics]]
     - [[#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
   - [[#John D. Fisher's home wiki#DIY|DIY]]
@@ -72,11 +72,6 @@ git config --global pull.rebase merges
 5. Run `rm -rf .git/modules/path_to_submodule`
 6. Commit the changes with `git commit -m "Removed submodule"`
 7. Delete the now un-tracked submodule files `rm -rf path_to_submodule`
-
-== Vim Releases ==
-:vim:install:
-
-- [[https://github.com/vim/vim-win32-installer/releases|Vim Win32 Installer]] includes 64 bit vim with `python3_dynamic`.
 
 == Electronics ==
 

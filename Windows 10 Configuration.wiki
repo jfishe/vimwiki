@@ -7,6 +7,7 @@
   - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
   - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
   - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
+  - [[#Windows 10 Configuration#Vim Installation and Update|Vim Installation and Update]]
   - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
@@ -20,6 +21,9 @@
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix|Whitewater Foundry Fedora Remix]]
     - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin|Whitewater Foundry Pengwin]]
+    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting|WSL Troubleshooting]]
+      - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting#Server execution failed|Server execution failed]]
+  - [[#Windows 10 Configuration#Windows Terminal|Windows Terminal]]
   - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
   - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
   - [[#Windows 10 Configuration#Symlinks|Symlinks]]
@@ -110,6 +114,20 @@ If any --params were passed to choco install, these need to be manually added
 location).  [[https://github.com/chocolatey/choco/wiki/CommandsInstall]] describes the packageParameters
 key that would need to be added to packages.config to replicate the previous
 installation.
+
+== Vim Installation and Update ==
+:vim:install:
+
+Depending on access to an elevated shell, perform the following.
+
+- [[https://github.com/vim/vim-win32-installer/releases|Vim Win32 Installer]] includes 64 bit vim with `python3_dynamic`.
+  - Move the old version to, e.g., `$env:USERPROFILE\vim\vim82.old`.
+  - Unzip to `$env:USERPROFILE\vim`.
+  - Delete the old version if the new one works.
+- From an elevated shell install with `Choclatey`, which should register
+  `gvimext.dll`. `choco install vim /RestartExplorer`
+- [[https://github.com/jfishe/vimfiles|Personal and work vim 8 configuration with submodules]]
+  provides instructions for registering `gvimext.dll` manually.
 
 == Windows Subsystem for Linux ==
 :WSL:Ubuntu:WSL2:
@@ -367,6 +385,41 @@ If the `gpg` keys do not work with `apt-get`:
 {{{ bash
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <PUBKEY>
 }}}
+
+=== WSL Troubleshooting ===
+:troubleshooting:
+
+==== Server execution failed ====
+
+[[https://answers.microsoft.com/en-us/windows/forum/all/error-server-execution-failed-when-trying-to-run/1e834b62-8106-4fc3-8bbf-9ab1b1218388|Error "Server execution failed" when trying to run bash command]]:
+
+{{{ text
+Press Windows key + R
+Type: optionalfeatures.exe
+Hit Enter
+
+Scroll to the bottom
+
+Uncheck Windows Subsystem for Linux
+Click OK
+
+Restart if prompted
+
+Press Windows key + R
+Type: optionalfeatures.exe
+Hit Enter
+
+Scroll to the bottom
+
+Check Windows Subsystem for Linux
+Click OK
+}}}
+
+Restart if prompted
+
+Check if it now works.
+
+== Windows Terminal ==
 
 == Console Colorscheme ==
 
