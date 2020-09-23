@@ -29,15 +29,20 @@
 === Sweet Home 3D ===
 
 - Furniture, textures and licenses from v5.7.1 archived in
-  [[file:~/userprofile/Documents/SweetHome3D/|Sweet Home 3D]]
+  [[file:C:/Users/fishe/Documents/SweetHome3D|Sweet Home 3D]]
 - To load either copy to the appropriate directory in
   `%APPDATA%\eTeks\Sweet Home 3D` or double-click on individual files to
   import.
 
 === Fonts ===
 
-- [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
-  explains how to use `fontforge`, which requires `X11 server`, such as `X410`.
+- Best looking but missing some unicode fonts:
+  [[https://adobe-fonts.github.io/source-code-pro/|Adobe Monospaced font family for user interface and coding environments]]
+- [[http://www.alanwood.net/unicode/fonts.html|Large, multi-script Unicode fonts for Windows computers]]
+- Most complete but not easy to read:
+  [[https://savannah.gnu.org/projects/unifont|Unifont - Summary]]
+- Explains how to use `fontforge`, which requires `X11 server`, such as
+  `Xming`: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
 - Built-in font `NSimSum` works within the WSL console and thus Vim.
 - [[https://github.com/jfishe/dotfiles#fonts-for-gvim|Fonts for Gvim]] in the
   [[https://github.com/jfishe/dotfiles|dotfiles]] repository lists several nice fonts.
