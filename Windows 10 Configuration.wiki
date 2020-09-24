@@ -128,6 +128,13 @@ Depending on access to an elevated shell, perform the following.
   `gvimext.dll`. `choco install vim /RestartExplorer`
 - [[https://github.com/jfishe/vimfiles|Personal and work vim 8 configuration with submodules]]
   provides instructions for registering `gvimext.dll` manually.
+- The default batch files do not activate a compatible python38 environment.
+
+{{{ powershell
+gvim $env:LOCALAPPDATA\Microsoft\WindowsApps\*vim*
+
+
+}}}
 
 == Windows Subsystem for Linux ==
 :WSL:Ubuntu:WSL2:
