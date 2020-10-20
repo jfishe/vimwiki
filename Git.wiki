@@ -1,0 +1,71 @@
+= Git =
+
+== Pull Rebase ==
+:git:pull:fetch:rebase:
+
+[[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
+
+{{{ bash
+git pull --rebase|-r # Normal to avoid merge commits.
+git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
+git config --global pull.rebase preserve
+
+# if you're on Git 2.18 or later
+git pull --rebase=merges
+git config --global pull.rebase merges
+}}}
+
+== Remove Submodule ==
+:git:submodule:
+
+1. Delete the section referring to the submodule from the `.gitmodules` file
+2. Stage the changes via git add `.gitmodules`
+3. Delete the relevant section of the submodule from `.git/config`.
+4. Run `git rm --cached path_to_submodule` (no trailing slash).
+5. Run `rm -rf .git/modules/path_to_submodule`
+6. Commit the changes with `git commit -m "Removed submodule"`
+7. Delete the now un-tracked submodule files `rm -rf path_to_submodule`
+
+== Remove Secrets from Git History ==
+:git:
+
+To search for strings in an entire git repository:
+
+{{{ PowerShell
+git grep -i '<regex>' $(git rev-list --all)
+}}}
+
+Refer to [[https://rtyley.github.io/bfg-repo-cleaner/]] for instructions and
+the Jar file. Setup an alias for `bfg`, replacing the Java and Jar paths, as
+needed.
+
+{{{ PowerShell
+Function _bfg {
+    $JavaExe = Get-Command "C:\Program Files\OpenJDK\jdk-15\bin\java.exe"
+    $JarPath = Resolve-Path ~\Downloads\bfg-1.13.0.jar
+    & $JavaExe -jar $JarPath $Args
+}
+Set-Alias -Name bfg -Value _bfg
+}}}
+
+Create `passwords.txt` with the Regex or strings to be replaced with
+`***REMOVED***`.
+
+{{{ PowerShell
+# Add regex(s) to file.
+@('<regex>', '<regex>') -join "`n" |
+  Out-File -Encoding utf8 -NoNewline -FilePath passwords.txt
+
+# Replace regex with **REMOVED**
+bfg --replace-text passwords.txt vimfiles.git
+
+# If all goes well, clean up the history.
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+}}}
+
+Clone the mirror repository, remove any secrets from HEAD, commit and push back
+to the local mirror repository. Re-run `bfg` to remove from the history,
+assuming everything works. `git pull` to update the clone. Then change the remote to `Github`.
+
+[[https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository|Removing Sensitive Data from a Repository]]
+provides instructions for force pushing to `Github`.

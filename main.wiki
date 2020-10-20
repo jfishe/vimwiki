@@ -7,8 +7,6 @@
     - [[#John D. Fisher's home wiki#Computer#Sweet Home 3D|Sweet Home 3D]]
     - [[#John D. Fisher's home wiki#Computer#Fonts|Fonts]]
     - [[#John D. Fisher's home wiki#Computer#WiFi|WiFi]]
-    - [[#John D. Fisher's home wiki#Computer#Git|Git]]
-      - [[#John D. Fisher's home wiki#Computer#Git#Remove Submodule|Remove Submodule]]
   - [[#John D. Fisher's home wiki#Electronics|Electronics]]
     - [[#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
   - [[#John D. Fisher's home wiki#DIY|DIY]]
@@ -23,6 +21,7 @@
 - [[PowerShell]]
 - [[Windows 10 Configuration]]
 - [[Linux]]
+- [[Git]]
 
 == Computer ==
 
@@ -51,32 +50,6 @@
 
 - To get WiFi security key content, type
   `netsh wlan show profile WiFi-name key=clear`.
-
-=== Git ===
-:git:
-
-[[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
-
-{{{ bash
-git pull --rebase|-r # Normal to avoid merge commits.
-git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
-git config --global pull.rebase preserve
-
-# if you're on Git 2.18 or later
-git pull --rebase=merges
-git config --global pull.rebase merges
-}}}
-
-==== Remove Submodule ====
-:git:submodule:
-
-1. Delete the section referring to the submodule from the `.gitmodules` file
-2. Stage the changes via git add `.gitmodules`
-3. Delete the relevant section of the submodule from `.git/config`.
-4. Run `git rm --cached path_to_submodule` (no trailing slash).
-5. Run `rm -rf .git/modules/path_to_submodule`
-6. Commit the changes with `git commit -m "Removed submodule"`
-7. Delete the now un-tracked submodule files `rm -rf path_to_submodule`
 
 == Electronics ==
 
