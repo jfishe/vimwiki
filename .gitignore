@@ -103,3 +103,4 @@ backups/
 tags*
 .netrwhist
 .tags
+.vimwiki_tags

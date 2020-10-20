@@ -1,0 +1,8 @@
+= Journal 2020-10-09 =
+
+{{{vim
+" Remove Contents Header
+cfdo g/^= Contents =$/d | update | bdelete
+" Change * bullets to - bullets
+cfdo %s/^\(\s\{0,\}\)\*\(\s\)/\1-\2/ | update | bdelete
+}}}
