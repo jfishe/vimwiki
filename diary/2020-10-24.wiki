@@ -1,0 +1,7 @@
+= Journal 2020-10-24 =
+
+== vimwiki_docx ==
+:vim:vimwiki:vimwiki_docx:
+
+- [[https://github.com/conda/cookiecutter-conda-python|conda / cookiecutter-conda-python]]
+  provides template for a conda project.
