@@ -11,3 +11,11 @@
 :Fedora:RHEL:
 
 - `cat /etc/os-release` provides detailed version information.
+
+== Bash Shell Script ==
+:bash:script:
+
+- [[https://betterdev.blog/minimal-safe-bash-script-template/|Minimal safe Bash script template]]
+  describes [[https://gist.github.com/m-radzikowski/53e0b39e9a59a1518990e76c2bff8038|m-radzikowski/script-template.sh]].
+- [[https://pforret.github.io/bashew/|bashew bash script creator - from small stand-alone script to complex projects with CI/CD and testing]]
+  describes [[https://github.com/pforret/bashew|pforret / bashew]].
