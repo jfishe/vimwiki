@@ -1,0 +1,7 @@
+= Python Notes =
+:python:
+
+== Vim Python Plugin ==
+:vim:plugin:python:
+
+- [[https://github.com/python-mode/python-mode/wiki|Python-mode, a Python IDE for Vim]]

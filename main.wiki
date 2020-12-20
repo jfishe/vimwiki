@@ -20,6 +20,7 @@
 - [[Windows 10 Configuration]]
 - [[Linux]]
 - [[Git]]
+- [[Python|Python Notes]]
 
 == Computer ==
 
