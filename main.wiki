@@ -68,10 +68,12 @@
 === French Press Coffee ===
 :coffee:
 
-[[https://youtu.be/st571DYYTR8|The Ultimate French Press Technique by James Hoffmann]] recommends a Coffee to Water Ratio of 60 – 70 g/l or 1:15 g:g.
+[[https://youtu.be/st571DYYTR8|The Ultimate French Press Technique by James Hoffmann]]
+recommends a Coffee to Water Ratio of 60 – 70 g/l or 1:15 g:g.
 
 1. Rinse empty press with 200 °F water and discard water after grinding coffee.
-2. Add 30 g coffee, grind-stop 11 for OXO Barista Brain.
+2. Add 30 g coffee (OXO Barista Brain 4 cups = 33 g), grind-stop 10 for OXO
+   Barista Brain.
 3. Add 500 g, 200 °F water.
 4. Steep 4 minutes or wibble, wobble, double-nipple.
 5. Stir gently and skim coarse grounds and foam.
