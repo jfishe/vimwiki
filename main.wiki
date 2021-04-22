@@ -40,7 +40,7 @@
 - Most complete but not easy to read:
   [[https://savannah.gnu.org/projects/unifont|Unifont - Summary]]
 - Explains how to use `fontforge`, which requires `X11 server`, such as
-  `Xming`: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
+  `X410`: [[https://stackoverflow.com/questions/10290912/|How do I get GNU Unifont or Free Mono working on gvim windows?]]
 - Built-in font `NSimSum` works within the WSL console and thus Vim.
 - [[https://github.com/jfishe/dotfiles#fonts-for-gvim|Fonts for Gvim]] in the
   [[https://github.com/jfishe/dotfiles|dotfiles]] repository lists several nice fonts.
