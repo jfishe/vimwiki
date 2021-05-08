@@ -1,0 +1,22 @@
+= Journal 2021-05-08 =
+
+== JabRef ==
+:jabref:Ubuntu:
+
+- [[https://docs.jabref.org/|JabRef]]
+
+{{{ bash
+sudo apt-get install jabref ant-doc default-jdk
+}}}
+
+== JSON with C-style Comments ==
+:json:jsonc:vim-polyglot:vscode:
+
+- [[https://github.com/neoclide/jsonc.vim|neoclide / jsonc.vim]] supports C-style comments in JSON.
+- [[https://github.com/sheerun/vim-polyglot|vim-polyglot]] includes JSONC.
+- [[https://github.com/jfishe/vimfiles/blob/master/vimfiles/after/filetype.vim|vimfiles/after/filetype.vim]] defaults *.json to filetype=jsonc to avoid formatting errors from syntax highlighting for JSON.
+
+{{{ vim
+set filetype=jsonc
+}}}
+

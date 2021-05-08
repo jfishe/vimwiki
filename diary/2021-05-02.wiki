@@ -1,0 +1,32 @@
+= Journal 2021-05-02 =
+
+== PyScaffold ==
+:python:pyscaffold:
+
+- [[https://pyscaffold.org/en/latest/api/modules.html#pyscaffold|pyscaffold python project template]]
+
+{{{ yaml
+name: pyscaffold-dsproject
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python <3.10
+  - sphinx
+  - tox
+  - jq
+  - jupyterlab
+  - nbstripout
+  - pip
+  - pre-commit
+  - pyscaffold
+  - pytest
+  - pytest-cov
+  - sphinx
+  - pip:
+    - pyscaffoldext-dsproject
+    - pyscaffoldext-pyproject
+}}}
+
+- https://github.com/mdda/vim-plugin-python
+- [[file:C:/Users/fishe/GitHub/vimwiki_docx]]
