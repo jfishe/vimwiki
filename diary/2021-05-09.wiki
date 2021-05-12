@@ -1,0 +1,32 @@
+= Journal 2021-05-09 =
+
+== conda completion ==
+:conda:zsh:
+
+Add [[https://github.com/esc/conda-zsh-completion| esc / conda-zsh-completion]] to [[https://github.com/jfishe/dotfiles|jfishe / dotfiles]] to restore conda zsh completion.
+
+== PyScaffold ==
+:python:pyscaffold:
+
+- [[https://pyscaffold.org/en/latest/api/modules.html#pyscaffold|pyscaffold python project template]]
+
+{{{ yaml
+name: pyscaffold-pyproject
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python <3.10
+  - pyscaffold
+  - tox
+  - virtualenv ==20.4.4 # python -m pip install 'build[virtualenv]' fails.
+  - pytest
+  - pytest-cov
+  - sphinx
+  - pip:
+    - pyscaffoldext-dsproject
+    - pyscaffoldext-pyproject
+}}}
+
+- https://github.com/mdda/vim-plugin-python
+- [[file:C:/Users/fishe/GitHub/vimwiki_docx]]

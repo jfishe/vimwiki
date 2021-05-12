@@ -1,0 +1,25 @@
+= Journal 2021-05-11 =
+
+== Debian dpkg error ==
+:Debian:Pengwin:Linux:
+
+- [[/Linux#Ubuntu, Debian and Pengwin|Linux#Ubuntu, Debian and Pengwin]]
+
+{{{
+dpkg: error processing package code (--remove): package is in a very bad
+inconsistent state; you should reinstall it before attempting a removal
+
+dpkg: too many errors, stopping
+Errors were encountered while processing:
+    code
+
+Processing was halted because there were too many errors.
+
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+}}}
+
+[[https://askubuntu.com/questions/383804/dpkg-package-is-in-a-very-bad-inconsistent-state-how-to-fix-it|askubuntu]] provided a solution:
+
+{{{ bash
+sudo apt-get --reinstall install code
+}}}
