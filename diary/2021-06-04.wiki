@@ -1,0 +1,24 @@
+= Journal 2021-06-04 =
+
+== Vim compiler pytest runner ==
+:python:vim:pytest:
+
+- [[http://liuchengxu.org/posts/use-vim-as-a-python-ide/|Use Vim as a Python IDE]]
+
+=== Vim Test ===
+
+Does not provide any benefit over the terminal because the QuickFix list is not
+parsed and linked to the failure.
+
+{{{ vim
+let test#strategy = 'dispatch'
+let test#vim#term_position = "belowright"
+}}}
+
+- [[https://github.com/vim-test/vim-test]]
+  - [[https://github.com/tpope/vim-dispatch]]
+
+=== Pytest.vim ===
+
+- https://github.com/alfredodeza/pytest.vim
+

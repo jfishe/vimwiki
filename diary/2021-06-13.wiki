@@ -1,0 +1,42 @@
+= Journal 2021-06-13 =
+
+== Git plain text conversion ==
+:git:Pengwin:Linux:msysgit:
+
+Debian git does not provide
+[[https://github.com/msysgit/msysgit/blob/master/bin/astextplain|msysgit astextplain]].
+Need to modify `~\.gitconfig` to consistently handle Word, Excel and Acrobat
+files.
+
+`run-mailcap --action=cat <file>` should work as `astextplain` but fails for
+Word. Installing `docx2txt` resolves the issue. The local `.git/config` can
+override the global.
+
+{{{ bash
+sudo apt-get install docx2txt
+
+git config diff.msword.textconv 'run-mailcap --action=cat'
+git config diff.msword.wordRegex '\\w+'
+}}}
+
+`.git/config` should should include a new section or add to
+`~/.dotfiles/.gitconfig` per [[#Dotfiles Git Config|Dotfiles Git Config]]
+below.
+
+{{{ gitconfig
+[diff "msword"]
+	textconv = run-mailcap --action=cat
+	wordRegex = "\\w+"
+[diff "astextplain"]
+	textconv = run-mailcap --action=cat
+}}}
+
+=== Dotfiles Git Config ===
+
+For [[https://github.com/jfishe/dotfiles|dotfiles]], make use of `include`
+section in `.git/config` to override the global default:
+
+{{{ gitconfig
+[include]
+	path = ~/.dotfiles/.gitconfig
+}}}

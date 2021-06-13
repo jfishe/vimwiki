@@ -1,0 +1,32 @@
+= Journal 2021-06-06 =
+
+== Vim compiler pytest runner ==
+:python:vim:pytest:pyscaffold:
+
+- [[http://liuchengxu.org/posts/use-vim-as-a-python-ide/|Use Vim as a Python IDE]]
+
+=== Vim Test ===
+
+Does not provide any benefit over the terminal because the QuickFix list is not
+parsed and linked to the failure.
+
+{{{ vim
+packadd vim-test
+packadd vim-compiler-pytest
+let test#enabled_runners = ["python#pytest"]
+let g:pytest_compiler_args = "--ff --junit-xml=junit.xml --vim-quickfix"
+let g:test#strategy = 'dispatch'
+let g:test#vim#term_position = "right"
+compiler pytest
+}}}
+
+- https://githubmemory.com/repo/CarloDePieri/pytest-vim-compiler adds `compiler pytest` so that Dispatch and QuickFix work together.
+- [[https://github.com/vim-test/vim-test]]
+  - [[https://github.com/tpope/vim-dispatch]]
+- https://github.com/CarloDePieri/pytest-vimqf
+
+=== Pytest.vim ===
+
+- https://github.com/alfredodeza/pytest.vim
+
+
