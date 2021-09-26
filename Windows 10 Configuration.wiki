@@ -34,28 +34,34 @@
 - Windows 10 Insider Preview 10.0.17738.1000 (RS5_RELEASE)
   [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/windows-10-insider-preview-100177381000-rs5release/33da6c23-c9db-4096-8d68-38ee39d51b89|Install Error-SOLVED]]
     - Open cmd.exe as Adminstrator
-      {{{ dos
-      Sfc.exe /Scannow
-      Dism.exe /online /Cleanup-Image /StartComponentCleanup
-      Dism.exe /online /Cleanup-Image /restorehealth
-      }}}
+
+{{{ dos
+Sfc.exe /Scannow
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
+Dism.exe /online /Cleanup-Image /restorehealth
+}}}
+
     - restart the computer
 - [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1|Microsoft Answers]]
   recommends repairing the Windows Update database, which may need to be run
   several times until no errors are found:
 - Open Windows `powershell (Admin)`:
-  {{{ powershell
-  cd $env:windir\diagnostics\system\windowsupdate\
-  Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
-  }}}
+
+{{{ powershell
+cd $env:windir\diagnostics\system\windowsupdate\
+Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
+}}}
+
 - Open `cmd.exe` with admin. rights:
-  {{{ DOS
-  net stop wuauserv
-  del /f /s /q C:\Windows\SoftwareDistribution\DataStore\*.*
-  del /f /s /q C:\Windows\SoftwareDistribution\Download\*.*
-  net start wuauserv
-  wuauclt /detectnow /reportnow
-  }}}
+
+{{{ DOS
+net stop wuauserv
+del /f /s /q C:\Windows\SoftwareDistribution\DataStore\*.*
+del /f /s /q C:\Windows\SoftwareDistribution\Download\*.*
+net start wuauserv
+wuauclt /detectnow /reportnow
+}}}
+
 - If Windows Update becomes stuck in a re-boot and install loop, upgrade to a
   later ISO from
   [[https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced|Windows Insider Preview Downloads]].
@@ -71,16 +77,17 @@
   4. Set InitialKeyboardIndicators to `2147483650` i.e., `0x80000002` if Windows
      does not save NumLock status after reboot.
   5. `HKEY_CURRENT_USER\Control Panel\Keyboard` does the following:
-     | InitialKeyboardIndicators value | Purpose                                                 |
-     |---------------------------------|---------------------------------------------------------|
-     | 0                               | Turn all indicators off (NumLock, CapsLock, ScrollLock) |
-     | 1                               | Turn CapsLock on                                        |
-     | 2                               | Turn NumLock on                                         |
-     | 3                               | Turn CapsLock and NumLock on                            |
-     | 4                               | Turn ScrollLock on                                      |
-     | 5                               | Turn CapsLock and ScrollLock on                         |
-     | 6                               | Turn NumLock and ScrollLock on                          |
-     | 7                               | Turn all indicators on (NumLock, CapsLock, ScrollLock)  |
+
+| InitialKeyboardIndicators value | Purpose                                                 |
+|---------------------------------|---------------------------------------------------------|
+| 0                               | Turn all indicators off (NumLock, CapsLock, ScrollLock) |
+| 1                               | Turn CapsLock on                                        |
+| 2                               | Turn NumLock on                                         |
+| 3                               | Turn CapsLock and NumLock on                            |
+| 4                               | Turn ScrollLock on                                      |
+| 5                               | Turn CapsLock and ScrollLock on                         |
+| 6                               | Turn NumLock and ScrollLock on                          |
+| 7                               | Turn all indicators on (NumLock, CapsLock, ScrollLock)  |
 
 == Explorer Quick Access ==
 
@@ -105,6 +112,27 @@ If any --params were passed to choco install, these need to be manually added
 location).  [[https://github.com/chocolatey/choco/wiki/CommandsInstall]] describes the packageParameters
 key that would need to be added to packages.config to replicate the previous
 installation.
+
+=== Improving choco list with options to show dependencies and sort by date (and more) #1276 ===
+:choco:powershell:
+
+- [[https://github.com/chocolatey/choco/issues/1276#issuecomment-754642856|Improving choco list with options to show dependencies and sort by date (and more) #1276]]
+
+{{{powershell
+$packages = Get-ChildItem C:\ProgramData\chocolatey\lib\ -Recurse  *.nuspec | select fullname,name
+foreach($p in $packages){
+        [XML]$xml=get-content $p.fullname
+        $dependencies = $xml.package.metadata.dependencies.dependency
+        foreach($d in $dependencies){
+	        $obj = New-Object -TypeName psobject
+	        $obj | Add-Member -MemberType NoteProperty -name package  -Value $xml.package.metadata.id
+	        $obj | Add-Member -MemberType NoteProperty -name packageversion  -Value $xml.package.metadata.version
+	        $obj | Add-Member -MemberType NoteProperty -name dependency  -Value  $d.id
+	        $obj | Add-Member -MemberType NoteProperty -name dependencyversion  -Value  $d.version
+	        $obj
+        }
+}
+}}}
 
 == Vim Installation and Update ==
 :vim:install:
@@ -262,31 +290,39 @@ the login scripts. This requires no password `sudo` for `sshd` to avoid
 entering a password every time the login scripts run.
 
 1. Create `/usr/bin/start-ssh` with the following content.
-   {{{ bash
-   #!/bin/bash
-   sshd_status=$(service ssh status)
-   if [[ ${sshd_status} = *"is not running"* ]]; then
-    service ssh --full-restart > /dev/null 2>&1
-   fi
-   }}}
+
+{{{ bash
+#!/bin/bash
+
+sshd_status=$(service ssh status)
+if [[ ${sshd_status} = *"is not running"* ]]; then
+ service ssh --full-restart > /dev/null 2>&1
+fi
+}}}
+
 2. Create `/etc/profile.d/start-ssh` with the following content.
-   {{{ bash
-   sudo /usr/bin/start-ssh
-   }}}
+
+{{{ bash
+sudo /usr/bin/start-ssh
+}}}
+
 3. Allow users to start `sshd` without `sudo` password, by creating
    `/etc/sudoers.d/start-ssh` with the following content.
-   {{{ bash
-   sudo /usr/bin/start-ssh
-   }}}
+
+{{{ bash
+sudo /usr/bin/start-ssh
+}}}
+
 4. Set permissions and owner.
-   {{{ bash
-   sudo chmod 700 /usr/bin/start-ssh
-   sudo chmod 644 /etc/profile.d/start-ssh.sh
-   sudo chmod 0440 /etc/sudoers.d/start-ssh
-   sudo chown root.root /usr/bin/start-ssh
-   sudo chown root.root /etc/profile.d/start-ssh.sh
-   sudo chown root.root /etc/sudoers.d/start-ssh
-   }}}
+
+{{{ bash
+sudo chmod 700 /usr/bin/start-ssh
+sudo chmod 644 /etc/profile.d/start-ssh.sh
+sudo chmod 0440 /etc/sudoers.d/start-ssh
+sudo chown root.root /usr/bin/start-ssh
+sudo chown root.root /etc/profile.d/start-ssh.sh
+sudo chown root.root /etc/sudoers.d/start-ssh
+}}}
 
 === WSL X11 Setup ===
 
