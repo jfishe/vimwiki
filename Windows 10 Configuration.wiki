@@ -483,6 +483,7 @@ Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
 - [[https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/]]
 
 == Symlinks ==
+:mklink:SeCreateSymbolicLinkPrivilege:symlinkevaluation:
 
 Windows reserves certain file extensions, like .COM, .PRN, etc. This can
 create problems with symlinks being misunderstood from `cmd.exe` and
@@ -491,6 +492,30 @@ does not show up in the actual link name so bash, etc. are not impacted.
 
 {{{ DOS
 mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPages\remodel_richland.droppages.com
+}}}
+
+[[https://github.com/Isiweb/7zBackup/issues/11#issuecomment-371811252|mklink]] may respond
+`You do not have sufficient privilege to perform this operation.`
+`/J` or `/H` usually are less restrictive but won't work with WSL symbolic
+links or OneDrive.
+[[https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links|Microsoft]]
+provides additional detail regarding :SeCreateSymbolicLinkPrivilege:
+
+- Run `gpedit.msc`
+- Navigate to Computer configuration → Windows Settings → Security Settings →
+  Local Policies → User Rights Assignment → Create symbolic links
+- Here you can set which users can create symbolic links.
+- You may need to change :symlinkevaluation: for OneDrive or corporate network
+  locations. The defaults work in most cases.
+
+{{{powershell
+fsutil behavior query symlinkevaluation
+}}}
+{{{text
+Local-to-local symbolic link evaluation is: ENABLED
+Local-to-remote symbolic link evaluation is: ENABLED
+Remote-to-local symbolic link evaluation is: DISABLED
+Remote-to-remote symbolic link evaluation is: DISABLED
 }}}
 
 == HP Envy BIOS Settings ==
