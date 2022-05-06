@@ -70,7 +70,7 @@
 :coffee:
 
 [[https://youtu.be/st571DYYTR8|The Ultimate French Press Technique by James Hoffmann]]
-recommends a Coffee to Water Ratio of 60 – 70 g/l or 1:15 g:g.
+recommends a Coffee to Water Ratio of 60 – 70 g/l.
 
 1. Rinse empty press with 200 °F water and discard water after grinding coffee.
 2. Add 30 g coffee (OXO Barista Brain 4 cups = 33 g), grind-stop 10 for OXO
@@ -80,3 +80,11 @@ recommends a Coffee to Water Ratio of 60 – 70 g/l or 1:15 g:g.
 5. Stir gently and skim coarse grounds and foam.
 6. Steep at least 5 – 8 minutes.
 7. Push plunger to top of liquid and pore gently.
+
+=== Chicory Coffee ===
+:chicory:
+
+1. 500 ml, 200 °F water
+2. 24 g ground chicory
+3. 24 g ground coffee
+4. Prepare per [[#French Press Coffee]].
