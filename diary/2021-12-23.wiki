@@ -1,0 +1,10 @@
+= Journal 2021-12-23 =
+
+== Windows 11 Vim Configuration ==
+:vim:Win11:conda:environment:
+
+{{{bash
+conda install conda-export -n base
+pip install condax pipx
+}}}
+

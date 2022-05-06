@@ -1,0 +1,9 @@
+= Journal 2021-12-24 =
+
+== Windows 11 Vim Configuration ==
+:vim:Win11:conda:environment:
+
+{{{bash
+pipx install pyscaffold[all]
+pipx install pls
+}}}
