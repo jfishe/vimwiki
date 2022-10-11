@@ -254,6 +254,18 @@ recent versions of WSL.
   2. Description: Open SSH ports for Windows and WSL
   3. Click Finish
 
+==== Verify ssh key access with KeePass and KeeAgent ====
+:ssh:powershell:
+
+OpenSSH uses the same command on PowerShell and Linux.
+
+Open KeePass and enter the following to list available private ssh keys. It
+should work in WSL if socat and npiperelay are working.
+
+{{{ bash
+ssh-add -l
+}}}
+
 ==== Add Unix socket access to Windows OpenSSH for KeeAgent ====
 :ssh:
 

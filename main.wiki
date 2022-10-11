@@ -12,6 +12,9 @@
   - [[#John D. Fisher's home wiki#DIY|DIY]]
   - [[#John D. Fisher's home wiki#Cooking|Cooking]]
     - [[#John D. Fisher's home wiki#Cooking#French Press Coffee|French Press Coffee]]
+    - [[#John D. Fisher's home wiki#Cooking#Chicory Coffee|Chicory Coffee]]
+    - [[#John D. Fisher's home wiki#Cooking#Iced Meso Mocha Breve|Iced Meso Mocha Breve]]
+    - [[#John D. Fisher's home wiki#Cooking#Mignonette Pepper|Mignonette Pepper]]
 
 == Projects ==
 
@@ -114,3 +117,19 @@ have a 1:1 or higher ratio.
 6. Add 1 – 4 shots chilled espresso (1 – 4 oz).
 7. Fill cups with ice.
 8. Top with half-cream and stir until well mixed.
+
+=== Mignonette Pepper ===
+:pepper:seasoning:
+
+Most mignonette pepper recipes include all spice berries and only include white
+and black peppercorns. This is based on the ground pepper available as
+[[https://www.penzeys.com/online-catalog/mignonette-pepper/c-24/p-207/pd-s|Pensey's Mignonette Pepper]].
+
+
+| Pepper    | g/Tb | g/Jar |
+|-----------|-----:|------:|
+| Coriander |    5 |    20 |
+| Black     |   11 |    44 |
+| White     |   13 |    52 |
+| Szechuan  |    4 |    16 |
+| Green     |    7 |    28 |
