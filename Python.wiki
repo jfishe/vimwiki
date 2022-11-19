@@ -5,3 +5,13 @@
 :vim:plugin:python:
 
 - [[https://github.com/python-mode/python-mode/wiki|Python-mode, a Python IDE for Vim]]
+
+== LaTeX ==
+:LaTeX:
+
+- [[https://github.com/Wookai/paper-tips-and-tricks#tips-and-tricks-for-writing-scientific-papers|Tips and Tricks for Writing Scientific Papers]]
+
+== Jupyter ==
+:notebook:
+
+- [[https://forums.fast.ai/t/jupyter-notebook-enhancements-tips-and-tricks/17064|Jupyter Notebook Enhancements Tips and Tricks]]
