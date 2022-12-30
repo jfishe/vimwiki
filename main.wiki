@@ -1,20 +1,21 @@
 = John D. Fisher's home wiki =
 
-%% = Contents =
-- [[#John D. Fisher's home wiki|John D. Fisher's home wiki]]
-  - [[#John D. Fisher's home wiki#Projects|Projects]]
-  - [[#John D. Fisher's home wiki#Computer|Computer]]
-    - [[#John D. Fisher's home wiki#Computer#Sweet Home 3D|Sweet Home 3D]]
-    - [[#John D. Fisher's home wiki#Computer#Fonts|Fonts]]
-    - [[#John D. Fisher's home wiki#Computer#WiFi|WiFi]]
-  - [[#John D. Fisher's home wiki#Electronics|Electronics]]
-    - [[#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset|Motorola H17 Bluetooth Headset]]
-  - [[#John D. Fisher's home wiki#DIY|DIY]]
-  - [[#John D. Fisher's home wiki#Cooking|Cooking]]
-    - [[#John D. Fisher's home wiki#Cooking#French Press Coffee|French Press Coffee]]
-    - [[#John D. Fisher's home wiki#Cooking#Chicory Coffee|Chicory Coffee]]
-    - [[#John D. Fisher's home wiki#Cooking#Iced Meso Mocha Breve|Iced Meso Mocha Breve]]
-    - [[#John D. Fisher's home wiki#Cooking#Mignonette Pepper|Mignonette Pepper]]
+== Contents ==
+- [[#John D. Fisher's home wiki]]
+  - [[#Projects]]
+  - [[#Computer]]
+    - [[#Sweet Home 3D]]
+    - [[#Fonts]]
+    - [[#WiFi]]
+  - [[#Electronics]]
+    - [[#Motorola H17 Bluetooth Headset]]
+  - [[#DIY]]
+  - [[#Cooking]]
+    - [[#French Press Coffee]]
+    - [[#Chicory Coffee]]
+    - [[#Iced Meso Mocha Breve]]
+    - [[#Mignonette Pepper]]
+    - [[#Santa Maria Rub]]
 
 == Projects ==
 
@@ -133,3 +134,18 @@ and black peppercorns. This is based on the ground pepper available as
 | White     |   13 |    52 |
 | Szechuan  |    4 |    16 |
 | Green     |    7 |    28 |
+
+=== Santa Maria Rub ===
+:tritip:rub:beef:seasoning:
+
+Worked well on tri tip of beef. Derived from
+[[https://forum.cookshack.com/topic/low-sodium-steak-seasonings-or-marinades?reply=587205936925127862#587205936925127862|Cookshack topic low sodium steak seasonings or marinades]].
+
+- 1 tablespoon ground mignonette pepper
+- 2 teaspoons granulated garlic
+- 1 teaspoon granulated shallots
+- 1 1/2 teaspoons paprika
+- 1/2 teaspoon cayenne pepper
+- 1 teaspoon _herbs de provence_
+- 1/2 teaspoon salt
+
