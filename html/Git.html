@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml" />
+    <title>Git</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="content">
+<div id="Git"><h1 id="Git" class="header"><a href="#Git">Git</a></h1></div>
+
+<div id="Git-Pull Rebase"><h2 id="Pull Rebase" class="header"><a href="#Git-Pull Rebase">Pull Rebase</a></h2></div>
+<p>
+<span id="Git-Pull Rebase-git"></span><span class="tag" id="git">git</span> <span id="Git-Pull Rebase-pull"></span><span class="tag" id="pull">pull</span> <span id="Git-Pull Rebase-fetch"></span><span class="tag" id="fetch">fetch</span> <span id="Git-Pull Rebase-rebase"></span><span class="tag" id="rebase">rebase</span>
+</p>
+
+<p>
+<a href="https://megakemp.com/2019/03/20/the-case-for-pull-rebase/">The Case for Pull Rebase</a>
+</p>
+
+<pre  bash>
+git pull --rebase|-r # Normal to avoid merge commits.
+git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
+git config --global pull.rebase preserve
+
+# if you're on Git 2.18 or later
+git pull --rebase=merges
+git config --global pull.rebase merges
+</pre>
+
+<div id="Git-Remove Submodule"><h2 id="Remove Submodule" class="header"><a href="#Git-Remove Submodule">Remove Submodule</a></h2></div>
+<p>
+<span id="Git-Remove Submodule-git"></span><span class="tag" id="git">git</span> <span id="Git-Remove Submodule-submodule"></span><span class="tag" id="submodule">submodule</span>
+</p>
+
+<ol>
+<li>
+Delete the section referring to the submodule from the <code>.gitmodules</code> file
+
+<li>
+Stage the changes via git add <code>.gitmodules</code>
+
+<li>
+Delete the relevant section of the submodule from <code>.git/config</code>.
+
+<li>
+Run <code>git rm --cached path_to_submodule</code> (no trailing slash).
+
+<li>
+Run <code>rm -rf .git/modules/path_to_submodule</code>
+
+<li>
+Commit the changes with <code>git commit -m "Removed submodule"</code>
+
+<li>
+Delete the now un-tracked submodule files <code>rm -rf path_to_submodule</code>
+
+</ol>
+<div id="Git-Remove Secrets from Git History"><h2 id="Remove Secrets from Git History" class="header"><a href="#Git-Remove Secrets from Git History">Remove Secrets from Git History</a></h2></div>
+<p>
+<span id="Git-Remove Secrets from Git History-git"></span><span class="tag" id="git">git</span>
+</p>
+
+<p>
+To search for strings in an entire git repository:
+</p>
+
+<pre  PowerShell>
+git grep -i '&lt;regex&gt;' $(git rev-list --all)
+</pre>
+
+<p>
+Refer to <a href="https://rtyley.github.io/bfg-repo-cleaner/">https://rtyley.github.io/bfg-repo-cleaner/</a> for instructions and
+the Jar file. Setup an alias for <code>bfg</code>, replacing the Java and Jar paths, as
+needed.
+</p>
+
+<pre  PowerShell>
+Function _bfg {
+    $JavaExe = Get-Command "C:\Program Files\OpenJDK\jdk-15\bin\java.exe"
+    $JarPath = Resolve-Path ~\Downloads\bfg-1.13.0.jar
+    &amp; $JavaExe -jar $JarPath $Args
+}
+Set-Alias -Name bfg -Value _bfg
+</pre>
+
+<p>
+Create <code>passwords.txt</code> with the Regex or strings to be replaced with
+<code>***REMOVED***</code>.
+</p>
+
+<pre  PowerShell>
+# Add regex(s) to file.
+@('&lt;regex&gt;', '&lt;regex&gt;') -join "`n" |
+  Out-File -Encoding utf8 -NoNewline -FilePath passwords.txt
+
+# Replace regex with **REMOVED**
+bfg --replace-text passwords.txt vimfiles.git
+
+# If all goes well, clean up the history.
+git reflog expire --expire=now --all &amp;&amp; git gc --prune=now --aggressive
+</pre>
+
+<p>
+Clone the mirror repository, remove any secrets from HEAD, commit and push back
+to the local mirror repository. Re-run <code>bfg</code> to remove from the history,
+assuming everything works. <code>git pull</code> to update the clone. Then change the remote to <code>Github</code>.
+</p>
+
+<p>
+<a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository">Removing Sensitive Data from a Repository</a>
+provides instructions for force pushing to <code>Github</code>.
+</p>
+</div>
+    <p><small>Page created on 2023-01-02</small></p>
+  </body>
+</html>

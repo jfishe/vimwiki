@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml" />
+    <title>2020-10-09</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="content">
+<div id="Journal 2020-10-09"><h1 id="Journal 2020-10-09" class="header"><a href="#Journal 2020-10-09">Journal 2020-10-09</a></h1></div>
+
+<pre vim>
+" Remove Contents Header
+cfdo g/^= Contents =$/d | update | bdelete
+" Change * bullets to - bullets
+cfdo %s/^\(\s\{0,\}\)\*\(\s\)/\1-\2/ | update | bdelete
+</pre>
+</div>
+    <p><small>Page created on 2023-01-02</small></p>
+  </body>
+</html>

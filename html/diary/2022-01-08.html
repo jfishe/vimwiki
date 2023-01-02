@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml" />
+    <title>2022-01-08</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="content">
+<div id="Journal 2022-01-08"><h1 id="Journal 2022-01-08" class="header"><a href="#Journal 2022-01-08">Journal 2022-01-08</a></h1></div>
+
+<div id="Journal 2022-01-08-Matplotlib Cursor"><h2 id="Matplotlib Cursor" class="header"><a href="#Journal 2022-01-08-Matplotlib Cursor">Matplotlib Cursor</a></h2></div>
+<p>
+<span id="Journal 2022-01-08-Matplotlib Cursor-python"></span><span class="tag" id="python">python</span> <span id="Journal 2022-01-08-Matplotlib Cursor-matplotlib"></span><span class="tag" id="matplotlib">matplotlib</span>
+</p>
+
+<p>
+<a href="https://blog.finxter.com/matplotlib-cursor/#:~:text=Every%20time%20a%20point%20on%20the%20window%20is,import%20matplotlib.pyplot%20as%20plt%20from%20matplotlib.widgets%20import%20Cursor">Matplotlib Cursor — How to Add a Cursor and Annotate Your Plot</a>
+</p>
+
+<pre python>
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Cursor
+
+#x and y arrays for definining an initial function
+x = np.linspace(0, 10, 100)
+y = np.exp(x**0.5) * np.sin(5*x)
+
+# Plotting
+fig = plt.figure()
+ax = fig.subplots()
+ax.plot(x,y, color = 'b')
+ax.grid()
+
+# Defining the cursor
+cursor = Cursor(ax, horizOn=True, vertOn=True, useblit=True,
+                color = 'r', linewidth = 1)
+
+# Creating an annotating box
+annot = ax.annotate("", xy=(0,0), xytext=(-40,40),textcoords="offset points",
+                    bbox=dict(boxstyle='round4', fc='linen',ec='k',lw=1),
+                    arrowprops=dict(arrowstyle='-|&gt;'))
+annot.set_visible(False)
+
+# Function for storing and showing the clicked values
+coord = []
+def onclick(event):
+    global coord
+    coord.append((event.xdata, event.ydata))
+    x = event.xdata
+    y = event.ydata
+
+    # printing the values of the selected point
+    print([x,y])
+    annot.xy = (x,y)
+    text = "({:.2g}, {:.2g})".format(x,y)
+    annot.set_text(text)
+    annot.set_visible(True)
+    fig.canvas.draw() #redraw the figure
+
+
+fig.canvas.mpl_connect('button_press_event', onclick)
+plt.show()
+
+# Unzipping the coord list in two different arrays
+x1, y1 = zip(*coord)
+print(x1, y1)
+</pre>
+</div>
+    <p><small>Page created on 2023-01-02</small></p>
+  </body>
+</html>
