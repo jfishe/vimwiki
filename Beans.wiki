@@ -1,12 +1,33 @@
 = Dried Beans Recipes =
-:beans:
+:beans:recipe:
+
+== Contents ==
+- [[#Dried Beans Recipes]]
+  - [[#Instant Pot Dried Beans]]
+  - [[#Ranch Style Beans]]
+    - [[#Ingredients]]
+    - [[#Directions]]
+  - [[#Cowboy Beans]]
+    - [[#Ingredients]]
+    - [[#Directions]]
+
+== Instant Pot Dried Beans ==
+
+- Seal and cook on High Pressure per
+  [[https://amindfullmom.com/instant-pot-beans/|Instant Pot Dried Beans]]:
+  - Black Beans—30 Minutes
+  - Chickpeas—40 Minutes
+  - Kidney Beans—35 Minutes
+  - Pinto Beans—25 Minutes
+  - Navy Beans—30 Minutes
+  - Great Northern Beans—35 Minutes
+- Slow release pressure for 20 minutes before doing a quick release.
 
 == Ranch Style Beans ==
 
 Derived from
 [[https://www.homesicktexan.com/ranch-style-beans-recipe/|Homesick Texan Ranch Style Beans Recipe]].
-Adapted for a Instant Pot, using
-[[https://amindfullmom.com/instant-pot-beans/|Instant Pot Dried Beans]].
+Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
 
 Additional sugar may be needed after refrigeration, depending on the acidity of
 the tomatoes.
@@ -54,19 +75,56 @@ the tomatoes.
   4. Set aside.
 4. Add the beans, bay leaves (granulated garlic and dried shallots) and beef
    broth to the Instant Pot.
-5. Seal and cook on High Pressure. Texture should be slightly under cooked.
-  - Black Beans—30 Minutes
-  - Chickpeas—40 Minutes
-  - Kidney Beans—35 Minutes
-  - Pinto Beans—25 Minutes
-  - Navy Beans—30 Minutes
-  - Great Northern Beans—35 Minutes
-6. Slow release pressure for 20 minutes before doing a quick release.
-7. Stir in the reserved chile puree.
-8. Set Instant Pot to Slow Cook with vent valve open.
+5. Seal and cook on High Pressure per [[#Instant Pot Dried Beans]]. Texture
+   should be slightly under cooked.
+6. Stir in the reserved chile puree.
+7. Set Instant Pot to Slow Cook with vent valve open.
   1. Adjust power level to More (High).
   2. Set time to 1 hour.
   3. Continue to cook the beans uncovered until tender and the sauce has
      reduced, stirring occasionally.
-9. Taste and adjust seasonings. Serve warm.
+8. Taste and adjust seasonings. Serve warm.
+
+== Cowboy Beans ==
+
+Derived from [[https://www.food.com/recipe/ranch-style-beans-aka-cowboy-beans-85199?units=us&scale=6|Ranch Style Beans aka Cowboy Beans]].
+Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
+
+=== Ingredients ===
+
+- 1 lb dry pinto beans
+- 8 cups water (4 cups of beef stock and 4 cups water)
+- 1 medium onion, diced
+- 1 bell pepper, diced
+- 2 cloves garlic, minced
+- 5 ounces diced tomatoes
+- 5 ounces diced green chiles
+- 1 tablespoon chili powder
+- 1⁄2 teaspoon dry mustard
+- 1⁄2 teaspoon pepper
+- 1⁄2 teaspoon salt
+- 2 tablespoons Worcestershire sauce
+- sugar to taste, depending on acidity after cooking.
+
+=== Directions ===
+
+1. Place rinsed beans in the Instant Pot and add water. Two inches of water
+   above the beans should be sufficient. Add more later if needed.
+2. Seal and cook on High Pressure per [[#Instant Pot Dried Beans]]. Beans
+   should be slightly under cooked.
+3. Saute onion, bell pepper, tomatoes and green chiles. If using canned or fire
+   roasted tomatoes and chiles, reserve them for the Instant Pot.
+  1. Heat up a teaspoon of cooking oil in a saute pan, over medium heat.
+  2. Cook the aromatics for 5 minutes.
+  3. Add the garlic and cook for another minute.
+  4. Transfer to the Instant Pot.
+4. Add chili powder, mustard, pepper and salt to the Instant Pot.
+5. Add water if needed.
+6. Set Instant Pot to Slow Cook with vent valve open.
+  1. Adjust power level to More (High).
+  2. Set time to 1 hour.
+  3. Continue to cook the beans until tender and the liquid has reduced,
+     stirring occasionally.
+7. Add Worcestershire sauce.
+8. Taste and adjust seasonings. Serve warm.
 
