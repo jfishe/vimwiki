@@ -1,0 +1,53 @@
+= Coffee =
+:recipe:coffee:
+
+== French Press Coffee ==
+:coffee:
+
+[[https://youtu.be/st571DYYTR8|The Ultimate French Press Technique by James Hoffmann]]
+recommends a Coffee to Water Ratio of 60 – 70 g/l.
+
+1. Rinse empty press with 200 °F water and discard water after grinding coffee.
+2. Add 30 g coffee (OXO Barista Brain 4 cups = 33 g), grind-stop 10 for OXO
+   Barista Brain.
+3. Add 500 g, 200 °F water.
+4. Steep 4 minutes or [[https://youtu.be/Y8cbxTumzvg|wibble, wobble, double nipple]] per Mrs. Marlowe of Brokenwood.
+5. Stir gently and skim coarse grounds and foam.
+6. Steep at least 5 – 8 minutes.
+7. Push plunger to top of liquid and pore gently.
+
+== Chicory Coffee ==
+:chicory:
+
+1. 500 ml, 200 °F water
+2. 24 g ground chicory
+3. 24 g ground coffee
+4. Prepare per [[#French Press Coffee]].
+
+== Iced Meso Mocha Breve ==
+:coffee:mocha:
+
+My attempt at Tucson's [[https://www.cafepassetucson.com/|Cafe Passe]] Meso
+Mocha with some changes to avoid ingredients that do not store well for weeks.
+The original uses chocolate syrup, which does not keep long enough to make at
+home.  The peppers are stronger than the original (1 g is roughly a large
+pinch; adjust to taste). The sugar is 3 Tbs:4 Tbs cocoa powder; most recipes
+have a 1:1 or higher ratio.
+
+1. Weigh dry ingredients into a mixing bowl.
+  1. 36 g sugar
+  2. 30 g Penseys Spices [[https://www.penzeys.com/online-catalog/natural-cocoa-powder/c-24/p-913/pd-s|Natural High Fat Cocoa Powder]]
+  3. 1 g each:
+    1. Penseys Spices [[https://www.penzeys.com/online-catalog/chipotle-pepper-ground-red/c-24/p-866/pd-s|Chipotle Pepper Ground Red]]
+    2. Penseys Spices [[https://www.penzeys.com/online-catalog/black-and-red-spice/c-24/p-25/pd-s|Black and Red Spice]]
+    3. Penseys Spices [[https://www.penzeys.com/online-catalog/vietnamese-cinnamon-ground/c-24/p-955/pd-s|Vietnamese Cinnamon Ground]]
+2. Add enough half-cream to make a thin paste, approximately 2 Tbs.
+3. Whisk until paste is smooth, scrapping down sides of the bowl. Add more cream
+   if the paste collects inside the whisk.
+4. Add enough half-cream to bring mix to approximately 16 oz.
+5. Divide equally between two 16 oz tumbler cups.
+6. Add 1 – 4 shots chilled espresso (1 – 4 oz).
+7. Fill cups with ice.
+8. Top with half-cream and stir until well mixed.
+
+
