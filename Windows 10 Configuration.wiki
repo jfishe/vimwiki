@@ -106,7 +106,7 @@ cmd.exe /c del "%AppData%\Microsoft\Windows\Recent\AutomaticDestinations\f01b4d9
 [[https://chocolatey.org/|Chocolatey]] can serve as a package manager for Windows. The package
 [[https://chocolatey.org/packages/choco-package-list-backup|choco-package-list-backup]] creates the packages.config file after
 configuring where to save the backup by editing variables
-in [[file:C:/ProgramData/chocolatey/bin/choco-package-list-backup.ps1|choco-package-list-backup.ps1]] to select a backup location.
+in [[file:C:/ProgramData/chocolatey/bin/choco-package-list-backup.bat|choco-package-list-backup.bat]] to select a backup location.
 If any --params were passed to choco install, these need to be manually added
 (note the script overwrites the file without prompting, so save to a different
 location).  [[https://github.com/chocolatey/choco/wiki/CommandsInstall]] describes the packageParameters

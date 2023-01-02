@@ -1,6 +1,6 @@
 = Journal 2021-05-01 =
-:python:vimwiki_docx:vimwiki:
+:python:vimwiki_docx:vimwiki:panvimwiki:
 
 - https://github.com/mdda/vim-plugin-python
-- [[file:C:/Users/fishe/GitHub/vimwiki_docx]]
+- https://github.com/jfishe/panvimwiki.git
 
