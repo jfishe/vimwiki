@@ -6,7 +6,10 @@
 
 - `lsb_release -a` per [[https://help.ubuntu.com/community/CheckingYourUbuntuVersion|Checking your Ubuntu Version]]
 - `cat /etc/*release` works for most distributions.
-- [[https://launchpad.net/~jonathonf/+archive/ubuntu/vim|ppa:jonathonf/vim, vim-gtk3, packaging files are based on "latest" Debian/Ubuntu]] if a more recent version of Vim is required than provided in Ubuntu.
+- [[https://launchpad.net/~jonathonf/+archive/ubuntu/vim|ppa:jonathonf/vim, vim-gtk3, packaging files are based on "latest" Debian/Ubuntu]]
+  if a more recent version of Vim is required than provided in Ubuntu.
+- `sudo hwclock --hctosys` resets system time to hardware clock time:
+  [[https://askubuntu.com/questions/1096930/sudo-apt-update-error-release-file-is-not-yet-valid|sudo apt update error: "Release file is not yet valid"]].
 
 == Fedora and Red Hat ==
 :Fedora:RHEL:
