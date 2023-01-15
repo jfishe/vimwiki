@@ -64,6 +64,7 @@
 
 - [[Coffee]]
 - [[Beans|Dried Beans Recipes]]
+- [[Drinks]]
 
 === Mignonette Pepper ===
 :pepper:seasoning:
@@ -98,6 +99,7 @@ Worked well on Tri Tip of beef. Derived from
 == Generated Links ==
 - [[Beans]]
 - [[Coffee]]
+- [[Drinks]]
 - [[Git]]
 - [[Health_Fitness]]
 - [[Linux]]
@@ -106,4 +108,5 @@ Worked well on Tri Tip of beef. Derived from
 - [[Python]]
 - [[Sisal_Rope]]
 - [[Windows 10 Configuration]]
+- [[diary/diary]]
 - [[index]]

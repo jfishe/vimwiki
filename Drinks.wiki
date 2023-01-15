@@ -1,0 +1,22 @@
+= Drink Recipes =
+
+== Martini ==
+:martini:
+
+=== Dry Martini ===
+
+- 6 part gin
+- 1 part dry vermouth
+- 2 dash orange bitters
+- 1 inch strip of peel from an un-waxed lemon or skewered olives
+
+=== Perfect Martini ===
+
+- [[https://www.diffordsguide.com/cocktails/recipe/1509/perfect-martini|Diffordsguide Cocktails Recipe Perfect Martini]]
+
+- 4 part gin
+- 1/2 part dry vermouth
+- 1/2 part sweet vermouth
+- 1 dash orange bitters
+- 1 inch strip of peel from an un-waxed lemon or skewered olives
+
