@@ -5,11 +5,7 @@
 - [[#Dried Beans Recipes]]
   - [[#Instant Pot Dried Beans]]
   - [[#Ranch Style Beans]]
-    - [[#Ingredients]]
-    - [[#Directions]]
   - [[#Cowboy Beans]]
-    - [[#Ingredients]]
-    - [[#Directions]]
 
 == Instant Pot Dried Beans ==
 
@@ -32,7 +28,7 @@ Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
 Additional sugar may be needed after refrigeration, depending on the acidity of
 the tomatoes.
 
-=== Ingredients ===
+Ingredients:
 
 - 16 oz dried beans
 - 2 Bay leaves
@@ -57,7 +53,7 @@ the tomatoes.
 - Optional, for serving: hot sauce, grated cheese, sliced jalapeno, sour cream,
   sliced green onion, chopped fresh parsley or cilantro
 
-=== Directions ===
+Directions:
 
 1. In a cast-iron skillet heated up to medium high, cook the anchos on each
    side for a couple of minutes (or until they start to bubble and pop), turn
@@ -90,7 +86,7 @@ the tomatoes.
 Derived from [[https://www.food.com/recipe/ranch-style-beans-aka-cowboy-beans-85199?units=us&scale=6|Ranch Style Beans aka Cowboy Beans]].
 Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
 
-=== Ingredients ===
+Ingredients:
 
 - 1 lb dry pinto beans
 - 8 cups water (4 cups of beef stock and 4 cups water)
@@ -106,7 +102,7 @@ Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
 - 2 tablespoons Worcestershire sauce
 - sugar to taste, depending on acidity after cooking.
 
-=== Directions ===
+Directions:
 
 1. Place rinsed beans in the Instant Pot and add water. Two inches of water
    above the beans should be sufficient. Add more later if needed.
