@@ -14,6 +14,8 @@
     - [[#Mignonette Pepper]]
     - [[#Santa Maria Rub]]
     - [[#Dutch Baby]]
+    - [[#Ingredients]]
+    - [[#Directions]]
   - [[#Generated Links]]
 
 == Projects ==
@@ -104,6 +106,8 @@ Adapted from
 [[https://youtu.be/xFIyWfrmF6E|Dutch baby — sweet and savory popover pancakes]]
 by Adam Ragusea
 
+=== Ingredients ===
+
 - eggs (one per person, 2 in a 10 in / 25 cm pan)
 - milk (80 ml per egg)
 - flour (20 g per egg)
@@ -117,6 +121,8 @@ by Adam Ragusea
 - butter
 - toppings (lemon juice and powdered sugar is nice for sweet, eggs/salami/onion
   is nice for savory)
+
+=== Directions ===
 
 1. Warm the eggs and the milk before mixing to room temperature.
 2. Combine the eggs, salt, sugar, garlic (optional), soft cheese (optional) and
