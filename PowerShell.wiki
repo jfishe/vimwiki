@@ -74,6 +74,12 @@ Set-Theme Honukai
 
 - moduleclean.ps1
 
+=== Dot-source and Execute ===
+
+- [[https://poshoholic.com/2008/03/18/powershell-deep-dive-using-myinvocation-and-invoke-expression-to-support-dot-sourcing-and-direct-invocation-in-shared-powershell-scripts/|PowerShell Deep Dive]]:
+  _Using $MyInvocation and Invoke-Expression to support
+  dot-sourcing and direct invocation in shared PowerShell scripts_.
+
 == Todo ==
 :todo:
 
