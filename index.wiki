@@ -13,6 +13,7 @@
   - [[#Cooking]]
     - [[#Mignonette Pepper]]
     - [[#Santa Maria Rub]]
+    - [[#Dutch Baby]]
   - [[#Generated Links]]
 
 == Projects ==
@@ -95,6 +96,41 @@ Worked well on Tri Tip of beef. Derived from
 - 1/2 teaspoon cayenne pepper
 - 1 teaspoon _herbs de provence_
 - 1/2 teaspoon salt
+
+=== Dutch Baby ===
+:breakfast:
+
+Adapted from
+[[https://youtu.be/xFIyWfrmF6E|Dutch baby — sweet and savory popover pancakes]]
+by Adam Ragusea
+
+- eggs (one per person, 2 in a 10 in / 25 cm pan)
+- milk (80 ml per egg)
+- flour (20 g per egg)
+- corn starch (20 g per egg)
+- salt (a pinch per egg)
+- sugar (1 teaspoon per egg, sweet or savory)
+- granulated garlic (pinch)
+- vanilla (only for sweet)
+- spreadable cheese, like Rondele Cheese Spread Garlic & Herb, feta, ricotta,
+  brie or mascarpone (OPTIONAL 1 tablespoon per egg)
+- butter
+- toppings (lemon juice and powdered sugar is nice for sweet, eggs/salami/onion
+  is nice for savory)
+
+1. Warm the eggs and the milk before mixing to room temperature.
+2. Combine the eggs, salt, sugar, garlic (optional), soft cheese (optional) and
+   vanilla (optional) in a mixing bowl and whisk until frothy.
+3. Whisk in the flour until smooth, then whisk in the milk. Or blender all at
+   once.
+4. Rest at least 20 minutes before baking.
+5. Put your pan cast iron skillet in the oven and preheat to 425ºF/220ºC.
+6. Melt in a thick film of butter.
+7. Pour in the batter and return the pan to the oven.
+8. Bake until puffy and golden (~20 minutes).
+9. Add eggs and savory toppings at ~15 minutes, after maximum rise.
+10. Return to the pan to the oven until the eggs finish cooking.
+11. Transfer to a cooling rack, until steam collapses.
 
 == Generated Links ==
 - [[Beans]]
