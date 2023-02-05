@@ -15,3 +15,8 @@
 :notebook:
 
 - [[https://forums.fast.ai/t/jupyter-notebook-enhancements-tips-and-tricks/17064|Jupyter Notebook Enhancements Tips and Tricks]]
+
+== Pandas DataFrames and Plotting ==
+:python:Pandas:DataFrame:seaborn:
+
+- [[https://medium.com/@andykashyap/how-to-convert-a-table-into-long-form-or-tidy-form-for-seaborn-visualizations-2bd8b44cdc29|How to convert a table into long-form or tidy-form for seaborn visualizations]]
