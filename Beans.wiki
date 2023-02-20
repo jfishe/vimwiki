@@ -9,6 +9,8 @@
 
 == Instant Pot Dried Beans ==
 
+- Bay leaves
+- 1/2 onion or dried shallots/onions
 - Seal and cook on High Pressure per
   [[https://amindfullmom.com/instant-pot-beans/|Instant Pot Dried Beans]]:
   - Black Beans—30 Minutes
@@ -18,6 +20,8 @@
   - Navy Beans—30 Minutes
   - Great Northern Beans—35 Minutes
 - Slow release pressure for 20 minutes before doing a quick release.
+- 1/2 tsp apple cider vinegar
+- Salt to taste
 
 == Ranch Style Beans ==
 
@@ -104,7 +108,7 @@ Ingredients:
 
 Directions:
 
-1. Place rinsed beans in the Instant Pot and add water. Two inches of water
+1. Place rinsed beans in the Instant Pot and add water. One inch of water
    above the beans should be sufficient. Add more later if needed.
 2. Seal and cook on High Pressure per [[#Instant Pot Dried Beans]]. Beans
    should be slightly under cooked.
