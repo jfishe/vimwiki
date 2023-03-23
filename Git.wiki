@@ -69,3 +69,13 @@ assuming everything works. `git pull` to update the clone. Then change the remot
 
 [[https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository|Removing Sensitive Data from a Repository]]
 provides instructions for force pushing to `Github`.
+
+== Developer Settings ==
+:2FA:tokens:
+
+- Git error: `remote: Invalid username or password. fatal: Authentication failed`
+  - [[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token|Authentication/Account security/Creating a personal access token]]
+  - [[https://github.com/settings/tokens]]
+  - Expired tokens can be refreshed.
+
+
