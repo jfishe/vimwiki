@@ -18,7 +18,6 @@
     - [[#Dutch Baby]]
     - [[#Tortillas de Harina]]
     - [[#Tacos al Pastor]]
-  - [[#Generated Links]]
 
 == Projects ==
 
@@ -330,17 +329,3 @@ Directions
     wedges. Meat will be very moist and should be packed into double-stacked
     tortillas for serving.
 
-== Generated Links ==
-  [[Beans]]
-  [[Coffee]]
-  [[Drinks]]
-  [[Git]]
-  [[Health Fitness]]
-  [[Linux]]
-  [[Oh My Zsh]]
-  [[Power Shell]]
-  [[Python]]
-  [[Sisal Rope]]
-  [[Windows 10 Configuration]]
-  [[Diary/Diary]]
-  [[Index]]

@@ -5,6 +5,7 @@
 :vim:plugin:python:
 
 - [[https://github.com/python-mode/python-mode/wiki|Python-mode, a Python IDE for Vim]]
+- [[https://github.com/nanotee/vimdoc-notes|Vimdoc notes]] proposes a Vim help file specification.
 
 == LaTeX ==
 :LaTeX:
