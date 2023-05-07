@@ -1,6 +1,9 @@
 
 
 == Generated Tags ==
+=== 2FA ===
+- [[Git#Git#Developer Settings]]
+
 === BIOS ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
 
@@ -94,6 +97,14 @@
 - [[index#John D. Fisher's home wiki#DIY]]
 - [[main#John D. Fisher's home wiki#DIY]]
 
+=== fetch ===
+- [[Git#Git#Pull Rebase]]
+
+=== git ===
+- [[Git#Git#Pull Rebase]]
+- [[Git#Git#Remove Secrets from Git History]]
+- [[Git#Git#Remove Submodule]]
+
 === install ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
 
@@ -115,6 +126,9 @@
 
 === oh-my-posh ===
 - [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
+
+=== pandoc ===
+- [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -138,6 +152,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
+=== pull ===
+- [[Git#Git#Pull Rebase]]
+
 === pwsh ===
 - [[PowerShell#PowerShell and pwsh]]
 
@@ -152,6 +169,9 @@
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
+
+=== rebase ===
+- [[Git#Git#Pull Rebase]]
 
 === recipe ===
 - [[Beans#Dried Beans Recipes]]
@@ -180,6 +200,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
+=== submodule ===
+- [[Git#Git#Remove Submodule]]
+
 === symlinkevaluation ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 - [[Windows 10 Configuration#symlinkevaluation]]
@@ -192,6 +215,9 @@
 
 === todo ===
 - [[PowerShell#PowerShell and pwsh#Todo]]
+
+=== tokens ===
+- [[Git#Git#Developer Settings]]
 
 === tortillas ===
 - [[index#John D. Fisher's home wiki#Cooking#Tortillas de Harina]]
@@ -206,6 +232,9 @@
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
+
+=== vimwik ===
+- [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 
 === vimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
