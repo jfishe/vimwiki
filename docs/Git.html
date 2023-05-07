@@ -3,11 +3,23 @@
   <head>
     <!-- Include required JS files -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
     <!-- <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
     <link rel="Stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="rss.xml"
+    />
     <title>Git</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +37,7 @@
 <a href="https://megakemp.com/2019/03/20/the-case-for-pull-rebase/">The Case for Pull Rebase</a>
 </p>
 
-<pre  bash>
+<pre bash>
 git pull --rebase|-r # Normal to avoid merge commits.
 git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
 git config --global pull.rebase preserve
@@ -72,7 +84,7 @@ Delete the now un-tracked submodule files <code>rm -rf path_to_submodule</code>
 To search for strings in an entire git repository:
 </p>
 
-<pre  PowerShell>
+<pre powershell>
 git grep -i '&lt;regex&gt;' $(git rev-list --all)
 </pre>
 
@@ -82,7 +94,7 @@ the Jar file. Setup an alias for <code>bfg</code>, replacing the Java and Jar pa
 needed.
 </p>
 
-<pre  PowerShell>
+<pre powershell>
 Function _bfg {
     $JavaExe = Get-Command "C:\Program Files\OpenJDK\jdk-15\bin\java.exe"
     $JarPath = Resolve-Path ~\Downloads\bfg-1.13.0.jar
@@ -96,7 +108,7 @@ Create <code>passwords.txt</code> with the Regex or strings to be replaced with
 <code>***REMOVED***</code>.
 </p>
 
-<pre  PowerShell>
+<pre powershell>
 # Add regex(s) to file.
 @('&lt;regex&gt;', '&lt;regex&gt;') -join "`n" |
   Out-File -Encoding utf8 -NoNewline -FilePath passwords.txt
@@ -141,10 +153,15 @@ Expired tokens can be refreshed.
 </ul>
 </ul>
 </div>
-    <p><small>Page created on 2023-04-07</small></p>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <p><small>Page created on 2023-05-06</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
     <script type="text/javascript">
-      document.querySelectorAll('pre').forEach(block => hljs.highlightElement(block));
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
     </script>
   </body>
 </html>

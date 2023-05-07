@@ -5,7 +5,7 @@
 
 [[https://megakemp.com/2019/03/20/the-case-for-pull-rebase/|The Case for Pull Rebase]]
 
-{{{ bash
+{{{bash
 git pull --rebase|-r # Normal to avoid merge commits.
 git pull --rebase=preserve # When local merge commit preserved, like Pull Request.
 git config --global pull.rebase preserve
@@ -31,7 +31,7 @@ git config --global pull.rebase merges
 
 To search for strings in an entire git repository:
 
-{{{ PowerShell
+{{{powershell
 git grep -i '<regex>' $(git rev-list --all)
 }}}
 
@@ -39,7 +39,7 @@ Refer to [[https://rtyley.github.io/bfg-repo-cleaner/]] for instructions and
 the Jar file. Setup an alias for `bfg`, replacing the Java and Jar paths, as
 needed.
 
-{{{ PowerShell
+{{{powershell
 Function _bfg {
     $JavaExe = Get-Command "C:\Program Files\OpenJDK\jdk-15\bin\java.exe"
     $JarPath = Resolve-Path ~\Downloads\bfg-1.13.0.jar
@@ -51,7 +51,7 @@ Set-Alias -Name bfg -Value _bfg
 Create `passwords.txt` with the Regex or strings to be replaced with
 `***REMOVED***`.
 
-{{{ PowerShell
+{{{powershell
 # Add regex(s) to file.
 @('<regex>', '<regex>') -join "`n" |
   Out-File -Encoding utf8 -NoNewline -FilePath passwords.txt

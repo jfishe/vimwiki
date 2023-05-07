@@ -1,0 +1,33 @@
+= Journal 2023-04-15 =
+
+== Vimwiki2HTML with Pandoc ==
+:vimwik:pandoc:
+
+{{{powershell
+$Path = Get-Item $HOME\vimwiki_home\Git.wiki
+$Output = Get-Item $HOME\vimwiki_home\docs\Git.html
+
+$Template = $env:APPDATA\pandoc\templates\default.html5
+pandoc --print-default-template=html5 | Out-File -Encoding utf8 -Path $Template
+
+pandoc --from=vimwiki --to=html5 --standalone $Path --output $Output
+}}}
+
+{{{html
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/agate.min.css"
+  />
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+}}}
