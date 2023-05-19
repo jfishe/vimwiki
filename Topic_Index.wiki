@@ -12,6 +12,7 @@
 
 === Debian ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
+- [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 
 === Fedora ===
 - [[Linux#Linux Notes#Fedora and Red Hat]]
@@ -25,6 +26,8 @@
 
 === Linux ===
 - [[Linux#Linux Notes]]
+- [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
+- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
 === Pandas ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -32,6 +35,8 @@
 === Pengwin ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
+- [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
+- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
@@ -46,6 +51,7 @@
 === Ubuntu ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
+- [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 
 === WSL ===
 - [[Linux#Linux Notes]]
@@ -56,6 +62,11 @@
 
 === Win10 ===
 - [[Windows 10 Configuration#Windows 10 Configuration]]
+
+=== Win11 ===
+- [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
@@ -78,6 +89,9 @@
 === breakfast ===
 - [[index#John D. Fisher's home wiki#Cooking#Dutch Baby]]
 
+=== cat ===
+- [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
+
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
 
@@ -92,24 +106,55 @@
 
 === conda ===
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
 - [[main#John D. Fisher's home wiki#DIY]]
 
+=== environment ===
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+
 === fetch ===
 - [[Git#Git#Pull Rebase]]
+
+=== fitness ===
+- [[Health_Fitness#Health and Fitness]]
+
+=== gh-pages ===
+- [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
+
+=== ghp-import ===
+- [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 
 === git ===
 - [[Git#Git#Pull Rebase]]
 - [[Git#Git#Remove Secrets from Git History]]
 - [[Git#Git#Remove Submodule]]
+- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
+
+=== health ===
+- [[Health_Fitness#Health and Fitness]]
 
 === install ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
 
+=== jabref ===
+- [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
+
+=== json ===
+- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
+
+=== jsonc ===
+- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
+
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
+
+=== matplotlib ===
+- [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -120,6 +165,9 @@
 === motorola ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
+
+=== msysgit ===
+- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
 === notebook ===
 - [[Python#Python Notes#Jupyter]]
@@ -161,6 +209,11 @@
 === pyscaffold ===
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+
+=== pytest ===
+- [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 
 === python ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -169,6 +222,9 @@
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
+- [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+- [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -176,6 +232,9 @@
 === recipe ===
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
+
+=== remodel ===
+- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
@@ -192,6 +251,9 @@
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+
+=== shades ===
+- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === ssh ===
 - [[PowerShell#PowerShell and pwsh#OpenSSH]]
@@ -222,6 +284,9 @@
 === tortillas ===
 - [[index#John D. Fisher's home wiki#Cooking#Tortillas de Harina]]
 
+=== toy ===
+- [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
+
 === tritip ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
@@ -232,15 +297,33 @@
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
+- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
+- [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+- [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+
+=== vim-polyglot ===
+- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
 
 === vimwik ===
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
+- [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 
 === vimwiki ===
+- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
 
 === vimwiki_docx ===
+- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
+
+=== vscode ===
+- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
+
+=== window ===
+- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === zsh ===
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
