@@ -5,4 +5,24 @@
 
 - [[https://github.com/c-w/ghp-import#github-pages-import|Github Pages Import]]
 - [[https://pages.github.com/|Github Pages]]
+- Add to `.git/hooks/pre-commit`:
+
+  {{{bash
+  # Update gh-pages
+  if test "$(git config --bool ghppages.push || echo false)" = true
+  then
+    pathhtml=$(git config ghppages.pathhtml || echo "$GIT_WORK_TREE/docs")
+    say 'Pushing html to gh-pages...'
+    ghp-import -n -o -p -f "$pathhtml"
+    say_done
+  fi
+  }}}
+
+- Update git config to enable:
+
+  {{{bash
+  git config ghppages.push true
+  # g:vimwiki_list[1]['path_html']
+  git config ghppages.pathhtml "$HOME/vimwiki_home/docs"
+  }}}
 
