@@ -26,3 +26,16 @@
   git config ghppages.pathhtml "$HOME/vimwiki_home/docs"
   }}}
 
+- To test start a webserver on the local network and open
+  [[http://laptop-pif179dt:8000/|http://laptop-pif179dt:8000/]]. Update the
+  `hostname` and allow `python` to access the network, in Windows
+  Security: Firewall & network protection.
+  [[https://pythonbasics.org/webserver/|Create a Python Web Server]] provides
+  details.
+
+{{{powershell
+python -m http.server --bind 0.0.0.0 8000 --dir $HOME/vimwiki_home/docs
+}}}
+
+- Template updates recommended by Ruslan Osipov in
+  [[https://www.rosipov.com/blog/custom-templates-in-vimwiki/|Custom templates in vimwiki]].

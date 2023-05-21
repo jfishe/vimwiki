@@ -25,6 +25,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <a href="%root_path%index.html">Index</a> |
+    <a href="%root_path%diary/diary.html">Diary</a>
+    <hr>
     <div class="content">%content%</div>
     <p><small>Page created on %date%</small></p>
     <script
