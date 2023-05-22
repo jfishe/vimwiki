@@ -1,7 +1,7 @@
 = Journal 2023-04-15 =
 
 == Vimwiki2HTML with Pandoc ==
-:vimwik:pandoc:
+:vimwiki:pandoc:
 
 {{{powershell
 $Path = Get-Item $HOME\vimwiki_home\Git.wiki

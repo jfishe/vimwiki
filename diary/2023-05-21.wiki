@@ -1,0 +1,5 @@
+= Journal 2023-05-21 =
+:Win10:Win10:
+
+- Avram Piltch provided instructions [[https://www.tomshardware.com/how-to/disable-windows-web-search|How to Disable Windows Web Search and Speed Up Your PC]].
+

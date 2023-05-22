@@ -15,14 +15,10 @@
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 
 === Fedora ===
-- [[Linux#Linux Notes#Fedora and Red Hat]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
 === HP ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
-
-=== LaTeX ===
-- [[Python#Python Notes#LaTeX]]
 
 === Linux ===
 - [[Linux#Linux Notes]]
@@ -40,9 +36,6 @@
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
-
-=== RHEL ===
-- [[Linux#Linux Notes#Fedora and Red Hat]]
 
 === SeCreateSymbolicLinkPrivilege ===
 - [[Windows 10 Configuration#SeCreateSymbolicLinkPrivilege]]
@@ -62,6 +55,8 @@
 
 === Win10 ===
 - [[Windows 10 Configuration#Windows 10 Configuration]]
+- [[diary/2023-05-21#Journal 2023-05-21]]
+- [[diary/2023-05-21#Journal 2023-05-21]]
 
 === Win11 ===
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
@@ -72,7 +67,7 @@
 - [[PowerShell#WindowsPowerShell]]
 
 === bash ===
-- [[Linux#Linux Notes#Bash Shell Script]]
+- [[Linux#bash]]
 
 === beans ===
 - [[Beans#Dried Beans Recipes]]
@@ -92,15 +87,11 @@
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
-=== chicory ===
-- [[Coffee#Coffee#Chicory Coffee]]
-
 === choco ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
 
 === coffee ===
-- [[Coffee#Coffee#French Press Coffee]]
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
 - [[Coffee#Coffee]]
 
@@ -132,7 +123,6 @@
 === git ===
 - [[Git#Git#Pull Rebase]]
 - [[Git#Git#Remove Secrets from Git History]]
-- [[Git#Git#Remove Submodule]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
 === health ===
@@ -143,12 +133,6 @@
 
 === jabref ===
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
-
-=== json ===
-- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
-
-=== jsonc ===
-- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
 
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
@@ -169,11 +153,8 @@
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
-=== notebook ===
-- [[Python#Python Notes#Jupyter]]
-
 === oh-my-posh ===
-- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
+- [[PowerShell#oh-my-posh]]
 
 === pandoc ===
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
@@ -192,10 +173,9 @@
 - [[Python#Python Notes#Vim Python Plugin]]
 
 === posh-git ===
-- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
+- [[PowerShell#posh-git]]
 
 === powershell ===
-- [[PowerShell#PowerShell and pwsh#Powershell Commands]]
 - [[PowerShell#PowerShell and pwsh]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
@@ -241,7 +221,7 @@
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === script ===
-- [[Linux#Linux Notes#Bash Shell Script]]
+- [[Linux#script]]
 
 === seaborn ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -256,14 +236,10 @@
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === ssh ===
-- [[PowerShell#PowerShell and pwsh#OpenSSH]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
-
-=== submodule ===
-- [[Git#Git#Remove Submodule]]
 
 === symlinkevaluation ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -304,23 +280,15 @@
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 
-=== vim-polyglot ===
-- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
-
-=== vimwik ===
-- [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
-- [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
-
 === vimwiki ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
+- [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
+- [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 
 === vimwiki_docx ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
-
-=== vscode ===
-- [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
 
 === window ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]

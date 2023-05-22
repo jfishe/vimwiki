@@ -1,7 +1,7 @@
 = Journal 2023-05-19 =
 
 == Vimwiki2HTML with ghp-import ==
-:vimwik:ghp-import:gh-pages:
+:vimwiki:ghp-import:gh-pages:
 
 - [[https://github.com/c-w/ghp-import#github-pages-import|Github Pages Import]]
 - [[https://pages.github.com/|Github Pages]]
