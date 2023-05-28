@@ -14,6 +14,10 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 
+=== Excel ===
+- [[diary/2023-05-26#Journal 2023-05-26]]
+- [[diary/2023-05-27#Journal 2023-05-27]]
+
 === Fedora ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
@@ -56,12 +60,12 @@
 === Win10 ===
 - [[Windows 10 Configuration#Windows 10 Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
-- [[diary/2023-05-21#Journal 2023-05-21]]
 
 === Win11 ===
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+- [[diary/2023-05-21#Journal 2023-05-21]]
 
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
@@ -99,6 +103,10 @@
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+
+=== csv ===
+- [[diary/2023-05-26#Journal 2023-05-26]]
+- [[diary/2023-05-27#Journal 2023-05-27]]
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
@@ -155,6 +163,10 @@
 
 === oh-my-posh ===
 - [[PowerShell#oh-my-posh]]
+
+=== pandas ===
+- [[diary/2023-05-26#Journal 2023-05-26]]
+- [[diary/2023-05-27#Journal 2023-05-27]]
 
 === pandoc ===
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
@@ -215,6 +227,10 @@
 
 === remodel ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
+
+=== rows ===
+- [[diary/2023-05-26#Journal 2023-05-26]]
+- [[diary/2023-05-27#Journal 2023-05-27]]
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]

@@ -1,0 +1,48 @@
+= Journal 2023-05-26 =
+:csv:Excel:pandas:rows:
+
+- [[https://www.ablebits.com/office-addins-blog/add-run-vba-macro-excel/|How to insert and run VBA code in Excel - tutorial for beginners]]
+- [[https://www.ablebits.com/office-addins-blog/convert-excel-csv/#multiple|Convert multiple Excel sheets to CSV]]
+
+  {{{vba
+  Sub ConvertMultipleCSV()
+    Dim ws As Worksheet
+    Dim path As String
+
+    Application.ScreenUpdating = False
+    path = ActiveWorkbook.path & "\" & Left(ActiveWorkbook.Name, InStr(ActiveWorkbook.Name, ".") - 1)
+
+    For Each ws In Worksheets
+      ws.Copy
+      ActiveWorkbook.SaveAs Filename:=path & "_" & ws.Name & ".csv", FileFormat:=xlCSV, CreateBackup:=False
+      ActiveWorkbook.Close False
+    Next
+
+    Application.ScreenUpdating = True
+  End Sub
+  }}}
+
+- [[https://stackoverflow.com/questions/47703751/how-can-i-quickly-convert-in-python-an-xlsx-file-into-a-csv-file|how can I quickly convert in python an xlsx file into a csv file?]]
+
+  {{{python
+  import csv
+  from openpyxl import load_workbook
+  from pathlib import Path
+
+  infile = Path(r"infile.xlsx")
+  archive = infile.with_suffix(".zip")
+
+  wb = load_workbook(infile, read_only=True, data_only=True, use_iterator)
+
+  def write_csv(ws):
+      with ZipFile(archive, "w") as zf:
+          outfile = "".join([ws.title, ".csv",])
+          with zf.open(outfile, "w") as out:
+              writer = csv.writer(TextIOWrapper(out, encoding="utf8", newline=""))
+              writer.writerows(row for row in ws.iter_rows(values_only=True))
+      return outfile
+
+  print(archive)
+  for ws in wb.worksheets:
+      print(write_csv(ws))
+  }}}

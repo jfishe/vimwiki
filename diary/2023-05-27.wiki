@@ -1,0 +1,30 @@
+= Journal 2023-05-27 =
+:csv:Excel:pandas:rows:
+
+- [[https://stackoverflow.com/questions/25971205/how-to-compress-csv-file-into-zip-archive-directly#comment111851348_25971205|How to compress csv file into zip archive directly?]]
+
+  {{{python
+  import csv
+  from openpyxl import load_workbook
+
+  from pathlib import Path
+
+  from zipfile import ZipFile
+  from io import TextIOWrapper
+
+  infile = Path(r"infile.xlsx")
+  archive = infile.with_suffix(".zip")
+
+  wb = load_workbook(infile, read_only=True, data_only=True)
+
+  def write_csv(ws):
+      with ZipFile(archive, "w") as zf:
+          outfile = "".join([ws.title, ".csv",])
+          with zf.open(outfile, "w") as out:
+              writer = csv.writer(TextIOWrapper(out, encoding="utf8", newline=""))
+              writer.writerows(row for row in ws.iter_rows(values_only=True))
+
+  for ws in wb.worksheets:
+      write_csv(ws)
+      print(outfile)
+  }}}
