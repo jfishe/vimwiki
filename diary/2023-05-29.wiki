@@ -1,0 +1,29 @@
+= Journal 2023-05-29 =
+:python:parquet:pandas:pyspark:pyarrow:
+
+- [[https://mungingdata.com/python/writing-parquet-pandas-pyspark-koalas/|mungingdata python writing parquet pandas pyspark koalas]]
+- `conda install pandas pyarrow`
+
+{{{python
+import pandas as pd
+from pathlib import Path
+import pyedna
+
+ednadata = "data"
+signalid = "signal"
+rawbook = Path(r"file_path.xlsx")
+
+data = pyedna.eDNA(ednadata=ednadata, signalid=signalid, inbook=rawbook)
+
+df = (
+    data.table.transpose()
+    .reindex(index=data.table_columns.index)
+    .set_index(pd.MultiIndex.from_frame(data.table_columns))
+    .transpose()
+)
+
+pqpath = rawbook.with_stem("_".join([rawbook.stem, ednadata])).with_suffix(".parquet")
+df.to_parquet(pqpath)
+df2 = pd.read_parquet(pqpath)
+}}}
+

@@ -167,12 +167,16 @@
 === pandas ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
+- [[diary/2023-05-29#Journal 2023-05-29]]
 
 === pandoc ===
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
+
+=== parquet ===
+- [[diary/2023-05-29#Journal 2023-05-29]]
 
 === pepper ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
@@ -198,10 +202,16 @@
 === pwsh ===
 - [[PowerShell#PowerShell and pwsh]]
 
+=== pyarrow ===
+- [[diary/2023-05-29#Journal 2023-05-29]]
+
 === pyscaffold ===
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+
+=== pyspark ===
+- [[diary/2023-05-29#Journal 2023-05-29]]
 
 === pytest ===
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
@@ -217,6 +227,7 @@
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
+- [[diary/2023-05-29#Journal 2023-05-29]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
