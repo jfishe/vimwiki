@@ -67,6 +67,11 @@
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 
+=== Win11 ===
+- [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
 
@@ -75,21 +80,21 @@
 
 === beans ===
 - [[Beans#Dried Beans Recipes]]
-- [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === bluetooth ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
 - [[index#John D. Fisher's home wiki#Cooking#Dutch Baby]]
 
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
+
+=== chicory ===
+- [[Coffee#Coffee#Chicory Coffee]]
 
 === choco ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
@@ -110,7 +115,25 @@
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
-- [[main#John D. Fisher's home wiki#DIY]]
+
+=== environment ===
+- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
+- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+
+=== fetch ===
+- [[Git#Git#Pull Rebase]]
+
+=== fitness ===
+- [[Health_Fitness#Health and Fitness]]
+
+=== git ===
+- [[Git#Git#Pull Rebase]]
+- [[Git#Git#Remove Secrets from Git History]]
+- [[Git#Git#Remove Submodule]]
+- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
+
+=== health ===
+- [[Health_Fitness#Health and Fitness]]
 
 === environment ===
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
@@ -151,12 +174,8 @@
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 
-=== mocha ===
-- [[Coffee#Coffee#Iced Meso Mocha Breve]]
-
 === motorola ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
@@ -180,7 +199,6 @@
 
 === pepper ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
@@ -212,6 +230,7 @@
 
 === pyspark ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 
 === pytest ===
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
@@ -228,6 +247,9 @@
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 - [[diary/2023-05-29#Journal 2023-05-29]]
+- [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
+- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+- [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -245,7 +267,6 @@
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === script ===
 - [[Linux#script]]
@@ -256,8 +277,9 @@
 === seasoning ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+
+=== shades ===
+- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === shades ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
@@ -267,6 +289,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
+
+=== submodule ===
+- [[Git#Git#Remove Submodule]]
 
 === symlinkevaluation ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -292,7 +317,6 @@
 
 === tritip ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === troubleshooting ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
