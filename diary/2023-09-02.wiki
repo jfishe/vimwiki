@@ -1,0 +1,48 @@
+= Journal 2023-09-02 =
+
+== Windows Subsystem for Linux v2 ==
+:WSL2:Pengwin:timesyncd:
+
+- [[https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154|WSL2 date incorrect after waking from sleep #8204]]
+- [[https://unix.stackexchange.com/a/737366/272577|Can't override a systemd unit's ConditionVirtualization on Archlinux on Distrod on WSL]]
+
+{{{bash
+# If not installed
+sudo apt install systemd-timesyncd
+
+# Edit/create
+# /etc/systemd/system/systemd-timesyncd.service.d/override.conf
+sudo systemctl edit systemd-timesyncd
+}}}
+
+- Add the following lines.
+
+{{{text
+[Unit]
+ConditionVirtualization=
+ConditionVirtualization=wsl
+}}}
+
+- Save, close WSL2 instance(s) and execute `wsl --shutdown`.
+- `sudo systemctl status systemd-timesyncd` should produce:
+
+{{{text
+● systemd-timesyncd.service - Network Time Synchronization
+     Loaded: loaded (/lib/systemd/system/systemd-timesyncd.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/systemd-timesyncd.service.d
+             └─override.conf
+     Active: active (running) since Sat 2023-09-02 06:19:50 PDT; 11min ago
+       Docs: man:systemd-timesyncd.service(8)
+   Main PID: 83 (systemd-timesyn)
+     Status: "Contacted time server 108.61.73.243:123 (0.debian.pool.ntp.org)."
+      Tasks: 2 (limit: 9385)
+     Memory: 1.5M
+     CGroup: /system.slice/systemd-timesyncd.service
+             └─83 /lib/systemd/systemd-timesyncd
+}}}
+== Taskwiki ImportError ==
+:taskwiki:conda:
+
+`conda install vim` will install a non-gui Vim compiled to use the conda
+python. This eliminates the mixed environment from system python and conda.
+

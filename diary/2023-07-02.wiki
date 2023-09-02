@@ -1,0 +1,38 @@
+= Journal 2023-07-02 =
+:Linux:WSL:gpg:
+
+{{{bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg \
+    -o /usr/share/keyrings/yarn-keyring.asc &&
+    sed -i '1s;^deb;deb [signed-by=/usr/share/keyrings/yarn-keyring.asc];' /etc/apt/sources.list.d/yarn.list
+}}}
+
+[[https://askubuntu.com/questions/1286545/what-commands-exactly-should-replace-the-deprecated-apt-key|What commands (exactly) should replace the deprecated apt-key?]]
+
+{{{bash
+gpg --no-default-keyring --keyring /etc/apt/trusted.gpg --list-keys
+
+apt-key export A83090303C88AB38BC22F277A30C9470132D65CB |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-pengwin-base-keyring.gpg
+apt-key export D7C59C0CC52809AEACB2ACDF6B1EFAF9737C6429 |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-pengwin-setup-keyring.gpg
+
+apt-key export 90F685494B52C0E96DA4B92500874F1710735619 |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-wslu-keyring.gpg
+}}}
+
+[[file:/etc/apt/sources.list.d/whitewaterfoundry.list]]
+
+{{{
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-pengwin-base-keyring.gpg] https://packagecloud.io/whitewaterfoundry/pengwin-base/debian/ bookworm main
+#deb-src https://packagecloud.io/whitewaterfoundry/pengwin-base/debian/ bookworm main
+
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-pengwin-setup-keyring.gpg] https://packagecloud.io/whitewaterfoundry/pengwin-setup/debian/ bookworm main
+#deb-src https://packagecloud.io/whitewaterfoundry/pengwin-setup/debian/ bookworm main
+
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-wslu-keyring.gpg] https://packagecloud.io/whitewaterfoundry/wslu/debian/ bullseye main
+#deb-src https://packagecloud.io/whitewaterfoundry/wslu/debian/ bullseye main
+}}}

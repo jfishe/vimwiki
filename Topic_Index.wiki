@@ -28,6 +28,7 @@
 - [[Linux#Linux Notes]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
+- [[diary/2023-07-02#Journal 2023-07-02]]
 
 === Pandas ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -37,6 +38,7 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
+- [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
@@ -53,24 +55,25 @@
 === WSL ===
 - [[Linux#Linux Notes]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
+- [[diary/2023-07-02#Journal 2023-07-02]]
 
 === WSL2 ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
+- [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 
 === Win10 ===
 - [[Windows 10 Configuration#Windows 10 Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
+- [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 
 === Win11 ===
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
-
-=== Win11 ===
-- [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
-- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
-- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+- [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
@@ -80,21 +83,21 @@
 
 === beans ===
 - [[Beans#Dried Beans Recipes]]
+- [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === bluetooth ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
+- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
 - [[index#John D. Fisher's home wiki#Cooking#Dutch Baby]]
 
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
-
-=== chicory ===
-- [[Coffee#Coffee#Chicory Coffee]]
 
 === choco ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
@@ -108,6 +111,10 @@
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+- [[diary/2023-06-10#Journal 2023-06-10]]
+- [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
+- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 
 === csv ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -115,25 +122,7 @@
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
-
-=== environment ===
-- [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
-- [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
-
-=== fetch ===
-- [[Git#Git#Pull Rebase]]
-
-=== fitness ===
-- [[Health_Fitness#Health and Fitness]]
-
-=== git ===
-- [[Git#Git#Pull Rebase]]
-- [[Git#Git#Remove Secrets from Git History]]
-- [[Git#Git#Remove Submodule]]
-- [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
-
-=== health ===
-- [[Health_Fitness#Health and Fitness]]
+- [[main#John D. Fisher's home wiki#DIY]]
 
 === environment ===
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
@@ -154,7 +143,11 @@
 === git ===
 - [[Git#Git#Pull Rebase]]
 - [[Git#Git#Remove Secrets from Git History]]
+- [[Git#Git#Remove Submodule]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
+
+=== gpg ===
+- [[diary/2023-07-02#Journal 2023-07-02]]
 
 === health ===
 - [[Health_Fitness#Health and Fitness]]
@@ -174,8 +167,12 @@
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 
+=== mocha ===
+- [[Coffee#Coffee#Iced Meso Mocha Breve]]
+
 === motorola ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
+- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
@@ -199,6 +196,7 @@
 
 === pepper ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
+- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
@@ -213,6 +211,8 @@
 - [[PowerShell#PowerShell and pwsh]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
+- [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 
 === pull ===
 - [[Git#Git#Pull Rebase]]
@@ -230,7 +230,6 @@
 
 === pyspark ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
-- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 
 === pytest ===
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
@@ -247,9 +246,8 @@
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 - [[diary/2023-05-29#Journal 2023-05-29]]
-- [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
-- [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
-- [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
+- [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -267,6 +265,7 @@
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === script ===
 - [[Linux#script]]
@@ -277,9 +276,8 @@
 === seasoning ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-
-=== shades ===
-- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
+- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
+- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === shades ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
@@ -300,8 +298,14 @@
 === taco ===
 - [[index#John D. Fisher's home wiki#Cooking#Tacos al Pastor]]
 
+=== taskwiki ===
+- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
+
 === template ===
 - [[PowerShell#PowerShell and pwsh#Template]]
+
+=== timesyncd ===
+- [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 
 === todo ===
 - [[PowerShell#PowerShell and pwsh#Todo]]
@@ -317,6 +321,7 @@
 
 === tritip ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === troubleshooting ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]

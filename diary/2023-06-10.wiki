@@ -1,0 +1,5 @@
+= Journal 2023-06-10 =
+:conda:
+
+- [[https://github.com/conda/conda/issues/12531|ImportError: DLL load failed while importing _ctypes: Can't find specified module. #12531]]
+
