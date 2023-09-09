@@ -10,7 +10,7 @@
     - [[#Fonts]]
     - [[#WiFi]]
   - [[#Electronics]]
-    - [[#Motorola H17 Bluetooth Headset]]
+    - [[#Motorola Bluetooth Headset]]
   - [[#DIY]]
   - [[#Cooking]]
     - [[#Mignonette Pepper]]
@@ -54,11 +54,14 @@
 
 == Electronics ==
 
-=== Motorola H17 Bluetooth Headset ===
+=== Motorola Bluetooth Headset ===
 :motorola:bluetooth:
 
-[[https://support.motorola.com/uk/en/solution/ms36639|Restore to Factory Settings]]::
+Motorola H17:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/36639|Restore to Factory Settings]]
 :: With your headset on, press and hold both Volume buttons and Call button for 10 seconds until the indicator light is steady blue.
+
+Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71059/~/hx550-reset-to-factory-default|Reset to factory default]]
+:: Press and hold the Call button while turning on the headset.
 
 == DIY ==
 :diy:

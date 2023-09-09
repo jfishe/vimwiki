@@ -1,0 +1,49 @@
+= Journal 2023-09-09 =
+
+== Jupyter-Book ==
+:python:jupyter:sphinx:pdf:jupyterbook:jupytext:
+
+{{{pyproject.toml
+[tool.jupytext.formats]
+"notebooks/" = "ipynb"
+"scripts/" = "py:percent"
+}}}
+
+- `%autosave 0` causes `Javascript Error: IPython is not defined Autosave
+  disabled`. `Jupytext` works without.
+- `<C-S-C>` opens the Command Palette. `Reload Notebook from Disk` refreshes
+  Jupyter Lab.
+- [[https://jupyterbook.org/en/stable/explain/sphinx.html#how-to-replicate-jupyter-books-functionality-in-sphinx|How to replicate Jupyter Book’s functionality in Sphinx]]
+
+  {{{powershell
+  # Generate conf.py
+  jupyter-book config sphinx path/to/mybook/
+  # Update settings, e.g., myst_heading_anchors = 2
+  sphinx-build . _build/html
+  }}}
+
+- Jupyter heading anchors are not consistent with Myst:
+  - Myst heading_anchors are lower case. Punctuation is dropped and spaces
+    replaced with hyphens.
+  - Jupyter matches the heading literally, replacing spaces with hyphens.
+  - Simplest solution is using fixed anchors or breaking the linking in
+    Jupyter.
+
+  {{{yaml
+  # Table of contents
+  # Learn more at https://jupyterbook.org/customize/toc.html
+
+  format: jb-book
+  root: notebooks/intro
+  parts:
+    - caption: A part
+      chapters:
+      - file: notebooks/markdown
+      - file: notebooks/notebooks
+        sections:
+        - file: notebooks/markdown-notebooks
+    - caption: Another part
+      chapters:
+      - file: notebooks/jupytext.ipynb
+  }}}
+

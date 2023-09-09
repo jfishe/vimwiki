@@ -90,7 +90,7 @@
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === bluetooth ===
-- [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
+- [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
@@ -158,6 +158,18 @@
 === jabref ===
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 
+=== jupyter ===
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
+
+=== jupyterbook ===
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
+
+=== jupytext ===
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
+
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
 
@@ -171,7 +183,7 @@
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
 
 === motorola ===
-- [[index#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
+- [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
@@ -193,6 +205,10 @@
 
 === parquet ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
+
+=== pdf ===
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 
 === pepper ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
@@ -248,6 +264,8 @@
 - [[diary/2023-05-29#Journal 2023-05-29]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -281,6 +299,10 @@
 
 === shades ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
+
+=== sphinx ===
+- [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
+- [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 
 === ssh ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro]]

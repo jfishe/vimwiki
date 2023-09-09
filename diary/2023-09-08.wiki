@@ -1,0 +1,48 @@
+= Journal 2023-09-08 =
+
+== Jupyter-Book ==
+:python:jupyter:sphinx:pdf:jupyterbook:jupytext:
+
+- [[https://jupyterbook.org/|Built with Jupyter Book]]
+- [[https://jupyterbook.org/en/stable/advanced/pdf.html#build-a-pdf|Build a PDF]]
+- Windows:
+  - ImageMagick missing.
+- Linux:
+
+  {{{bash
+  sudo apt-get install texlive-latex-extra texlive-fonts-extra texlive-xetex \
+    latexmk
+  jupyter-book build mybookname/ --builder pdflatex
+  }}}
+
+- [[https://jupytext.readthedocs.io/|Jupytext]]
+
+  {{{powershell
+  python -m venv --upgrade-deps ./venv
+  .\venv\Scripts\Activate.ps1
+  python -m pip install -r requirements.txt
+  }}}
+  {{{requirements.txt
+  jupyter-book
+  matplotlib
+  numpy
+  jupytext
+  }}}
+
+  {{{powershell
+  putup --dsproject --markdown --pre-commit --venv=venv dsproj
+  }}}
+
+  {{{pyproject.toml
+  [tool.jupytext.formats]
+  "notebooks/" = "ipynb"
+  "scripts/" = "py:percent"
+  }}}
+  {{{environment.yml
+  - jupyter-book
+  - jupytext
+  - nodejs
+  - sphinx
+  }}}
+
+- [[https://github.com/jupyter-vim/jupyter-vim|jupyter-vim]]
