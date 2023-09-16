@@ -1,0 +1,50 @@
+= Journal 2023-09-10 =
+
+== Python Module Search Path ==
+:python:miniconda3:conda:
+
+- `/usr/share/doc/python3.11/README.venv`
+- [[https://peps.python.org/pep-0668/|PEP 668]]
+- Debian 12 implementation of PEP 668 doesn't load `site-packages` in a
+  `Miniconda3` environment but does from `venv` virtual environment.
+
+{{{pyenv.cfg
+home = /usr/bin
+include-system-site-packages = true
+version = 3.11.2
+executable = /usr/bin/python3.11
+command = /usr/bin/python3 -m venv --system-site-packages --upgrade-deps ~/jdfen/.venvs/vim_python
+}}}
+
+{{{bash
+sudo apt install \
+  python3-full \
+  pipx \
+  python3-tasklib \
+  ripgrep \
+  task \
+  texlive-fonts-extra \
+  texlive-latex-extra \
+  texlive-xetex latexmk \
+  universal-ctags \
+  vim-gtk3
+  wslu
+
+pipx install vimwiki-cli
+
+venvs="$HOME/.venvs"
+venv_name="$venvs/vim_python"
+venv_options='--system-site-packages --upgrade-deps'
+
+mkdir -p $venvs
+python3 -m venv $venv_options $venv_name
+
+$venv_name/bin/python -m pip install panvimwiki
+
+unset venv_name
+
+condax install nodejs
+condax install pandoc
+condax install starship
+}}}
+
