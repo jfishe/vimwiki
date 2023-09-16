@@ -49,6 +49,20 @@ env _VIMWIKI_COMPLETE=zsh_source vimwiki >$COMPLETION_PATH
 
 ## Github Pages
 
+- Add gh-pages to `$VIMWIKI_PATH/.git/hooks/pre-commit`:
+
+  ```bash
+  # Update gh-pages
+  if test "$(git config --bool ghppages.push || echo false)" = true
+  then
+    pathhtml=$(git config ghppages.pathhtml || echo "$GIT_WORK_TREE/docs")
+    say 'Pushing html to gh-pages...'
+    ghp-import -n -o -p -f "$pathhtml"
+    say_done
+  fi
+  ```
+
+- `python -m pip install ghp-import`
 - Github page: [John D. Fisher's home wiki](https://jfishe.github.io/vimwiki/)
 - Run `:VimwikiAll2HTML` from a Vimwiki buffer.
 - Commit and push to deploy.
