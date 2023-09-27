@@ -1,0 +1,38 @@
+= Journal 2023-09-16 =
+
+== Zettelkasten Setup ==
+:Zettelkasten:vimwiki:
+
+- [[https://facedragons.com/productivity/zettelkasten-method/|A Quick Zettelkasten Method Guide: Creativity from Chaos in Minutes - Face Dragons]]
+- Setup VimWiki 3 aka `zk`.
+
+  {{{vim
+  " Zettelkasten vimwiki {{{
+  let s:wiki_3 = copy(s:wiki_1)
+  let s:wiki_3.syntax = 'markdown'
+  let s:wiki_3.ext = '.md'
+  let s:wiki_3.index = 'index'
+  let s:wiki_3.path = s:my_docs .. '/zk/'
+  let s:wiki_3.path_html = s:wiki_3.path .. 'docs'
+  let s:wiki_3.css_name = 'css/style.css'
+  let s:wiki_3.template_path = s:wiki_3.path .. 'templates'
+
+  let g:zettel_options = [{}, {},
+        \{"front_matter" : [["tags", ""], ["type","note"]], "disable_front_matter": 1,
+        \ "template" :  s:wiki_3.template_path .. "/note.tpl"}]
+
+  let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always"
+  " }}}
+  " Work & Home vimwiki {{{
+  let s:wiki_1.name = 'work'
+  let s:wiki_2.name = 'home'
+  let s:wiki_2.name = 'zk'
+  let g:vimwiki_list = [ s:wiki_1, s:wiki_2, s:wiki_3 ]
+  "}}}
+  }}}
+
+- Install GitHub - [[https://github.com/michal-h21/vim-zettel|michal h21 vim zettel]]: VimWiki addon for managing notes according to Zettelkasten method
+  - [[https://github.com/junegunn/fzf|junegunn/fzf]] to `~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf`
+  - [[https://github.com/junegunn/fzf.vim.git|junegunn/fzf.vim]] to `~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf.vim`
+  - [[https://github.com/michal-h21/vim-zettel.git|michal-h21/vim-zettel]] to  `~/.dotfiles/config/nvim/pack/zettelkasten/start/vim-zettel`
+

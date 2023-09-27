@@ -1,0 +1,70 @@
+= Journal 2023-09-22 =
+
+== Bibliography Setup ==
+:biblatex:bibtool:BibTeX:
+
+- [[https://github.com/vim-pandoc/vim-pandoc-syntax|vim-pandoc-syntax]] recommends:
+
+  {{{vim
+  augroup pandoc_syntax
+    autocmd! FileType vimwiki set syntax=markdown.pandoc
+  augroup END
+  }}}
+
+- This would conflict with Vimwiki syntax in non-markdown files.
+- [[https://github.com/patashish704/pandoc-complete#pre-requisites|Pandoc-Complete: Your completion buddy for editing Pandoc-style markdown files]]
+  displays the title from the BibTeX database. However, it doesn't parse the
+  Cite Keys from the testing database. The Regex assumes the keys are words
+  without hyphens. Matching non-space characters and ending on comma seems to
+  work better.
+
+  {{{gitcommit
+  index 2c87935..b6e41ff 100644
+  --- a/autoload/PandocComplete.vim
+  +++ b/autoload/PandocComplete.vim
+  @@ -95,7 +95,7 @@ fun! s:FetchBibItems()
+                       \ l:bibkeys,
+                       \ s:MatchFile(
+                           \ l:bibfile,
+  -                        \ '^\s*@\w\+{\zs\w\+'
+  +                        \ '^\s*@\w\+{\zs\S\+\ze,'
+                           \ )
+                       \ )
+  }}}
+
+- [[https://ctan.math.utah.edu/ctan/tex-archive/biblio/bibtex/contrib/test/test.bib|CTAN test.bib]] provides a sample BibTeX database.
+- [[https://gist.github.com/fmoralesc/1203698/8dba921b45ff5464ea4d87433f9fadb0276cc2fa|Fmoralesc]] provides a minimal regex based BibTex parser in python.
+- `bibtool`
+- [[https://en.m.wikipedia.org/wiki/JabRef|JabRef]] is available from Debian.
+  Switch the `X410` to Floating Desktop mode or the screen will be blank.
+
+{{{vim
+let g:pandoc#biblio#bibs = [expand('~/zk/default.bib')]
+let g:pandoc#completion#bib#mode = 'fallback'
+}}}
+
+- https://pandoc.org/MANUAL.html#citation-syntax
+
+{{{bash
+pandoc --bibliography=$HOME/zk/default.bib \
+  --citeproc --standalone \
+  --to markdown-citations \
+  --metadata link-citations \
+  -o test.md \
+  ~/.dotfiles/README.md
+}}}
+
+{{{yaml
+bibliography: /home/jdfen/zk/default.bib
+link-citations: true
+link-bibliography: true
+}}}
+
+{{{bash
+pandoc -o test.md \
+  --citeproc --standalone \
+  --to markdown-citations \
+  --metadata link-citations \
+  ~/.dotfiles/README.md
+}}}
+

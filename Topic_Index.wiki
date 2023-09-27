@@ -7,6 +7,10 @@
 === BIOS ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
 
+=== BibTeX ===
+- [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
+- [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
+
 === DataFrame ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 
@@ -78,6 +82,9 @@
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
 
+=== Zettelkasten ===
+- [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
+
 === bash ===
 - [[Linux#bash]]
 
@@ -88,6 +95,14 @@
 === beef ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+
+=== biblatex ===
+- [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
+- [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
+
+=== bibtool ===
+- [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
+- [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 
 === bluetooth ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
@@ -368,6 +383,7 @@
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
+- [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
 
 === vimwiki_docx ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
