@@ -10,6 +10,10 @@
 === BibTeX ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
+- [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
+
+=== CSL ===
+- [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 
 === DataFrame ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -84,6 +88,10 @@
 
 === Zettelkasten ===
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
+- [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
+
+=== Zotero ===
+- [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
 
 === bash ===
 - [[Linux#bash]]
@@ -99,10 +107,12 @@
 === biblatex ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
+- [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
 === bibtool ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
+- [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
 === bluetooth ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
@@ -149,6 +159,9 @@
 
 === fitness ===
 - [[Health_Fitness#Health and Fitness]]
+
+=== fzf-bibtex ===
+- [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
 === gh-pages ===
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]

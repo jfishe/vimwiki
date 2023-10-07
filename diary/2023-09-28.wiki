@@ -1,0 +1,18 @@
+= Journal 2023-09-28 =
+
+== `Zotero` on WSL ==
+:Zotero:Zettelkasten:
+
+[[https://github.com/retorquere/zotero-deb|Retorquere / zotero-deb]] provides a
+Debian `ppa` to install `Zotero` per
+[[https://www.zotero.org/support/installation|zotero.org]]
+
+{{{bash
+wget -qO- \
+  https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh |
+  sudo bash
+sudo apt update
+sudo apt install zotero
+}}}
+
+

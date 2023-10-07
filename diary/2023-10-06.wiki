@@ -1,0 +1,67 @@
+= Journal 2023-10-06 =
+
+== Bibliography Setup ==
+:biblatex:bibtool:BibTeX:fzf-bibtex:
+
+- [[2023-09-27|Journal 2023-09-27]] uses `pandoc` and `python` to parse
+  `BibTeX` files.
+- [[https://github.com/msprev/fzf-bibtex|github msprev / fzf-bibtex]]
+- [[https://stackoverflow.com/a/54416455/22003636|Getting GOPATH error "go: cannot use path@version syntax in GOPATH mode" in Ubuntu 16.04]]
+
+{{{bash
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-ls
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-markdown
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-cite
+}}}
+
+- `after/ftplugin/vimwiki.vim`
+
+{{{vim
+function s:get_bibfiles() abort
+  let save_dir = chdir(expand('%:p:h'))
+  let bibfiles = pandoc#bibliographies#Find_Bibliographies()
+  call chdir(save_dir)
+  let bibfiles = join(bibfiles, ' ')
+  return bibfiles
+endfunction
+
+function! s:bibtex_ls() abort
+  if exists('b:pandoc_biblio_bibs')
+    let source_cmd = 'bibtex-ls '..<sid>get_bibfiles()
+    return source_cmd
+  " let bibfiles = (
+  "     \ globpath('.', '*.bib', v:true, v:true) +
+  "     \ globpath('..', '*.bib', v:true, v:true) +
+  "     \ globpath('*/', '*.bib', v:true, v:true)
+  "     \ )
+  endif
+endfunction
+
+function! s:bibtex_markdown_sink(lines) abort
+  let r=system("bibtex-markdown "..<sid>get_bibfiles(), a:lines)
+  execute ':normal! a' . r
+endfunction
+
+function! s:bibtex_cite_sink_insert(lines) abort
+  let r=system("bibtex-cite ", a:lines)
+  execute ':normal! a' . r
+  call feedkeys('a', 'n')
+endfunction
+
+inoremap <silent><buffer> @@ <c-g>u<c-o>:call fzf#run({
+      \ 'source': <sid>bibtex_ls(),
+      \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
+      \ 'up': '40%',
+      \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
+
+nnoremap <silent><buffer> <leader>m :call fzf#run({
+      \ 'source': <sid>bibtex_ls(),
+      \ 'sink*': function('<sid>bibtex_markdown_sink'),
+      \ 'up': '40%',
+      \ 'options': '--ansi --layout=reverse-list --multi --prompt "Markdown> "'})<CR>
+}}}
+
+- `bibtex-cite` is able to use `bibtool` without `pandoc-citeproc`, unlike
+  `vim-pandoc`.
+- `bibtex-markdown` citations do not support [[2023-09-27#CSL|CSL]].
+

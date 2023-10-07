@@ -1,7 +1,7 @@
 = Journal 2023-09-27 =
 
 == Bibliography Setup ==
-:biblatex:bibtool:BibTeX:
+:biblatex:bibtool:BibTeX:CSL:
 
 - [[https://citationstyles.org/authors/#/finding-and-installing-styles]]
   recommends finding CSL styles using [[https://www.zotero.org/styles?q=ieee|Zotero Style Repository]]
@@ -42,3 +42,4 @@ if __name__ == "__main__":
     GetTheSentences('dude.md')
 }}}
 
+- [[2023-10-06#fzf-bibtex|fzf-bibtex]] uses `bibtool` to parse `BibTeX`.
