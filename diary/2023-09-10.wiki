@@ -1,8 +1,10 @@
 = Journal 2023-09-10 =
 
 == Python Module Search Path ==
-:python:miniconda3:conda:
+:python:miniconda3:conda:PEP-668:
 
+- [[2023-10-14|Journal 2023-10-14]] replaces gvim with gvim.appimage and
+  updates vimrc to load python3 dynamically.
 - `/usr/share/doc/python3.11/README.venv`
 - [[https://peps.python.org/pep-0668/|PEP 668]]
 - Debian 12 implementation of PEP 668 doesn't load `site-packages` in a

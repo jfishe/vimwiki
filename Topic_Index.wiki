@@ -15,6 +15,9 @@
 === CSL ===
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 
+=== CoC ===
+- [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
+
 === DataFrame ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 
@@ -37,6 +40,10 @@
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-07-02#Journal 2023-07-02]]
+
+=== PEP-668 ===
+- [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
+- [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
 === Pandas ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -93,6 +100,9 @@
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
 
+=== appimage ===
+- [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+
 === bash ===
 - [[Linux#bash]]
 
@@ -141,6 +151,7 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
+- [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
 === csv ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -199,6 +210,9 @@
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 
+=== keymap ===
+- [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
+
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
 
@@ -207,6 +221,7 @@
 
 === miniconda3 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
+- [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -299,6 +314,7 @@
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
+- [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -397,6 +413,7 @@
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
+- [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
 
 === vimwiki_docx ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]

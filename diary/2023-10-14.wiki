@@ -1,0 +1,41 @@
+= Journal 2023-10-14 =
+
+== Python Module Search Path ==
+:python:miniconda3:conda:PEP-668:appimage:
+
+- [[2023-09-10|Journal 2023-09-10]] covers initial attempts to work around.
+- [[https://github.com/vim/vim-appimage|vim / vim-appimage]]
+  provides pre-built appimage.
+
+{{{bash
+dest="$HOME/.local/bin"
+appimage="gvim.appimage"
+
+pushd "$dest"
+wget -O "$appimage" https://github.com/vim/vim-appimage/releases/download/v9.0.2018/GVim-v9.0.2018.glibc2.29-x86_64.AppImage
+chmod +x "$appimage"
+
+for f in gvim gvimdiff gview eview evim view vim vimdiff
+do
+  ln -s "$appimage" "$f"
+done
+
+popd
+}}}
+
+- Update vimrc.
+
+{{{vim
+" ================ Python 3 ======================
+if !has('nvim') && !empty($CONDA_PREFIX) && has('python3_dynamic')
+  let s:conda_env = '/miniconda3/envs/vim-python'
+  if isdirectory(expand("$LOCALAPPDATA" .. s:conda_env))
+    let &pythonthreehome = expand("$LOCALAPPDATA" .. s:conda_env)
+  elseif isdirectory(expand("$HOME" .. s:conda_env))
+    let &pythonthreehome = expand("$HOME" .. s:conda_env)
+  endif
+  if has('linux')
+    let &pythonthreedll=expand(&pythonthreehome .. "/lib/libpython3.so")
+  endif
+endif
+}}}
