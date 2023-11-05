@@ -1,0 +1,70 @@
+= Journal 2023-11-05 =
+
+== Convert Vimwiki Format to Obsidian Markdown with Pandoc ==
+:pandoc:Obsidian:vimwiki:
+
+- [[https://pandoc.org/MANUAL.html#pandocs-markdown|Pandoc User’s Guide Pandoc's Markdown]]
+- Obsidian does not parse:
+	- header_attributes
+	- Wiki links converted to `CommonMark` links, so `+wikilinks_title_after_pipe`,
+		since it supports Wiki links directly.
+	- Tags converted to `CommonMark` attributes are not recognized. Sed can
+		convert to `#tag` format.
+
+{{{make
+TXTDIR=$(HOME)/userprofile/Documents/vimwiki_html/md
+WIKIS=$(wildcard *.wiki diary/*.wiki)
+MDS=$(patsubst %.wiki,$(TXTDIR)/%.md, $(WIKIS))
+
+.PHONY : all
+
+all : $(MDS)
+
+.PHONY : clean
+
+clean : $(MDS)
+	rm "$<"
+
+$(TXTDIR)/%.md : %.wiki
+	mkdir -p "$(@D)"
+	pandoc --from=vimwiki \
+		--to=markdown-header_attributes+wikilinks_title_after_pipe \
+		--standalone \
+		--wrap=none \
+		"$<" | sed --expression='s/\[\]{#-\(\S\+\)}\[\1\]{#\1 \.tag}/#\1/g' > "$@"
+}}}
+
+- Pandoc cannot distinguish html and md file extensions.
+
+{{{bash
+pandoc --from=html-native_divs-native_spans \
+	--to=markdown-header_attributes+wikilinks_title_after_pipe \
+	--standalone \
+	--wrap=none \
+	ACUMEN.html
+}}}
+
+{{{bash
+pandoc \
+	--from=vimwiki \
+	--to=markdown-header_attributes+implicit_header_references+wikilinks_title_after_pipe+compact_definition_lists-native_divs-native_spans \
+	--standalone \
+	--wrap=none \
+	"ACUMEN.wiki"
+}}}
+
+{{{bash
+pandoc \
+	--from=vimwiki \
+	--to=markdown-header_attributes+wikilinks_title_after_pipe-native_divs-native_spans  \
+	--standalone \
+	--wrap=none \
+	"ACUMEN.wiki"
+}}}
+
+- Example Pandoc tag format, which Obsidian does not recognize.
+
+{{{bash
+echo "[]{#-diary}[diary]{#diary .tag} []{#-journal}[journal]{#journal .tag} []{#defined}**defined**\n:   definition." |
+	sed --expression='s/\[\]{#-\(\S\+\)}\[\1\]{#\1 \.tag}/#\1/g'
+}}}

@@ -1,0 +1,11 @@
+= Journal 2023-10-29 =
+
+== Git Windows Terminal Integration ==
+:git:WindowsTerminal:choco:
+
+[[https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md|Git Package Parameters]]
+provides the options to Chocolatey.
+
+{{{powershell
+choco install git.install --params "'/GitOnlyOnPath /WindowsTerminal /SChannel /WindowsTerminalProfile'"
+}}}

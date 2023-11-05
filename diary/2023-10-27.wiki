@@ -1,0 +1,31 @@
+= Journal 2023-10-27 =
+
+== VimwikiCheckLinks Error ==
+:vimwiki:Win10:Win11:
+
+{{{vim
+:VimwikiCheckLinks
+}}}
+{{{text
+Error detected while processing function vimwiki#base#check_links:
+line   91:
+E716: Key not present in Dictionary: "C:\Users\jdfen\OneDrive\Documents\vimwiki_home/index.wiki"
+}}}
+
+[[https://github.com/vimwiki/vimwiki/issues/1022|VimwikiCheckLinks is broken on Windows #1022]].
+A work around fixes the path separator mismatch.
+
+{{{dep3patch
+M autoload/vimwiki/base.vim
+@@ -1055,8 +1055,8 @@ function! vimwiki#base#check_links(range, line1, line2) abort
+
+   " Mark: every index file as reachable
+   for idx in wiki_list
+-    let index_file = vimwiki#vars#get_wikilocal('path', idx) .
+-          \ vimwiki#vars#get_wikilocal('index', idx) . vimwiki#vars#get_wikilocal('ext', idx)
++    let index_file = expand(vimwiki#vars#get_wikilocal('path', idx) .
++          \ vimwiki#vars#get_wikilocal('index', idx) . vimwiki#vars#get_wikilocal('ext', idx))
+     if filereadable(index_file)
+       let reachable_wikifiles[index_file] = 1
+     endif
+}}}

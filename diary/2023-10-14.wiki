@@ -10,12 +10,22 @@
 {{{bash
 dest="$HOME/.local/bin"
 appimage="gvim.appimage"
+uri="https://github.com/vim/vim-appimage/releases/download/v9.0.2090/GVim-v9.0.2090.glibc2.29-x86_64.AppImage"
 
 pushd "$dest"
-wget -O "$appimage" https://github.com/vim/vim-appimage/releases/download/v9.0.2018/GVim-v9.0.2018.glibc2.29-x86_64.AppImage
-chmod +x "$appimage"
 
-for f in gvim gvimdiff gview eview evim view vim vimdiff
+wget -O "$appimage" "$uri"
+chmod +x "$appimage"
+for f in gvim gvimdiff gview
+do
+  ln -s "$appimage" "$f"
+done
+
+appimage="vim.appimage"
+uri="https://github.com/vim/vim-appimage/releases/download/v9.0.2090/Vim-v9.0.2090.glibc2.29-x86_64.AppImage"
+wget -O "$appimage" "$uri"
+chmod +x "$appimage"
+for f in eview evim view vim vimdiff
 do
   ln -s "$appimage" "$f"
 done
