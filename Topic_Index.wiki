@@ -102,6 +102,9 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 
+=== Windows11 ===
+- [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
 
@@ -117,6 +120,9 @@
 
 === appimage ===
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+
+=== background ===
+- [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === bash ===
 - [[Linux#Linux Notes#Bash Shell Script]]
@@ -176,6 +182,9 @@
 === csv ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
+
+=== desktop ===
+- [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
@@ -311,6 +320,7 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
+- [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === pull ===
 - [[Git#Git#Pull Rebase]]
@@ -462,6 +472,9 @@
 
 === vscode ===
 - [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
+
+=== wallpaper ===
+- [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === window ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]

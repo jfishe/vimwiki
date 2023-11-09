@@ -1,0 +1,20 @@
+= Journal 2023-11-09 =
+
+== Windows Desktop Background ==
+:Windows11:desktop:wallpaper:background:powershell:
+
+- [[https://answers.microsoft.com/en-us/windows/forum/all/how-to-save-windows-spotlight-images-for-your/6415a7e1-dc0d-4f53-9b38-1942c02d0d9d|How to save Windows Spotlight images for your wallpaper or phone]]
+- `PowerShell 7` requires `Join-Path` because it doesn't drop the path from
+  `$_` automatically, unlike `Windows PowerShell 5.1`. `$_.FullName` may be
+  required for the source.
+
+{{{powershell
+# $Destination = "$HOME\Desktop\Wallpaper"
+$Destination = "$env:OneDrive\Desktop\Wallpaper"
+New-Item -Path $Destination -Type Directory -ErrorAction SilentlyContinue
+Get-ChildItem "$env:LOCALAPPDATA\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\" |
+  ForEach-Object -Process {
+  Copy-Item $_ (Join-Path "$Destination" "$($_.Name).jpg") -Verbose -Whatif
+}
+}}}
+
