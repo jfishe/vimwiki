@@ -3,16 +3,20 @@
 == Bibliography Setup ==
 :biblatex:bibtool:BibTeX:CSL:
 
+- [[2023-11-09#Bibliography Setup|Journal 2023-11-09 Bibliography Setup]]
 - [[https://citationstyles.org/authors/#/finding-and-installing-styles]]
   recommends finding CSL styles using [[https://www.zotero.org/styles?q=ieee|Zotero Style Repository]]
 
 {{{bash
 pandoc --citeproc \
-  --bibliography=default.bib \
+  --bibliography=zk.bib \
   --metadata='link-citations:true' \
-  --to markdown-citations \
-  --output=dude.md \
-  230916-0736.md
+  --from=markdown+wikilinks_title_after_pipe \
+  --standalone \
+  --to=markdown-citations \
+  --wrap=none \
+  20231019-0701.md |
+  python dude.py
 }}}
 
 {{{markdown
@@ -28,18 +32,18 @@ Chomsky, N. 1973. "Conditions on Transformations." In *A Festschrift for Morris 
 }}}
 
 {{{python
+import sys
 import re
 
-def GetTheSentences(infile):
-     with open(infile) as fp:
-         for result in re.findall('::: {#ref-(.*?):::', fp.read(), re.S):
-             entry = result.split("\n")
-             reference = f"[#ref-{entry[0].split()[0]}]:"
-             citation = "\n".join(entry[1:])
-             print(f"{reference} {citation}")
+def GetTheSentences():
+  for result in re.findall('::: {#ref-(.*?):::', sys.stdin.read(), re.S):
+     entry = result.split("\n")
+     reference = f"[#{entry[0].split()[0]}]:"
+     citation = "\n".join(entry[1:])
+     print(f"{reference} {citation}")
 
 if __name__ == "__main__":
-    GetTheSentences('dude.md')
+    GetTheSentences()
 }}}
 
 - [[2023-10-06#fzf-bibtex|fzf-bibtex]] uses `bibtool` to parse `BibTeX`.

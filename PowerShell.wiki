@@ -7,7 +7,7 @@
 - [[https://github.com/questionmark/PowerShellTemplate|Questionmark Computing PowerShell Template]]
   list best practices for Module design and style.
 - [[https://poshcode.gitbooks.io/powershell-practice-and-style/|The PowerShell Best Practices and Style Guide]]
-- [[https://github.com/powershell/Plaster/|Plaster]] template engine.
+- [[https://github.com/powershell/Plaster|Plaster]] template engine.
 
 == Powershell Commands ==
 :powershell:

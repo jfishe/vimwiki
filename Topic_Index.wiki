@@ -11,12 +11,14 @@
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 
 === CSL ===
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 
 === CoC ===
 - [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
+- [[diary/2023-11-11#Journal 2023-11-11#Vimwiki and CoC Keymap Conflict]]
 
 === DataFrame ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -33,6 +35,9 @@
 - [[Linux#Linux Notes#Fedora and Red Hat]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
+=== GitHub ===
+- [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
+
 === HP ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
 
@@ -47,10 +52,12 @@
 
 === Obsidian ===
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
 
 === PEP-668 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+- [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 
 === Pandas ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -64,6 +71,7 @@
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
+- [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
 === RHEL ===
 - [[Linux#Linux Notes#Fedora and Red Hat]]
@@ -114,6 +122,7 @@
 === Zettelkasten ===
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
@@ -139,6 +148,7 @@
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 
 === bibtool ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
@@ -163,6 +173,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 
+=== citeproc ===
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
+
 === coffee ===
 - [[Coffee#Coffee#French Press Coffee]]
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
@@ -178,6 +191,7 @@
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+- [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 
 === csv ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -248,6 +262,7 @@
 
 === keymap ===
 - [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
+- [[diary/2023-11-11#Journal 2023-11-11#Vimwiki and CoC Keymap Conflict]]
 
 === margarita ===
 - [[Drinks#Drink Recipes#Margarita]]
@@ -261,6 +276,7 @@
 === miniconda3 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+- [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -289,6 +305,8 @@
 === pandoc ===
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
+- [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -306,6 +324,7 @@
 
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
+- [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
 === plugin ===
 - [[Python#Python Notes#Vim Python Plugin]]
@@ -321,6 +340,7 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+- [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
 === pull ===
 - [[Git#Git#Pull Rebase]]
@@ -330,6 +350,9 @@
 
 === pyarrow ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
+
+=== pypi ===
+- [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 
 === pyscaffold ===
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
@@ -360,6 +383,8 @@
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
+- [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
+- [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -415,11 +440,16 @@
 === taco ===
 - [[index#John D. Fisher's home wiki#Cooking#Tacos al Pastor]]
 
+=== tags ===
+- [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
+
 === taskwiki ===
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 
 === template ===
 - [[PowerShell#PowerShell and pwsh#Template]]
+- [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
 === timesyncd ===
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
@@ -443,6 +473,9 @@
 === troubleshooting ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
 
+=== twine ===
+- [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
+
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
@@ -456,6 +489,9 @@
 === vim-polyglot ===
 - [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
 
+=== vim-zettel ===
+- [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
+
 === vimwiki ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -465,10 +501,16 @@
 - [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
+- [[diary/2023-11-11#Journal 2023-11-11#Vimwiki and CoC Keymap Conflict]]
 
 === vimwiki_docx ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
+
+=== vimwiki_tags ===
+- [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
 
 === vscode ===
 - [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]

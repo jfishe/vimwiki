@@ -3,6 +3,7 @@
 == Bibliography Setup ==
 :biblatex:bibtool:BibTeX:
 
+- [[2023-11-09#Bibliography Setup|Journal 2023-11-09 Bibliography Setup]]
 - [[https://github.com/vim-pandoc/vim-pandoc-syntax|vim-pandoc-syntax]] recommends:
 
   {{{vim

@@ -1,0 +1,8 @@
+= Journal 2023-11-11 =
+
+== Vimwiki and CoC Keymap Conflict ==
+:vimwiki:CoC:keymap:
+
+- [[2023-10-13#Vimwiki and CoC Keymap Conflict|Journal 2023-10-13]]
+  attempted to resolve the conflict.
+- `coc.nvim/autoload/coc/ui.vim` line 20 copies `<CR>` mapping, which only works in a Vimwiki file.

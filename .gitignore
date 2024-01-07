@@ -105,3 +105,6 @@ tags*
 .netrwhist
 .tags
 .vimwiki_tags
+
+# JabRef backups
+*.bib.bak

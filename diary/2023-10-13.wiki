@@ -3,6 +3,7 @@
 == Vimwiki and CoC Keymap Conflict ==
 :vimwiki:CoC:keymap:
 
+- [[2023-11-11#Vimwiki and CoC Keymap Conflict|Journal 2023-11-11]]
 - Vimwiki recursively insert maps `<CR>` to `VimwikiReturn`, which confuses
   Conquer of Completion (CoC) completion.
 

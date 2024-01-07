@@ -3,6 +3,7 @@
 == Windows Desktop Background ==
 :Windows11:desktop:wallpaper:background:powershell:
 
+- [[2023-11-19|Journal 2023-11-19]] creates script module `Copy-Wallpaper`.
 - [[https://answers.microsoft.com/en-us/windows/forum/all/how-to-save-windows-spotlight-images-for-your/6415a7e1-dc0d-4f53-9b38-1942c02d0d9d|How to save Windows Spotlight images for your wallpaper or phone]]
 - `PowerShell 7` requires `Join-Path` because it doesn't drop the path from
   `$_` automatically, unlike `Windows PowerShell 5.1`. `$_.FullName` may be
@@ -18,3 +19,69 @@ Get-ChildItem "$env:LOCALAPPDATA\Packages\Microsoft.Windows.ContentDeliveryManag
 }
 }}}
 
+== Bibliography Setup ==
+:citeproc:pandoc:Zettelkasten:vim-zettel:biblatex:BibTeX:
+
+- [[2023-09-22#Bibliography Setup|Journal 2023-09-22 Bibliography Setup]]
+- [[2023-09-27#Bibliography Setup|Journal 2023-09-27 Bibliography Setup]]
+- [[wn.zk:20231019-0701|@TSTF_476_Ar12007]] to test `Pandoc #expand_citeproc`.
+
+{{{vim
+# expand_citations|markdown-citations --citeproc
+#  --metadata='link-citations:true' --from=markdown+wikilinks_title_after_pipe
+#  --standalone
+:Pandoc #expand_citations
+Error detected while processing function pandoc#command#Pandoc:
+line    4:
+}}}
+
+
+{{{bash
+pandoc --to=markdown-citations \
+  --citeproc \
+  --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe \
+  --standalone \
+  20231019-0701.md
+}}}
+
+The version of pandoc impacts `pandoc --list-extensions` output.
+
+{{{vim
+Error detected while processing function redir#Redir[20]..pandoc#command#Pandoc:
+line    4:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/jdfen/.dotfiles/config/vim/vimfiles/pack/python/start/vim-pandoc/python3/vim_pandoc/command.py", line 72, in __call__
+    if self.pandoc_info.is_valid_output_format(c_vars['output_format']) \
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jdfen/.dotfiles/config/vim/vimfiles/pack/python/start/vim-pandoc/python3/vim_pandoc/helpparser.py", line 99, in is_valid_output_format
+    return re.match(identifier+"(([+-]("+"|".join(self.extensions)+"))+)?$", identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<snip>
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 40
+}}}
+
+The error in `self.extensions` is caused by [[https://github.com/vim-pandoc/vim-pandoc/blob/d4fc6f8234c37eef16b6de8055c5fe53b7d7316a/python3/vim_pandoc/helpparser.py#L82|get_extensions()]]
+not parsing `pandoc --list-extensions` because the space is missing before + or
+-. For backwards compatibility with versions requiring the space, use Regex to
+replace either pattern with an empty string.
+
+{{{dep3patch
+M python3/vim_pandoc/helpparser.py
+@@ -80,8 +80,8 @@ class PandocInfo(object):
+         return list(chain.from_iterable([v.names for v in self.options]))
+
+     def get_extensions(self):
+-        data = self.__raw_output('--list-extensions').\
+-            replace(' +', '').replace(' -', '')
++        data = self.__raw_output('--list-extensions')
++        data = re.sub('(^ |^)[\+-]', '', data, flags=re.MULTILINE)
+         return data.splitlines()
+
+     def get_input_formats(self):
+}}}
+
+[[https://github.com/vim-pandoc/vim-pandoc/issues/457|Github vim-pandoc Issue #457]]
+describes the problem, and [[https://github.com/vim-pandoc/vim-pandoc/pull/458|Pull Request #458]] proposes the solution.

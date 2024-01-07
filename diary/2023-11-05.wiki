@@ -1,14 +1,14 @@
 = Journal 2023-11-05 =
 
 == Convert Vimwiki Format to Obsidian Markdown with Pandoc ==
-:pandoc:Obsidian:vimwiki:
+:pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
 
 - [[https://pandoc.org/MANUAL.html#pandocs-markdown|Pandoc User’s Guide Pandoc's Markdown]]
 - Obsidian does not parse:
 	- header_attributes
 	- Wiki links converted to `CommonMark` links, so `+wikilinks_title_after_pipe`,
 		since it supports Wiki links directly.
-	- Tags converted to `CommonMark` attributes are not recognized. Sed can
+	- Tags converted to `CommonMark` attributes are not recognized. `sed` can
 		convert to `#tag` format.
 
 {{{make

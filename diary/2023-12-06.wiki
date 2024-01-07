@@ -1,0 +1,7 @@
+= Journal 2023-12-06 =
+
+== Packaging Python Projects ==
+:twine:pypi:python:GitHub:
+
+- [[https://packaging.python.org/en/latest/tutorials/packaging-projects/#packaging-python-projects|Packaging Python Projects]]
+- [[https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/|Publishing package distribution releases using GitHub Actions CI/CD workflows]]

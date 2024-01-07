@@ -6,6 +6,7 @@
   - [[#Instant Pot Dried Beans]]
   - [[#Ranch Style Beans]]
   - [[#Cowboy Beans]]
+  - [[#Frijoles Refritos]]
 
 == Instant Pot Dried Beans ==
 
@@ -128,3 +129,35 @@ Directions:
 7. Add Worcestershire sauce.
 8. Taste and adjust seasonings. Serve warm.
 
+== Frijoles Refritos ==
+
+Derived from [[https://www.rickbayless.com/recipe/well-fried-beans|Rick Bayless' Well-fried Beans]] and Diana Kennedy's
+_Frijoles de Olla (Pot Beans)_ and _Frijoles Refritos (Refried Beans)_
+([[#ref-Kennedy2008|Kennedy 2008, 179--80]]).
+
+*Ingredients*:
+
+- 2 lb dry beans
+- 2 Tb bacon drippings
+- 2 large onions
+- 2-3 bay leaves
+- 1 garlic bulb peeled and finely chopped
+- 1/4 cup lard
+- salt
+
+*Directions*:
+
+1. Rinse beans and add to Instant Pot.
+2. Add 2 qt water, bay leaves and bacon drippings.
+3. Add one roughly chopped onion.
+4. Pressure cook for 1 hour and natural release for 20 minutes.
+5. Add 1-1/2 tsp salt
+6. Heat dutch oven over medium heat.
+7. Cook one diced onion until brown.
+8. Add garlic and cook until fragrant.
+9. Turn heat off.
+10. With a slotted spoon, add several large spoonfuls of beans and mash.
+11. Add bean broth to desired consistency.
+12. Adjust seasoning.
+
+*ref-Kennedy2008*: Kennedy, Diana. 2008. *The Art of Mexican Cooking*. New York, NY: Clarkson Potter. <https://penguinrandomhousehighereducation.com/book/?isbn=9780307383259>.

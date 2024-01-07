@@ -1,0 +1,31 @@
+= Journal 2023-11-10 =
+
+== Vimwiki Markdown Tag Syntax ==
+:pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
+
+- [[2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc|Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+  developed a `Makefile` to convert `Vimwiki` native format to `Markdown` and
+  convert the tags to `#tag` style.
+- Partially working solution. `VimwikiRebuildTags` fails.
+
+{{{vim
+let g:vimwiki_syntaxlocal_vars.markdown.tag_format = {
+  \ 'pre_mark': '\%(:\)',
+  \ 'sep': '\%(:\)',
+  \ 'cchar': '',
+  \ 'post_mark': '\%(:\)',
+  \ 'conceal': 0,
+  \ 'post': '\%(\s\|$\)',
+  \ 'in': '\%([^:''[:space:]]\+\)',
+  \ 'pre': '\%(^\|\s\)'
+  \ }
+" tags: tag1 tag2
+" let g:vimwiki_tag_format = { 'pre': '\(^[ -]*tags\s*: .*\)\@<=', 'pre_mark': '', 'post_mark': '', 'sep': ' ' }
+let g:vimwiki_tag_format = {
+  \ 'pre': '\(^tags: .*\)\@<=',
+  \ 'pre_mark': '',
+  \ 'post_mark': '',
+  \ 'sep': ' ',
+  \ 'in': ''
+  \ }
+}}}

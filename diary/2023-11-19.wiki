@@ -1,0 +1,43 @@
+= Journal 2023-11-19 =
+
+== Plaster Module Template ==
+:plaster:PowerShellCore:powershell:template:
+
+- [[2023-11-09#Journal 2023-11-09#Windows Desktop Background]] originated the Copy-Wallpaper script.
+- [[../PowerShell#PowerShell and pwsh#Template]]
+- [[https://github.com/jfishe/PlasterModuleTemplate.git|jfishe PlasterModuleTemplate]]
+- [[https://github.com/mojoaar/plastermoduletemplate|mojoaar/plastermoduletemplate]]:
+  A Plaster template for automating the scaffolding of a new PowerShell module,
+  does not include Pester tests.
+- [[https://github.com/ThePoShWolf/MyPlasterTemplates|ThePoShWolf/MyPlasterTemplates]]:
+  A collection of my Plaster templates, does not install dependencies.
+- [[https://github.com/PPOSHGROUP/PlasterModuleTemplate|PPOSHGROUP/PlasterModuleTemplate]]:
+  Template for module creation with Plaster, has features:
+  {{{text
+  Adds a public folder to module root
+  Adds a private folder to module root
+  Adds a binaries folder to module root
+  Add Git Support
+  Select a license for your module
+  Include Pester Tests?
+  Include PPoShBuild Support?
+  Include PPoShTools requirement file?
+  Add VSCode support?
+  Add Docs folder?
+  }}}
+  - Defaults to installing dependencies for AllUsers, AcceptLicense,
+    AllowClobber, AllowPrerelease, Dependency, Import, PSDependAction,
+    Repository, and SkipPublisherCheck.
+- Microsoft provides instructions for
+  [[https://learn.microsoft.com/en-us/powershell/gallery/how-to/working-with-local-psrepositories?view=powershellget-2.x|Register-PSRepository]]
+  {{{powershell
+  # Register a file share on my local machine
+  $SourceLocation = [System.Uri] "$(Resolve-Path '~\Github\PSRepoLocal\')"
+  $registerPSRepositorySplat = @{
+      Name = 'LocalPSRepo'
+      SourceLocation = $SourceLocation
+      ScriptSourceLocation = $SourceLocation
+      InstallationPolicy = 'Trusted'
+  }
+  Register-PSRepository @registerPSRepositorySplat
+  }}}
