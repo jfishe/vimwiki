@@ -3,6 +3,7 @@
 == Convert Vimwiki Format to Obsidian Markdown with Pandoc ==
 :pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
 
+- [[2024-01-20|Journal 2024-01-20]]
 - [[https://pandoc.org/MANUAL.html#pandocs-markdown|Pandoc User’s Guide Pandoc's Markdown]]
 - Obsidian does not parse:
 	- header_attributes

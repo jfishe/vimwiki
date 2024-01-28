@@ -69,6 +69,7 @@ Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71
 - [[Sisal_Rope|Cat Scratching Pole Sisal Rope Replacement]]
 
 == Cooking ==
+:cookery:cooking:
 
 - [[Coffee]]
 - [[Beans|Dried Beans Recipes]]

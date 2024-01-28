@@ -1,0 +1,123 @@
+= Journal 2024-01-20 =
+:pandoc:
+
+- [[2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc|Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+
+== Convert Vimwiki Wikilinks to Markdown with Pandoc ==
+:vimwiki:pandoc:wikilinks_title_after_pipe:vimwiki-todo-lists:
+
+{{{vim
+Pandoc markdown --from=markdown-task_lists+wikilinks_title_after_pipe
+  \ --standalone
+}}}
+
+== Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc ==
+:vimwiki:vimwiki-syntax-links:vimwiki-todo-lists:
+:pandoc:task_lists:wikilinks_title_after_pipe:
+
+- With the default, `--from=markdown`, pandoc lower cases finished tasks and
+  escapes the brackets for in progress tasks, which conflict with Vimwiki
+  syntax.
+- With `--from=markdown-task_lists`, pandoc escapes all the brackets.  which
+  conflicts with Vimwiki syntax.
+- With `--to=markdown-task_lists`, pandoc escapes all the brackets.  which
+  conflicts with Vimwiki syntax.
+  - Unfinished tasks convert to ☐ and finished to ☒, which is not
+    reversible.
+  - In progress tasks escape the brackets.
+  - `--from=markdown-task_lists` disables the `--to=` extension.
+  - Unordered list space after the bullet is two, rather than the expected one
+    space.
+- [[https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe|Extension: wikilinks_title_after_pipe]]
+- Pandoc [[https://pandoc.org/MANUAL.html#links-1|Links]] includes "wikilinks"
+  as a link title.
+- `VimwikiFollowLink` creates the wrong destination file with "wikilinks"
+  appended to the file base name.
+- Vimwiki doesn't recognize `\\` in links because pandoc also escapes syntax
+  characters, like `'`.
+
+
+{{{vim
+# Do not change vimwiki-todo-lists and vimwiki-syntax-links.
+Pandoc markdown+wikilinks_title_after_pipe
+  \ --from=markdown
+  \ --standalone
+
+# Escape brackets in vimwiki-todo-lists and vimwiki-syntax-links.
+# Without -task_lists pandoc only escapes in-progress todos and links.
+Pandoc markdown --from=markdown-task_lists --standalone
+
+# Escape brackets and ' character.
+# Convert
+Pandoc markdown --from=markdown-task_lists+wikilinks_title_after_pipe
+  \ --standalone --wrap=none
+%substitute/\v\\\[(\S|\s)\\]/[\1]/
+}}}
+
+{{{bash
+echo "
+- [ ] task 1
+- [X] task 2
+- [.] task 3
+  - [.] task 3.1
+  - [.] task 3.2
+" |
+pandoc \
+  --from=markdown-task_lists+wikilinks_title_after_pipe \
+  --to=markdown \
+  --standalone \
+  --wrap=none
+-   \[ \] task 1
+-   \[X\] task 2
+-   \[.\] task 3
+    -   \[.\] task 3.1
+    -   \[.\] task 3.2
+}}}
+
+{{{bash
+echo "
+- [ ] task 1
+- [X] task 2
+- [.] task 3
+  - [.] task 3.1
+  - [.] task 3.2
+" |
+pandoc \
+  --from=markdown+wikilinks_title_after_pipe \
+  --to=markdown-task_lists \
+  --standalone \
+  --wrap=none
+-   ☐ task 1
+-   ☒ task 2
+-   \[.\] task 3
+    -   \[.\] task 3.1
+    -   \[.\] task 3.2
+}}}
+
+== Convert Vimwiki Tasks to Markdown `mdformat-myst` ==
+:myst:mdformat:mdformat-myst:vimwiki:
+
+- [[https://pre-commit.com/|pre-commit]]
+- [[https://github.com/executablebooks/mdformat-myst|Mdformat plugin for MyST compatibility]]
+
+{{{yaml
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17 # Use the ref you want to point at
+    hooks:
+      - id: mdformat
+        # Optionally add plugins
+        additional_dependencies:
+          # - mdformat-gfm
+          - mdformat-myst
+          # - mdformat-black
+}}}
