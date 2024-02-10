@@ -46,4 +46,3 @@
       chapters:
       - file: notebooks/jupytext.ipynb
   }}}
-

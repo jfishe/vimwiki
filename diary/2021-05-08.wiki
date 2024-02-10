@@ -19,4 +19,3 @@ sudo apt-get install jabref ant-doc default-jdk
 {{{ vim
 set filetype=jsonc
 }}}
-

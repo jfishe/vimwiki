@@ -21,4 +21,3 @@ let test#vim#term_position = "belowright"
 === Pytest.vim ===
 
 - https://github.com/alfredodeza/pytest.vim
-

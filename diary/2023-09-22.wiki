@@ -68,4 +68,3 @@ pandoc -o test.md \
   --metadata link-citations \
   ~/.dotfiles/README.md
 }}}
-

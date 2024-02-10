@@ -3,4 +3,3 @@
 
 - https://github.com/mdda/vim-plugin-python
 - https://github.com/jfishe/panvimwiki.git
-

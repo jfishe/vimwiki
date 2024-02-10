@@ -26,4 +26,3 @@ pqpath = rawbook.with_stem("_".join([rawbook.stem, ednadata])).with_suffix(".par
 df.to_parquet(pqpath)
 df2 = pd.read_parquet(pqpath)
 }}}
-

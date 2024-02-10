@@ -28,5 +28,3 @@ compiler pytest
 === Pytest.vim ===
 
 - https://github.com/alfredodeza/pytest.vim
-
-

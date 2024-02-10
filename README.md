@@ -9,21 +9,22 @@ configuration defines Vimwiki configuration.
 
 ## Vimwiki-cli Installation
 
-- Installation instructions:
+- Install
   [sstallion / vimwiki-cli](https://github.com/sstallion/vimwiki-cli)
-- Pre-commit hook to maintain tags:
-  [vimwiki-cli/scripts/pre-commit.sh](https://github.com/sstallion/vimwiki-cli/blob/master/scripts/pre-commit.sh)
+- Install [pre-commit][].
+- Install `python -m pip install ghp-import`
 
 ```bash
-VIMWIKI_PATH=$HOME/vimwiki_home
+VIMWIKI_PATH="$HOME/vimwiki_home"
 
-git clone https://github.com/jfishe/vimwiki.git $VIMWIKI_PATH
+git clone https://github.com/jfishe/vimwiki.git "$VIMWIKI_PATH"
 
-curl \
-https://raw.githubusercontent.com/sstallion/vimwiki-cli/master/scripts/pre-commit.sh \
-> $VIMWIKI_PATH/.git/hooks/pre-commit
+pushd "$VIMWIKI_PATH"
 
-pushd $VIMWIKI_PATH
+# Install pre-commit hooks and update to latest.
+pre-commit install --install-hooks
+pre-commit autoupdate
+
 # Count should match vimwiki configuration.
 git config vimwiki.options '--count=2'
 # Collect .vimwiki_tag in Topic_Index.wiki.
@@ -35,6 +36,7 @@ git config vimwiki.generatelinks true
 git config vimwiki.generatediarylinks true
 git config vimwiki.generatetaglinks true
 git config vimwiki.rebuildtags true
+git config vimwiki.allhtml true
 popd
 ```
 
@@ -49,22 +51,14 @@ env _VIMWIKI_COMPLETE=zsh_source vimwiki >$COMPLETION_PATH
 
 ## Github Pages
 
-- Add gh-pages to `$VIMWIKI_PATH/.git/hooks/pre-commit`:
-
-  ```bash
-  # Update gh-pages
-  if test "$(git config --bool ghppages.push || echo false)" = true
-  then
-    pathhtml=$(git config ghppages.pathhtml || echo "$GIT_WORK_TREE/docs")
-    say 'Pushing html to gh-pages...'
-    ghp-import -n -o -p -f "$pathhtml"
-    say_done
-  fi
-  ```
-
-- `python -m pip install ghp-import`
+- `.pre-commit-config.yaml` includes a pre-push hook to publish to
+  [Github Pages][gh-pages].
+- To enable the hook, `git config ghppages.push true`.
+- To set the HTML path, `git config ghppages.pathhtml <absolute path>/docs`.
+  Defaults to `$GIT_WORK_TREE/docs`.
 - Github page: [John D. Fisher's home wiki](https://jfishe.github.io/vimwiki/)
-- Run `:VimwikiAll2HTML` from a Vimwiki buffer.
+- Run `:VimwikiAll2HTML` from a Vimwiki buffer or the `vimwiki-cli` pre-commit
+  hook.
 - Commit and push to deploy.
 
 ```text
@@ -74,3 +68,6 @@ env _VIMWIKI_COMPLETE=zsh_source vimwiki >$COMPLETION_PATH
 ├── templates
 │   ├── default.tpl
 ```
+
+[pre-commit]: <https://pre-commit.com/index.html>
+[gh-pages]: <https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site>

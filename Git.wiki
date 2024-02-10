@@ -78,4 +78,3 @@ provides instructions for force pushing to `Github`.
   - [[https://github.com/settings/tokens]]
   - Expired tokens can be refreshed.
   - `Windows Credential Manager` stores tokens for Windows 10 and Windows 11.
-

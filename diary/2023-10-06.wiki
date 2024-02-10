@@ -64,4 +64,3 @@ nnoremap <silent><buffer> <leader>m :call fzf#run({
 - `bibtex-cite` is able to use `bibtool` without `pandoc-citeproc`, unlike
   `vim-pandoc`.
 - `bibtex-markdown` citations do not support [[2023-09-27#CSL|CSL]].
-

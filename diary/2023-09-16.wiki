@@ -35,4 +35,3 @@
   - [[https://github.com/junegunn/fzf|junegunn/fzf]] to `~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf`
   - [[https://github.com/junegunn/fzf.vim.git|junegunn/fzf.vim]] to `~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf.vim`
   - [[https://github.com/michal-h21/vim-zettel.git|michal-h21/vim-zettel]] to  `~/.dotfiles/config/nvim/pack/zettelkasten/start/vim-zettel`
-

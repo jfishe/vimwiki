@@ -45,4 +45,3 @@ ConditionVirtualization=wsl
 
 `conda install vim` will install a non-gui Vim compiled to use the conda
 python. This eliminates the mixed environment from system python and conda.
-

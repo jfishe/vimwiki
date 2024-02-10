@@ -534,4 +534,3 @@ Remote-to-remote symbolic link evaluation is: DISABLED
 :BIOS:HP:
 
 Pres `F10` repeatedly during boot.
-
