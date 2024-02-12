@@ -18,6 +18,7 @@ repos:
       - id: vimwiki-cli
         stages:
           - pre-commit
+          - pre-push
   - repo: local
     hooks:
       - id: ghp-import
