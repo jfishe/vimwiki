@@ -193,6 +193,9 @@
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 
+=== condiment ===
+- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+
 === cookery ===
 - [[index#John D. Fisher's home wiki#Cooking]]
 
@@ -225,9 +228,11 @@
 
 === gh-pages ===
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
+- [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === ghp-import ===
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
+- [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === git ===
 - [[Git#Git#Pull Rebase]]
@@ -312,6 +317,9 @@
 === oh-my-posh ===
 - [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
 
+=== olives ===
+- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+
 === pandas ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
@@ -325,6 +333,7 @@
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20]]
+- [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -359,6 +368,9 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
+
+=== pre-commit ===
+- [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === pull ===
 - [[Git#Git#Pull Rebase]]
@@ -462,6 +474,9 @@
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
 - [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
 
+=== tapanade ===
+- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+
 === task_lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 
@@ -527,6 +542,8 @@
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
+- [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
+- [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
@@ -534,6 +551,7 @@
 === vimwiki-todo-lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
+- [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 
 === vimwiki_docx ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
@@ -552,6 +570,7 @@
 === wikilinks_title_after_pipe ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
+- [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 
 === window ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
