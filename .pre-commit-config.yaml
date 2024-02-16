@@ -12,13 +12,13 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
-  - repo: https://github.com/jfishe/vimwiki-cli.git
-    rev: ce89fe5dfd2e1135b37c57836b39cee4424ab3ce
+  - repo: https://github.com/sstallion/vimwiki-cli
+    rev: v1.2.0
     hooks:
       - id: vimwiki-cli
         stages:
           - pre-commit
-          - pre-push
+        verbose: true
   - repo: local
     hooks:
       - id: ghp-import
@@ -28,3 +28,4 @@ repos:
         require_serial: true
         stages:
           - pre-push
+        verbose: true
