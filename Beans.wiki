@@ -12,7 +12,7 @@
 == Instant Pot Dried Beans ==
 
 - Bay leaves
-- 1/2 onion or dried shallots/onions
+- ½ onion or dried shallots/onions
 - Seal and cook on High Pressure per
   [[https://amindfullmom.com/instant-pot-beans/|Instant Pot Dried Beans]]:
   - Black Beans—30 Minutes
@@ -22,7 +22,7 @@
   - Navy Beans—30 Minutes
   - Great Northern Beans—35 Minutes
 - Slow release pressure for 20 minutes before doing a quick release.
-- 1/2 tsp apple cider vinegar
+- ½ tsp apple cider vinegar
 - Salt to taste
 
 == Ranch Style Beans ==
@@ -38,8 +38,8 @@ Ingredients:
 
 - 16 oz dried beans
 - 2 Bay leaves
-- 6 ancho chiles, stems and seeds removed (1/4 c chili powder)
-- 6 cloves garlic, minced (1-1/2 tsp granulated)
+- 6 ancho chiles, stems and seeds removed (¼ c chili powder)
+- 6 cloves garlic, minced (1-½ tsp granulated)
 - 4 cloves black garlic (optional)
 - 1 onion, diced (2 tsp dried shallots)
 - 1 15-ounce can diced tomatoes and their juices (1 (6 ounce) can tomato
@@ -48,12 +48,12 @@ Ingredients:
 - 1 teaspoon apple cider vinegar
 - 1 teaspoon paprika
 - 1 teaspoon ground cumin
-- 1/2 teaspoon ground coriander
+- ½ teaspoon ground coriander
 - 1 teaspoon cinnamon
-- 1/2 teaspoon oregano
+- ½ teaspoon oregano
 - 2 teaspoons salt
 - 1 teaspoon black pepper
-- 1 teaspoon black & red pepper (1/2 tsp cayenne pepper)
+- 1 teaspoon black & red pepper (½ tsp cayenne pepper)
 - 6 cups beef broth
 - Cayenne pepper, optional, for heat, to taste
 - Optional, for serving: hot sauce, grated cheese, sliced jalapeno, sour cream,
@@ -144,7 +144,7 @@ _Frijoles de Olla (Pot Beans)_ and _Frijoles Refritos (Refried Beans)_
 - 2-3 bay leaves
 - 1 large sprig fresh epazote (1 Tb dried)
 - 1 garlic bulb peeled and finely chopped
-- 1/4 cup lard
+- ¼ cup lard
 - 2 Tb Worcestershire sauce
 - salt
 
@@ -154,7 +154,7 @@ _Frijoles de Olla (Pot Beans)_ and _Frijoles Refritos (Refried Beans)_
 2. Add 3 qt water, bay leaves, epazote and bacon drippings.
 3. Add one roughly chopped onion.
 4. Pressure cook for 1 hour and natural release for 20 minutes.
-5. Add 1-1/2 tsp salt
+5. Add 1-½ tsp salt
 6. Heat dutch oven over medium heat.
 7. Cook one diced onion until brown.
 8. Add garlic and cook until fragrant.
@@ -170,38 +170,46 @@ _Frijoles de Olla (Pot Beans)_ and _Frijoles Refritos (Refried Beans)_
 == Baked Eggs and Beans on Toast ==
 :beans:toast:eggs:
 
-Adapted from the
-[[https://web.archive.org/web/20140105211757/http://www.foodnetwork.com/recipes/food-network-kitchens/baked-eggs-and-beans-on-toast-recipe/index.html|Web Archive]],
-Recipes, Food Network Kitchens, Baked Eggs And Beans On Toast Recipe Index.
+Adapted from:
+- [[https://web.archive.org/web/20140105211757/http://www.foodnetwork.com/recipes/food-network-kitchens/baked-eggs-and-beans-on-toast-recipe/index.html|Web Archive]],
+  Recipes, Food Network Kitchens, Baked Eggs and Beans on Toast
+- [[https://www.thepetitecook.com/british-baked-beans/|The Petite Cook]] British Baked Beans
 
 *Ingredients*:
 
 - 2 tablespoons extra-virgin olive oil, plus more for brushing
-- 1/2 small onion, chopped
+- ½ onion finely minced
+- 2 garlic cloves minced
+- Pinch of dried thyme (optional)
+- ½ teaspoon smoked paprika
 - 1 tablespoon tomato paste
 - 2 tablespoons balsamic vinegar
 - 1 tablespoon Dijon mustard
 - 2 teaspoons Worcestershire sauce or steak sauce
-- Kosher salt and freshly ground pepper
-- 4 cups cooked beans with bean broth or
-  - 2 15-ounce cans navy beans (1 undrained; 1 drained and rinsed)
+- 1 tablespoon maple syrup (to taste)
+- 100 g pureed tomatoes or tomato passata
+- 400 g (4 cups) cooked cannellini (navy) beans
 - 8 large eggs
 - 4 thick slices crusty bread
 - 2 cups halved grape tomatoes
-- 1/4 cup chopped fresh cilantro
+- ¼ cup chopped fresh cilantro
+- Kosher salt and freshly ground pepper
 
 *Directions for Eggs and Baked Beans*:
 
 1. Preheat the oven to 375 degrees F.
-2. Heat 1-1/2 tablespoons olive oil in a large ovenproof skillet over
-   medium-high heat.
-3. Add the onion and cook, stirring, until golden, about 5 minutes.
-4. Add the tomato paste and cook, stirring, 1 more minute.
-5. Stir in the vinegar, mustard, Worcestershire sauce, and 1/2 cup bean broth
-   (or water)
+2. Heat 1-½ tablespoons olive oil in a large ovenproof skillet over
+   medium-low heat.
+3. Add the onion and garlic and cook, stirring often, until they’re soft, about
+   5 minutes.
+4. Add the tomato paste followed by the mustard, thyme, smoked paprika, Worcestershire
+   sauce, vinegar, and tomato passata; stir well and cook for a further 2
+   minutes.
+5. Add maple syrup to taste.
 6. Salt and pepper to taste.
-7. Bring to a simmer, then add the beans, plus the liquid from one of the cans.
-8. Cook until the beans are soft, about 5 more minutes.
+7. Add the beans and bean broth or water, as needed.
+8. Simmer all the ingredients for 8 minutes over low heat, stirring every now
+   and then, until the sauce has slightly thickened.
 9. Make eight indentations in the bean mixture and crack an egg into each.
 10. Sprinkle with salt and pepper and transfer to the oven.
 11. Bake until the egg whites are set, 10 to 14 minutes.
@@ -211,7 +219,7 @@ Recipes, Food Network Kitchens, Baked Eggs And Beans On Toast Recipe Index.
 1. Heat a large skillet over medium-high heat.
 2. Brush the bread with olive oil on both sides and toast in the skillet, 1
    minute per side.
-3. Toss the tomatoes, cilantro, and 1/2 tablespoon olive oil
+3. Toss the tomatoes, cilantro, and ½ tablespoon olive oil
 4. Salt and pepper to taste in a bowl.
 5. Divide the toast among plates; top each with 2 eggs, some beans and the
    tomato salad.
