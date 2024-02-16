@@ -137,6 +137,7 @@
 - [[Linux#Linux Notes#Bash Shell Script]]
 
 === beans ===
+- [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 - [[Beans#Dried Beans Recipes]]
 - [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
@@ -212,6 +213,9 @@
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
 - [[main#John D. Fisher's home wiki#DIY]]
+
+=== eggs ===
+- [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 
 === environment ===
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
@@ -489,6 +493,9 @@
 
 === timesyncd ===
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
+
+=== toast ===
+- [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 
 === todo ===
 - [[PowerShell#PowerShell and pwsh#Todo]]
