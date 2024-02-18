@@ -7,7 +7,7 @@
 - [[2023-10-14|Journal 2023-10-14]] covers an attempt to use `AppImage`.
 - `AppImage` crashes X11 randomly, leaving detached gvim processes, usually
   when Windows sleeps.
-- [[https://stackoverflow.com/questions/9387928/whats-the-difference-between-dist-packages-and-site-packages|Stackoverflow questions, Whats the difference between dist-packages and site-packages?]]
+- [[https://stackoverflow.com/questions/9387928/whats-the-difference-between-dist-packages-and-site-packages|Stackoverflow questions, What's the difference between dist-packages and site-packages?]]
   points to a solution that works with the Debian version of vim: Use the
   embedded python3 in vim to add the missing site-packages path.
 

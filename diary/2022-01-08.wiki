@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Cursor
 
-#x and y arrays for definining an initial function
+#x and y arrays for defining an initial function
 x = np.linspace(0, 10, 100)
 y = np.exp(x**0.5) * np.sin(5*x)
 

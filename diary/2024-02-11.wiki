@@ -32,7 +32,7 @@ repos:
 #!/usr/bin/env bash
 # pre-commit hook using ghp-import to push HTML to Github Pages.
 # Assumes:
-#		HTML exists in docs foler.
+#		HTML exists in docs folder.
 #		ghp-import in PATH, e.g., `python -m pip install ghp-import`.
 #		`git config ghppages.pathhtml <absolute path>/docs`. Defaults to
 #		"$GIT_WORK_TREE/docs".

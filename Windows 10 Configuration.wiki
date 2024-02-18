@@ -33,7 +33,7 @@
 
 - Windows 10 Insider Preview 10.0.17738.1000 (RS5_RELEASE)
   [[https://answers.microsoft.com/en-us/windows/forum/windows_10-update/windows-10-insider-preview-100177381000-rs5release/33da6c23-c9db-4096-8d68-38ee39d51b89|Install Error-SOLVED]]
-    - Open cmd.exe as Adminstrator
+    - Open cmd.exe as Administrator
 
 {{{ dos
 Sfc.exe /Scannow
@@ -403,7 +403,7 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
-git lfs instal
+git lfs install
 }}}
 
 === Whitewater Foundry Fedora Remix ===
@@ -533,4 +533,4 @@ Remote-to-remote symbolic link evaluation is: DISABLED
 == HP Envy BIOS Settings ==
 :BIOS:HP:
 
-Pres `F10` repeatedly during boot.
+Press `F10` repeatedly during boot.
