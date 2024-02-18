@@ -1,15 +1,62 @@
 = Journal 2024-02-17 =
 
 == Panvimwiki Github Flavored Markdown (GFM) ==
-:vimwiki:panvimwiki:markdownlint:
+:vimwiki:panvimwiki:markdownlint:gfm:
 
-Vimwiki supports GFM and does not recognize Pandoc's markdown
+- Vimwiki supports GFM and does not recognize Pandoc markdown `::: {#refs`
+  from Pandoc
+  [[https://pandoc.org/MANUAL.html#placement-of-the-bibliography|Placement of the bibliography]].
+  - `--to=gfm` converts to `<div id="refs" class="references csl-bib-body
+    hanging-indent">`.
+  - `Markdownlint-cli` accepts the anchor (no MD051/link-fragments), unlike
+    the default pandoc format, but emits `MD033/no-inline-html`, unless
+    `.markdownlint.yaml` overrides.
+- `Markdownlint-cli` accepts the anchor to resolve `MD051/link-fragments`.
+- Vimwiki does not recognize `<a id="anchor"></a>` or
+  `<div id="ref-TSTF_476_Ar12007" class="csl-entry">`.
+  - If a Vimwiki tag matches the anchor, Vimwiki will prefer the tag.
+  - Manually creating the anchor leaves cruft in the file that could impair
+    `HTML` output.
+- Pandoc can strip the references from `--from=gfm` and `--from=markdown` if
+  using `--to=markdown`, without `-citations`.
 
-Pandoc [[https://pandoc.org/MANUAL.html#placement-of-the-bibliography|Placement of the bibliography]]
-{{{text
-MD051/link-fragments Link fragments should be valid
+*.markdownlint.yaml*:
+
+{{{yaml
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md051.md
+# MD051/link-fragments Link fragments should be valid [Context: "[2007](#ref-TSTF_476_Ar12007)"]
+
+# MD033/no-inline-html : Inline HTML : https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md
+MD033:
+  # MD033/no-inline-html Inline HTML [Element: a]
+  # MD033/no-inline-html Inline HTML [Element: div]
+  # Allowed elements
+  allowed_elements:
+    - 'a'
+    - 'div'
 }}}
 
+To expand citations, convert Vimwiki links to markdown and remove the link
+title:
+
+{{{bash
+pandoc --to=gfm --citeproc --metadata='link-citations:true'
+--from=markdown+wikilinks_title_after_pipe-citations --standalone
+
+pandoc --citeproc --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe-task_lists \
+  --standalone --wrap=auto \
+  --to=markdown-citations \
+  expand_citeproc.md | wikilink_markdown
+
+pandoc --citeproc --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe-task_lists \
+  --standalone --wrap=auto \
+  --to=gfm  \
+  expand_citeproc.md | wikilink_markdown > expand_citeproc-gfm.md
+}}}
+
+*expand_citeproc.md*:
 
 {{{markdown
 ---
@@ -70,4 +117,42 @@ pandoc --citeproc \
 
 ----
 House of Dude
+}}}
+
+*expand_citeproc-gfm.md*:
+
+{{{markdown
+<!-- snip -->
+Hey [Adding to the House of Dude](230916-1043)
+
+<!-- snip -->
+
+Bloggs and Jones ([1959](#ref-bloggs-jones))
+
+([Chomsky 1973](#ref-chomsky-73))
+
+[vimwiki](vimwiki)
+
+------------------------------------------------------------------------
+
+House of Dude
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-bloggs-jones" class="csl-entry">
+
+Bloggs, A. J., and X. Y. Jones. 1959. “Title Title Title Title Title
+Title Title Title Title Title.” *Journal Journal Journal*.
+
+</div>
+
+<div id="ref-chomsky-73" class="csl-entry">
+
+Chomsky, N. 1973. “Conditions on Transformations.” In *A Festschrift for
+Morris Halle*, edited by S. R. Anderson and P. Kiparsky. New York: Holt,
+Rinehart & Winston.
+
+</div>
+
+</div>
 }}}

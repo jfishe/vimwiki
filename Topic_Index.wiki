@@ -230,6 +230,9 @@
 === fzf-bibtex ===
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
+=== gfm ===
+- [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
+
 === gh-pages ===
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
