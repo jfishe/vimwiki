@@ -127,6 +127,9 @@
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
 
+=== ancho ===
+- [[Beans#Dried Beans Recipes#Chili]]
+
 === appimage ===
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
@@ -138,6 +141,7 @@
 
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
+- [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes]]
 - [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
@@ -169,6 +173,9 @@
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
 
+=== chili ===
+- [[Beans#Dried Beans Recipes#Chili]]
+
 === choco ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
@@ -198,6 +205,7 @@
 - [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
 
 === cookery ===
+- [[Beans#Dried Beans Recipes]]
 - [[index#John D. Fisher's home wiki#Cooking]]
 
 === cooking ===
