@@ -240,6 +240,7 @@
 
 === gfm ===
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
 
 === gh-pages ===
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
@@ -295,6 +296,7 @@
 
 === markdownlint ===
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
 
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
@@ -356,6 +358,7 @@
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
 
 === parquet ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -567,6 +570,7 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]

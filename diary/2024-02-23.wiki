@@ -1,0 +1,28 @@
+= Journal 2024-02-23 =
+
+== Panvimwiki Github Flavored Markdown (GFM) ==
+:vimwiki:panvimwiki:markdownlint:gfm:
+
+- [[2024-02-17|Journal 2024-02-17]] selected `gfm` for `citeproc` output
+  because `markdownlint` recognizes the anchors, whereas the default pandoc
+  anchors would require disabling `MD051/link-fragments`.
+- [.] Defines tests for `task_lists` behavior.
+- If a `task_lists`  contains blank lines, pandoc will split every item in
+  adjacent unordered lists with a blank line. Break with a comment or other
+  text to split the list.
+- Pandoc coerces asterisk unordered list-markers to hyphens and escapes
+  octothorpes (`#`), which breaks `Taskwiki` syntax.
+- Github and Myst have different implicit heading links:
+  - Myst: `#g-panvimwiki-settings`
+  - Github: `#gpanvimwiki_settings`
+
+  {{{markdown
+  See [g:panvimwiki_settings].
+
+  ## g:panvimwiki_settings
+
+  To link here.
+
+  <!-- markdownlint-disable MD051 -->
+  [g:panvimwiki_settings]: #g-panvimwiki-settings
+  }}}
