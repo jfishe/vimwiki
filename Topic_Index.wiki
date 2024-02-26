@@ -143,11 +143,9 @@
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 - [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes]]
-- [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === biblatex ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
@@ -162,7 +160,6 @@
 
 === bluetooth ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
 - [[index#John D. Fisher's home wiki#Cooking#Dutch Baby]]
@@ -220,7 +217,6 @@
 
 === diy ===
 - [[index#John D. Fisher's home wiki#DIY]]
-- [[main#John D. Fisher's home wiki#DIY]]
 
 === eggs ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
@@ -323,7 +319,6 @@
 
 === motorola ===
 - [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
@@ -369,7 +364,6 @@
 
 === pepper ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
@@ -454,7 +448,6 @@
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === script ===
 - [[Linux#Linux Notes#Bash Shell Script]]
@@ -465,8 +458,6 @@
 === seasoning ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === shades ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
@@ -529,7 +520,6 @@
 
 === tritip ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === troubleshooting ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
