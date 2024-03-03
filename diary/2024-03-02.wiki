@@ -1,0 +1,20 @@
+= Journal 2024-03-02 =
+
+== Vimwiki Windows vimwiki#base#system_open_link() ==
+
+- [[https://github.com/vimwiki/vimwiki/issues/1343#issuecomment-1690936595|Vimwiki Issue 1343]] Following HTML link is broken if shell is PowerShell.
+- Issue 1343 comments describe `:h :shell` `:h E371` occurring for
+  `execute '! start "Title" /B ' .. url`
+- netrw-gx uses `url.dll`
+
+{{{vim
+:!rundll32 url.dll,FileProtocolHandler 'url'
+}}}
+
+{{{powershell
+"pwsh.exe" -c "start url"
+}}}
+
+{{{cmd
+cmd.exe /c (start url)
+}}}

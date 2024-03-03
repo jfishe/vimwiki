@@ -203,6 +203,7 @@
 
 === cookery ===
 - [[Beans#Dried Beans Recipes]]
+- [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 - [[index#John D. Fisher's home wiki#Cooking]]
 
 === cooking ===
@@ -354,6 +355,7 @@
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v]]
 
 === parquet ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -438,6 +440,7 @@
 === recipe ===
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
+- [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
 === remodel ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
@@ -472,6 +475,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
+
+=== stew ===
+- [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
 === submodule ===
 - [[Git#Git#Remove Submodule]]
@@ -527,6 +533,9 @@
 === twine ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 
+=== vegetable ===
+- [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
+
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
@@ -561,6 +570,7 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
+- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
