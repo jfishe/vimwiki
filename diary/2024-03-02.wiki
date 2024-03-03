@@ -7,14 +7,10 @@
   `execute '! start "Title" /B ' .. url`
 - netrw-gx uses `url.dll`
 
-{{{vim
-:!rundll32 url.dll,FileProtocolHandler 'url'
-}}}
-
 {{{powershell
-"pwsh.exe" -c "start url"
-}}}
+# :!rundll32 url.dll,FileProtocolHandler 'url'
+cmd.exe /c (rundll32 url.dll,FileProtocolHandler ^"https://github.com/vimwiki/vimwiki/issues/1343#issuecomment-1690936595^")
 
-{{{cmd
-cmd.exe /c (start url)
+$Env:SHELL = Get-Command pwsh
+pwsh.exe -c "rundll32 url.dll,FileProtocolHandler 'https://github.com/vimwiki/vimwiki/issues/1343#issuecomment-1690936595'"
 }}}
