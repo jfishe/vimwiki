@@ -13,7 +13,7 @@
   disabled`. `Jupytext` works without.
 - `<C-S-C>` opens the Command Palette. `Reload Notebook from Disk` refreshes
   Jupyter Lab.
-- [[https://jupyterbook.org/en/stable/explain/sphinx.html#how-to-replicate-jupyter-books-functionality-in-sphinx|How to replicate Jupyter Book’s functionality in Sphinx]]
+- [[https://jupyterbook.org/en/stable/explain/sphinx.html#how-to-replicate-jupyter-books-functionality-in-sphinx|How to replicate Jupyter Book's functionality in Sphinx]]
 
   {{{powershell
   # Generate conf.py

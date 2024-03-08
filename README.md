@@ -63,10 +63,10 @@ env _VIMWIKI_COMPLETE=zsh_source vimwiki >$COMPLETION_PATH
 
 ```text
 ├── docs
-│   ├── css
-│   │   └── style.css
+│   ├── css
+│   │   └── style.css
 ├── templates
-│   ├── default.tpl
+│   ├── default.tpl
 ```
 
 [pre-commit]: <https://pre-commit.com/index.html>

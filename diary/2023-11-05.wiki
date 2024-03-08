@@ -4,7 +4,7 @@
 :pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
 
 - [[2024-01-20|Journal 2024-01-20]]
-- [[https://pandoc.org/MANUAL.html#pandocs-markdown|Pandoc User’s Guide Pandoc's Markdown]]
+- [[https://pandoc.org/MANUAL.html#pandocs-markdown|Pandoc User's Guide Pandoc's Markdown]]
 - Obsidian does not parse:
 	- header_attributes
 	- Wiki links converted to `CommonMark` links, so `+wikilinks_title_after_pipe`,

@@ -202,7 +202,7 @@ enabled = true
 options = "metadata,uid=1000,gid=1000,umask=22,fmask=11,case=off"
 mountFsTab = false
 
-#Let’s enable DNS – even though these are turned on by default, we’ll specify her
+#Let's enable DNS – even though these are turned on by default, we'll specify her
 [network]
 generateHosts = true
 generateResolvConf = true
