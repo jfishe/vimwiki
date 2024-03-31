@@ -1,6 +1,6 @@
 = Journal 2024-02-25 =
 
-== Pandoc v3.1.3 and v ==
+== Pandoc v3.1.3 and v3.1.12 ==
 :vimwiki:panvimwiki:
 
 {{{bash

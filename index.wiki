@@ -58,9 +58,6 @@
 === Motorola Bluetooth Headset ===
 :motorola:bluetooth:
 
-Motorola H17:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/36639|Restore to Factory Settings]]
-:: With your headset on, press and hold both Volume buttons and Call button for 10 seconds until the indicator light is steady blue.
-
 Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71059/~/hx550-reset-to-factory-default|Reset to factory default]]
 :: Press and hold the Call button while turning on the headset.
 
@@ -70,8 +67,9 @@ Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71
 - [[Sisal_Rope|Cat Scratching Pole Sisal Rope Replacement]]
 
 == Cooking ==
-:cookery:cooking:
+:cookery:cooking:recipes:
 
+- [[https://coolconversion.com/cooking-volume-weight/|CoolConversion Ingredients Volume To Weight]]
 - [[Coffee]]
 - [[Beans|Dried Beans Recipes]]
 - [[Drinks]]
@@ -111,30 +109,28 @@ Worked well on Tri Tip of beef. Derived from
 
 Ingredients:
 
-- 1 cup black olives, pitted (Καλαμάτα)
-- 1 cup green olives, pitted (Castelvetrano)
+- 1 cup (180 g) black olives, pitted (Καλαμάτα)
+- 1 cup (180 g) green olives, pitted (Castelvetrano)
 - 3 anchovy fillets, rinsed and patted dry
-- 3 tablespoons drained capers
+- 3 tablespoons (22.5 g) drained capers
 - 3 tablespoons olive oil
 - 2 tablespoons lemon juice or brandy
-- 2 garlic cloves
-- 2 teaspoons fresh thyme leaves or 1 teaspoon dried thyme
-- Mint leaves and cilantro, to taste.
-- black pepper, to taste.
+- 3 garlic cloves
+- 3 teaspoons _Herbes de Provence_
+- Mint leaves and cilantro
+- black pepper
 
 Directions:
 
-1. Depending on preservation method, capers and olives may need rinsing and
-   patting dry to manage salt.
+1. Depending on preservation method, anchovies, capers and olives may need
+   rinsing and patting dry to manage salt.
 2. Puree olive oil, capers, anchovies, garlic and herbs in food processor.
 3. Process olives through a meat grinder (or food processor) to desired
-   consistency.
-4. Combine olives and puree.
+   texture.
+4. Combine olives with puree.
 5. Some olives are stored in vinegar, so taste and adjust acidity with lemon
    juice or brandy.
-6. Add pepper to taste.
-
-
+6. Add ground pepper to taste.
 
 === Dutch Baby ===
 :breakfast:

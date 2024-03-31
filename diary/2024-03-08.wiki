@@ -1,6 +1,12 @@
 = Journal 2024-03-08 =
 
-== Ventilated Prose ==
+== Ventilated Prose and Semantic Line Breaks ==
+:prose:markdown:sembr:
 
-[[https://vanemden.wordpress.com/2009/01/01/ventilated-prose/|A Programmer's Place]] summarized Buckminster Fuller's Ventilated Prose from the preface of
-*No More Second-Hand God* by Buckminster Fuller, Southern Illinois University Press, 1963.
+[[https://vanemden.wordpress.com/2009/01/01/ventilated-prose/|A Programmer's Place]]
+summarized Buckminster Fuller's Ventilated Prose from the preface of
+*No More Second-Hand God* by Buckminster Fuller,
+Southern Illinois University Press, 1963.
+[[https://sembr.org/|Semantic Line Breaks]] formalizes a set of rules.
+
+https://rhodesmill.org/brandon/2012/one-sentence-per-line/

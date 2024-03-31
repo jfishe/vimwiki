@@ -295,6 +295,9 @@
 === margarita ===
 - [[Drinks#Drink Recipes#Margarita]]
 
+=== markdown ===
+- [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
+
 === markdownlint ===
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
@@ -360,7 +363,7 @@
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
-- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v]]
+- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v3.1.12]]
 
 === parquet ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -395,6 +398,9 @@
 
 === pre-commit ===
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
+
+=== prose ===
+- [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
 
 === pull ===
 - [[Git#Git#Pull Rebase]]
@@ -448,6 +454,9 @@
 - [[Coffee#Coffee]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
+=== recipes ===
+- [[index#John D. Fisher's home wiki#Cooking]]
+
 === remodel ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
@@ -470,6 +479,9 @@
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+
+=== sembr ===
+- [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
 
 === shades ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
@@ -580,7 +592,7 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
-- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v]]
+- [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v3.1.12]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
