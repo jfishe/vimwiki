@@ -1,0 +1,15 @@
+= Journal 2024-03-31 =
+
+== Typst as a LaTeX Replacement ==
+:typst:LaTeX:
+
+- [[https://typst.app/docs/|Typst]]
+- Pandoc supports conversion to and from `typst`.
+
+== Hayagriva as a BibLaTeX Replacement ==
+:hayagriva:biblatex:
+
+- [[https://github.com/typst/hayagriva/blob/main/docs/file-format.md|The Hayagriva YAML File Format]]
+  is less arcane than BibLaTeX.
+- Zotero does not support.
+- Imports but does not export BibLaTeX.

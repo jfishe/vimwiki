@@ -18,9 +18,9 @@ Pandoc markdown --from=markdown-task_lists+wikilinks_title_after_pipe
 - With the default, `--from=markdown`, pandoc lower cases finished tasks and
   escapes the brackets for in progress tasks, which conflict with Vimwiki
   syntax.
-- With `--from=markdown-task_lists`, pandoc escapes all the brackets.  which
+- With `--from=markdown-task_lists`, pandoc escapes all the brackets, which
   conflicts with Vimwiki syntax.
-- With `--to=markdown-task_lists`, pandoc escapes all the brackets.  which
+- With `--to=markdown-task_lists`, pandoc escapes all the brackets, which
   conflicts with Vimwiki syntax.
   - Unfinished tasks convert to ☐ and finished to ☒, which is not
     reversible.

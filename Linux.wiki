@@ -11,6 +11,28 @@
 - `sudo hwclock --hctosys` resets system time to hardware clock time:
   [[https://askubuntu.com/questions/1096930/sudo-apt-update-error-release-file-is-not-yet-valid|sudo apt update error: "Release file is not yet valid"]].
 
+=== Packages Not Upgraded ===
+:apt:
+
+When `sudo apt update && sudo apt upgrade` produces a warning similar to:
+
+{{{text
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+...
+
+The following packages have been kept back:
+  cloud-init libruby3.0 python3-update-manager ruby3.0 update-manager-core
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+}}}
+
+Update the packages individually.
+
+{{{bash
+sudo apt list --upgradable
+sudo apt install --only-upgrade <package name>
+}}}
+
 == Fedora and Red Hat ==
 :Fedora:RHEL:
 
