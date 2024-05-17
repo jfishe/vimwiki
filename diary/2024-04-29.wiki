@@ -1,0 +1,130 @@
+= Journal 2024-04-29 =
+
+== Vimwiki Markdown Tag Syntax ==
+:pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
+
+- [[2023-11-10#Vimwiki Markdown Tag Syntax|Journal 2023-11-10 Vimwiki Markdown Tag Syntax]]
+- https://goral.net.pl/post/ctags-for-notes/
+
+{{{vim
+
+\(^tags:\_.\)\zs\(\s*[*+-]\s\(.\+\)\_.\)\+
+  let tf = {
+        \ 'pre': '\(^tags:\_.\)\zs',
+        \ 'pre_mark': '\s*[*+-]\s',
+        \ 'in': '\(.\+\)',
+        \ 'sep': '\_.',
+        \ 'post_mark': '',
+        \ 'post': '',
+        \ 'cchar': '',
+        \ 'conceal': 0
+        \ }
+
+{
+  \ 'pre_mark': '\%(:\)',
+  \ 'sep': '\%(:\)',
+  \ 'cchar': '',
+  \ 'post_mark': '\%(:\)',
+  \ 'conceal': 0,
+  \ 'post': '\%(\s\|$\)',
+  \ 'in': '\%([^:''[:space:]]\+\)',
+  \ 'pre': '\%(^\|\s\)'
+\ }
+{
+  \ 'pre_mark': '\%(\)',
+  \ 'sep': '\%(>><<\)',
+  \ 'conceal': 0,
+  \ 'post_mark': '\%(\)',
+  \ 'cchar': '',
+  \ 'post': '\%(\s\|$\)',
+  \ 'in': '\%([^:''[:space:]]\+\)',
+  \ 'pre': '\%(\(^[ -]*tags\s*:.*\)\@<=\)'
+  \ }
+}}}
+
+- autoload/vimwiki/tags.vim
+
+{{{pandoc
+Pandoc
+  Meta
+    { unMeta =
+        fromList
+          [ ( "bibliography" , MetaInlines [ Str "zk.bib" ] )
+          , ( "date"
+            , MetaInlines [ Str "2023-11-06" , Space , Str "14:49" ]
+            )
+          , ( "id" , MetaInlines [ Str "20231106-1449" ] )
+          , ( "link-citations" , MetaBool True )
+          , ( "status" , MetaInlines [ Str "Reviewed" ] )
+          , ( "tags"
+            , MetaList
+                [ MetaInlines [ Str "EPRI" ]
+                , MetaInlines [ Str "EnergyNorthwest" ]
+                , MetaInlines [ Str "NEI" ]
+                , MetaInlines [ Str "NEI12-16" ]
+                , MetaInlines [ Str "NUREG/CR-6698" ]
+                , MetaInlines [ Str "RG1.240" ]
+                , MetaInlines [ Str "criticality" ]
+                , MetaInlines [ Str "ref-NEI12-16r4" ]
+                ]
+            )
+          , ( "title"
+            , MetaInlines
+                [ Str "NEI"
+                , Space
+                , Str "12-16"
+                , Space
+                , Str "Rev"
+                , Space
+                , Str "4"
+                ]
+            )
+          , ( "type" , MetaInlines [ Str "literature" ] )
+          ]
+    }
+}}}
+
+{{{python
+# coding=utf8
+# the above tag defines encoding for this document and is for Python 2.x compatibility
+
+import re
+
+regex = r"(?<=(^tags:\s))(\s*[\+\-\*]\s(.+)\s)+"
+
+test_str = ("---\n"
+	"bibliography: zk.bib\n"
+	"date: \"2024-03-21 08:54\"\n"
+	"id: 20240321-0854\n"
+	"link-citations: true\n"
+	"status: Reviewed\n"
+	"tags:\n"
+	"- EnergyNorthwest\n"
+	"   - ref-NEDE-33885P-Ar1\n"
+	"- TRACG-CRDA\n"
+	"  - NEDE-33885P-A\n"
+	"  - BPWS\n"
+	"title: NEDE-33885P-A, Revision 1\n"
+	"  - EnergyNorthwest\n"
+	"  - ref-NEDE-33885P-Ar1\n"
+	"  - TRACG-CRDA\n"
+	"  - NEDE-33885P-A\n"
+	"  - BPWS\n"
+	"type: literature\n"
+	"---")
+
+matches = re.finditer(regex, test_str, re.MULTILINE)
+
+for matchNum, match in enumerate(matches, start=1):
+
+    print ("Match {matchNum} was found at {start}-{end}: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()))
+
+    for groupNum in range(0, len(match.groups())):
+        groupNum = groupNum + 1
+
+        print ("Group {groupNum} found at {start}-{end}: {group}".format(groupNum = groupNum, start = match.start(groupNum), end = match.end(groupNum), group = match.group(groupNum)))
+}}}
+
+{{{vim
+/\(^tags:\_.\)\zs\(\s*[*+-]\s\(.\+\)\_.\)\+
+}}}
