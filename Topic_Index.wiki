@@ -393,6 +393,9 @@
 === plugin ===
 - [[Python#Python Notes#Vim Python Plugin]]
 
+=== pork ===
+- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
+
 === posh-git ===
 - [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
 
@@ -476,6 +479,7 @@
 
 === rub ===
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === script ===
@@ -487,6 +491,7 @@
 === seasoning ===
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
@@ -549,6 +554,9 @@
 
 === tokens ===
 - [[Git#Git#Developer Settings]]
+
+=== toploin ===
+- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
 
 === tortillas ===
 - [[index#John D. Fisher's home wiki#Cooking#Tortillas de Harina]]

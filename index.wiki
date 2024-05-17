@@ -15,6 +15,7 @@
   - [[#Cooking]]
     - [[#Mignonette Pepper]]
     - [[#Santa Maria Rub]]
+    - [[#Smoked Pork Top Loin]]
     - [[#Olive Tapanade]]
     - [[#Dutch Baby]]
     - [[#Tortillas de Harina]]
@@ -103,6 +104,53 @@ Worked well on Tri Tip of beef. Derived from
 - 1/2 teaspoon cayenne pepper
 - 1 teaspoon _herbs de provence_
 - 1/2 teaspoon salt
+
+=== Smoked Pork Top Loin ===
+:toploin:rub:pork:seasoning:
+
+[[https://blog.thermoworks.com/pork/smoked-pork-loin/|Thermoworks Pork Smoked Pork Loin]]
+recommends smoking at 250 °F until internal temperature reaches 140 °F.
+
+[[https://www.traeger.com/recipes/smoked-pork-loin|Traeger Smoked Pork Loin]]
+comments recommend ignoring time,
+cooking at low temperature, until stalling at 125 °F, and
+then increasing to 350 °F to finish.
+Apply prepared mustard prior to applying rub.
+Smoke at 180 °F, spritz with cider vinegar and beer
+every 30 minutes until 135 °F.
+Finish at 350 °F until 150 °F.
+Drizzle with balsamic vinegar 30 minutes before cooking and
+spritz with pineapple juice to retain moisture.
+
+- [[https://www.traeger.com/recipes/ancho-rubbed-pork-loin|Traeger BBQ Ancho-Rubbed Pork Loin]]
+  produced more rub than needed.
+  - Score the fat cap.
+  - Added salt directly to top loin to reduce sodium.
+    Thin uniform sprinkle on all sides before apply rub.
+  - Substitute
+    [[https://penzeys.com/online-catalog/33rd-galena-seasoning/c-24/p-307/pd-s|Pensey's 33rd & Galena Seasoning]]
+    for oregano.
+  - Substitute
+    [[https://www.penzeys.com/online-catalog/italian-herb-mix/c-24/p-183/pd-s|Pensey's Italian Herb Mix]]
+    for paprika, pepper and chile de árbol.
+  - Apply rub on all sides and allow time to adhere before rotating to another
+    side.
+  - Wrap tightly in cling wrap and refrigerate over night on a rack to allow
+    air circulation on all sides.
+- Use cooking instructions from
+  [[https://www.traeger.com/recipes/smoked-pork-loin|Traeger Smoked Pork Loin]]
+  - 140 ⁰F internal temperature after 2 hours at low smoke setting (180 °F)
+    Fat cap should be on top.
+  - Rotate loins in smoker periodically for uniform cooking.
+    Hottest zone was near drip pan.
+- Place loin(s) in covered roasting dish or wrap in foil.
+- Add a small amount of braising liquid, e.g., beer and apple cider vinegar.
+  Enough liquid to cover the bottom of the pan should be sufficient.
+  Steam from the liquid prevents the loin drying out since the fat cap is not
+  large enough to meet that need.
+- Braise covered for 30 minutes, at 350 °F.
+  Final internal temperature should be ~180 °F.
+- Rest for 30 minutes.
 
 === Olive Tapanade ===
 :tapanade:olives:condiment:
