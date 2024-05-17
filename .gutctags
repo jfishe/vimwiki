@@ -1,0 +1,63 @@
+--recurse=yes
+--langdef=vimwiki
+--langmap=vimwiki:.wiki
+--regex-vimwiki=/^=[ \t]+(.+)[ \t]+=$/\1/h,header/
+--regex-vimwiki=/^==[ \t]+(.+)[ \t]+==$/. \1/h,header/
+--regex-vimwiki=/^===[ \t]+(.+)[ \t]+===$/.   \1/h,header/
+--regex-vimwiki=/^====[ \t]+(.+)[ \t]+====$/.     \1/h,header/
+--regex-vimwiki=/^=====[ \t]+(.+)[ \t]+=====$/.       \1/h,header/
+--regex-vimwiki=/^======[ \t]+(.+)[ \t]+======$/.         \1/h,header/
+--exclude=$RECYCLE.BIN
+--exclude=*$py.class
+--exclude=*.ini
+--exclude=*.py[cod]
+--exclude=*.temp
+--exclude=*.tmp
+--exclude=.DS_Store
+--exclude=.anaconda
+--exclude=.env
+--exclude=.git
+--exclude=.matplotlib
+--exclude=.mypy_cache
+--exclude=.obsidian
+--exclude=.pyc
+--exclude=.pylint.d
+--exclude=.pyo
+--exclude=.pytest_cache
+--exclude=.tags
+--exclude=.venv
+--exclude=.vscode
+--exclude=.vscode-insiders
+--exclude=Anaconda3
+--exclude=AnacondaProjects
+--exclude=AppData
+--exclude=Desktop
+--exclude=Documentum
+--exclude=Downloads
+--exclude=GitHub
+--exclude=Google Drive
+--exclude=Intel
+--exclude=IntelGraphicsProfiles
+--exclude=Local
+--exclude=MathJax
+--exclude=Miniconda3
+--exclude=Modules
+--exclude=Modules
+--exclude=OneDrive
+--exclude=Pictures
+--exclude=RECYCLER
+--exclude=Roaming
+--exclude=Scripts
+--exclude=Temp
+--exclude=Videos
+--exclude=__pycache__
+--exclude=docs
+--exclude=env
+--exclude=iCloudDrive
+--exclude=pack
+--exclude=tags
+--exclude=temp
+--exclude=tmp
+--exclude=venv
+--exclude=vim??
+--exclude=vimfiles
