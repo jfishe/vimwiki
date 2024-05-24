@@ -147,6 +147,7 @@
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 - [[Beans#Dried Beans Recipes#Chili]]
+- [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes]]
 - [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
@@ -386,6 +387,9 @@
 - [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
+=== pico ===
+- [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
@@ -473,6 +477,9 @@
 === remodel ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
+=== rice ===
+- [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
@@ -481,6 +488,9 @@
 - [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 - [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+
+=== salsa ===
+- [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 
 === script ===
 - [[Linux#Linux Notes#Bash Shell Script]]

@@ -9,6 +9,7 @@
   - [[#Frijoles Refritos]]
   - [[#Baked Eggs and Beans on Toast]]
   - [[#Chili]]
+  - [[#Red Beans and Rice]]
 
 == Instant Pot Dried Beans ==
 
@@ -282,6 +283,56 @@ _Chili_
 12. Drain excess fat.
 13. Stir in and cook ancho seasoning to temper raw flavor.
 14. Add beans, broth, beer, and tomatoes.
-16. Simmer gently for 1 hour.
-17. Add sugar and salt to taste.
-18. If needed, thicken with Masa Harina mixed with water.
+15. Simmer gently for 1 hour.
+16. Add sugar and salt to taste.
+17. If needed, thicken with Masa Harina mixed with water.
+
+== Red Beans and Rice ==
+:beans:rice:pico:salsa:
+
+*Ingredients*:
+
+_Beans_
+
+- 1 lb ground sausage
+- Olive oil for sautéing
+- 2 cup chopped celery
+- 2 cup chopped onion (1 large)
+- 1 clove chopped garlic
+- 3 qt water
+- 2 lb red beans
+- 4 bay leaves
+- 1 Tb _herbs de provence_
+- 1 Tb [[https://www.penzeys.com/online-catalog/penzeys-salsa-pico/c-24/p-3092/pd-s|Penzeys Salsa & Pico]]
+- 2 lb dried red beans
+- 2 oz soy sauce
+- 1 lb smoked andouille or kielbasa sausage, sliced diagonally, ½-inch.
+
+_Rice_
+
+- 4 cups rice
+- 2 cups coconut milk
+- 2 cups water
+
+*Directions*:
+
+_Beans_
+
+1. Brown sausage in a stock pot, adding olive oil if needed.
+2. Drain fat, remove sausage and reserve.
+3. Sauté celery and onion in sausage fat, adding olive oil if needed.
+4. When vegetables are tender and aromatic, add the garlic and sauté until fragrant.
+5. Add water and simmer for approximately 20 minutes.
+6. Strain liquid into Instant Pot and add beans and herbs.
+7. Cook according [[#Instant Pot Dried Beans|Instant Pot Dried Beans]].
+8. Add soy sauce to taste.
+9. Add beans and liquid to stock pot.
+10. Return ground sausage to stock pot.
+11. Add sliced sausage.
+12. Simmer until beans are tender.
+
+_Rice_
+
+1. Rinse rice.
+2. Combine rice, coconut milk and water.
+3. Cook on rice setting and quick release when done.
