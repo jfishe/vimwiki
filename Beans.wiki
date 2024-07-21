@@ -237,7 +237,8 @@ Based on 4 servings:
 == Chili ==
 :chili:beans:ancho:
 
-Adapted from [[https://www.rickbayless.com/recipe/fronteras-award-winning-chili/|Rick Bayless' Frontera's Award Winning Chili]].
+Adapted from [[https://www.rickbayless.com/recipe/fronteras-award-winning-chili/|Rick Bayless' Frontera's Award Winning Chili]]
+and [[https://www.youtube.com/watch?v=mb3k0wApWas|The SHOCKING SECRET to great chili by Adam Ragusea]]
 Based on 2 lb dried beans.
 
 *Ingredients*:
@@ -264,6 +265,7 @@ _Chili_
 - 2 cups canned tomatoes
 - 4 Tb Masa Harina
 - 12 cups slightly under cooked beans
+- Dark chocolate to taste (~4 Tb cocoa powder or shaved chocolate).
 
 *Directions*:
 
@@ -284,8 +286,9 @@ _Chili_
 13. Stir in and cook ancho seasoning to temper raw flavor.
 14. Add beans, broth, beer, and tomatoes.
 15. Simmer gently for 1 hour.
-16. Add sugar and salt to taste.
-17. If needed, thicken with Masa Harina mixed with water.
+16. Add dark chocolate
+17. Add sugar and salt to taste.
+18. If needed, thicken with Masa Harina mixed with water.
 
 == Red Beans and Rice ==
 :beans:rice:pico:salsa:
