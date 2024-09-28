@@ -191,6 +191,9 @@
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 
+=== cocoa ===
+- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
+
 === coffee ===
 - [[Coffee#Coffee#French Press Coffee]]
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
@@ -267,6 +270,9 @@
 
 === gpg ===
 - [[diary/2023-07-02#Journal 2023-07-02]]
+
+=== gravy ===
+- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
 
 === hayagriva ===
 - [[diary/2024-03-31#Journal 2024-03-31#Hayagriva as a BibLaTeX Replacement]]
@@ -491,6 +497,9 @@
 
 === salsa ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+
+=== sauce ===
+- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
 
 === script ===
 - [[Linux#Linux Notes#Bash Shell Script]]

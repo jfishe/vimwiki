@@ -13,6 +13,7 @@
     - [[#Motorola Bluetooth Headset]]
   - [[#DIY]]
   - [[#Cooking]]
+    - [[#Cocoa Gravy]]
     - [[#Mignonette Pepper]]
     - [[#Santa Maria Rub]]
     - [[#Smoked Pork Top Loin]]
@@ -74,6 +75,31 @@ Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71
 - [[Coffee]]
 - [[Beans|Dried Beans Recipes]]
 - [[Drinks]]
+
+=== Cocoa Gravy ===
+:cocoa:gravy:sauce:
+
+Derived from [[https://www.food.com/recipe/sweet-spicy-chocolate-gravy-442606|Sweet & Spicy Chocolate Gravy]].
+
+Ingredients:
+
+- ⅔ cups unsweetened cocoa powder (more or less)
+- ½ cup all-purpose flour
+- 1⅓ cups powdered sugar (granulated also works just fine)
+- 1 quart whole milk
+- 71 g (5 Tb) butter (or bacon fat)
+- 4 teaspoons vanilla
+- ½ teaspoon salt
+- 2 to taste cayenne pepper (2-3 generous dashes, depending on your spicy preference)
+
+Directions:
+
+1. Heat skillet or sauce pan over medium-low heat, add butter or bacon fat until melted.
+2. Sprinkle in flour slowly and whisk until smooth.
+3. Add chocolate and sugar, whisk until fully blended; cook 1-2 minutes, careful to not burn.
+4. Slowly add milk, whisk continuously to prevent lumps.
+5. Add vanilla, salt, and cayenne.
+6. Cook a few minutes until gravy thickens. Whisk in more milk for a thinner gravy.
 
 === Mignonette Pepper ===
 :pepper:seasoning:
