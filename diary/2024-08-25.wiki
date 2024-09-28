@@ -1,0 +1,45 @@
+= Journal 2024-08-25 =
+
+== VimwikiSearchTags Default ==
+
+{{{vim
+/
+\%(^\|\s\)
+\@<=\%(:\)
+\%(\%([^:'[:space:]]\+\)\%(:\)\)*
+AppendixR
+\%(\%(:\)\%([^:'[:space:]]\+\)\)*
+\%(:\)
+\%(\s\|$\)
+\@=
+/
+}}}
+
+== VimwikiSearchTags Markdown Hashtag ==
+
+`vimwiki#tags#search_tags` generates a Vim regex based on
+`g:vimwiki_tag_format` and `vimwiki#vars#get_syntaxlocal('tag_format')`.
+
+{{{vim
+/
+\%(^\|\s\)
+\@<=\%(\W#\w\@=\)
+\%(\%([^#:[:space:]]\+\)\%([#[:space:]]\+\)\)*
+AppendixR
+\%(\%([#[:space:]]\+\)\%([^#:[:space:]]\+\)\)*
+\%(\)
+\%(\s\|$\)
+\@=
+/
+}}}
+
+Modify the preceding for compatibility with `ripgrep` `pcre2` regex syntax.
+
+{{{text
+(^|\s)(?<=(\W#\w))(?=(([^#:[:space:]]+)([#[:space:]]+)))*
+}}}
+
+{{{text
+ #EnergyNorthwest #PFSS #AppendixR #GNF3 #TRACG-LOCA #EPU
+ #AppendixR
+}}}

@@ -1,0 +1,52 @@
+= Journal 2024-08-24 =
+
+== Vimwiki Markdown Hashtags ==
+:pandoc:Obsidian:vimwiki:tags:vimwiki_tags:
+
+{{{vim
+cfdo VimwikiMarkdownFormat |
+%s/^#\(\w\)/ #\1/ |
+%s/-\{72\}/----/
+
+Rg ^:
+}}}
+
+{{{bash
+sed -i '/^$/{
+  $!{ N
+    s/^---$/----/M
+  }
+}' 2*.md
+}}}
+
+{{{bash
+sed -i '/^:/{
+  $!{
+    s/:/ #/g
+    s/ #$//
+  }
+}' 2*.md
+}}}
+
+{{{vim
+let g:vimwiki_tag_format = {
+      \ 'pre_mark': '\W#\w\@=',
+      \ 'post_mark': '',
+      \ 'sep': '[#[:space:]]\+',
+      \ 'in': '[^#:[:space:]]\+'
+      \ }
+}}}
+
+{{{gitconfig
+[vimwiki]
+  options = --count=3 --editor=vim
+  taglinkspage = Topic_Index
+  linkspage = index
+  generatelinks = true
+  generatediarylinks = false
+  generatetaglinks = true
+  rebuildtags = true
+}}}
+
+{'pre_mark': '\%(:\)', 'sep': '\%(:\)', 'cchar': '', 'post_mark': '\%(:\)', 'conceal': 0, 'post': '\%(\s\|$\)', 'in': '\%([^:''[:space:]]\+\)', 'pre': '\%(^\|\s\)'}
+{'pre_mark': '\%(\W#\w\@=\)', 'sep': '\%([#[:space:]]\+\)', 'conceal': 0, 'post_mark': '\%(\)', 'cchar': '', 'post': '\%(\s\|$\)', 'in': '\%([^#:[:space:]]\+\)', 'pre': '\%(^\|\s\)'}
