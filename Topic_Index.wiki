@@ -133,6 +133,9 @@
 === ancho ===
 - [[Beans#Dried Beans Recipes#Chili]]
 
+=== anglo-saxon ===
+- [[diary/2024-09-27#Journal 2024-09-27#Anglo-Saxon runes (ᚠᚢᚦᚩᚱ/Futhorc/Fuþorc)]]
+
 === appimage ===
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
@@ -246,6 +249,9 @@
 
 === fitness ===
 - [[Health_Fitness#Health and Fitness]]
+
+=== futhorc ===
+- [[diary/2024-09-27#Journal 2024-09-27#Anglo-Saxon runes (ᚠᚢᚦᚩᚱ/Futhorc/Fuþorc)]]
 
 === fzf-bibtex ===
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
