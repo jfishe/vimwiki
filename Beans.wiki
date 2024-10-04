@@ -13,8 +13,15 @@
 
 == Instant Pot Dried Beans ==
 
-- Bay leaves
-- ½ onion or dried shallots/onions
+Derived from  [[https://amindfullmom.com/instant-pot-beans/|A MIND "FULL" MOM Instant Pot Beans]] and [[#Frijoles Refritos|Frijoles Refritos]].
+
+- 2 lb dry beans
+- 2-3 bay leaves
+- 1 large sprig fresh epazote (1 Tb dried)
+- 1 onion or 2 Tb [[https://www.penzeys.com/online-catalog/penzeys-air-dried-shallots/c-24/p-3074/pd-s|Penzeys Air-Dried Shallots]]
+- ½ bulb garlic or 2 tsp [[https://www.penzeys.com/online-catalog/granulated-garlic-powder/c-24/p-1000/pd-s|Granulated Garlic Powder]]
+  (¼ tsp = 1 clove)
+- 2 Tb bacon drippings (optional)
 - Seal and cook on High Pressure per
   [[https://amindfullmom.com/instant-pot-beans/|Instant Pot Dried Beans]]:
   - Black Beans—30 Minutes
@@ -23,8 +30,8 @@
   - Pinto Beans—25 Minutes
   - Navy Beans—30 Minutes
   - Great Northern Beans—35 Minutes
-- Slow release pressure for 20 minutes before doing a quick release.
-- ½ tsp apple cider vinegar
+- Slow release pressure for 30 minutes before doing a quick release.
+- 1 tsp apple cider vinegar
 - Salt to taste
 
 == Ranch Style Beans ==
@@ -38,7 +45,7 @@ the tomatoes.
 
 Ingredients:
 
-- 16 oz dried beans
+- 1 lb dried beans
 - 2 Bay leaves
 - 6 ancho chiles, stems and seeds removed (¼ c chili powder)
 - 6 cloves garlic, minced (1-½ tsp granulated)
@@ -79,7 +86,7 @@ Directions:
   4. Set aside.
 4. Add the beans, bay leaves (granulated garlic and dried shallots) and beef
    broth to the Instant Pot.
-5. Seal and cook on High Pressure per [[#Instant Pot Dried Beans]]. Texture
+5. Seal and cook on High Pressure per [[#Instant Pot Dried Beans|Instant Pot Dried Beans]]. Texture
    should be slightly under cooked.
 6. Stir in the reserved chile pureé.
 7. Set Instant Pot to Slow Cook with vent valve open.
@@ -92,7 +99,7 @@ Directions:
 == Cowboy Beans ==
 
 Derived from [[https://www.food.com/recipe/ranch-style-beans-aka-cowboy-beans-85199?units=us&scale=6|Ranch Style Beans aka Cowboy Beans]].
-Adapted for a Instant Pot, using [[#Instant Pot Dried Beans]].
+Adapted for a Instant Pot, using [[#Instant Pot Dried Beans|Instant Pot Dried Beans]].
 
 Ingredients:
 
@@ -114,7 +121,7 @@ Directions:
 
 1. Place rinsed beans in the Instant Pot and add water. One inch of water
    above the beans should be sufficient. Add more later if needed.
-2. Seal and cook on High Pressure per [[#Instant Pot Dried Beans]]. Beans
+2. Seal and cook on High Pressure per [[#Instant Pot Dried Beans|Instant Pot Dried Beans]]. Beans
    should be slightly under cooked.
 3. Saute onion, bell pepper, tomatoes and green chiles. If using canned or fire
    roasted tomatoes and chiles, reserve them for the Instant Pot.
