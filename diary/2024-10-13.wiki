@@ -1,0 +1,12 @@
+= Journal 2024-10-13 =
+
+== Pyscaffold Pre-Commit Configuration ==
+:pyscaffold:pre-commit:
+
+- [[2024-10-06#Pyscaffold Pre-Commit Configuration|Journal 2024-10-06]] Pyscaffold Pre-Commit Configuration
+- [[2024-10-05#Install Astral uv Python CLI tools|Journal 2024-10-05 Install Astral uv Python CLI tools]]
+- [[https://pyscaffold.org/en/v4.6/examples/pre-commit-extension.html|Pre Commit Extension]]
+
+{{{bash
+putup --custom-extension pre-commit-ruff
+}}}

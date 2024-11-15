@@ -268,6 +268,9 @@
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
+=== gis ===
+- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
+
 === git ===
 - [[Git#Git#Pull Rebase]]
 - [[Git#Git#Remove Secrets from Git History]]
@@ -287,6 +290,10 @@
 === health ===
 - [[Health_Fitness#Health and Fitness]]
 
+=== ini2toml ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
+
 === install ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
 
@@ -302,6 +309,8 @@
 === jupyter ===
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === jupyterbook ===
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
@@ -408,6 +417,9 @@
 - [[PowerShell#PowerShell and pwsh#Template]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
+=== pls ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+
 === plugin ===
 - [[Python#Python Notes#Vim Python Plugin]]
 
@@ -429,6 +441,9 @@
 
 === pre-commit ===
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
+- [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
 
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
@@ -449,6 +464,9 @@
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
+- [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
 
 === pyspark ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -476,6 +494,8 @@
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -493,6 +513,9 @@
 
 === rice ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+
+=== rich ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -589,6 +612,13 @@
 === tortillas ===
 - [[index#John D. Fisher's home wiki#Cooking#Tortillas de Harina]]
 
+=== tox ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+
+=== tox-uv ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+
 === toy ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
@@ -604,6 +634,10 @@
 
 === typst ===
 - [[diary/2024-03-31#Journal 2024-03-31#Typst as a LaTeX Replacement]]
+
+=== uv ===
+- [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === vegetable ===
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]

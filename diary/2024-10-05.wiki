@@ -1,0 +1,92 @@
+= Journal 2024-10-05 =
+
+== Install Astral uv Python CLI tools ==
+:jupyter:python:uv:tox:pyscaffold:rich:
+:ini2toml:pls:pre-commit:tox:tox-uv:
+
+- [[https://docs.astral.sh/uv/getting-started/installation/#installation-methods|Installing uv]]
+- [[https://github.com/tox-dev/tox-uv#how-to-use|How To Use tox-uv]]
+- [[https://github.com/tox-dev/pre-commit-uv/|pre-commit-uv]]
+
+{{{powershell
+$URL = 'https://astral.sh/uv/install.ps1'
+powershell -ExecutionPolicy ByPass -c `
+  "Invoke-RestMethod "$URL" | Invoke-Expression"
+uv tool install tox --with tox-uv # use uv to install
+tox --version # validate you are using the installed tox
+
+uv tool install 'ini2toml[full]'
+uv tool install 'pyscaffold[all]'
+uv tool install jupyter-book
+uv tool install pls
+uv tool install pre-commit --with pre-commit-uv
+uv tool install rich-cli
+}}}
+
+`putup --dsproject --markdown --pre-commit --interactive <project>`
+defaults to `autoflake`, `isort`, `black`, `blacken-docs`, and `flake8`.
+Update `.pre-commit-config.yaml` to add `ruff` and
+enable `pyupgrade` and `codespell`.
+
+{{{yaml
+exclude: |
+  (?x)(
+    ^docs/conf.py|
+    ^docs/.*.md$|
+    ^.*/out/.*$
+  )
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-added-large-files
+  - id: check-ast
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-xml
+  - id: check-yaml
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args: ['--fix=lf']  # replace 'auto' with 'lf' to enforce Linux/Mac line endings or 'crlf' for Windows
+  - id: name-tests-test
+    args: ["--pytest-test-first"]
+  - id: requirements-txt-fixer
+  - id: trailing-whitespace
+
+# ruff-pre-commit
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.6.9
+  hooks:
+    # Run the linter.
+    - id: ruff
+      types_or: [ python, pyi ]
+      args: [ --fix ]
+    # Run the formatter.
+    - id: ruff-format
+      types_or: [ python, pyi ]
+## If you want to automatically "modernize" your Python code:
+- repo: https://github.com/asottile/pyupgrade
+  rev: v3.17.0
+  hooks:
+  - id: pyupgrade
+    args: ['--py38-plus']
+
+## Check for misspells in documentation files:
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.3.0
+  hooks:
+  - id: codespell
+
+## Markdown Lint
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.42.0
+  hooks:
+  - id: markdownlint-fix
+    args:
+      - "--ignore"
+      - "tests/**/*.md"
+}}}
