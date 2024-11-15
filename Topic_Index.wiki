@@ -153,6 +153,7 @@
 - [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes]]
+- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 - [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
@@ -183,6 +184,9 @@
 
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
+
+=== chile ===
+- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === chili ===
 - [[Beans#Dried Beans Recipes#Chili]]
@@ -346,6 +350,9 @@
 === mdformat-myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 
+=== mexican ===
+- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
+
 === miniconda3 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
@@ -369,6 +376,9 @@
 
 === notebook ===
 - [[Python#Python Notes#Jupyter]]
+
+=== nytimes ===
+- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === oh-my-posh ===
 - [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
@@ -504,6 +514,7 @@
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
+- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === recipes ===
 - [[index#John D. Fisher's home wiki#Cooking]]

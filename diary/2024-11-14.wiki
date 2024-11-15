@@ -1,0 +1,29 @@
+= Journal 2024-11-14 =
+
+== Cheesy Green Chile Bean Bake ==
+:recipe:mexican:nytimes:chile:beans:
+
+- Adapted from [[https://cooking.nytimes.com/recipes/1025014-cheesy-green-chile-bean-bake?smid=url-share|New York Times Cheesy Green Chile Bean Bake]].
+- [[/index#cooking|Cooking]]
+
+*Ingredients*:
+
+- 1 lb dried pinto beans, rinsed (2×15-ounce cans)
+- 24 oz Flame Roasted Hatch Valley Green Chile (1 jar)
+- 2 (16-ounce) jar salsa verde, or 3½ cups homemade salsa verde.
+- ½ cup packed cilantro leaves, stems reserved and finely chopped
+- 3 cups/12 ounces grated Monterey Jack cheese
+- Lime wedges, for serving
+
+*Directions*:
+
+1. Prepare pinto beans per [[/Beans#Instant Pot Dried Beans|Dried Beans Recipes]].
+2. Drain beans and reserve bean broth.
+3. In a stock pot, combine beans, green chiles, salsa verde, and
+   cilantro stems.
+4. Add bean broth, as needed.
+5. Simmer until slightly thickened, 2 to 3 minutes.
+6. Transfer to 9×13 inch pans (2)
+7. Sprinkle the cheese evenly over the top.
+8. Broil until melted and browned in spots, 2 to 3 minutes.
+9. Top with cilantro leaves and a squeeze of lime.
