@@ -274,6 +274,7 @@
 
 === gis ===
 - [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
+- [[index#John D. Fisher's home wiki#City of Richland]]
 
 === git ===
 - [[Git#Git#Pull Rebase]]
@@ -527,6 +528,9 @@
 
 === rich ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+
+=== richland ===
+- [[index#John D. Fisher's home wiki#City of Richland]]
 
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
