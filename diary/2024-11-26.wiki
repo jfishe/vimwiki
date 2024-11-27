@@ -1,14 +1,5 @@
 = Journal 2024-11-26 =
 
-== Windows Terminal Configuration ==
-:Win11:Win10:WindowsTerminal:
-
-- [[file:C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json|C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json]]
-- [[file:C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.jsondd|C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.jsondd]]
-- [[https://freshman.tech/windows-terminal-guide/|Freshman A Guide to Customising the Windows Terminal]]
-  - Launch default Windows Terminal profile shortcut, e.g., `Win+2`, depending
-    on `Taskbar` order.
-
 == Windows Subsystem for Linux Stuck During Installation ==
 :WSL:CFG:
 

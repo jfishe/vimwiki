@@ -1,0 +1,16 @@
+= Journal 2024-11-27 =
+
+== Windows Terminal Configuration ==
+:Win11:Win10:WindowsTerminal:
+
+- [[file:C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json|C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json]]
+- [[file:C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json|C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json]]
+- [[https://freshman.tech/windows-terminal-guide/|Freshman A Guide to Customising the Windows Terminal]]
+  - Launch default Windows Terminal profile shortcut, e.g., `Win+2`, depending
+    on `Taskbar` order.
+
+== ChangeLog and GitHub Release Notes ==
+:GitHub:panvimwiki:changelog:release:
+
+- [[https://github.com/marketplace/actions/create-release-notes-from-changelog|GitHub Marketplace actions create release notes from ChangeLog]]
+- [[https://github.com/jfishe/panvimwiki/blob/main/.github/workflows/ci.yml|https://github.com/jfishe/panvimwiki/blob/main/.github/workflows/ci.yml]]
