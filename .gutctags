@@ -25,6 +25,7 @@
 --exclude=.pyo
 --exclude=.pytest_cache
 --exclude=.tags
+--exclude=.task
 --exclude=.venv
 --exclude=.vscode
 --exclude=.vscode-insiders
@@ -42,13 +43,13 @@
 --exclude=MathJax
 --exclude=Miniconda3
 --exclude=Modules
---exclude=Modules
 --exclude=OneDrive
 --exclude=Pictures
 --exclude=RECYCLER
 --exclude=Roaming
 --exclude=Scripts
 --exclude=Temp
+--exclude=Topic_Index.wiki
 --exclude=Videos
 --exclude=__pycache__
 --exclude=docs

@@ -13,6 +13,9 @@
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 
+=== CFG ===
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Subsystem for Linux Stuck During Installation]]
+
 === CSL ===
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 
@@ -32,7 +35,6 @@
 - [[diary/2023-05-27#Journal 2023-05-27]]
 
 === Fedora ===
-- [[Linux#Linux Notes#Fedora and Red Hat]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
 === GitHub ===
@@ -71,13 +73,11 @@
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
+- [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
-
-=== RHEL ===
-- [[Linux#Linux Notes#Fedora and Red Hat]]
 
 === SeCreateSymbolicLinkPrivilege ===
 - [[Windows 10 Configuration#SeCreateSymbolicLinkPrivilege]]
@@ -88,10 +88,15 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 
+=== VHD ===
+- [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
+
 === WSL ===
 - [[Linux#Linux Notes]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2023-07-02#Journal 2023-07-02]]
+- [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Subsystem for Linux Stuck During Installation]]
 
 === WSL2 ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
@@ -101,8 +106,8 @@
 - [[Windows 10 Configuration#Windows 10 Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
-- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Terminal Configuration]]
 
 === Win11 ===
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
@@ -110,8 +115,8 @@
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
-- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Terminal Configuration]]
 
 === Windows11 ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
@@ -121,6 +126,7 @@
 
 === WindowsTerminal ===
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Terminal Configuration]]
 
 === Zettelkasten ===
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
@@ -144,9 +150,6 @@
 
 === background ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
-
-=== bash ===
-- [[Linux#Linux Notes#Bash Shell Script]]
 
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
@@ -213,8 +216,6 @@
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-06-10#Journal 2023-06-10]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
-- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
-- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
@@ -375,14 +376,14 @@
 === myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 
+=== nested_syntaxes ===
+- [[diary/2024-11-23#Journal 2024-11-23#Vimwiki Temporary Wiki Nested Syntax]]
+
 === notebook ===
 - [[Python#Python Notes#Jupyter]]
 
 === nytimes ===
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
-
-=== oh-my-posh ===
-- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
 
 === olives ===
 - [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
@@ -437,16 +438,12 @@
 === pork ===
 - [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
 
-=== posh-git ===
-- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
-
 === powershell ===
 - [[PowerShell#PowerShell and pwsh#Powershell Commands]]
 - [[PowerShell#PowerShell and pwsh]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
-- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
@@ -498,7 +495,6 @@
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 - [[diary/2023-05-29#Journal 2023-05-29]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
-- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
@@ -546,9 +542,6 @@
 
 === sauce ===
 - [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
-
-=== script ===
-- [[Linux#Linux Notes#Bash Shell Script]]
 
 === seaborn ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -601,9 +594,6 @@
 
 === task_lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
-
-=== taskwiki ===
-- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 
 === template ===
 - [[PowerShell#PowerShell and pwsh#Template]]
@@ -694,6 +684,7 @@
 - [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v3.1.12]]
 - [[diary/2024-04-29#Journal 2024-04-29#Vimwiki Markdown Tag Syntax]]
 - [[diary/2024-08-24#Journal 2024-08-24#Vimwiki Markdown Hashtags]]
+- [[diary/2024-11-23#Journal 2024-11-23#Vimwiki Temporary Wiki Nested Syntax]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
