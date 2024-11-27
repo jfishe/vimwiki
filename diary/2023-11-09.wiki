@@ -1,7 +1,7 @@
 = Journal 2023-11-09 =
 
 == Windows Desktop Background ==
-:Windows11:desktop:wallpaper:background:powershell:
+:Win11:desktop:wallpaper:background:powershell:
 
 - [[2023-11-19|Journal 2023-11-19]] creates script module `Copy-Wallpaper`.
 - [[https://answers.microsoft.com/en-us/windows/forum/all/how-to-save-windows-spotlight-images-for-your/6415a7e1-dc0d-4f53-9b38-1942c02d0d9d|How to save Windows Spotlight images for your wallpaper or phone]]

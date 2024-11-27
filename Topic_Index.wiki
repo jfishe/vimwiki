@@ -116,10 +116,8 @@
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
-- [[diary/2024-11-26#Journal 2024-11-26#Windows Terminal Configuration]]
-
-=== Windows11 ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+- [[diary/2024-11-26#Journal 2024-11-26#Windows Terminal Configuration]]
 
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]

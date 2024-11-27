@@ -1,0 +1,14 @@
+= Journal 2024-11-23 =
+
+== Vimwiki Temporary Wiki Nested Syntax ==
+:vimwiki:nested_syntaxes:
+
+[[https://github.com/vimwiki/vimwiki|Vimwiki]] does not support setting `nested_syntaxes` for temporary wikis,
+forcing use of Vim `filetypes` for syntax highlighting.
+Some Vim `filetypes` differ from [[https://highlightjs.org/|`highlight.js`]] and [[https://pygments.org/|Pygments]],
+disabling syntax highlighting, when converted to `HTML`.
+
+
+{{{vim
+vimwiki#vars#set_wikilocal('nested_syntaxes', vimwiki#vars#get_wikilocal('nested_syntaxes',1))
+}}}

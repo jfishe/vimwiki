@@ -1,0 +1,53 @@
+= Journal 2024-11-26 =
+
+== Windows Terminal Configuration ==
+:Win11:Win10:WindowsTerminal:
+
+- [[file:C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json|C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json]]
+- [[file:C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.jsondd|C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.jsondd]]
+- [[https://freshman.tech/windows-terminal-guide/|Freshman A Guide to Customising the Windows Terminal]]
+  - Launch default Windows Terminal profile shortcut, e.g., `Win+2`, depending
+    on `Taskbar` order.
+
+== Windows Subsystem for Linux Stuck During Installation ==
+:WSL:CFG:
+
+- [[https://github.com/microsoft/WSL/issues/6405|WSL distro installation stuck]]
+  1. Open "Windows Security"
+  2. Open "App & Browser control"
+  3. Click "Exploit protection settings" at the bottom
+  4. Switch to "Program settings" tab
+  5. Add/Locate `Hyper-V Host Compute Service`:
+     `C:\WINDOWS\System32\vmcompute.exe` in the list and expand it
+  6. Click "Edit"
+  7. Scroll down to "Code flow guard (`CFG`)" and check "Override system
+     settings" (`CFG` must be ON for this app!)
+  8. Check "Use strict `CFG`".
+  9. Click "Apply".
+  10. Reboot
+
+== Backup and Restore Whitewater Foundry `Pengwin` ==
+:WSL:Pengwin:VHD:
+
+- [[https://github.com/WhitewaterFoundry/Pengwin/issues/598#top|Proper way to backup/restore Pengwin #598]]
+- Determine archive location, and update `$FileName`.
+- Determine previous installation location, and update `$InstallLocation`.
+- To avoid error messages, `wsl --unregister WLinux`.
+
+{{{powershell
+# wsl --export <Distro> <FileName[.tar|.vhdx]> [--vhd]
+# VHD (Virtual Hard Disk) is a file-based virtual disk that represents a Linux
+# file system.
+$FileName = "$env:USERPROFILE\Downloads\WLinux.vhdx"
+wsl --export WLinux "$FileName" --vhd
+
+# wsl --import <Distro> <InstallLocation> <FileName> [Options]
+#   [--version <1|2>]
+#   [--vhd]
+$InstallLocation = Get-Item -Path ("$env:LOCALAPPDATA\" +
+  "Packages\WhitewaterFoundryLtd.Co.16571368D6CFF_kd1vv0z0vy70w\LocalState\")
+$FileName = Get-Item -Path "$env:USERPROFILE\Downloads\WLinux.vhdx"
+
+wsl --import WLinux "$InstallLocation" "$FileName" --version 2 --vhd
+pengwin.exe config --default-user jdfen
+}}}
