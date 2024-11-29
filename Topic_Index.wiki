@@ -39,7 +39,7 @@
 
 === GitHub ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
-- [[diary/2024-11-27#Journal 2024-11-27#ChangeLog and GitHub Release Notes]]
+- [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
 === HP ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
@@ -185,7 +185,7 @@
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
 === changelog ===
-- [[diary/2024-11-27#Journal 2024-11-27#ChangeLog and GitHub Release Notes]]
+- [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
@@ -412,7 +412,7 @@
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-23#Journal 2024-02-23#Panvimwiki Github Flavored Markdown (GFM)]]
 - [[diary/2024-02-25#Journal 2024-02-25#Pandoc v3.1.3 and v3.1.12]]
-- [[diary/2024-11-27#Journal 2024-11-27#ChangeLog and GitHub Release Notes]]
+- [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
 === parquet ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -520,7 +520,7 @@
 - [[index#John D. Fisher's home wiki#Cooking]]
 
 === release ===
-- [[diary/2024-11-27#Journal 2024-11-27#ChangeLog and GitHub Release Notes]]
+- [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
 === remodel ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]

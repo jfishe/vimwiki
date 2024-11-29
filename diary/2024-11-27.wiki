@@ -3,13 +3,42 @@
 == Windows Terminal Configuration ==
 :Win11:Win10:WindowsTerminal:
 
-- [[file:C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json|C:/Users/jdfen/Documents/PowerShell/WindowsTerminal/settings.json]]
-- [[file:C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json|C:/Users/jdfen/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json]]
+- `%USERPROFILE%\Documents\PowerShell\WindowsTerminal\settings.json`
+- `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 - [[https://freshman.tech/windows-terminal-guide/|Freshman A Guide to Customising the Windows Terminal]]
   - Launch default Windows Terminal profile shortcut, e.g., `Win+2`, depending
     on `Taskbar` order.
+- [[https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions|Windows Terminal json fragment extensions]]
+  - `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+  - `%USERPROFILE%\Documents\PowerShell\WindowsTerminal\settings_fragment.json`
+  - [[https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions#microsoft-store-applications|Microsoft Store applications]]
+    require declaring an app extension.
+    [[https://github.com/microsoft/terminal/issues/10970|Windows Terminal Issue #10970]]
+    may result in an example workflow.
 
-== ChangeLog and GitHub Release Notes ==
+{{{powershell
+$fragmentJson = (
+    Split-Path $PROFILE.CurrentUserCurrentHost |
+    Join-Path -ChildPath "WindowsTerminal\settings_fragment.json" |
+    Get-Item
+)
+
+$AppName = "myFragments"
+$FileName = "settings"
+
+# C:\Users\<user>\AppData\Local\Microsoft\Windows Terminal\Fragments\
+#   {app-name}\{file-name}.json
+$fragmentPath = (
+    Join-Path -Path "$env:LOCALAPPDATA\Microsoft\Windows Terminal\" `
+        -ChildPath "Fragments\$AppName"
+)
+New-Item -ItemType Directory -Path "$fragmentPath" -ErrorAction SilentlyContinue
+
+$fragmentPath = Join-Path -Path $fragmentPath -ChildPath "${FileName}.json"
+Copy-Item "$fragmentJson" "$fragmentPath"
+}}}
+
+== Change Log and GitHub Release Notes ==
 :GitHub:panvimwiki:changelog:release:
 
 - [[https://github.com/marketplace/actions/create-release-notes-from-changelog|GitHub Marketplace actions create release notes from ChangeLog]]
