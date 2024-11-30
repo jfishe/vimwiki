@@ -10,6 +10,7 @@
   - [[#Baked Eggs and Beans on Toast]]
   - [[#Chili]]
   - [[#Red Beans and Rice]]
+  - [[#Cheesy Green Chile Bean Bake]]
 
 == Instant Pot Dried Beans ==
 
@@ -349,3 +350,31 @@ _Rice_
 1. Rinse rice.
 2. Combine rice, coconut milk and water.
 3. Cook on rice setting and quick release when done.
+
+== Cheesy Green Chile Bean Bake ==
+:recipe:mexican:nytimes:chile:beans:
+
+- Adapted from [[https://cooking.nytimes.com/recipes/1025014-cheesy-green-chile-bean-bake?smid=url-share|New York Times Cheesy Green Chile Bean Bake]].
+
+*Ingredients*:
+
+- 2 lb dried pinto beans, rinsed (4 × 15-ounce cans)
+- 24 oz Flame Roasted Hatch Valley Green Chile (1 jar)
+- 2 (16-ounce) jar salsa verde, or 3½ cups homemade salsa verde
+- ½ cup packed cilantro leaves, stems reserved and finely chopped
+- 1 lb grated Monterey Jack or medium-sharp, cheddar cheese
+- Lime wedges, for serving
+
+*Directions*:
+
+1. Prepare pinto beans per [[#Instant Pot Dried Beans|Dried Beans Recipes]].
+2. While beans absorb seasoning, preheat oven to 300 °F.
+3. Drain beans and reserve bean broth.
+4. In a large container, combine beans, green chiles, salsa verde, and cilantro
+   stems.
+5. Add bean broth, as needed.
+6. Transfer to 9×13 inch pans (2).
+7. Simmer, at 300 °F, until slightly thickened.
+8. Sprinkle the cheese evenly over the top.
+9. Broil until melted and browned in spots, 2 to 3 minutes.
+10. Top with cilantro leaves and a squeeze of lime.

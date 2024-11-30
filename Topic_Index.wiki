@@ -152,6 +152,7 @@
 
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
+- [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes]]
@@ -191,6 +192,7 @@
 - [[Coffee#Coffee#Chicory Coffee]]
 
 === chile ===
+- [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === chili ===
@@ -355,6 +357,7 @@
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 
 === mexican ===
+- [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === miniconda3 ===
@@ -385,6 +388,7 @@
 - [[Python#Python Notes#Jupyter]]
 
 === nytimes ===
+- [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === olives ===
@@ -511,6 +515,7 @@
 - [[Git#Git#Pull Rebase]]
 
 === recipe ===
+- [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
