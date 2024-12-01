@@ -287,6 +287,10 @@
 - [[Git#Git#Remove Submodule]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
+- [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
+
+=== gitlint ===
+- [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
 
 === gpg ===
 - [[diary/2023-07-02#Journal 2023-07-02]]
@@ -459,6 +463,7 @@
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 - [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
 - [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
+- [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
 
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
