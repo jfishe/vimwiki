@@ -89,6 +89,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 
+=== UltiSnips ===
+- [[diary/2024-12-05#UltiSnips]]
+
 === VHD ===
 - [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
 
@@ -214,6 +217,9 @@
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
 - [[Coffee#Coffee]]
 
+=== commitizen ===
+- [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
+
 === conda ===
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
@@ -288,6 +294,7 @@
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 - [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
+- [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
 
 === gitlint ===
 - [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
@@ -464,6 +471,7 @@
 - [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
 - [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
 - [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
+- [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
 
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
@@ -672,6 +680,10 @@
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
+- [[diary/2024-12-01#vim]]
+
+=== vim-fugitive ===
+- [[diary/2024-12-05#vim-fugitive]]
 
 === vim-polyglot ===
 - [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]

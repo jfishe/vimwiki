@@ -3,6 +3,7 @@
 == Pre-Commit Lint Git Commit Messages ==
 :pre-commit:git:gitlint:
 
+- [[/diary/2024-12-05#commitizen|Journal 2024-12-05 Commitizen]]
 - [[https://www.conventionalcommits.org/en/v1.0.0/|ConventionalCommits.org]]
 - [[https://jorisroovers.com/gitlint/|Gitlint]]
 
@@ -10,15 +11,8 @@
 
   {{{conf
   [general]
-  # You HAVE to add the rule to [general] to enable it
-  # Only configuring (such as below) does NOT enable it.
-  contrib =
-    - contrib-title-conventional-commits
-    - contrib-allowed-authors
-
-  # Setting contrib rule options is identical to configuring other rules
-  [contrib-title-conventional-commits]
-  types = bugfix,user-story,epic
+  ignore = body-is-missing
+  contrib = contrib-title-conventional-commits
   }}}
 
   `.pre-commit-config.yaml`:
@@ -30,3 +24,9 @@
       - id: gitlint
         stages: [commit-msg]
   }}}
+
+- Install the `commit-msg` hook: `pre-commit install --hook-type commit-msg`
+- To enable `gitlint` in :vim: [[https://github.com/dense-analysis/ale|ALE - Asynchronous Lint Engine]],
+  `uv tool install gitlint-core --with gitlint`.
+  `gitlint` alone does not provide the command line interface for `uv` to
+  expose, and `gitlint-core` lacks the default optional

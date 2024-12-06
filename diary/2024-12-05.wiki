@@ -1,0 +1,61 @@
+= Journal 2024-12-05 =
+
+== Pre-Commit Lint Git Commit Messages ==
+:pre-commit:git:commitizen:
+
+- [[/diary/2024-12-01#gitlint|Journal 2024-12-01]] GitLint
+- `cz commit` populates the commit message using a dialog and selection format,
+  much less efficient that :UltiSnips: and :vim-fugitive:
+- If pre-commit hooks are selected, `cz init` modifies and reorders
+  `.pre-commit-config.yaml`, strips comments, and installs `.git/hooks/`
+  scripts. The less readable format is not consistent with the typical
+  structure, e.g., [[https://commitizen-tools.github.io/commitizen/getting_started/#integration-with-pre-commit|Commitizen Integration with Pre-Commit]].
+  Leave that option blank during `cz init`.
+- `cz bump` creates a `bump:` commit, only if previous commit messages include
+  `feat:`, `fix:`, etc. `build:`, e.g, does not. The extraneous `bump:`
+  clutters the git history.
+- In project root, initialize [[https://commitizen-tools.github.io/|Commitizen]] with `cz init`.
+  - Please choose a supported config file:  pyproject.toml
+  - Please choose a cz (commit rule): (default: cz_conventional_commits) cz_conventional_commits
+  - Choose the source of the version: pep621: Get and set version from pyproject.toml:project.version field
+  - Choose version scheme:  semver2
+  - Please enter the correct version format: (default: "$version")
+  - Create changelog automatically on bump Yes
+  - Keep major version zero (0.x) during breaking changes Yes
+  - What types of pre-commit hook you want to install? (Leave blank if you don't want to install)
+- Select dialog options to update `pyproject.toml`:
+
+  {{{toml
+  [tool.commitizen]
+  name = "cz_conventional_commits"
+  tag_format = "$version"
+  version_scheme = "semver2"
+  version_provider = "scm"
+  update_changelog_on_bump = true
+  major_version_zero = true
+  }}}
+
+does not modify `.pre-commit-config.yaml` correctly, so leave the pre-commit dialog empty, above.
+- [[https://commitizen-tools.github.io/commitizen/getting_started/#integration-with-pre-commit|Commitizen Integration with Pre-Commit]] recommends manually installing
+  `commit-msg` and `pre-push` hooks; improve reproducibility by adding
+  `stages:` to `.pre-commit-config.yaml`:
+
+  {{{yaml
+  # Commitzen
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.0.0
+    hooks:
+      - id: commitizen
+        stages:
+          - commit-msg
+      - id: commitizen-branch
+        stages:
+          - pre-push
+  }}}
+
+- Update pre-commit hooks and install:
+
+  {{{bash
+  pre-commit autoupdate
+  pre-commit install --install-hooks
+  }}}
