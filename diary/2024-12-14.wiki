@@ -1,0 +1,53 @@
+= Journal 2024-12-14 =
+
+== Sync Forked Github Repository and Branches ==
+:GitHub:git:vimwiki:
+
+{{{bash
+cd ~/dev/vimwiki-lib/
+
+# Add upstream remote
+git remote add upstream https://github.com/vimwiki/vimwiki.git
+
+# Rebase upstream/dev on local dev
+git fetch upstream
+git checkout dev
+git rebase upstream/dev
+
+# Rebase local dev onto branch
+git switch issue1343
+git fetch
+git rebase origin/dev
+
+# Resolve any conflicts.
+# git add changes.
+git add test/tag.vader
+git rebase --continue
+# Update commit message, as needed.
+}}}
+
+- [[https://github.com/vimwiki/vimwiki/pull/1396|PR#1396]] Issue1343 system_open_link E371 command not found Windows PowerShell and cmd
+
+== Neovide, NeoVim and Telescope-Nvim ==
+:neovide:neovim:telescope:vim:
+
+- `Telekasten` partially replicates Vimwiki with Vim-Zettel.
+- Required dependencies are not Windows compatible.
+- Minimum NeoVim version requires a separate PPA.
+- `$env:LOCALAPPDATA\nvim`
+  - `init.vim`
+  - `ginit.vim`
+
+{{{powershell
+conda activate vim-python
+uv pip install pynvim
+
+winget install sharkdp.fd
+}}}
+
+=== NeoVim GUI Choices ===
+:neovim:gvim:gui:
+
+- [[https://itsfoss.com/neovim-gui-editors/|It's FOSS]] 5 NeoVim GUI Editors You Could Try If You are Not a Total Terminal Junkie
+  - `neovide`
+  - `nvim-qt`

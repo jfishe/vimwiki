@@ -35,7 +35,6 @@
   major_version_zero = true
   }}}
 
-does not modify `.pre-commit-config.yaml` correctly, so leave the pre-commit dialog empty, above.
 - [[https://commitizen-tools.github.io/commitizen/getting_started/#integration-with-pre-commit|Commitizen Integration with Pre-Commit]] recommends manually installing
   `commit-msg` and `pre-push` hooks; improve reproducibility by adding
   `stages:` to `.pre-commit-config.yaml`:

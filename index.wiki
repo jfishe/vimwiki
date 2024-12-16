@@ -27,13 +27,15 @@
 
 == Projects ==
 
+- [[Git]]
+- [[Health_Fitness|Health and_Fitness]]
+- [[Linux]]
 - [[Oh-my-zsh]]
 - [[PowerShell]]
-- [[Windows 10 Configuration]]
-- [[Linux]]
-- [[Git]]
 - [[Python|Python Notes]]
-- [[Health_Fitness|Health and_Fitness]]
+- [[Windows 10 Configuration]]
+- [[https://github.com/jfishe/Richland_prefab_2br|Richland, WA, 2 bedroom Prefab Remodel]] Project site
+  - [[https://jfishe.github.io/Richland_prefab_2br/|Remodel Plan Richland Prefab 2BR]] Web site
 
 == Computer ==
 

@@ -1,0 +1,33 @@
+= Journal 2024-12-09 =
+
+== Evaluate Marksman Markdown Language Server Protocol ==
+:lsp:CoC:markdown:marksman:
+
+- [[https://github.com/artempyanykh/marksman|Marksman]]
+  - [[https://github.com/yaegassy/coc-marksman|:CocInstall @yaegassy/coc-marksman]]
+  - `$HOME\\AppData\\Roaming\\marksman\\config.toml` Windows default
+  - `.marksman.toml` Project or directory scope.
+  - `$HOME/.config/marksman/config.toml` Linux default
+
+  {{{toml
+  [core]
+  # When set to true, level 1 headings will be treated as document titles
+  # (this includes an assumption of having a single title in the document).
+  # Setting this to false automatically changes the default wiki link
+  # completion style to a file-based one.
+  title_from_heading = false
+
+  # Use incremental resolution of project-wide references.
+  # This is much more efficient but is currently experimental
+  incremental_references = true
+
+  [completion]
+  # The style of wiki links completion.
+  # Other values include:
+  # * "file-stem" to complete using file name without an extension,
+  # * "file-path-stem" same as above but using file path.
+  wiki.style = "file-path-stem"
+  }}}
+
+- Table of Contents generation is non-obtrusive.
+- Does not conflict with Vimwiki.
