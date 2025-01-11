@@ -198,6 +198,3 @@ pre_commit"""
 # https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
 # https://setuptools.pypa.io/en/latest/references/keywords.html
 }}}
-
-== Jupyter Python Geographic Information System ==
-:gis:jupyter:python:uv:

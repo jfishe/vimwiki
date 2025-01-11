@@ -294,7 +294,6 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === gis ===
-- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 - [[index#John D. Fisher's home wiki#City of Richland]]
 
 === git ===
@@ -348,7 +347,6 @@
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
-- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === jupyterbook ===
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
@@ -556,7 +554,6 @@
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
-- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -703,7 +700,6 @@
 
 === uv ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
-- [[diary/2024-10-06#Journal 2024-10-06#Jupyter Python Geographic Information System]]
 
 === vegetable ===
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
