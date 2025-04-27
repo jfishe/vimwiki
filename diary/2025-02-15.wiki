@@ -1,0 +1,10 @@
+= Journal 2025-02-15 =
+
+== Astral uv init options ==
+:uv:python:
+
+- `uv init --lib lib-name` generates a python library.
+- `uv init --package package-name` generates a library with a console entry
+  point.
+- `uv init --virtual project-name` generates a virtual project which appears
+  the same as `uv init --app project-name`.

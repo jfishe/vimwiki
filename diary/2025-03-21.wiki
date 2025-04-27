@@ -1,0 +1,7 @@
+= Journal 2025-03-21 =
+
+== Lua 5.4 Tutorial ==
+:lua:coc-lua:
+
+- [[https://www.lua.org/pil/|Programming in Lua]] online
+- [[wn.zk:/20250321-0952|Programming in Lua]] literature reference

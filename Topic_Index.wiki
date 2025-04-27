@@ -90,6 +90,7 @@
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
 
 === UltiSnips ===
 - [[diary/2024-12-05#UltiSnips]]
@@ -139,6 +140,9 @@
 
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
+
+=== anaconda ===
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 
 === ancho ===
 - [[Beans#Dried Beans Recipes#Chili]]
@@ -216,6 +220,9 @@
 === cobib ===
 - [[diary/2024-12-15#Journal 2024-12-15#coBib - the Console Bibliography]]
 
+=== coc-lua ===
+- [[diary/2025-03-21#Journal 2025-03-21#Lua 5.4 Tutorial]]
+
 === cocoa ===
 - [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
 
@@ -236,6 +243,7 @@
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 
 === condiment ===
 - [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
@@ -360,8 +368,14 @@
 - [[diary/2023-10-13#Journal 2023-10-13#Vimwiki and CoC Keymap Conflict]]
 - [[diary/2023-11-11#Journal 2023-11-11#Vimwiki and CoC Keymap Conflict]]
 
+=== license ===
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
+
 === lsp ===
 - [[diary/2024-12-09#Journal 2024-12-09#Evaluate Marksman Markdown Language Server Protocol]]
+
+=== lua ===
+- [[diary/2025-03-21#Journal 2025-03-21#Lua 5.4 Tutorial]]
 
 === margarita ===
 - [[Drinks#Drink Recipes#Margarita]]
@@ -420,6 +434,7 @@
 === neovim ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim#NeoVim GUI Choices]]
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
+- [[diary/2025-02-17#Journal 2025-02-17#NeoVim]]
 
 === nested_syntaxes ===
 - [[diary/2024-11-23#Journal 2024-11-23#Vimwiki Temporary Wiki Nested Syntax]]
@@ -554,6 +569,11 @@
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
+- [[diary/2025-02-15#Journal 2025-02-15#Astral uv init options]]
+
+=== rcm ===
+- [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -700,6 +720,7 @@
 
 === uv ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2025-02-15#Journal 2025-02-15#Astral uv init options]]
 
 === vegetable ===
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]

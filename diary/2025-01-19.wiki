@@ -1,0 +1,32 @@
+= Journal 2025-01-19 =
+
+== Ubuntu 24.04 Clean Installation ==
+:Ubuntu:rcm:
+
+{{{bash
+sudo apt install neovim python3-pynvim
+}}}
+
+=== Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues ===
+:conda:python:anaconda:license:
+
+[[https://dev.to/kaamisan/using-miniconda-with-conda-forge-to-avoid-anaconda-licensing-issues-5hkj|Kaa Mi]].
+Posted on 2024-06-19. _Using Miniconda with Conda-Forge to Avoid
+Anaconda Licensing Issues_.
+
+1. Download and Install [[https://docs.anaconda.com/miniconda/|Miniconda]].
+2. Initialize Conda with `conda init`.
+3. Add Conda-Forge as the Default Channel.
+
+  {{{bash
+  conda config --remove channels defaults
+  conda config --add channels conda-forge
+  conda config --set channel_priority strict
+  }}}
+4. Create a New Environment.
+
+  {{{bash
+  conda create -n vim-python python=3.12
+  conda activate vim-python
+  conda config --show channels
+  }}}
