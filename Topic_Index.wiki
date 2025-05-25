@@ -169,7 +169,7 @@
 - [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
-- [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[cooking#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === biblatex ===
@@ -191,7 +191,7 @@
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
-- [[index#John D. Fisher's home wiki#Cooking#Dutch Baby]]
+- [[cooking#Cooking#Dutch Baby]]
 
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
@@ -224,7 +224,7 @@
 - [[diary/2025-03-21#Journal 2025-03-21#Lua 5.4 Tutorial]]
 
 === cocoa ===
-- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
+- [[cooking#Cooking#Cocoa Gravy]]
 
 === coffee ===
 - [[Coffee#Coffee#French Press Coffee]]
@@ -246,15 +246,15 @@
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 
 === condiment ===
-- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+- [[cooking#Cooking#Olive Tapanade]]
 
 === cookery ===
 - [[Beans#Dried Beans Recipes]]
+- [[cooking#Cooking]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
-- [[index#John D. Fisher's home wiki#Cooking]]
 
 === cooking ===
-- [[index#John D. Fisher's home wiki#Cooking]]
+- [[cooking#Cooking]]
 
 === csv ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -321,7 +321,7 @@
 - [[diary/2023-07-02#Journal 2023-07-02]]
 
 === gravy ===
-- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
+- [[cooking#Cooking#Cocoa Gravy]]
 
 === gui ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim#NeoVim GUI Choices]]
@@ -427,6 +427,11 @@
 
 === myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
+- [[diary/2025-04-27#Journal 2025-04-27#MyST Markdown]]
+
+=== mystmd ===
+- [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
+- [[diary/2025-04-27#Journal 2025-04-27#MyST Markdown]]
 
 === neovide ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
@@ -447,7 +452,7 @@
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === olives ===
-- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+- [[cooking#Cooking#Olive Tapanade]]
 
 === pandas ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -484,7 +489,7 @@
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 
 === pepper ===
-- [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
+- [[cooking#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
 === pico ===
@@ -501,7 +506,7 @@
 - [[Python#Python Notes#Vim Python Plugin]]
 
 === pork ===
-- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
+- [[cooking#Cooking#Smoked Pork Top Loin]]
 
 === powershell ===
 - [[PowerShell#PowerShell and pwsh#Powershell Commands]]
@@ -586,7 +591,7 @@
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === recipes ===
-- [[index#John D. Fisher's home wiki#Cooking]]
+- [[cooking#Cooking]]
 
 === release ===
 - [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
@@ -608,23 +613,23 @@
 - [[diary/2023-05-27#Journal 2023-05-27]]
 
 === rub ===
-- [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
+- [[cooking#Cooking#Santa Maria Rub]]
+- [[cooking#Cooking#Smoked Pork Top Loin]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === salsa ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 
 === sauce ===
-- [[index#John D. Fisher's home wiki#Cooking#Cocoa Gravy]]
+- [[cooking#Cooking#Cocoa Gravy]]
 
 === seaborn ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 
 === seasoning ===
-- [[index#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
-- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
+- [[cooking#Cooking#Mignonette Pepper]]
+- [[cooking#Cooking#Santa Maria Rub]]
+- [[cooking#Cooking#Smoked Pork Top Loin]]
 - [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
@@ -656,7 +661,7 @@
 - [[Windows 10 Configuration#symlinkevaluation]]
 
 === taco ===
-- [[index#John D. Fisher's home wiki#Cooking#Tacos al Pastor]]
+- [[cooking#Cooking#Tacos al Pastor]]
 
 === tags ===
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
@@ -665,7 +670,7 @@
 - [[diary/2024-08-24#Journal 2024-08-24#Vimwiki Markdown Hashtags]]
 
 === tapanade ===
-- [[index#John D. Fisher's home wiki#Cooking#Olive Tapanade]]
+- [[cooking#Cooking#Olive Tapanade]]
 
 === task_lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
@@ -690,10 +695,10 @@
 - [[Git#Git#Developer Settings]]
 
 === toploin ===
-- [[index#John D. Fisher's home wiki#Cooking#Smoked Pork Top Loin]]
+- [[cooking#Cooking#Smoked Pork Top Loin]]
 
 === tortillas ===
-- [[index#John D. Fisher's home wiki#Cooking#Tortillas de Harina]]
+- [[cooking#Cooking#Tortillas de Harina]]
 
 === tox ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
@@ -706,7 +711,7 @@
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
 === tritip ===
-- [[index#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
+- [[cooking#Cooking#Santa Maria Rub]]
 - [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === troubleshooting ===

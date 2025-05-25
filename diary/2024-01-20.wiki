@@ -96,6 +96,7 @@ pandoc \
 
 == Convert Vimwiki Tasks to Markdown `mdformat-myst` ==
 :myst:mdformat:mdformat-myst:vimwiki:
+:mystmd:
 
 - [[https://pre-commit.com/|pre-commit]]
 - [[https://github.com/executablebooks/mdformat-myst|Mdformat plugin for MyST compatibility]]
@@ -121,3 +122,5 @@ repos:
           - mdformat-myst
           # - mdformat-black
 }}}
+
+- [[/diary/2025-04-27#mystmd|Journal 2025-04-27]] MyST Markdown
