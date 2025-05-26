@@ -56,6 +56,9 @@
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-07-02#Journal 2023-07-02]]
 
+=== NC ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
+
 === Obsidian ===
 - [[diary/2023-11-05#Journal 2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
 - [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
@@ -158,6 +161,9 @@
 
 === background ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+
+=== bbq ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
@@ -334,6 +340,9 @@
 
 === health ===
 - [[Health_Fitness#Health and Fitness]]
+
+=== hot_sauce ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce]]
 
 === ini2toml ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
@@ -622,6 +631,7 @@
 
 === sauce ===
 - [[cooking#Cooking#Cocoa Gravy]]
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === seaborn ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
@@ -793,6 +803,9 @@
 - [[diary/2023-11-10#Journal 2023-11-10#Vimwiki Markdown Tag Syntax]]
 - [[diary/2024-04-29#Journal 2024-04-29#Vimwiki Markdown Tag Syntax]]
 - [[diary/2024-08-24#Journal 2024-08-24#Vimwiki Markdown Hashtags]]
+
+=== vinegar ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === vscode ===
 - [[diary/2021-05-08#Journal 2021-05-08#JSON with C-style Comments]]
