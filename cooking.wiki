@@ -28,8 +28,8 @@ Ingredients:
 
 - 2 cups of apple cider vinegar
 - 1 Tb of ketchup
-- 1 Tb dark brown sugar
-- ½ tsp salt
+- 2 Tb dark brown sugar
+- 1 tsp salt
 - 2 tsp garlic granules
 - 2 tsp onion granules
 - 2 tsp black pepper
@@ -42,6 +42,7 @@ Directions:
 
 1. Dissolve vinegar, brown sugar and salt in a sauce pan and bring to boil.
 2. Add other ingredients and simmer for 15 minutes.
+3. Adjust salt and sugar to taste.
 
 == Cocoa Gravy ==
 :cocoa:gravy:sauce:
