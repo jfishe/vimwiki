@@ -105,6 +105,33 @@ Worked well on Tri Tip of beef. Derived from
 == Smoked Pork Top Loin ==
 :toploin:rub:pork:seasoning:
 
+*Ingredients*:
+
+- [[https://www.traeger.com/recipes/ancho-rubbed-pork-loin|Traeger BBQ Ancho-Rubbed Pork Loin]]
+  produces more rub than needed.
+  - Substitute [[https://penzeys.com/online-catalog/33rd-galena-seasoning/c-24/p-307/pd-s|Pensey's 33rd & Galena Seasoning]] for oregano.
+  - Substitute [[https://www.penzeys.com/online-catalog/italian-herb-mix/c-24/p-183/pd-s|Pensey's Italian Herb Mix]] for paprika, pepper and chile de árbol.
+  - Substitute leftover seasonings, e.g.:
+    - [[https://www.penzeys.com/online-catalog/vindaloo-seasoning/c-24/p-138/pd-s|Penzey's Vindaloo]]
+    - [[https://www.penzeys.com/online-catalog/sweet-curry-powder/c-24/p-108/pd-s|Penzey's Sweet Curry Powder]]
+    - [[https://www.penzeys.com/online-catalog/rogan-josh-seasoning/c-24/p-149/pd-s|Penzey's Rogan Josh]]
+    - [[https://www.penzeys.com/online-catalog/maharajah-style-curry-powder/c-24/p-144/pd-s|Penzey's Maharajah Style Curry Powder]]
+    - [[https://www.penzeys.com/online-catalog/bbq-3001-seasoning/c-24/p-429/pd-s|Pensey's BBQ 3001]]
+    - [[https://www.penzeys.com/online-catalog/bbq-3000/c-24/p-327/pd-s|Penzey's BBQ 3000]] (contains salt)
+- Salt separately to manage sodium.
+- Spritz:
+  - Cider vinegar and beer or
+  - Pineapple juice
+- Balsamic vinegar
+
+*Directions*:
+
+1. Score the fat cap.
+2. Added salt directly to top loin to reduce sodium.
+   Thin uniform sprinkle on all sides before apply rub.
+3. Apply rub on all sides and allow time to adhere before rotating to another side.
+4. Wrap tightly in cling wrap and refrigerate over night on a rack to allow air circulation on all sides.
+
 [[https://blog.thermoworks.com/pork/smoked-pork-loin/|Thermoworks Pork Smoked Pork Loin]]
 recommends smoking at 250 °F until internal temperature reaches 140 °F.
 
@@ -119,21 +146,6 @@ Finish at 350 °F until 150 °F.
 Drizzle with balsamic vinegar 30 minutes before cooking and
 spritz with pineapple juice to retain moisture.
 
-- [[https://www.traeger.com/recipes/ancho-rubbed-pork-loin|Traeger BBQ Ancho-Rubbed Pork Loin]]
-  produced more rub than needed.
-  - Score the fat cap.
-  - Added salt directly to top loin to reduce sodium.
-    Thin uniform sprinkle on all sides before apply rub.
-  - Substitute
-    [[https://penzeys.com/online-catalog/33rd-galena-seasoning/c-24/p-307/pd-s|Pensey's 33rd & Galena Seasoning]]
-    for oregano.
-  - Substitute
-    [[https://www.penzeys.com/online-catalog/italian-herb-mix/c-24/p-183/pd-s|Pensey's Italian Herb Mix]]
-    for paprika, pepper and chile de árbol.
-  - Apply rub on all sides and allow time to adhere before rotating to another
-    side.
-  - Wrap tightly in cling wrap and refrigerate over night on a rack to allow
-    air circulation on all sides.
 - Use cooking instructions from
   [[https://www.traeger.com/recipes/smoked-pork-loin|Traeger Smoked Pork Loin]]
   - 140 ⁰F internal temperature after 2 hours at low smoke setting (180 °F)
@@ -401,3 +413,7 @@ Directions
     immediately with warmed tortillas, onions, cilantro, salsa, and lime
     wedges. Meat will be very moist and should be packed into double-stacked
     tortillas for serving.
+
+== Backlinks ==
+- [[/Topic_Index|Topic_Index]]
+- [[/index|John D. Fisher's home wiki]]

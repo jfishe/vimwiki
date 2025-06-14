@@ -1,5 +1,14 @@
 = Drink Recipes =
 
+== Contents ==
+- [[#Drink Recipes]]
+  - [[#Martini]]
+    - [[#Dry Martini]]
+    - [[#Perfect Martini]]
+    - [[#White Lady]]
+  - [[#Margarita]]
+  - [[#Backlinks]]
+
 == Martini ==
 :martini:
 
@@ -41,3 +50,8 @@ to balance the añejo tequila.
 - 3 oz tequila
 - 2 oz Cointreau
 - 2 oz lime juice
+
+== Backlinks ==
+- [[/Topic_Index|Topic_Index]]
+- [[/cooking|Cooking]]
+- [[/index|John D. Fisher's home wiki]]

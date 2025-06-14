@@ -11,6 +11,7 @@
   - [[#Chili]]
   - [[#Red Beans and Rice]]
   - [[#Cheesy Green Chile Bean Bake]]
+  - [[#Backlinks]]
 
 == Instant Pot Dried Beans ==
 
@@ -380,3 +381,8 @@ _Rice_
 8. Sprinkle the cheese evenly over the top.
 9. Broil until melted and browned in spots, 2 to 3 minutes.
 10. Top with cilantro leaves and a squeeze of lime.
+
+== Backlinks ==
+- [[/Topic_Index|Topic_Index]]
+- [[/cooking|Cooking]]
+- [[/index|John D. Fisher's home wiki]]
