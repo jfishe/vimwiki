@@ -1,0 +1,87 @@
+= Journal 2025-05-31 =
+
+== Zettelkasten VimWiki Addon (vim-zettel) ==
+:Zettelkasten:vim-zettel:vimwiki:pandoc:
+
+- [[/diary/2025-04-27#mystmd|MyST Markdown]] `compiler` and `errorformat`
+- `ZettelInsertNote` drops the `yaml` metadata and the footer.
+  `link-citations` are lost.
+- `pandoc --citeproc` is not easily reversed.
+- [[https://github.com/Chrismarsh/undo-pandoc-citeproc|Chrismarsh / undo-pandoc-citeproc]]
+  provides a mechanism but requires creating
+  `citations.txt` to record the prior state.
+- Pandoc cannot add the References section without expanding the citations.
+  Some conversion artifacts require cleanup.
+
+{{{vim
+let g:pandoc#compiler#arguments = "--to=markdown "
+      \ .. "--from=markdown-header_attributes"
+      \ ..    "+wikilinks_title_after_pipe-task_lists-citations "
+      \ .. "--wrap=preserve --standalone --citeproc"
+
+compiler! pandoc
+
+make % -o %
+" --to=markdown escapes @xyz, [@xyz] and tasks [X]
+
+Format
+" Prettier lower cases [X]
+
+function pandoc#unescape_markdown() abort
+  " Suppress :he E486.
+  " Remove backslash from \[@abc\] and \@abc.
+  %substitute/\\\[\(@.\{-1,}\)\\]/[\1]/ge
+  %substitute/\\@/@/ge
+  " Remove backslash and uppercase \[x\].
+  %substitute/\\\[x\\]/[X]/e
+  " Prettier lower cases [X]
+  call CocAction('format')
+  %substitute/\(\[x]\)/\U\1/Ie
+endfunction
+}}}
+
+== MyST Markdown and Pandoc Markdown ==
+:myst:mystmd:pandoc:markdown:
+
+- MyST Markdown and Pandoc formats differ on explicit header anchors.
+  - [[https://mystmd.org/guide/cross-references#targeting-headers|MyST Cross References Targeting Headers]]
+  - [[https://pandoc.org/MANUAL.html#extension-header_attributes|Pandoc Extension header_attributes]]
+- Targets should be unique and not match file base names.
+
+{{{bash
+myst build --site
+
+⚠️  20230929-1034.md:26 Linking "index-structure-or-hub-notes" to an implicit heading reference, best practice is to create an explicit reference.
+⚠️  CRDA_notes.md:54 No target for internal reference "#20250528-1430" was found.
+}}}
+
+{{{vim
+" Make #ref unique.
+let b:uniq = rand()
+%s/\(#\d\{8\}-\d\{4\}\)/\=submatch(1) .. "-" .. b:uniq/
+
+" Convert ATX header attribute to MyST anchor.
+%s/\(^#\{1,\}\s.\{1,\}\)\s{#\(.\{1,\}\)}/(\2)=\r\1/
+}}}
+
+{{{markdown
+(index-structure-or-hub-notes)=
+
+## Index, Structure or Hub Notes
+
+MyST format.
+
+## Index, Structure or Hub Notes {#index-structure-or-hub-notes}
+
+Pandoc format.
+
+## Internal Reference
+
+[NEDO-10527](#20250528-1430-1051592359).
+
+(#20250528-1430-1051592359)=
+
+## NEDO-10527 {#20250528-1430-1051592359}
+
+Target.
+}}}
