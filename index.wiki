@@ -1,16 +1,15 @@
-= John D. Fisher's home wiki =
+= John D. Fisher's Home Wiki =
 
-[[https://github.com/jfishe/vimwiki|Home Vimwiki on Github]]
+- [[https://jfishe.github.io/vimwiki/|John D. Fisher's Home Wiki Journal and Knowledge Archive]]
+- [[https://github.com/jfishe/vimwiki|Home Vimwiki on Github]]
 
 == Contents ==
-- [[#John D. Fisher's home wiki]]
+- [[#John D. Fisher's Home Wiki]]
   - [[#Projects]]
   - [[#Computer]]
     - [[#Sweet Home 3D]]
     - [[#Fonts]]
     - [[#WiFi]]
-  - [[#Electronics]]
-    - [[#Motorola Bluetooth Headset]]
   - [[#DIY]]
   - [[#City of Richland]]
   - [[#Generated Links]]
@@ -50,14 +49,6 @@
 - To get WiFi security key content, type
   `netsh wlan show profile WiFi-name key=clear`.
 
-== Electronics ==
-
-=== Motorola Bluetooth Headset ===
-:motorola:bluetooth:
-
-Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71059/~/hx550-reset-to-factory-default|Reset to factory default]]
-:: Press and hold the Call button while turning on the headset.
-
 == DIY ==
 :diy:
 
@@ -69,7 +60,7 @@ Motorola HX550:: [[https://en-us.support.motorola.com/app/answers/detail/a_id/71
 - [[https://www.arcgis.com/apps/webappviewer/index.html?id=1541b5feb5644ef888a1e8cf7a8c3349&extent=1922780.572%2C319593.1635%2C1987606.9608%2C366676.4968%2C102749&showLayers=AGOL_Symb_Water_8321%3BAGOL_Symb_Water_8321_35%3BAGOL_Symb_Water_8321_34%3BAGOL_Symb_|Richland City Map]]
 - [[https://arcg.is/D509D|Local Map]]
 
-%plainhtml <iframe width="300" height="200" frameborder="0" scrolling="no" allowfullscreen src="https://arcg.is/1rnHau0"></iframe>
+%plainhtml <iframe width="300" height="200" frameborder="0" scrolling="no" allowfullscreen style="display:none;" onload="this.style.display='inline';" src="https://arcg.is/1rnHau0"></iframe>
 
 == Generated Links ==
 - [[Beans]]
