@@ -43,6 +43,7 @@ endfunction
 == MyST Markdown and Pandoc Markdown ==
 :myst:mystmd:pandoc:markdown:
 
+- [[/diary/2025-06-27#mystmd|Journal 2025-06-27 MyST Markdown with mdformat]]
 - MyST Markdown and Pandoc formats differ on explicit header anchors.
   - [[https://mystmd.org/guide/cross-references#targeting-headers|MyST Cross References Targeting Headers]]
   - [[https://pandoc.org/MANUAL.html#extension-header_attributes|Pandoc Extension header_attributes]]

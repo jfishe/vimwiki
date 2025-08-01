@@ -1,0 +1,67 @@
+= Journal 2025-06-27 =
+
+== MyST Markdown with mdformat ==
+:myst:mystmd:pandoc:markdown:
+:myst:mdformat:mdformat-myst:vimwiki:
+
+- [[/diary/2025-05-31#MyST Markdown and Pandoc Markdown|Journal 2025-05-31 MyST Markdown and Pandoc Markdown]]
+- [[/diary/2024-01-20#mdformat-myst|Journal 2024-01-20 Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
+
+{{{bash
+uv tool install mdformat \
+  --with mdformat-myst \
+  --with mdformat-pyproject \
+  --with mdformat-ruff \
+  --with mdformat-shfmt \
+  --with mdformat-simple-breaks \
+  --with mdformat-wikilink
+
+mdformat --number *.md
+}}}
+
+- Sequentially number ordered lists.
+- Lower-case reference links.
+- URL encode link targets.
+  Edge process an encoded `mailto:` URL correctly with Outlook 365.
+- Unwrap verbatim text.
+- Remove explicit reference-link targets, e.g,
+  `[Jupytext][jupytext]` becomes `[Jupytext]`.
+  Vimwiki syntax requires explicit targets.
+- Unwrap YAML `title:`.
+- Converts Vimwiki `vimwiki-todo-lists` to lower-case and re-wraps, e.g:
+  {{{markdown
+  - [X] Task 1
+  - [X] Task 2
+        Line 2
+  }}}
+  becomes
+  {{{markdown
+  - [x] Task 1
+  - [x] Task 2
+    Line 2
+  }}}
+- Un-escape square brackets, e.g., `\[1, 2\]`.
+- Escape solo parenthesis and angle brackets, i.e., `2\) \>6 \<7`.
+- Escape `file:` URLs, e.g.,
+  {{{markdown
+  \[Text\](file:///C:/abc/xyz.txt/)
+  \<file:///C:/abc/xyz.txt/>
+  }}}
+  MyST does not convert to a link.
+- Include external files as download links, e.g:
+  {{{markdown
+  [Volume 10 Issue 7](/c/Users/jdfen/Downloads/vol10_iss7_web.pdf)
+  is rendered as
+  [Volume 10 Issue 7](http://localhost:3100/vol10_iss7_web-d78d1d47b1d91fcc2e3ded640dbbb51d.pdf)
+  }}}
+  MyST does not support Universal Network Container (UNC) paths.
+  Mount the share and use the absolute path for the link target.
+  {{{bash
+  sudo mount -t drvfs '\\server\share' /mnt/share
+  }}}
+  Pandoc supports UNC paths, e.g:
+  {{{markdown
+  [title](file:////server/share/filepath)
+  }}}
+  Fewer than four slashes results in `file:///C:/server/share/filepath`
+  in Edge on Windows.

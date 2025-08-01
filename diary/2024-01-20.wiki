@@ -98,6 +98,7 @@ pandoc \
 :myst:mdformat:mdformat-myst:vimwiki:
 :mystmd:
 
+- [[/diary/2025-06-27#mdformat-myst|Journal 2025-06-27 MyST Markdown with mdformat]]
 - [[https://pre-commit.com/|pre-commit]]
 - [[https://github.com/executablebooks/mdformat-myst|Mdformat plugin for MyST compatibility]]
 
@@ -116,10 +117,16 @@ repos:
     rev: 0.7.17 # Use the ref you want to point at
     hooks:
       - id: mdformat
+        args:
+          - "--number"
         # Optionally add plugins
         additional_dependencies:
           # - mdformat-gfm
           - mdformat-myst
+          - mdformat-pyproject
+          - mdformat-ruff
+          - mdformat-shfmt
+          - mdformat-simple-breaks
           # - mdformat-black
 }}}
 
