@@ -44,6 +44,31 @@ Directions:
 2. Add other ingredients and simmer for 15 minutes.
 3. Adjust salt and sugar to taste.
 
+== Bakade Ägg (Baked Eggs) ==
+:eggs:breakfast:
+
+Adapted from [[https://www.broderpdx.com/nord-menu|Broder Nord]] and [[https://bakeitwithlove.com/baked-eggs/#recipe|Baked It with Love, Baked Eggs]].
+
+== Uunipuuro (Finnish Oven Porridge) ==
+:oats:breakfast:
+
+Adapted from
+
+- [[https://www.broderpdx.com/nord-menu|Broder Nord]]
+- [[https://recipes.fandom.com/wiki/Uunipuuro|Fandom Recipes Wiki Uunipuuro]]
+- [[https://wellspentmarket.com/blogs/recipes/finnish-style-baked-porridge|Wellspent Market Finnish Style Baked Porridge]]
+
+*Ingredients*:
+
+- Pearl barley, rolled oats, steel cut oats, and/or buckwheat
+  - ½ cup flaked/rolled grain
+  - ¾ cup whole/steel cut grain
+- 2 cups water
+- 2 cups milk
+- 1 tsp salt
+
+*Directions*:
+
 == Cocoa Gravy ==
 :cocoa:gravy:sauce:
 
