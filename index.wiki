@@ -60,7 +60,7 @@
 - [[https://www.arcgis.com/apps/webappviewer/index.html?id=1541b5feb5644ef888a1e8cf7a8c3349&extent=1922780.572%2C319593.1635%2C1987606.9608%2C366676.4968%2C102749&showLayers=AGOL_Symb_Water_8321%3BAGOL_Symb_Water_8321_35%3BAGOL_Symb_Water_8321_34%3BAGOL_Symb_|Richland City Map]]
 - [[https://arcg.is/D509D|Local Map]]
 
-%plainhtml <iframe width="300" height="200" frameborder="0" scrolling="no" allowfullscreen style="display:none;" onload="this.style.display='inline';" src="https://arcg.is/1rnHau0"></iframe>
+%% %plainhtml <iframe width="300" height="200" frameborder="0" scrolling="no" allowfullscreen style="display:none;" onload="this.style.display='inline';" src="https://arcg.is/1rnHau0"></iframe>
 
 == Generated Links ==
 - [[Beans]]

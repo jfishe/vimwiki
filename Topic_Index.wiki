@@ -140,6 +140,7 @@
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
+- [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
 
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
@@ -193,11 +194,12 @@
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
 === bluetooth ===
-- [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === breakfast ===
+- [[cooking#Cooking#Bakade Ägg (Baked Eggs)]]
 - [[cooking#Cooking#Dutch Baby]]
+- [[cooking#Cooking#Uunipuuro (Finnish Oven Porridge)]]
 
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
@@ -219,6 +221,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
+
+=== chocolate ===
+- [[Coffee#Coffee#Iced Meso Mocha Breve#Chocolate Sauce]]
 
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
@@ -273,11 +278,12 @@
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === diy ===
-- [[index#John D. Fisher's home wiki#DIY]]
+- [[index#John D. Fisher's Home Wiki#DIY]]
 - [[main#John D. Fisher's home wiki#DIY]]
 
 === eggs ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
+- [[cooking#Cooking#Bakade Ägg (Baked Eggs)]]
 
 === environment ===
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
@@ -308,7 +314,7 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
 
 === gis ===
-- [[index#John D. Fisher's home wiki#City of Richland]]
+- [[index#John D. Fisher's Home Wiki#City of Richland]]
 
 === git ===
 - [[Git#Git#Pull Rebase]]
@@ -392,6 +398,8 @@
 === markdown ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
 - [[diary/2024-12-09#Journal 2024-12-09#Evaluate Marksman Markdown Language Server Protocol]]
+- [[diary/2025-05-31#Journal 2025-05-31#MyST Markdown and Pandoc Markdown]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === markdownlint ===
 - [[diary/2024-02-17#Journal 2024-02-17#Panvimwiki Github Flavored Markdown (GFM)]]
@@ -408,9 +416,11 @@
 
 === mdformat ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === mdformat-myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === mexican ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
@@ -428,7 +438,6 @@
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
 
 === motorola ===
-- [[index#John D. Fisher's home wiki#Electronics#Motorola Bluetooth Headset]]
 - [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
@@ -437,10 +446,15 @@
 === myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 - [[diary/2025-04-27#Journal 2025-04-27#MyST Markdown]]
+- [[diary/2025-05-31#Journal 2025-05-31#MyST Markdown and Pandoc Markdown]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === mystmd ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 - [[diary/2025-04-27#Journal 2025-04-27#MyST Markdown]]
+- [[diary/2025-05-31#Journal 2025-05-31#MyST Markdown and Pandoc Markdown]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === neovide ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
@@ -459,6 +473,9 @@
 === nytimes ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
+
+=== oats ===
+- [[cooking#Cooking#Uunipuuro (Finnish Oven Porridge)]]
 
 === olives ===
 - [[cooking#Cooking#Olive Tapanade]]
@@ -479,6 +496,9 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 - [[diary/2024-04-29#Journal 2024-04-29#Vimwiki Markdown Tag Syntax]]
 - [[diary/2024-08-24#Journal 2024-08-24#Vimwiki Markdown Hashtags]]
+- [[diary/2025-05-31#Journal 2025-05-31#MyST Markdown and Pandoc Markdown]]
+- [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -615,7 +635,7 @@
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 
 === richland ===
-- [[index#John D. Fisher's home wiki#City of Richland]]
+- [[index#John D. Fisher's Home Wiki#City of Richland]]
 
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -761,6 +781,7 @@
 
 === vim-zettel ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
+- [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
 
 === vimwiki ===
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
@@ -785,6 +806,8 @@
 - [[diary/2024-08-24#Journal 2024-08-24#Vimwiki Markdown Hashtags]]
 - [[diary/2024-11-23#Journal 2024-11-23#Vimwiki Temporary Wiki Nested Syntax]]
 - [[diary/2024-12-14#Journal 2024-12-14#Sync Forked Github Repository and Branches]]
+- [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
+- [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]

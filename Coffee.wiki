@@ -6,7 +6,7 @@
   - [[#French Press Coffee]]
   - [[#Chicory Coffee]]
   - [[#Iced Meso Mocha Breve]]
-  - [[#Backlinks]]
+    - [[#Chocolate Sauce]]
 
 == French Press Coffee ==
 :coffee:
@@ -58,11 +58,33 @@ Yield: 2 × 16 oz
    5 – 10 minutes on the counter top.
 6. Add enough half-cream to bring mix to approximately 16 oz, i.e., ~12 oz.
 7. Divide equally between two, 16 oz, tumbler cups.
-8. Add chilled, reserved espresso.
-9. Fill cups with ice.
-10. Top up with half-cream and stir until well mixed.
+8. Add reserved espresso
+9. Chill in freezer for ~20 minutes (optional)
+10. Fill cups with ice.
+11. Top up with half-cream and stir until well mixed.
 
-== Backlinks ==
-- [[/Topic_Index|Topic_Index]]
-- [[/cooking|Cooking]]
-- [[/index|John D. Fisher's home wiki]]
+=== Chocolate Sauce ===
+:chocolate:
+
+Derived from:
+
+[[https://barefeetinthekitchen.com/simple-homemade-chocolate-sauce/#wprm-recipe-container-22065|Barefeet in the Kitchen Simple Homemade Chocolate Sauce]]
+
+Ingredients:
+
+- 110 g unsweetened cocoa powder
+- 132 g sugar
+- ⅛ teaspoon kosher salt (2 pinches)
+- ¾ cup cold water
+- 1 tsp double-strength vanilla
+
+Directions:
+
+1. In a cold saucepan, whisk together the cocoa and the sugar until all lumps
+   are removed.
+2. Add the salt and the water and bring to a boil over medium to medium-high
+   heat.
+3. Reduce to a simmer; stirring constantly. Simmer for about 30 seconds and
+   then remove from heat.
+4. Let cool and then add vanilla. Pour into a glass jar and refrigerate until
+   needed.
