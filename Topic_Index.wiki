@@ -85,6 +85,9 @@
 - [[PowerShell#PowerShellCore]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
+=== SC ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
+
 === SeCreateSymbolicLinkPrivilege ===
 - [[Windows 10 Configuration#SeCreateSymbolicLinkPrivilege]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
@@ -164,6 +167,7 @@
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
 === bbq ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === beans ===
@@ -443,6 +447,9 @@
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 
+=== mustard ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
+
 === myst ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`]]
 - [[diary/2025-04-27#Journal 2025-04-27#MyST Markdown]]
@@ -651,6 +658,7 @@
 
 === sauce ===
 - [[cooking#Cooking#Cocoa Gravy]]
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === seaborn ===

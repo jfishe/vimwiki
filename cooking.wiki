@@ -9,6 +9,7 @@
 == Contents ==
 - [[#Cooking]]
   - [[#Hot Sauce and BBQ Sauce]]
+    - [[#Mustard Based Carolina BBQ Sauce]]
     - [[#Vinegar Based Carolina BBQ Sauce]]
   - [[#Bakade Ägg (Baked Eggs)]]
   - [[#Uunipuuro (Finnish Oven Porridge)]]
@@ -26,6 +27,46 @@
 :hot_sauce:
 
 - [[https://pepperscale.com/hot-sauce-rankings/|PepperScale Hot Sauce Rankings]]
+
+=== Mustard Based Carolina BBQ Sauce===
+:mustard:bbq:sauce:SC:
+
+Derived from:
+
+- [[https://destination-bbq.com/our-favorite-sc-mustard-based-bbq-sauce-recipe|Destination BBQ South Carolina's Best Mustard-Based BBQ Sauce Recipe]]
+- [[https://heygrillhey.com/carolina-mustard-bbq-sauce/|Hey Grill Hey Carolina Mustard BBQ Sauce]]
+- [[https://houseofnasheats.com/carolina-mustard-bbq-sauce/|House of Nash Eats Carolina Mustard Based BBQ Sauce]]
+- [[https://spicerally.com/homemade-carolina-mustard-bbq-sauce-recipe/|Spice Rally Homemade Carolina Mustard BBQ Sauce Recipe – Discover The Secret in the Mustard Blend!]]
+- [[https://www.billyparisi.com/south-carolina-mustard-bbq-sauce-recipe/|Chef Billy Parisi South Carolina Mustard BBQ Sauce]]
+- [[https://www.southernliving.com/recipes/south-carolina-mustard-bbq-sauce|Southern Living South Carolina Mustard BBQ Sauce]]
+
+Ingredients:
+
+- ¾ cup mustard flour
+- ½ tsp ground turmeric
+- 1 tsp garlic powder
+- 1 tsp onion powder
+- ⅛ tsp paprika
+- ¼ cup brown sugar
+- 2 Tb chili powder
+- ¼ tsp cayenne
+- 2 tsp mignonette pepper
+- ½ cup white vinegar
+- ¾ cup apple cider vinegar
+- ¾ cup water
+- 2 Tb butter
+- ½ tsp soy sauce
+- 1 Tb Worcestershire sauce
+- 1 Tb liquid smoke
+- Hot sauce to taste
+
+Directions:
+
+1. Mix together all the ingredients except the butter, soy sauce, Worcestershire sauce, and liquid smoke in a large saucepan.
+2. Simmer on low heat for about 30 minutes.
+3. Stir in remaining ingredients and simmer for 10 more minutes. Vinegar taste may be very strong until completely cooled.
+4. Refrigerating overnight is best and allows flavors to blend.
+5. Add a few drops of your favorite hot sauce at the end if additional heat is desired.
 
 === Vinegar Based Carolina BBQ Sauce ===
 :vinegar:bbq:sauce:NC:
