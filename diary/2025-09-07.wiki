@@ -1,0 +1,97 @@
+= Journal 2025-09-07 =
+:vimwiki:math:LaTeX:syntax:
+
+{{{vim
+# List syntax tree at cursor.
+for id in synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0)) | echomsg synIDattr(id, "name") | endfor
+}}}
+
+== Inline Math ==
+
+On the delimiters:
+
+- VimwikiH1Folding
+  - VimwikiH2Folding
+    - textSnipTEX
+      - texSnip
+
+Within the delimiters:
+
+- VimwikiH1Folding
+  - VimwikiH2Folding
+    - textSnipTEX
+
+$\sum_i a_i^2 = 1$
+
+In vimwiki markdown:
+
+{{{markdown
+$\sum_i a_i^2 = 1$
+
+- VimwikiH1Folding
+  - textSnipTEX
+}}}
+
+In Pandoc:
+
+- pandocLaTeXInlineMath
+  - texMathZoneTI
+- pandocLaTeXInlineMath
+  - texMathZoneTI
+    - texDelim
+- pandocLaTeXInlineMath
+  - texMathZoneTI
+    - texMathDelimZoneTI
+
+Within a text delimiter:
+
+- pandocLaTeXInlineMath
+  - texMathZoneTI
+    - texMathTextConcArg
+
+== Block Display Math ==
+
+On the block display delimiter lines:
+
+- VimwikiH1Folding
+  - VimwikiH2Folding
+    - textSnipTEX
+      - VimwikiMath
+
+Within the block:
+
+- VimwikiH1Folding
+  - VimwikiH2Folding
+    - textSnipTEX
+
+{{$
+\sum_i a_i^2
+=
+1
+}}$
+
+In vimwiki markdown:
+
+{{{markdown
+$$
+\sum_i a_i^2
+=
+1
+$$
+
+- VimwikiH1Folding
+  - textSnipTEX
+
+On the block display delimiter lines:
+
+- VimwikiH1Folding
+  - textSnipTEX
+    - VimwikiMath
+}}}
+
+== Block Align Math ==
+
+{{$%align%
+\sum_i a_i^2 &= 1 + 1 \\
+&= 2.
+}}$

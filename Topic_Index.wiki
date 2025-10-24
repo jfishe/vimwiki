@@ -49,6 +49,8 @@
 === LaTeX ===
 - [[Python#Python Notes#LaTeX]]
 - [[diary/2024-03-31#Journal 2024-03-31#Typst as a LaTeX Replacement]]
+- [[diary/2025-08-23#Journal 2025-08-23#Mathematics Note-Taking]]
+- [[diary/2025-09-07#Journal 2025-09-07]]
 
 === Linux ===
 - [[Linux#Linux Notes]]
@@ -415,6 +417,10 @@
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
 
+=== math ===
+- [[diary/2025-08-23#Journal 2025-08-23#Mathematics Note-Taking]]
+- [[diary/2025-09-07#Journal 2025-09-07]]
+
 === matplotlib ===
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 
@@ -698,6 +704,9 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 - [[Windows 10 Configuration#symlinkevaluation]]
 
+=== syntax ===
+- [[diary/2025-09-07#Journal 2025-09-07]]
+
 === taco ===
 - [[cooking#Cooking#Tacos al Pastor]]
 
@@ -816,6 +825,7 @@
 - [[diary/2024-12-14#Journal 2024-12-14#Sync Forked Github Repository and Branches]]
 - [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
 - [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
+- [[diary/2025-09-07#Journal 2025-09-07]]
 
 === vimwiki-syntax-links ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]

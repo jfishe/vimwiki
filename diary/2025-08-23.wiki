@@ -1,0 +1,7 @@
+= Journal 2025-08-23 =
+
+== Mathematics Note-Taking ==
+:math:LaTeX:
+
+- Castel, Gilles. 2019-03-16. _How I'm able to take notes in mathematics lectures using LaTeX and Vim_. [[https://castel.dev/post/lecture-notes-1/#in-conclusion]]
+- Snippets are available at [[https://github.com/gillescastel/latex-snippets]].
