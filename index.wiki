@@ -73,6 +73,7 @@
 - [[PowerShell]]
 - [[Python]]
 - [[Sisal_Rope]]
+- [[Soup]]
 - [[Topic_Index]]
 - [[Windows 10 Configuration]]
 - [[cooking]]
