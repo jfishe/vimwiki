@@ -36,6 +36,7 @@
 - [[diary/2023-05-27#Journal 2023-05-27]]
 
 === Fedora ===
+- [[Linux#Linux Notes#Fedora and Red Hat]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
 === GitHub ===
@@ -87,6 +88,9 @@
 - [[PowerShell#PowerShellCore]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
+=== RHEL ===
+- [[Linux#Linux Notes#Fedora and Red Hat]]
+
 === SC ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 
@@ -121,6 +125,7 @@
 - [[Windows 10 Configuration#Windows 10 Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 - [[diary/2024-11-27#Journal 2024-11-27#Windows Terminal Configuration]]
 
@@ -130,6 +135,7 @@
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2024-11-27#Journal 2024-11-27#Windows Terminal Configuration]]
@@ -167,6 +173,9 @@
 
 === background ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+
+=== bash ===
+- [[Linux#Linux Notes#Bash Shell Script]]
 
 === bbq ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
@@ -257,6 +266,8 @@
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 - [[diary/2023-06-10#Journal 2023-06-10]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
+- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
@@ -490,6 +501,9 @@
 === oats ===
 - [[cooking#Cooking#Uunipuuro (Finnish Oven Porridge)]]
 
+=== oh-my-posh ===
+- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
+
 === olives ===
 - [[cooking#Cooking#Olive Tapanade]]
 
@@ -550,12 +564,16 @@
 === pork ===
 - [[cooking#Cooking#Smoked Pork Top Loin]]
 
+=== posh-git ===
+- [[PowerShell#PowerShell and pwsh#PowerShell Configuration]]
+
 === powershell ===
 - [[PowerShell#PowerShell and pwsh#Powershell Commands]]
 - [[PowerShell#PowerShell and pwsh]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
@@ -609,6 +627,7 @@
 - [[diary/2022-01-08#Journal 2022-01-08#Matplotlib Cursor]]
 - [[diary/2023-05-29#Journal 2023-05-29]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
+- [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
@@ -667,6 +686,9 @@
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
+=== script ===
+- [[Linux#Linux Notes#Bash Shell Script]]
+
 === seaborn ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 
@@ -721,6 +743,9 @@
 
 === task_lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
+
+=== taskwiki ===
+- [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 
 === telescope ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
