@@ -25,7 +25,7 @@
 - [[Python|Python Notes]]
 - [[https://github.com/jfishe/Richland_prefab_2br|Richland, WA, 2 bedroom Prefab Remodel]] Project site
   - [[https://jfishe.github.io/Richland_prefab_2br/|Remodel Plan Richland Prefab 2BR]] Web site
-- [[Windows 10 Configuration]]
+- [[windows_config]]
 
 == Computer ==
 
@@ -75,7 +75,7 @@
 - [[Sisal_Rope]]
 - [[Soup]]
 - [[Topic_Index]]
-- [[Windows 10 Configuration]]
+- [[windows_config]]
 - [[cooking]]
 - [[diary/diary]]
 - [[index]]

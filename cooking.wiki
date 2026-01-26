@@ -171,6 +171,7 @@ and black peppercorns. This is based on the ground pepper available as
 | White     |   13 |    52 |
 | Szechuan  |    4 |    16 |
 | Green     |    7 |    28 |
+| Pink      |    7 |    28 |
 
 == Santa Maria Rub ==
 :tritip:rub:beef:seasoning:

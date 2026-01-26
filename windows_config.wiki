@@ -1,33 +1,35 @@
-= Windows 10 Configuration =
-:Win10:
+= Microsoft Windows Configuration =
+:Win10:Win11:
 
-%% = Contents =
-- [[#Windows 10 Configuration|Windows 10 Configuration]]
-  - [[#Windows 10 Configuration#Windows Update Fails|Windows Update Fails]]
-  - [[#Windows 10 Configuration#NumLock on Startup|NumLock on Startup]]
-  - [[#Windows 10 Configuration#Explorer Quick Access|Explorer Quick Access]]
-  - [[#Windows 10 Configuration#Chocolatey|Chocolatey]]
-  - [[#Windows 10 Configuration#Vim Installation and Update|Vim Installation and Update]]
-  - [[#Windows 10 Configuration#Windows Subsystem for Linux|Windows Subsystem for Linux]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Share Environment Vars between WSL and Windows|Share Environment Vars between WSL and Windows]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Configuration|WSL Configuration]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Access WSL Files from Windows|Access WSL Files from Windows]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro|Configure SSH in each WSL Distro]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH|Windows Firewall Rules for SSH]]
-      - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent|Add Unix socket access to Windows OpenSSH for KeeAgent]]
-      - [[#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd|Automatically Start WSL sshd]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL X11 Setup|WSL X11 Setup]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git Credentials|Git Credentials]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Git lfs|Git lfs]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix|Whitewater Foundry Fedora Remix]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin|Whitewater Foundry Pengwin]]
-    - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting|WSL Troubleshooting]]
-      - [[#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting#Server execution failed|Server execution failed]]
-  - [[#Windows 10 Configuration#Windows Terminal|Windows Terminal]]
-  - [[#Windows 10 Configuration#Console Colorscheme|Console Colorscheme]]
-  - [[#Windows 10 Configuration#Google Chrome|Google Chrome]]
-  - [[#Windows 10 Configuration#Symlinks|Symlinks]]
-  - [[#Windows 10 Configuration#HP Envy BIOS Settings|HP Envy BIOS Settings]]
+%% == Contents ==
+- [[#Microsoft Windows Configuration]]
+  - [[#Windows Update Fails]]
+  - [[#NumLock on Startup]]
+  - [[#Explorer Quick Access]]
+  - [[#Chocolatey]]
+    - [[#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
+  - [[#Vim Installation and Update]]
+  - [[#Windows Subsystem for Linux]]
+    - [[#Share Environment Vars between WSL and Windows]]
+    - [[#WSL Configuration]]
+    - [[#Access WSL Files from Windows]]
+    - [[#Configure SSH in each WSL Distro]]
+    - [[#Windows Firewall Rules for SSH]]
+      - [[#Verify ssh key access with KeePass and KeeAgent]]
+      - [[#Add Unix socket access to Windows OpenSSH for KeeAgent]]
+      - [[#Automatically Start WSL sshd]]
+    - [[#WSL X11 Setup]]
+    - [[#Git Credentials]]
+    - [[#Git lfs]]
+    - [[#Whitewater Foundry Fedora Remix]]
+    - [[#Whitewater Foundry Pengwin]]
+    - [[#WSL Troubleshooting]]
+      - [[#Server execution failed]]
+  - [[#Windows Terminal]]
+  - [[#Console Colorscheme]]
+  - [[#Google Chrome]]
+  - [[#Symlinks]]
+  - [[#HP Envy BIOS Settings]]
 
 == Windows Update Fails ==
 
@@ -183,9 +185,10 @@ Windows side.
 
 === WSL Configuration ===
 
-[[https://docs.microsoft.com/en-us/windows/wsl/wsl2-install|Automatically Configuring WSL]]
-provides guidance on `/etc/wsl.conf`. Changes to wsl.conf do not take affect
-until reboot or `Restart-Service -Name "LxssManager"`.
+[[https://learn.microsoft.com/en-us/windows/wsl/wsl-config|Advanced settings configuration in WSL]]
+provides guidance on `/etc/wsl.conf`.
+Changes to wsl.conf do not take affect until reboot or
+`wsl --shutdown`.
 
 Umask may be set in `~/.profile` to reasonable values for user created files.
 
@@ -198,14 +201,24 @@ executed from WSL.
 {{{ ini
 [automount]
 enabled = true
+# Docker requires mounting under /c. Symlink /mnt/c to /c.
 # root = /mnt/
 options = "metadata,uid=1000,gid=1000,umask=22,fmask=11,case=off"
-mountFsTab = false
+mountFsTab = true
 
-#Let's enable DNS – even though these are turned on by default, we'll specify her
 [network]
 generateHosts = true
 generateResolvConf = true
+
+[filesystem]
+umask = 0022
+
+[interop]
+enabled=true
+# appendWindowsPath=true
+
+[boot]
+systemd=true
 }}}
 
 === Access WSL Files from Windows ===
@@ -286,9 +299,9 @@ sudo ln -s $HOME/userprofile/go/bin/npiperelay.exe \
   /usr/local/bin/npiperelay.exe
 
 # Add to ~/.profile
-if [ ! -f /tmp/ssh-agent-pipe ]; then
-  socat UNIX-LISTEN:/tmp/ssh-agent-pipe,fork,group=fishe,umask=007 \
-    EXEC:"npiperelay.exe -ep -s //./pipe/openssh-ssh-agent",nofork &
+if [ ! -S /tmp/ssh-agent-pipe ]; then
+  (socat UNIX-LISTEN:/tmp/ssh-agent-pipe,fork,group="$USER",umask=007 \
+    EXEC:"npiperelay.exe -ep -s //./pipe/openssh-ssh-agent",nofork &)
   export SSH_AUTH_SOCK=/tmp/ssh-agent-pipe
 fi
 }}}
