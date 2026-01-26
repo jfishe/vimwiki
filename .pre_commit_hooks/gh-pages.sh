@@ -30,5 +30,6 @@ then
   say 'Pushing html to gh-pages...'
   # ghp-import -n -o -p -f "$pathhtml"
   ghp-import -n -o -f "$pathhtml"
+  git push origin gh-pages --force --no-verify
   say_done
 fi
