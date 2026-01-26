@@ -320,7 +320,7 @@ entering a password every time the login scripts run.
 #!/bin/bash
 
 sshd_status=$(service ssh status)
-if [[ ${sshd_status} = *"is not running"* ]]; then
+if [ ${sshd_status} = *"is not running"* ]; then
  service ssh --full-restart > /dev/null 2>&1
 fi
 }}}
@@ -385,7 +385,7 @@ From WSL Ubuntu:
 {{{ bash
 sudo apt-get install x11-apps
 
-if [[ ! -z "$WSL_INTEROP" ]] ; then
+if [ ! -z "$WSL_INTEROP" ] ; then
   # For WSL2, determine the IP address of the Hyper-V VM.
   export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 else

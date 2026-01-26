@@ -6,6 +6,7 @@
 
 === BIOS ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
+- [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
 === BibTeX ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
@@ -30,6 +31,7 @@
 === Debian ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 
 === Excel ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -38,6 +40,7 @@
 === Fedora ===
 - [[Linux#Linux Notes#Fedora and Red Hat]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
 === GitHub ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
@@ -46,6 +49,7 @@
 
 === HP ===
 - [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
+- [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
 === LaTeX ===
 - [[Python#Python Notes#LaTeX]]
@@ -84,6 +88,7 @@
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 - [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
@@ -98,12 +103,15 @@
 === SeCreateSymbolicLinkPrivilege ===
 - [[Windows 10 Configuration#SeCreateSymbolicLinkPrivilege]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
+- [[windows_config#Microsoft Windows Configuration#Symlinks]]
+- [[windows_config#SeCreateSymbolicLinkPrivilege]]
 
 === Ubuntu ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === UltiSnips ===
 - [[diary/2024-12-05#UltiSnips]]
@@ -117,10 +125,12 @@
 - [[diary/2023-07-02#Journal 2023-07-02]]
 - [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
 - [[diary/2024-11-26#Journal 2024-11-26#Windows Subsystem for Linux Stuck During Installation]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === WSL2 ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === Win10 ===
 - [[Windows 10 Configuration#Windows 10 Configuration]]
@@ -129,6 +139,7 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 - [[diary/2024-11-27#Journal 2024-11-27#Windows Terminal Configuration]]
+- [[windows_config#Microsoft Windows Configuration]]
 
 === Win11 ===
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
@@ -140,6 +151,7 @@
 - [[diary/2023-10-27#Journal 2023-10-27#VimwikiCheckLinks Error]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2024-11-27#Journal 2024-11-27#Windows Terminal Configuration]]
+- [[windows_config#Microsoft Windows Configuration]]
 
 === WindowsPowerShell ===
 - [[PowerShell#WindowsPowerShell]]
@@ -241,6 +253,8 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
+- [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
+- [[windows_config#Microsoft Windows Configuration#Chocolatey]]
 
 === chocolate ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve#Chocolate Sauce]]
@@ -381,6 +395,7 @@
 
 === install ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
+- [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === jabref ===
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
@@ -468,6 +483,7 @@
 
 === mklink ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
+- [[windows_config#Microsoft Windows Configuration#Symlinks]]
 
 === mocha ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
@@ -590,6 +606,8 @@
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
+- [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
 === pre-commit ===
 - [[diary/2024-02-11#Journal 2024-02-11#Github Pages Pre-Commit]]
@@ -732,6 +750,10 @@
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
 === stew ===
 - [[Soup#Soup and Stew#Brunswick Stew]]
@@ -744,6 +766,8 @@
 === symlinkevaluation ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 - [[Windows 10 Configuration#symlinkevaluation]]
+- [[windows_config#Microsoft Windows Configuration#Symlinks]]
+- [[windows_config#symlinkevaluation]]
 
 === syntax ===
 - [[diary/2025-09-07#Journal 2025-09-07]]
@@ -807,6 +831,7 @@
 
 === troubleshooting ===
 - [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
 
 === twine ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
@@ -833,6 +858,7 @@
 - [[diary/2024-12-01#vim]]
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
 - [[diary/2024-12-15#Journal 2024-12-15#Papis Command-line Bibliography Manager]]
+- [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === vim-fugitive ===
 - [[diary/2024-12-05#vim-fugitive]]
