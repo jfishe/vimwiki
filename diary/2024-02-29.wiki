@@ -3,6 +3,10 @@
 == Root Vegetable Stew ==
 :recipe:cookery:vegetable:stew:
 
+<<<<<<< Updated upstream
+Transferred to [[/Soup|Soup and Stew]].
+
+||||||| Stash base
 Adapted from:
 
 - [[https://www.asaucykitchen.com/roasted-root-vegetable-stew/|A Saucy Kitchen Roasted Root Vegetable Stew]]
@@ -73,3 +77,6 @@ Adapted from:
     stir. Simmer for 10 minutes until the stew is thick.
 25. The meat should be very tender; if it's tough, let it continue to cook.
 26. To finish, add the cilantro and stir through the stew.
+=======
+Transferred to [[/Soup|Soup and Stew]].
+>>>>>>> Stashed changes

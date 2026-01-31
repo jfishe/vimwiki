@@ -1,6 +1,11 @@
 = Soup and Stew =
 :soup:stew:
 
+== Contents ==
+- [[#Soup and Stew]]
+  - [[#Brunswick Stew]]
+  - [[#Root Vegetable Stew]]
+
 == Brunswick Stew ==
 :brunswick:stew:NC:
 
@@ -54,3 +59,99 @@ Adapted from:
 7. Add brown sugar (1–2 Tb) or vinegar (1–2 tsp), as needed, to balance BBQ
    sauce.
 8. Cook on low for 6 hours or on high for 3-4 hours.
+
+== Root Vegetable Stew ==
+:vegetable:stew:
+
+Adapted from:
+
+- [[https://www.asaucykitchen.com/roasted-root-vegetable-stew/|A Saucy Kitchen Roasted Root Vegetable Stew]]
+- [[https://www.foodnetwork.com/recipes/ree-drummond/beef-stew-with-root-vegetables-recipe-1983394|Beef Stew with Root Vegetables]]
+- [[https://www.foodnetwork.com/recipes/food-network-kitchen/roasted-root-vegetable-irish-lamb-stew-recipe-2008979|Roasted Root Vegetable Irish Lamb Stew]]
+
+Yield: 9 qts based on 9 lb root vegetables and 4 lb meat.
+
+Hardware: 10 qt stock pot and large frying pan.
+
+*Roasted Vegetables*:
+
+- 9 lb root vegetables, fine diced
+  - A combination of potatoes, carrots, parsnips, beets, turnips, rutabagas,
+    etc.
+  - Reserve the peelings for stock.
+  - 5 lb Yukon gold potatoes
+  - 1 lb parsnips
+  - 1 lb rutabagas
+  - 1 lb yellow beets
+  - 1 lb carrots
+- 8 Tb olive oil
+- 2 tsp salt (substitute 4 Tb [[https://www.penzeys.com/online-catalog/fox-point-seasoning/c-24/p-393/pd-s|Fox Point Seasoning]])
+- As needed, Mural of Flavor, Sunny Spain, etc
+- 2 Tb [[/cooking#Mignonette Pepper|Mignonette Pepper]]
+- 1 tsp cayenne
+- 4 garlic bulbs, sliced in half
+
+*Stew*:
+
+- 3 Tb olive oil, each, for stock pot and frying pan
+- 1 Tb butter, each, or rendered meat trimmings
+- 4 pounds beef stew meat
+- 4 shallots, diced
+- 2 can or bottle beer
+- 4 cups beef broth, more as needed
+- 8 Tb Worcestershire sauce
+- 6 Tb tomato paste (2×6 oz, 170 g)
+- 4 15 oz/400 g cans fire-roasted, crushed or chopped tomatoes
+- 4 tsp dried oregano
+- 4 tsp red chili flakes
+- 1 tsp sugar
+- Cinnamon, several dashes to balance flavor
+- 1 tsp sweet paprika
+- 1 tsp smoked paprika
+- 1 Tb salt
+- Freshly ground black pepper
+- 2 Tb all-purpose flour, optional
+- Minced fresh cilantro, for garnish
+
+*Directions*:
+
+*Roasted Vegetables*:
+
+1. Preheat the oven to 425°F/220°C.
+2. Cover baking sheet with parchment paper.
+3. Drizzle olive oil on cut side of garlic and sprinkle with salt.
+4. Place cut side down on the baking sheet.
+5. Add vegetables to a large bowl.
+6. Drizzle olive oil and sprinkle the seasonings over the top.
+7. Mix everything together until the veggies are well coated.
+8. Spread vegetables on top of baking sheets.
+9. Place in the middle of the oven and roast for 30-35 minutes
+   (20 minutes, convect-roast)
+   until the edges are crispy and vegetables are fork tender.
+10. Set aside to cool.
+11. Squeeze garlic from bulb onto vegetables.
+
+*Stew*:
+
+1. Heat the oil and butter in a pan, over medium heat
+2. Brown the beef in batches to avoid crowding.
+3. Remove the beef from the pan.
+4. If meat trimmings are available,
+  1. Render the trimmings with oil, in a 10 qt stock pot, over medium heat
+  2. Discard the trimmings.
+  3. Otherwise, heat the oil and butter, over medium heat
+5. Sauté onions until softened, about 5-7 minutes.
+6. Add tomato paste, paprika, and red chili flakes to the onion mixture and cook another minute.
+7. Add oregano, canned tomatoes, parmesan, beer, beef broth, and Worcestershire sauce.
+8. Add sugar, salt and pepper to taste.
+9. Bring the mixture to a simmer and let cook while the vegetables are roasting or for at least 15 minutes.
+10. Add the roasted vegetables and garlic.
+11. Return the beef to the pan.
+12. Cover and simmer on a low heat until the meat is very tender, 1-½ to 2 hours.
+13. If the liquid level gets too low, add more broth as needed.
+14. Adjust seasoning as needed.
+15. If the stew is too thin, remove a cup of cooking liquid from the
+    pan and stir in the flour. Add the flour mixture back into the pan and
+    stir. Simmer for 10 minutes until the stew is thick.
+16. The meat should be very tender; if it's tough, let it continue to cook.
+17. To finish, add the cilantro and stir through the stew.
