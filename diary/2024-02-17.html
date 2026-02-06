@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-02-17</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-02-17"><h1 id="Journal 2024-02-17" class="header"><a href="#Journal 2024-02-17">Journal 2024-02-17</a></h1></div>
+
+<div id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)"><h2 id="Panvimwiki Github Flavored Markdown (GFM)" class="header"><a href="#Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)">Panvimwiki Github Flavored Markdown (GFM)</a></h2></div>
+<p>
+<span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-panvimwiki"></span><span class="tag" id="panvimwiki">panvimwiki</span> <span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-markdownlint"></span><span class="tag" id="markdownlint">markdownlint</span> <span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-gfm"></span><span class="tag" id="gfm">gfm</span>
+</p>
+
+<ul>
+<li>
+Vimwiki supports GFM and does not recognize Pandoc markdown <code>::: {#refs</code>
+  from Pandoc
+  <a href="https://pandoc.org/MANUAL.html#placement-of-the-bibliography">Placement of the bibliography</a>.
+
+<ul>
+<li>
+<code>--to=gfm</code> converts to `&lt;div id="refs" class="references csl-bib-body
+    hanging-indent"&gt;`.
+
+<li>
+<code>Markdownlint-cli</code> accepts the anchor (no MD051/link-fragments), unlike
+    the default pandoc format, but emits <code>MD033/no-inline-html</code>, unless
+    <code>.markdownlint.yaml</code> overrides.
+
+</ul>
+<li>
+<code>Markdownlint-cli</code> accepts the anchor to resolve <code>MD051/link-fragments</code>.
+
+<li>
+Vimwiki does not recognize <code>&lt;a id="anchor"&gt;&lt;/a&gt;</code> or
+  <code>&lt;div id="ref-TSTF_476_Ar12007" class="csl-entry"&gt;</code>.
+
+<ul>
+<li>
+If a Vimwiki tag matches the anchor, Vimwiki will prefer the tag.
+
+<li>
+Manually creating the anchor leaves cruft in the file that could impair
+    <code>HTML</code> output.
+
+</ul>
+<li>
+Pandoc can strip the references from <code>--from=gfm</code> and <code>--from=markdown</code> if
+  using <code>--to=markdown</code>, without <code>-citations</code>.
+
+</ul>
+<p>
+<span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-.markdownlint.yaml"></span><strong id=".markdownlint.yaml">.markdownlint.yaml</strong>:
+</p>
+
+<pre yaml>
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md051.md
+# MD051/link-fragments Link fragments should be valid [Context: "[2007](#ref-TSTF_476_Ar12007)"]
+
+# MD033/no-inline-html : Inline HTML : https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md
+MD033:
+  # MD033/no-inline-html Inline HTML [Element: a]
+  # MD033/no-inline-html Inline HTML [Element: div]
+  # Allowed elements
+  allowed_elements:
+    - 'a'
+    - 'div'
+</pre>
+
+<p>
+To expand citations, convert Vimwiki links to markdown and remove the link
+title:
+</p>
+
+<pre bash>
+pandoc --to=gfm --citeproc --metadata='link-citations:true'
+--from=markdown+wikilinks_title_after_pipe-citations --standalone
+
+pandoc --citeproc --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe-task_lists \
+  --standalone --wrap=auto \
+  --to=markdown-citations \
+  expand_citeproc.md | wikilink_markdown
+
+pandoc --citeproc --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe-task_lists \
+  --standalone --wrap=auto \
+  --to=gfm  \
+  expand_citeproc.md | wikilink_markdown &gt; expand_citeproc-gfm.md
+</pre>
+
+<p>
+<span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-expand_citeproc.md"></span><strong id="expand_citeproc.md">expand_citeproc.md</strong>:
+</p>
+
+<pre markdown>
+---
+title: Try ZettelNew
+date: 2023-09-16 07:36
+tags: Zettelkasten
+type: note
+link-citations: true
+references:
+  - author:
+    - family: Bloggs
+      given: A. J.
+    - family: Jones
+      given: X. Y.
+    container-title: Journal journal journal
+    id: bloggs-jones
+    issued: 1959
+    title: Title title title title title title title title title title
+    type: article-journal
+  - author:
+    - family: Chomsky
+      given: N.
+    container-title: A festschrift for Morris Halle
+    editor:
+    - family: Anderson
+      given: S. R.
+    - family: Kiparsky
+      given: P.
+    id: chomsky-73
+    issued: 1973
+    publisher: Holt, Rinehart &amp; Winston
+    publisher-place: New York
+    title: Conditions on transformations
+    type: paper-conference
+---
+
+Hey [Adding to the House of Dude](230916-1043)
+
+```bash
+# To convert BibLaTeX to Markdown Yaml Header above:
+pandoc --from=biblatex --to=markdown default.bib --standalone
+
+# To convert this file to expected output:
+pandoc --citeproc \
+  --from=markdown+wikilinks_title_after_pipe \
+  --standalone \
+  --to=markdown-citations+wikilinks_title_after_pipe  \
+  --wrap=none \
+  tests/func/reference_citation.md |
+  reference_citation &gt; tests/func/reference_citation.out.md
+```
+
+@bloggs-jones
+
+[@chomsky-73]
+
+[[vimwiki]]
+
+----
+House of Dude
+</pre>
+
+<p>
+<span id="Journal 2024-02-17-Panvimwiki Github Flavored Markdown (GFM)-expand_citeproc-gfm.md"></span><strong id="expand_citeproc-gfm.md">expand_citeproc-gfm.md</strong>:
+</p>
+
+<pre markdown>
+&lt;!-- snip --&gt;
+Hey [Adding to the House of Dude](230916-1043)
+
+&lt;!-- snip --&gt;
+
+Bloggs and Jones ([1959](#ref-bloggs-jones))
+
+([Chomsky 1973](#ref-chomsky-73))
+
+[vimwiki](vimwiki)
+
+------------------------------------------------------------------------
+
+House of Dude
+
+&lt;div id="refs" class="references csl-bib-body hanging-indent"&gt;
+
+&lt;div id="ref-bloggs-jones" class="csl-entry"&gt;
+
+Bloggs, A. J., and X. Y. Jones. 1959. "Title Title Title Title Title
+Title Title Title Title Title." *Journal Journal Journal*.
+
+&lt;/div&gt;
+
+&lt;div id="ref-chomsky-73" class="csl-entry"&gt;
+
+Chomsky, N. 1973. "Conditions on Transformations." In *A Festschrift for
+Morris Halle*, edited by S. R. Anderson and P. Kiparsky. New York: Holt,
+Rinehart &amp; Winston.
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

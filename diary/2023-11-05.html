@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-11-05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-11-05"><h1 id="Journal 2023-11-05" class="header"><a href="#Journal 2023-11-05">Journal 2023-11-05</a></h1></div>
+
+<div id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc"><h2 id="Convert Vimwiki Format to Obsidian Markdown with Pandoc" class="header"><a href="#Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc">Convert Vimwiki Format to Obsidian Markdown with Pandoc</a></h2></div>
+<p>
+<span id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc-Obsidian"></span><span class="tag" id="Obsidian">Obsidian</span> <span id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc-tags"></span><span class="tag" id="tags">tags</span> <span id="Journal 2023-11-05-Convert Vimwiki Format to Obsidian Markdown with Pandoc-vimwiki_tags"></span><span class="tag" id="vimwiki_tags">vimwiki_tags</span>
+</p>
+
+<ul>
+<li>
+<a href="2024-01-20.html">Journal 2024-01-20</a>
+
+<li>
+<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc User's Guide Pandoc's Markdown</a>
+
+<li>
+Obsidian does not parse:
+
+<ul>
+<li>
+header_attributes
+
+<li>
+Wiki links converted to <code>CommonMark</code> links, so <code>+wikilinks_title_after_pipe</code>,
+		since it supports Wiki links directly.
+
+<li>
+Tags converted to <code>CommonMark</code> attributes are not recognized. <code>sed</code> can
+		convert to <code>#tag</code> format.
+<pre make>
+TXTDIR=$(HOME)/userprofile/Documents/vimwiki_html/md
+WIKIS=$(wildcard *.wiki diary/*.wiki)
+MDS=$(patsubst %.wiki,$(TXTDIR)/%.md, $(WIKIS))
+
+.PHONY : all
+
+all : $(MDS)
+
+.PHONY : clean
+
+clean : $(MDS)
+	rm "$&lt;"
+
+$(TXTDIR)/%.md : %.wiki
+	mkdir -p "$(@D)"
+	pandoc --from=vimwiki \
+		--to=markdown-header_attributes+wikilinks_title_after_pipe \
+		--standalone \
+		--wrap=none \
+		"$&lt;" | sed --expression='s/\[\]{#-\(\S\+\)}\[\1\]{#\1 \.tag}/#\1/g' &gt; "$@"
+</pre>
+
+</ul>
+<li>
+Pandoc cannot distinguish html and md file extensions.
+<pre bash>
+pandoc --from=html-native_divs-native_spans \
+	--to=markdown-header_attributes+wikilinks_title_after_pipe \
+	--standalone \
+	--wrap=none \
+	ACUMEN.html
+</pre>
+<pre bash>
+pandoc \
+	--from=vimwiki \
+	--to=markdown-header_attributes+implicit_header_references+wikilinks_title_after_pipe+compact_definition_lists-native_divs-native_spans \
+	--standalone \
+	--wrap=none \
+	"ACUMEN.wiki"
+</pre>
+<pre bash>
+pandoc \
+	--from=vimwiki \
+	--to=markdown-header_attributes+wikilinks_title_after_pipe-native_divs-native_spans  \
+	--standalone \
+	--wrap=none \
+	"ACUMEN.wiki"
+</pre>
+
+<li>
+Example Pandoc tag format, which Obsidian does not recognize.
+<pre bash>
+echo "[]{#-diary}[diary]{#diary .tag} []{#-journal}[journal]{#journal .tag} []{#defined}**defined**\n:   definition." |
+	sed --expression='s/\[\]{#-\(\S\+\)}\[\1\]{#\1 \.tag}/#\1/g'
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

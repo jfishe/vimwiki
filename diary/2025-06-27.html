@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2025-06-27</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2025-06-27"><h1 id="Journal 2025-06-27" class="header"><a href="#Journal 2025-06-27">Journal 2025-06-27</a></h1></div>
+
+<div id="Journal 2025-06-27-MyST Markdown with mdformat"><h2 id="MyST Markdown with mdformat" class="header"><a href="#Journal 2025-06-27-MyST Markdown with mdformat">MyST Markdown with mdformat</a></h2></div>
+<p>
+<span id="Journal 2025-06-27-MyST Markdown with mdformat-myst"></span><span class="tag" id="myst">myst</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-mystmd"></span><span class="tag" id="mystmd">mystmd</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-markdown"></span><span class="tag" id="markdown">markdown</span>
+<span id="Journal 2025-06-27-MyST Markdown with mdformat-myst"></span><span class="tag" id="myst">myst</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-mdformat"></span><span class="tag" id="mdformat">mdformat</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-mdformat-myst"></span><span class="tag" id="mdformat-myst">mdformat-myst</span> <span id="Journal 2025-06-27-MyST Markdown with mdformat-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span>
+</p>
+
+<ul>
+<li>
+<a href="2025-05-31.html#MyST Markdown and Pandoc Markdown">Journal 2025-05-31 MyST Markdown and Pandoc Markdown</a>
+
+<li>
+[[/diary/2024-01-20#mdformat-myst|Journal 2024-01-20 Convert Vimwiki Tasks to Markdown <code>mdformat-myst</code>]]
+<pre bash>
+uv tool install mdformat \
+  --with mdformat-myst \
+  --with mdformat-pyproject \
+  --with mdformat-ruff \
+  --with mdformat-shfmt \
+  --with mdformat-simple-breaks \
+  --with mdformat-wikilink
+
+mdformat --number *.md
+</pre>
+
+<li>
+Sequentially number ordered lists.
+
+<li>
+Lower-case reference links.
+
+<li>
+URL encode link targets.
+  Edge process an encoded <code>mailto:</code> URL correctly with Outlook 365.
+
+<li>
+Unwrap verbatim text.
+
+<li>
+Remove explicit reference-link targets, e.g,
+  <code>[Jupytext][jupytext]</code> becomes <code>[Jupytext]</code>.
+  Vimwiki syntax requires explicit targets.
+
+<li>
+Unwrap YAML <code>title:</code>.
+
+<li>
+Converts Vimwiki <code>vimwiki-todo-lists</code> to lower-case and re-wraps, e.g:
+<pre markdown>
+  - [X] Task 1
+  - [X] Task 2
+        Line 2
+</pre>
+  becomes
+<pre markdown>
+  - [x] Task 1
+  - [x] Task 2
+    Line 2
+</pre>
+
+<li>
+Un-escape square brackets, e.g., <code>\[1, 2\]</code>.
+
+<li>
+Escape solo parenthesis and angle brackets, i.e., <code>2\) \&gt;6 \&lt;7</code>.
+
+<li>
+Escape <code>file:</code> URLs, e.g.,
+<pre markdown>
+  \[Text\](file:///C:/abc/xyz.txt/)
+  \&lt;file:///C:/abc/xyz.txt/&gt;
+</pre>
+  MyST does not convert to a link.
+
+<li>
+Include external files as download links, e.g:
+<pre markdown>
+  [Volume 10 Issue 7](/c/Users/jdfen/Downloads/vol10_iss7_web.pdf)
+  is rendered as
+  [Volume 10 Issue 7](http://localhost:3100/vol10_iss7_web-d78d1d47b1d91fcc2e3ded640dbbb51d.pdf)
+</pre>
+  MyST does not support Universal Network Container (UNC) paths.
+  Mount the share and use the absolute path for the link target.
+<pre bash>
+  sudo mount -t drvfs '\\server\share' /mnt/share
+</pre>
+  Pandoc supports UNC paths, e.g:
+<pre markdown>
+  [title](file:////server/share/filepath)
+</pre>
+  Fewer than four slashes results in <code>file:///C:/server/share/filepath</code>
+  in Edge on Windows.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2025-09-07</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2025-09-07"><h1 id="Journal 2025-09-07" class="header"><a href="#Journal 2025-09-07">Journal 2025-09-07</a></h1></div>
+<p>
+<span id="Journal 2025-09-07-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2025-09-07-math"></span><span class="tag" id="math">math</span> <span id="Journal 2025-09-07-LaTeX"></span><span class="tag" id="LaTeX">LaTeX</span> <span id="Journal 2025-09-07-syntax"></span><span class="tag" id="syntax">syntax</span>
+</p>
+
+<pre vim>
+# List syntax tree at cursor.
+for id in synstack(line('.'), col('.') - (col('.')&gt;=2 ? 1 : 0)) | echomsg synIDattr(id, "name") | endfor
+</pre>
+
+<div id="Journal 2025-09-07-Inline Math"><h2 id="Inline Math" class="header"><a href="#Journal 2025-09-07-Inline Math">Inline Math</a></h2></div>
+
+<p>
+On the delimiters:
+</p>
+
+<ul>
+<li>
+VimwikiH1Folding
+
+<ul>
+<li>
+VimwikiH2Folding
+
+<ul>
+<li>
+textSnipTEX
+
+<ul>
+<li>
+texSnip
+
+</ul>
+</ul>
+</ul>
+</ul>
+<p>
+Within the delimiters:
+</p>
+
+<ul>
+<li>
+VimwikiH1Folding
+
+<ul>
+<li>
+VimwikiH2Folding
+
+<ul>
+<li>
+textSnipTEX
+
+</ul>
+</ul>
+</ul>
+<p>
+\(\sum_i a_i^2 = 1\)
+</p>
+
+<p>
+In vimwiki markdown:
+</p>
+
+<pre markdown>
+$\sum_i a_i^2 = 1$
+
+- VimwikiH1Folding
+  - textSnipTEX
+</pre>
+
+<p>
+In Pandoc:
+</p>
+
+<ul>
+<li>
+pandocLaTeXInlineMath
+
+<ul>
+<li>
+texMathZoneTI
+
+</ul>
+<li>
+pandocLaTeXInlineMath
+
+<ul>
+<li>
+texMathZoneTI
+
+<ul>
+<li>
+texDelim
+
+</ul>
+</ul>
+<li>
+pandocLaTeXInlineMath
+
+<ul>
+<li>
+texMathZoneTI
+
+<ul>
+<li>
+texMathDelimZoneTI
+
+</ul>
+</ul>
+</ul>
+<p>
+Within a text delimiter:
+</p>
+
+<ul>
+<li>
+pandocLaTeXInlineMath
+
+<ul>
+<li>
+texMathZoneTI
+
+<ul>
+<li>
+texMathTextConcArg
+
+</ul>
+</ul>
+</ul>
+<div id="Journal 2025-09-07-Block Display Math"><h2 id="Block Display Math" class="header"><a href="#Journal 2025-09-07-Block Display Math">Block Display Math</a></h2></div>
+
+<p>
+On the block display delimiter lines:
+</p>
+
+<ul>
+<li>
+VimwikiH1Folding
+
+<ul>
+<li>
+VimwikiH2Folding
+
+<ul>
+<li>
+textSnipTEX
+
+<ul>
+<li>
+VimwikiMath
+
+</ul>
+</ul>
+</ul>
+</ul>
+<p>
+Within the block:
+</p>
+
+<ul>
+<li>
+VimwikiH1Folding
+
+<ul>
+<li>
+VimwikiH2Folding
+
+<ul>
+<li>
+textSnipTEX
+\[
+\sum_i a_i^2
+=
+1
+\]
+
+</ul>
+</ul>
+</ul>
+<p>
+In vimwiki markdown:
+</p>
+
+<pre markdown>
+$$
+\sum_i a_i^2
+=
+1
+$$
+
+- VimwikiH1Folding
+  - textSnipTEX
+
+On the block display delimiter lines:
+
+- VimwikiH1Folding
+  - textSnipTEX
+    - VimwikiMath
+</pre>
+
+<div id="Journal 2025-09-07-Block Align Math"><h2 id="Block Align Math" class="header"><a href="#Journal 2025-09-07-Block Align Math">Block Align Math</a></h2></div>
+
+\begin{align}
+\sum_i a_i^2 &amp;= 1 + 1 \\
+&amp;= 2.
+\end{align}
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2025-05-31</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2025-05-31"><h1 id="Journal 2025-05-31" class="header"><a href="#Journal 2025-05-31">Journal 2025-05-31</a></h1></div>
+
+<div id="Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)"><h2 id="Zettelkasten VimWiki Addon (vim-zettel)" class="header"><a href="#Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)">Zettelkasten VimWiki Addon (vim-zettel)</a></h2></div>
+<p>
+<span id="Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)-Zettelkasten"></span><span class="tag" id="Zettelkasten">Zettelkasten</span> <span id="Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)-vim-zettel"></span><span class="tag" id="vim-zettel">vim-zettel</span> <span id="Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2025-05-31-Zettelkasten VimWiki Addon (vim-zettel)-pandoc"></span><span class="tag" id="pandoc">pandoc</span>
+</p>
+
+<ul>
+<li>
+<a href="2025-04-27.html#mystmd">MyST Markdown</a> <code>compiler</code> and <code>errorformat</code>
+
+<li>
+<code>ZettelInsertNote</code> drops the <code>yaml</code> metadata and the footer.
+  <code>link-citations</code> are lost.
+
+<li>
+<code>pandoc --citeproc</code> is not easily reversed.
+
+<li>
+<a href="https://github.com/Chrismarsh/undo-pandoc-citeproc">Chrismarsh / undo-pandoc-citeproc</a>
+  provides a mechanism but requires creating
+  <code>citations.txt</code> to record the prior state.
+
+<li>
+Pandoc cannot add the References section without expanding the citations.
+  Some conversion artifacts require cleanup.
+<pre vim>
+let g:pandoc#compiler#arguments = "--to=markdown "
+      \ .. "--from=markdown-header_attributes"
+      \ ..    "+wikilinks_title_after_pipe-task_lists-citations "
+      \ .. "--wrap=preserve --standalone --citeproc"
+
+compiler! pandoc
+
+make % -o %
+" --to=markdown escapes @xyz, [@xyz] and tasks [X]
+
+Format
+" Prettier lower cases [X]
+
+function pandoc#unescape_markdown() abort
+  " Suppress :he E486.
+  " Remove backslash from \[@abc\] and \@abc.
+  %substitute/\\\[\(@.\{-1,}\)\\]/[\1]/ge
+  %substitute/\\@/@/ge
+  " Remove backslash and uppercase \[x\].
+  %substitute/\\\[x\\]/[X]/e
+  " Prettier lower cases [X]
+  call CocAction('format')
+  %substitute/\(\[x]\)/\U\1/Ie
+endfunction
+</pre>
+
+</ul>
+<div id="Journal 2025-05-31-MyST Markdown and Pandoc Markdown"><h2 id="MyST Markdown and Pandoc Markdown" class="header"><a href="#Journal 2025-05-31-MyST Markdown and Pandoc Markdown">MyST Markdown and Pandoc Markdown</a></h2></div>
+<p>
+<span id="Journal 2025-05-31-MyST Markdown and Pandoc Markdown-myst"></span><span class="tag" id="myst">myst</span> <span id="Journal 2025-05-31-MyST Markdown and Pandoc Markdown-mystmd"></span><span class="tag" id="mystmd">mystmd</span> <span id="Journal 2025-05-31-MyST Markdown and Pandoc Markdown-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2025-05-31-MyST Markdown and Pandoc Markdown-markdown"></span><span class="tag" id="markdown">markdown</span>
+</p>
+
+<ul>
+<li>
+<a href="2025-06-27.html#mystmd">Journal 2025-06-27 MyST Markdown with mdformat</a>
+
+<li>
+MyST Markdown and Pandoc formats differ on explicit header anchors.
+
+<ul>
+<li>
+<a href="https://mystmd.org/guide/cross-references#targeting-headers">MyST Cross References Targeting Headers</a>
+
+<li>
+<a href="https://pandoc.org/MANUAL.html#extension-header_attributes">Pandoc Extension header_attributes</a>
+
+</ul>
+<li>
+Targets should be unique and not match file base names.
+<pre bash>
+myst build --site
+
+⚠️  20230929-1034.md:26 Linking "index-structure-or-hub-notes" to an implicit heading reference, best practice is to create an explicit reference.
+⚠️  CRDA_notes.md:54 No target for internal reference "#20250528-1430" was found.
+</pre>
+<pre vim>
+" Make #ref unique.
+let b:uniq = rand()
+%s/\(#\d\{8\}-\d\{4\}\)/\=submatch(1) .. "-" .. b:uniq/
+
+" Convert ATX header attribute to MyST anchor.
+%s/\(^#\{1,\}\s.\{1,\}\)\s{#\(.\{1,\}\)}/(\2)=\r\1/
+</pre>
+<pre markdown>
+(index-structure-or-hub-notes)=
+
+## Index, Structure or Hub Notes
+
+MyST format.
+
+## Index, Structure or Hub Notes {#index-structure-or-hub-notes}
+
+Pandoc format.
+
+## Internal Reference
+
+[NEDO-10527](#20250528-1430-1051592359).
+
+(#20250528-1430-1051592359)=
+
+## NEDO-10527 {#20250528-1430-1051592359}
+
+Target.
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

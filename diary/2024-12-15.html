@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-12-15</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-12-15"><h1 id="Journal 2024-12-15" class="header"><a href="#Journal 2024-12-15">Journal 2024-12-15</a></h1></div>
+
+<div id="Journal 2024-12-15-Papis Command-line Bibliography Manager"><h2 id="Papis Command-line Bibliography Manager" class="header"><a href="#Journal 2024-12-15-Papis Command-line Bibliography Manager">Papis Command-line Bibliography Manager</a></h2></div>
+<p>
+<span id="Journal 2024-12-15-Papis Command-line Bibliography Manager-papis"></span><span class="tag" id="papis">papis</span> <span id="Journal 2024-12-15-Papis Command-line Bibliography Manager-vim"></span><span class="tag" id="vim">vim</span> <span id="Journal 2024-12-15-Papis Command-line Bibliography Manager-biblatex"></span><span class="tag" id="biblatex">biblatex</span>
+</p>
+
+<ul>
+<li>
+The <a href="https://github.com/papis/papis-vim">papis-vim</a> package provides Vim support for <a href="https://papis.readthedocs.io/">Papis</a>,
+  command-line based bibliography manager.
+
+<li>
+<a href="https://github.com/papis/papis/discussions/867#discussioncomment-9689683">Getting an error every time I run a papis command #867</a> reveals a
+  missing dependency on <code>setuptools</code>:
+<pre bash>
+  uv tool install papis --with setuptools
+</pre>
+
+<li>
+Initial Papis configuration, with <code>papis init</code>, creates a configuration file.
+  <code>~/.config/papis/config</code>:
+<pre ini>
+  [settings]
+  default-library = jdfen
+
+  [jdfen]
+  dir = /c/Users/jdfen/OneDrive/Documents/papis
+  opentool = wslview
+  editor = vim
+  use-git = True
+  notes-name = notes_{doc[ref]}.md
+  database-backend = papis
+  bibtex-unicode = True
+  ref-format = {doc[title]:.15} {doc[author]:.6} {doc[year]}
+  multiple-authors-format = {au[family]}, {au[given]}
+  citations-file-name = citations.yaml
+</pre>
+
+<li>
+Import an existing BibLaTeX file:
+<pre bash>
+  cd ~/zk
+
+  # List missing keys.
+  papis bibtex read zk.bib doctor
+
+  # Import
+  papis bibtex read zk.bib import --all
+
+  # Check for errors
+  papis doctor --all-checks --all --explain
+</pre>
+
+</ul>
+<div id="Journal 2024-12-15-coBib - the Console Bibliography"><h2 id="coBib - the Console Bibliography" class="header"><a href="#Journal 2024-12-15-coBib - the Console Bibliography">coBib - the Console Bibliography</a></h2></div>
+<p>
+<span id="Journal 2024-12-15-coBib - the Console Bibliography-cobib"></span><span class="tag" id="cobib">cobib</span> <span id="Journal 2024-12-15-coBib - the Console Bibliography-biblatex"></span><span class="tag" id="biblatex">biblatex</span> <span id="Journal 2024-12-15-coBib - the Console Bibliography-ctan"></span><span class="tag" id="ctan">ctan</span>
+</p>
+
+<ul>
+<li>
+<a href="http://mirrors.ctan.org/macros/latex/contrib/biblatex/doc/biblatex.pdf">biblatex.pdf</a>
+
+<li>
+@report: A technical report, research report, or white paper published by a university or some other institution.
+
+<ul>
+<li>
+Required fields: author, title, type, institution, year/date
+
+<li>
+Optional fields: subtitle, titleaddon, language, number, version, note,
+    location, month, isrn, eid, chapter, pages, pagetotal, addendum, pubstate,
+    doi, eprint, eprintclass, eprinttype, url, urldate
+
+</ul>
+<li>
+@techreport: Similar to @report except that the type field is optional and
+  defaults to the localized term 'technical report'.
+
+<li>
+@misc: A fallback type for entries which do not fit into any other category.
+
+<ul>
+<li>
+Required fields: author/editor, title, year/date
+
+<li>
+Optional fields: subtitle, titleaddon, language, howpublished, type,
+    version, note, organization, location, month, addendum, pubstate, doi,
+    eprint, eprintclass, eprinttype, url, urldate
+
+</ul>
+<li>
+<a href="https://gist.github.com/geosharma/9da7c2bcb406ef6bf78f3ffddbc6b065">Geosharma</a>,
+  <em>Personal notes on creating and using coBib</em>, summarizes the installation
+  and configuration process.
+
+<li>
+Install <a href="https://cobib.gitlab.io/cobib/cobib.html">coBib - the Console Bibliography</a>.
+<pre bash>
+  uv tool install cobib
+</pre>
+
+<li>
+Create <code>~/.config/cobib/config.py</code> directly or generate the default
+  configuration and modify:
+<pre python>
+  from cobib.config import config
+
+  config.database.file = "~/cobib/database.yaml"
+
+  config.utils.file_downloader.default_location = "~/cobib"
+
+  config.database.git = True
+
+  config.commands.open.command = "wslview"
+</pre>
+
+<li>
+To generate the default configuration:
+<pre bash>
+  # Create default configuration and update settings.
+  mkdir -p ~/.config/cobib
+  cobib _example_config &gt; ~/.config/cobib/config.py
+</pre>
+
+<li>
+Initialize the database:
+<pre bash>
+  # Flush the cache when switching databases.
+  rm -r ~/.cache/cobib/
+
+  # Use a shared location, like OneDrive.
+  mkdir -p ~/userprofile/Documents/cobib
+  ln -s ~/userprofile/Documents/cobib cobib
+  touch ~/cobib/database.yaml
+  # RCRC can manage the symlinks across WSL environments.
+  # mkrc -U ~/cobib
+
+  cobib init --git
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

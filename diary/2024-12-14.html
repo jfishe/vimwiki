@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-12-14</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-12-14"><h1 id="Journal 2024-12-14" class="header"><a href="#Journal 2024-12-14">Journal 2024-12-14</a></h1></div>
+
+<div id="Journal 2024-12-14-Sync Forked Github Repository and Branches"><h2 id="Sync Forked Github Repository and Branches" class="header"><a href="#Journal 2024-12-14-Sync Forked Github Repository and Branches">Sync Forked Github Repository and Branches</a></h2></div>
+<p>
+<span id="Journal 2024-12-14-Sync Forked Github Repository and Branches-GitHub"></span><span class="tag" id="GitHub">GitHub</span> <span id="Journal 2024-12-14-Sync Forked Github Repository and Branches-git"></span><span class="tag" id="git">git</span> <span id="Journal 2024-12-14-Sync Forked Github Repository and Branches-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span>
+</p>
+
+<pre bash>
+cd ~/dev/vimwiki-lib/
+
+# Add upstream remote
+git remote add upstream https://github.com/vimwiki/vimwiki.git
+
+# Rebase upstream/dev on local dev
+git fetch upstream
+git checkout dev
+git rebase upstream/dev
+
+# Rebase local dev onto branch
+git switch issue1343
+git fetch
+git rebase origin/dev
+
+# Resolve any conflicts.
+# git add changes.
+git add test/tag.vader
+git rebase --continue
+# Update commit message, as needed.
+</pre>
+
+<ul>
+<li>
+<a href="https://github.com/vimwiki/vimwiki/pull/1396">PR#1396</a> Issue1343 system_open_link E371 command not found Windows PowerShell and cmd
+
+</ul>
+<div id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim"><h2 id="Neovide, NeoVim and Telescope-Nvim" class="header"><a href="#Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim">Neovide, NeoVim and Telescope-Nvim</a></h2></div>
+<p>
+<span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-neovide"></span><span class="tag" id="neovide">neovide</span> <span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-neovim"></span><span class="tag" id="neovim">neovim</span> <span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-telescope"></span><span class="tag" id="telescope">telescope</span> <span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-vim"></span><span class="tag" id="vim">vim</span>
+</p>
+
+<ul>
+<li>
+<code>Telekasten</code> partially replicates Vimwiki with Vim-Zettel.
+
+<li>
+Required dependencies are not Windows compatible.
+
+<li>
+Minimum NeoVim version requires a separate PPA.
+
+<li>
+<code>$env:LOCALAPPDATA\nvim</code>
+
+<ul>
+<li>
+<code>init.vim</code>
+
+<li>
+<code>ginit.vim</code>
+<pre powershell>
+conda activate vim-python
+uv pip install pynvim
+
+winget install sharkdp.fd
+</pre>
+
+</ul>
+</ul>
+<div id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-NeoVim GUI Choices"><h3 id="NeoVim GUI Choices" class="header"><a href="#Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-NeoVim GUI Choices">NeoVim GUI Choices</a></h3></div>
+<p>
+<span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-NeoVim GUI Choices-neovim"></span><span class="tag" id="neovim">neovim</span> <span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-NeoVim GUI Choices-gvim"></span><span class="tag" id="gvim">gvim</span> <span id="Journal 2024-12-14-Neovide, NeoVim and Telescope-Nvim-NeoVim GUI Choices-gui"></span><span class="tag" id="gui">gui</span>
+</p>
+
+<ul>
+<li>
+<a href="https://itsfoss.com/neovim-gui-editors/">It's FOSS</a> 5 NeoVim GUI Editors You Could Try If You are Not a Total Terminal Junkie
+
+<ul>
+<li>
+<code>neovide</code>
+
+<li>
+<code>nvim-qt</code>
+
+</ul>
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

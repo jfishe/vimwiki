@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-10-06</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-10-06"><h1 id="Journal 2024-10-06" class="header"><a href="#Journal 2024-10-06">Journal 2024-10-06</a></h1></div>
+
+<div id="Journal 2024-10-06-Pyscaffold Pre-Commit Configuration"><h2 id="Pyscaffold Pre-Commit Configuration" class="header"><a href="#Journal 2024-10-06-Pyscaffold Pre-Commit Configuration">Pyscaffold Pre-Commit Configuration</a></h2></div>
+<p>
+<span id="Journal 2024-10-06-Pyscaffold Pre-Commit Configuration-pyscaffold"></span><span class="tag" id="pyscaffold">pyscaffold</span> <span id="Journal 2024-10-06-Pyscaffold Pre-Commit Configuration-pre-commit"></span><span class="tag" id="pre-commit">pre-commit</span> <span id="Journal 2024-10-06-Pyscaffold Pre-Commit Configuration-ini2toml"></span><span class="tag" id="ini2toml">ini2toml</span>
+</p>
+
+<ul>
+<li>
+<a href="2024-10-05.html#Install Astral uv Python CLI tools">Journal 2024-10-05 Install Astral uv Python CLI tools</a>
+
+<li>
+Uv does not support <code>setup.cfg</code>: "error: No <code>project</code> table found".
+
+<li>
+Stack Overflow answers
+  <a href="https://stackoverflow.com/questions/72832052/is-there-a-simple-way-to-convert-setup-py-to-pyproject-toml">Is there a simple way to convert setup.py to pyproject.toml</a>:
+
+<ul>
+<li>
+<code>ini2toml</code> converts to <code>pyproject.toml</code>, but does not incorporate an
+    existing <code>toml</code> file.
+
+<li>
+<code>setuptools-py2cfg</code> converts <code>setup.py</code> to <code>setup.cfg</code>.
+    However, <code>pyscaffold</code> does not include configuration in <code>setup.py</code>.
+
+</ul>
+<li>
+Merge <code>pyproject1.toml</code> into <code>pyproject.toml</code>.
+
+<li>
+<code>flake8</code> does not include <a href="https://github.com/PyCQA/flake8/issues/234">pyproject.toml (PEP 518) support #234</a>.
+  Replace with <code>ruff</code> and update settings per <a href="https://docs.astral.sh/ruff/rules/">ruff rules</a>.
+
+<li>
+<code>ruff</code> and <code>ruff-format</code> replace <code>black</code>, eliminating <code>flake8</code> compatibility
+  settings.
+
+<li>
+Activate <code>ruff</code> equivalent for <code>pycodestyle</code>, <code>Pyflakes</code>, <code>pyupgrade</code>,
+  <code>flake8-bugbear</code>, and <code>flake8-simplify</code>.
+<pre bash>
+uv tool install 'ini2toml[full]'
+ini2toml --output-file pyproject1.toml setup.cfg
+</pre>
+<pre text>
+[WARNING] Sections 'flake8', 'devpi:upload' ('setup.cfg') may be problematic.
+
+It might be the case TOML files are not supported by the relevant tools,
+or that 'ini2toml' just lacks a plugin for this kind of configuration.
+
+Please review the generated output and remove these sections if necessary.
+</pre>
+
+</ul>
+<p>
+<code>pyproject.toml</code>:
+</p>
+
+<pre toml>
+[build-system]
+# AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
+requires = ["setuptools&gt;=46.1.0", "setuptools_scm[toml]&gt;=5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dude"
+description = "Add a short description here!"
+authors = [{name = "John D. Fisher", email = "jdfenw@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+]
+dependencies = ['importlib-metadata; python_version&lt;"3.8"']
+dynamic = ["version"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown; charset=UTF-8; variant=GFM"
+# Add here related links, for example:
+
+[project.urls]
+Homepage = "https://github.com/pyscaffold/pyscaffold/"
+Documentation = "https://pyscaffold.org/"
+# Source = https://github.com/pyscaffold/pyscaffold/
+# Changelog = https://pyscaffold.org/en/latest/changelog.html
+# Tracker = https://github.com/pyscaffold/pyscaffold/issues
+# Conda-Forge = https://anaconda.org/conda-forge/pyscaffold
+# Download = https://pypi.org/project/PyScaffold/#files
+# Twitter = https://twitter.com/PyScaffold
+# Change if running only on Windows, Mac or Linux (comma-separated)
+# Add here all kinds of additional classifiers as defined under
+# https://pypi.org/classifiers/
+
+[project.optional-dependencies]
+# Add here additional requirements for extra features, to install with:
+# `pip install dude[PDF]` like:
+# PDF = ReportLab; RXP
+# Add here test requirements (semicolon/line-separated)
+testing = [
+    "setuptools",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.entry-points]
+# Add here console scripts like:
+# console_scripts =
+# script_name = dude.module:function
+# For example:
+# console_scripts =
+# fibonacci = dude.skeleton:run
+# And any other entry points, for example:
+# pyscaffold.cli =
+# awesome = pyscaffoldext.awesome.extension:AwesomeExtension
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+package-dir = {"" = "src"}
+# Require a min/specific Python version (comma-separated conditions)
+# python_requires = &gt;=3.8
+# Add here dependencies of your project (line-separated), e.g. requests&gt;=2.2,&lt;3.0.
+# Version specifiers like &gt;=2.2,&lt;3.0 avoid problems due to API changes in
+# new major versions. This works if the required packages follow Semantic Versioning.
+# For more information, check out https://semver.org/.
+platforms = ["any"]
+license-files = ["LICENSE.txt"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
+namespaces = true
+
+[tool.setuptools_scm]
+# For smarter version schemes and other configuration options,
+# check out https://github.com/pypa/setuptools_scm
+version_scheme = "no-guess-dev"
+
+[tool.pytest.ini_options]
+# Specify command line options as you would do when invoking pytest directly.
+# e.g. --cov-report html (or xml) for html/xml output or --junitxml junit.xml
+# in order to write a coverage file that can be read by Jenkins.
+# CAUTION: --cov flags may prohibit setting breakpoints while debugging.
+# Comment those flags to avoid this pytest issue.
+addopts = """
+--cov dude --cov-report term-missing
+--verbose"""
+norecursedirs = [
+    "dist",
+    "build",
+    ".tox",
+]
+testpaths = ["tests"]
+# Use pytest markers to select/deselect specific tests
+# markers =
+# slow: mark tests as slow (deselect with '-m "not slow"')
+# system: mark end-to-end system tests
+
+[tool.devpi.upload]
+# Options for the devpi: PyPI server and packaging tool
+# VCS export must be deactivated since we are using setuptools-scm
+no_vcs = "1"
+formats = "bdist_wheel"
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    ".tox",
+    "build",
+    "dist",
+    ".eggs",
+    "docs/conf.py"
+]
+
+[tool.ruff.lint]
+select = [
+    # pydocstyle
+    "D",
+    # Augment the convention by requiring an imperative mood for all
+    # docstrings.
+    "D401",
+    # pycodestyle
+    "E",
+    # trailing-whitespace (W291)
+    # missing-newline-at-end-of-file (W292)
+    "W",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 20
+
+[tool.pyscaffold]
+# PyScaffold's parameters when the project was created.
+# This will be used when updating. Do not change!
+version = "4.6"
+package = "dude"
+extensions = """
+dsproject
+markdown
+no_skeleton
+pre_commit"""
+# This file is used to configure your project.
+# Read more about the various options under:
+# https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
+# https://setuptools.pypa.io/en/latest/references/keywords.html
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

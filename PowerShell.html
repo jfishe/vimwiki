@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="rss.xml"
+    />
+    <title>PowerShell</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="index.html">Index</a> |
+    <a href="diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="PowerShell and pwsh"><h1 id="PowerShell and pwsh" class="header"><a href="#PowerShell and pwsh">PowerShell and pwsh</a></h1></div>
+<p>
+<span id="PowerShell and pwsh-pwsh"></span><span class="tag" id="pwsh">pwsh</span> <span id="PowerShell and pwsh-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<div id="PowerShell and pwsh-Template"><h2 id="Template" class="header"><a href="#PowerShell and pwsh-Template">Template</a></h2></div>
+<p>
+<span id="PowerShell and pwsh-Template-template"></span><span class="tag" id="template">template</span> <span id="PowerShell and pwsh-Template-plaster"></span><span class="tag" id="plaster">plaster</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/questionmark/PowerShellTemplate">Questionmark Computing PowerShell Template</a>
+  list best practices for Module design and style.
+
+<li>
+<a href="https://poshcode.gitbooks.io/powershell-practice-and-style/">The PowerShell Best Practices and Style Guide</a>
+
+<li>
+<a href="https://github.com/powershell/Plaster">Plaster</a> template engine.
+
+</ul>
+<div id="PowerShell and pwsh-Powershell Commands"><h2 id="Powershell Commands" class="header"><a href="#PowerShell and pwsh-Powershell Commands">Powershell Commands</a></h2></div>
+<p>
+<span id="PowerShell and pwsh-Powershell Commands-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<ul>
+<li>
+List module commands: <code>Get-Command -Module &lt;ModuleName&gt;</code>
+
+<li>
+Hide <code>dotfiles</code>
+<pre  powershell>
+  Get-ChildItem "$env:USERPROFILE" | # -recurse -force |
+      Where-Object {$_.name -like ".*" -and $_.attributes -match 'Hidden' -eq $false} |
+      Set-ItemProperty -name Attributes -value ([System.IO.FileAttributes]::Hidden)
+</pre>
+
+</ul>
+<div id="PowerShell and pwsh-OpenSSH"><h2 id="OpenSSH" class="header"><a href="#PowerShell and pwsh-OpenSSH">OpenSSH</a></h2></div>
+<p>
+<span id="PowerShell and pwsh-OpenSSH-ssh"></span><span class="tag" id="ssh">ssh</span>
+</p>
+
+<p>
+As of OpenSSH 0.0.22.0 Universal Installer, a script is distributed that allows
+setting the default shell for openssh. You could call it with code like this:
+</p>
+
+<pre  powershell>
+    If (Test-Path "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1")
+      {&amp; "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1" [PARAMETERS]}
+</pre>
+
+<p>
+Learn more with this: <code>Get-Help "C:\Program Files\openssh-win64\Set-SSHDefaultShell.ps1"</code>
+Or here: <a href="https://github.com/DarwinJS/ChocoPackages/blob/master/openssh/readme.md">https://github.com/DarwinJS/ChocoPackages/blob/master/openssh/readme.md</a>
+</p>
+
+<div id="PowerShell and pwsh-PowerShell Configuration"><h2 id="PowerShell Configuration" class="header"><a href="#PowerShell and pwsh-PowerShell Configuration">PowerShell Configuration</a></h2></div>
+<p>
+<span id="PowerShell and pwsh-PowerShell Configuration-oh-my-posh"></span><span class="tag" id="oh-my-posh">oh-my-posh</span> <span id="PowerShell and pwsh-PowerShell Configuration-posh-git"></span><span class="tag" id="posh-git">posh-git</span>
+</p>
+
+<p>
+<a href="https://github.com/JanDeDobbeleer/oh-my-posh">JanDeDobbeleer / oh-my-posh</a>
+provides instructions for installing posh-git and oh-my-posh. The <code>Honukai</code> theme
+works well with <code>conda</code> environments and doesn't clobber terminal colors. A
+prompt function is no longer required.
+</p>
+
+<p>
+Add the following to <code>~\Documents\PowerShell\posh-gitrc.ps1</code>:
+</p>
+
+<pre  powershell>
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Honukai
+</pre>
+
+<div id="PowerShell and pwsh-PowerShell Modules and Scripts"><h2 id="PowerShell Modules and Scripts" class="header"><a href="#PowerShell and pwsh-PowerShell Modules and Scripts">PowerShell Modules and Scripts</a></h2></div>
+
+<div id="PowerShell and pwsh-PowerShell Modules and Scripts-Required by PROFILE"><h3 id="Required by PROFILE" class="header"><a href="#PowerShell and pwsh-PowerShell Modules and Scripts-Required by PROFILE">Required by PROFILE</a></h3></div>
+
+<ul>
+<li>
+<code>posh-git</code>
+
+<li>
+<code>oh-my-posh</code>
+
+<li>
+<code>PSReadLine</code>
+
+<li>
+<code>PSBashCompletions</code> <span id="PowerShell and pwsh-PowerShell Modules and Scripts-Required by PROFILE-WindowsPowerShell"></span><span class="tag" id="WindowsPowerShell">WindowsPowerShell</span> only. See <code>WslInterop</code>.
+
+<li>
+<code>WslInterop</code> <span id="PowerShell and pwsh-PowerShell Modules and Scripts-Required by PROFILE-PowerShellCore"></span><span class="tag" id="PowerShellCore">PowerShellCore</span>
+
+</ul>
+<div id="PowerShell and pwsh-PowerShell Modules and Scripts-Build Tools"><h3 id="Build Tools" class="header"><a href="#PowerShell and pwsh-PowerShell Modules and Scripts-Build Tools">Build Tools</a></h3></div>
+
+<ul>
+<li>
+PowerShell-Beautifier
+
+<li>
+Pester
+
+<li>
+Plaster
+
+<li>
+platyPS
+
+<li>
+PSDeploy
+
+<li>
+PSScriptAnalyzer
+
+</ul>
+<div id="PowerShell and pwsh-PowerShell Modules and Scripts-Maintenance"><h3 id="Maintenance" class="header"><a href="#PowerShell and pwsh-PowerShell Modules and Scripts-Maintenance">Maintenance</a></h3></div>
+
+<ul>
+<li>
+moduleclean.ps1
+
+</ul>
+<div id="PowerShell and pwsh-PowerShell Modules and Scripts-Dot-source and Execute"><h3 id="Dot-source and Execute" class="header"><a href="#PowerShell and pwsh-PowerShell Modules and Scripts-Dot-source and Execute">Dot-source and Execute</a></h3></div>
+
+<ul>
+<li>
+<a href="https://poshoholic.com/2008/03/18/powershell-deep-dive-using-myinvocation-and-invoke-expression-to-support-dot-sourcing-and-direct-invocation-in-shared-powershell-scripts/">PowerShell Deep Dive</a>:
+  _Using $MyInvocation and Invoke-Expression to support
+  dot-sourcing and direct invocation in shared PowerShell scripts_.
+
+</ul>
+<div id="PowerShell and pwsh-Todo"><h2 id="Todo" class="header"><a href="#PowerShell and pwsh-Todo">Todo</a></h2></div>
+<p>
+<span id="PowerShell and pwsh-Todo-todo"></span><span class="tag" id="todo">todo</span>
+</p>
+
+<ul>
+<li>
+Convert <code>moduleclean.ps1</code> to installable script.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-02-06</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

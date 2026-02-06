@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2025-01-19</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2025-01-19"><h1 id="Journal 2025-01-19" class="header"><a href="#Journal 2025-01-19">Journal 2025-01-19</a></h1></div>
+
+<div id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation"><h2 id="Ubuntu 24.04 Clean Installation" class="header"><a href="#Journal 2025-01-19-Ubuntu 24.04 Clean Installation">Ubuntu 24.04 Clean Installation</a></h2></div>
+<p>
+<span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Ubuntu"></span><span class="tag" id="Ubuntu">Ubuntu</span> <span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-rcm"></span><span class="tag" id="rcm">rcm</span>
+</p>
+
+<pre bash>
+sudo apt install neovim python3-pynvim
+</pre>
+
+<div id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues"><h3 id="Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues" class="header"><a href="#Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues">Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues</a></h3></div>
+<p>
+<span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues-python"></span><span class="tag" id="python">python</span> <span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues-anaconda"></span><span class="tag" id="anaconda">anaconda</span> <span id="Journal 2025-01-19-Ubuntu 24.04 Clean Installation-Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues-license"></span><span class="tag" id="license">license</span>
+</p>
+
+<p>
+<a href="https://dev.to/kaamisan/using-miniconda-with-conda-forge-to-avoid-anaconda-licensing-issues-5hkj">Kaa Mi</a>.
+Posted on 2024-06-19. _Using Miniconda with Conda-Forge to Avoid
+Anaconda Licensing Issues_.
+</p>
+
+<ol>
+<li>
+Download and Install <a href="https://docs.anaconda.com/miniconda/">Miniconda</a>.
+
+<li>
+Initialize Conda with <code>conda init</code>.
+
+<li>
+Add Conda-Forge as the Default Channel.
+<pre bash>
+  conda config --remove channels defaults
+  conda config --add channels conda-forge
+  conda config --set channel_priority strict
+</pre>
+
+<li>
+Create a New Environment.
+<pre bash>
+  conda create -n vim-python python=3.12
+  conda activate vim-python
+  conda config --show channels
+</pre>
+
+</ol>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

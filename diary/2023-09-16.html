@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-09-16</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-09-16"><h1 id="Journal 2023-09-16" class="header"><a href="#Journal 2023-09-16">Journal 2023-09-16</a></h1></div>
+
+<div id="Journal 2023-09-16-Zettelkasten Setup"><h2 id="Zettelkasten Setup" class="header"><a href="#Journal 2023-09-16-Zettelkasten Setup">Zettelkasten Setup</a></h2></div>
+<p>
+<span id="Journal 2023-09-16-Zettelkasten Setup-Zettelkasten"></span><span class="tag" id="Zettelkasten">Zettelkasten</span> <span id="Journal 2023-09-16-Zettelkasten Setup-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span>
+</p>
+
+<ul>
+<li>
+<a href="https://facedragons.com/productivity/zettelkasten-method/">A Quick Zettelkasten Method Guide: Creativity from Chaos in Minutes - Face Dragons</a>
+
+<li>
+Setup VimWiki 3 aka <code>zk</code>.
+<pre vim>
+  " Zettelkasten vimwiki {{{
+  let s:wiki_3 = copy(s:wiki_1)
+  let s:wiki_3.syntax = 'markdown'
+  let s:wiki_3.ext = '.md'
+  let s:wiki_3.index = 'index'
+  let s:wiki_3.path = s:my_docs .. '/zk/'
+  let s:wiki_3.path_html = s:wiki_3.path .. 'docs'
+  let s:wiki_3.css_name = 'css/style.css'
+  let s:wiki_3.template_path = s:wiki_3.path .. 'templates'
+
+  let g:zettel_options = [{}, {},
+        \{"front_matter" : [["tags", ""], ["type","note"]], "disable_front_matter": 1,
+        \ "template" :  s:wiki_3.template_path .. "/note.tpl"}]
+
+  let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always"
+  " }}}
+  " Work &amp; Home vimwiki {{{
+  let s:wiki_1.name = 'work'
+  let s:wiki_2.name = 'home'
+  let s:wiki_2.name = 'zk'
+  let g:vimwiki_list = [ s:wiki_1, s:wiki_2, s:wiki_3 ]
+  "}}}
+</pre>
+
+<li>
+Install GitHub - <a href="https://github.com/michal-h21/vim-zettel">michal h21 vim zettel</a>: VimWiki addon for managing notes according to Zettelkasten method
+
+<ul>
+<li>
+<a href="https://github.com/junegunn/fzf">junegunn/fzf</a> to <code>~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf</code>
+
+<li>
+<a href="https://github.com/junegunn/fzf.vim.git">junegunn/fzf.vim</a> to <code>~/.dotfiles/config/nvim/pack/zettelkasten/start/fzf.vim</code>
+
+<li>
+<a href="https://github.com/michal-h21/vim-zettel.git">michal-h21/vim-zettel</a> to  <code>~/.dotfiles/config/nvim/pack/zettelkasten/start/vim-zettel</code>
+
+</ul>
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

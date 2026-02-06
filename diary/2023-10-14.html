@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-10-14</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-10-14"><h1 id="Journal 2023-10-14" class="header"><a href="#Journal 2023-10-14">Journal 2023-10-14</a></h1></div>
+
+<div id="Journal 2023-10-14-Python Module Search Path"><h2 id="Python Module Search Path" class="header"><a href="#Journal 2023-10-14-Python Module Search Path">Python Module Search Path</a></h2></div>
+<p>
+<span id="Journal 2023-10-14-Python Module Search Path-python"></span><span class="tag" id="python">python</span> <span id="Journal 2023-10-14-Python Module Search Path-miniconda3"></span><span class="tag" id="miniconda3">miniconda3</span> <span id="Journal 2023-10-14-Python Module Search Path-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2023-10-14-Python Module Search Path-PEP-668"></span><span class="tag" id="PEP-668">PEP-668</span> <span id="Journal 2023-10-14-Python Module Search Path-appimage"></span><span class="tag" id="appimage">appimage</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-09-10.html">Journal 2023-09-10</a> covers initial attempts to work around.
+
+<li>
+<a href="https://github.com/vim/vim-appimage">vim / vim-appimage</a>
+  provides pre-built appimage.
+<pre bash>
+dest="$HOME/.local/bin"
+appimage="gvim.appimage"
+uri="https://github.com/vim/vim-appimage/releases/download/v9.0.2090/GVim-v9.0.2090.glibc2.29-x86_64.AppImage"
+
+pushd "$dest"
+
+wget -O "$appimage" "$uri"
+chmod +x "$appimage"
+for f in gvim gvimdiff gview
+do
+  ln -s "$appimage" "$f"
+done
+
+appimage="vim.appimage"
+uri="https://github.com/vim/vim-appimage/releases/download/v9.0.2090/Vim-v9.0.2090.glibc2.29-x86_64.AppImage"
+wget -O "$appimage" "$uri"
+chmod +x "$appimage"
+for f in eview evim view vim vimdiff
+do
+  ln -s "$appimage" "$f"
+done
+
+popd
+</pre>
+
+<li>
+Update vimrc.
+<pre vim>
+" ================ Python 3 ======================
+if !has('nvim') &amp;&amp; !empty($CONDA_PREFIX) &amp;&amp; has('python3_dynamic')
+  let s:conda_env = '/miniconda3/envs/vim-python'
+  if isdirectory(expand("$LOCALAPPDATA" .. s:conda_env))
+    let &amp;pythonthreehome = expand("$LOCALAPPDATA" .. s:conda_env)
+  elseif isdirectory(expand("$HOME" .. s:conda_env))
+    let &amp;pythonthreehome = expand("$HOME" .. s:conda_env)
+  endif
+  if has('linux')
+    let &amp;pythonthreedll=expand(&amp;pythonthreehome .. "/lib/libpython3.so")
+  endif
+endif
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

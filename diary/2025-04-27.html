@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2025-04-27</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2025-04-27"><h1 id="Journal 2025-04-27" class="header"><a href="#Journal 2025-04-27">Journal 2025-04-27</a></h1></div>
+
+<div id="Journal 2025-04-27-MyST Markdown"><h2 id="MyST Markdown" class="header"><a href="#Journal 2025-04-27-MyST Markdown">MyST Markdown</a></h2></div>
+<p>
+<span id="Journal 2025-04-27-MyST Markdown-myst"></span><span class="tag" id="myst">myst</span> <span id="Journal 2025-04-27-MyST Markdown-mystmd"></span><span class="tag" id="mystmd">mystmd</span>
+</p>
+
+<ul>
+<li>
+<a href="2024-01-20.html#mdformat-myst">Journal 2024-01-20</a> Convert Vimwiki Tasks to Markdown <code>mdformat-myst</code>.
+
+<li>
+<a href="https://mystmd.org/">MyST</a> extends Markdown for technical, scientific communication and publication.
+
+<li>
+MyST supports YAML frontmatter tags, not inline <code>#tags</code>.
+  It warns if the tags are not an array.
+<pre text>
+  ⛔️ 20241226-1537.md 'tags' must be an array (at 20241226-1537.md#frontmatter)
+</pre>
+  Break words into an unordered list or
+  surround a comma separated list with square brackets.
+<pre yaml>
+  tags: [AR00000001, AR00000001, ABCD, ABC-DEFG-HIJ, LMN-OPQ-R101]
+  tags:
+    - AR00000001
+    - AR00000001
+    - ABCD
+    - ABC-DEFG-HIJ
+    - LMN-OPQ-R101
+</pre>
+<pre vim>
+" Vim compiler file
+" Compiler:	MyST (MyST Markdown)
+" Maintainer:   jdfenw@gmail.com
+" Last Change:	2025 May 01
+
+" if exists("current_compiler") | finish | endif
+let current_compiler = "myst"
+
+let s:cpo_save = &amp;cpo
+set cpo&amp;vim
+
+" CompilerSet makeprg=myst
+" let &amp;l:makeprg = 'mypy --show-column-numbers '
+" 	    \ ..get(b:, 'mypy_makeprg_params', get(g:, 'mypy_makeprg_params', '--strict --ignore-missing-imports'))
+let &amp;l:makeprg = 'myst build --site'
+exe 'CompilerSet makeprg='..escape(&amp;l:makeprg, ' \|"')
+
+" ⛔ 0x26d4 0xfe0f is a composite character.
+" ⛔️ 20240815-0706.md:61 Link for "wn.work:diary/2024-08-15" did not resolve.
+CompilerSet errorformat=%E⛔️\ %f:%l\ %m
+" ⛔️ 20240730-1540.md 'tags.0' must be string (at 20240730-1540.md#frontmatter)
+CompilerSet errorformat+=%E⛔️\ %f\ %m
+
+" ⚠  0x26a0 0xfe0f is a composite character; it doesn't display in Vim.
+" ⚠️  20230929-1034.md:27 Linking "index-structure-or-hub-notes" to an implicit heading reference, best practice is to create an explicit reference.
+"    Explicit references do not break when you update the title to a section, they are preferred over using the implicit HTML ID created for headers.
+CompilerSet errorformat+=%W⚠️\ %f:%l\ %m
+
+" ⚠️  20240320-0807.md Duplicate identifier in project "ref-nede-33885p-ar1"
+"    In files: 20240320-0807.md, 20240321-0854.md
+CompilerSet errorformat+=%W⚠️\ %f\ %m
+
+CompilerSet errorformat+=%Z\ \ \ %m
+
+" 🌎 Building MyST site
+" 🌎 0x0001f30e
+" ⏳ Waiting for response from wn.work:diary/2024-04-25
+" ⏳ 0x23f3
+" 📖 Built 20250417-1424.md in 263 ms.
+" 📖 Ox0001f4d6
+" 🔗 Checked 2 links in 20250417-1424.md in 2.85 min
+" 🔗 0x0001f517
+" 📚 Built 69 pages for project in 2.61 s.
+" 📚 0x0001f4da
+CompilerSet errorformat+=%-G📖\ %m
+CompilerSet errorformat+=%-G🔗\ %m
+CompilerSet errorformat+=%-G🌎\ %m
+CompilerSet errorformat+=%-G📚\ %m
+CompilerSet errorformat+=%-G⏳\ %m
+
+let &amp;cpo = s:cpo_save
+unlet s:cpo_save
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

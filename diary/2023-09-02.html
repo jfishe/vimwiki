@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-09-02</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-09-02"><h1 id="Journal 2023-09-02" class="header"><a href="#Journal 2023-09-02">Journal 2023-09-02</a></h1></div>
+
+<div id="Journal 2023-09-02-Windows Subsystem for Linux v2"><h2 id="Windows Subsystem for Linux v2" class="header"><a href="#Journal 2023-09-02-Windows Subsystem for Linux v2">Windows Subsystem for Linux v2</a></h2></div>
+<p>
+<span id="Journal 2023-09-02-Windows Subsystem for Linux v2-WSL2"></span><span class="tag" id="WSL2">WSL2</span> <span id="Journal 2023-09-02-Windows Subsystem for Linux v2-Pengwin"></span><span class="tag" id="Pengwin">Pengwin</span> <span id="Journal 2023-09-02-Windows Subsystem for Linux v2-timesyncd"></span><span class="tag" id="timesyncd">timesyncd</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154">WSL2 date incorrect after waking from sleep #8204</a>
+
+<li>
+<a href="https://unix.stackexchange.com/a/737366/272577">Can't override a systemd unit's ConditionVirtualization on Archlinux on Distrod on WSL</a>
+<pre bash>
+# If not installed
+sudo apt install systemd-timesyncd
+
+# Edit/create
+# /etc/systemd/system/systemd-timesyncd.service.d/override.conf
+sudo systemctl edit systemd-timesyncd
+</pre>
+
+<li>
+Add the following lines.
+<pre text>
+[Unit]
+ConditionVirtualization=
+ConditionVirtualization=wsl
+</pre>
+
+<li>
+Save, close WSL2 instance(s) and execute <code>wsl --shutdown</code>.
+
+<li>
+<code>sudo systemctl status systemd-timesyncd</code> should produce:
+<pre text>
+● systemd-timesyncd.service - Network Time Synchronization
+     Loaded: loaded (/lib/systemd/system/systemd-timesyncd.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/systemd-timesyncd.service.d
+             └─override.conf
+     Active: active (running) since Sat 2023-09-02 06:19:50 PDT; 11min ago
+       Docs: man:systemd-timesyncd.service(8)
+   Main PID: 83 (systemd-timesyn)
+     Status: "Contacted time server 108.61.73.243:123 (0.debian.pool.ntp.org)."
+      Tasks: 2 (limit: 9385)
+     Memory: 1.5M
+     CGroup: /system.slice/systemd-timesyncd.service
+             └─83 /lib/systemd/systemd-timesyncd
+</pre>
+
+</ul>
+<div id="Journal 2023-09-02-Taskwiki ImportError"><h2 id="Taskwiki ImportError" class="header"><a href="#Journal 2023-09-02-Taskwiki ImportError">Taskwiki ImportError</a></h2></div>
+<p>
+<span id="Journal 2023-09-02-Taskwiki ImportError-taskwiki"></span><span class="tag" id="taskwiki">taskwiki</span> <span id="Journal 2023-09-02-Taskwiki ImportError-conda"></span><span class="tag" id="conda">conda</span>
+</p>
+
+<p>
+<code>conda install vim</code> will install a non-gui Vim compiled to use the conda
+python. This eliminates the mixed environment from system python and conda.
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

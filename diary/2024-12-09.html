@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-12-09</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-12-09"><h1 id="Journal 2024-12-09" class="header"><a href="#Journal 2024-12-09">Journal 2024-12-09</a></h1></div>
+
+<div id="Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol"><h2 id="Evaluate Marksman Markdown Language Server Protocol" class="header"><a href="#Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol">Evaluate Marksman Markdown Language Server Protocol</a></h2></div>
+<p>
+<span id="Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol-lsp"></span><span class="tag" id="lsp">lsp</span> <span id="Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol-CoC"></span><span class="tag" id="CoC">CoC</span> <span id="Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol-markdown"></span><span class="tag" id="markdown">markdown</span> <span id="Journal 2024-12-09-Evaluate Marksman Markdown Language Server Protocol-marksman"></span><span class="tag" id="marksman">marksman</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/artempyanykh/marksman">Marksman</a>
+
+<ul>
+<li>
+<a href="https://github.com/yaegassy/coc-marksman">:CocInstall @yaegassy/coc-marksman</a>
+
+<li>
+<code>$HOME\\AppData\\Roaming\\marksman\\config.toml</code> Windows default
+
+<li>
+<code>.marksman.toml</code> Project or directory scope.
+
+<li>
+<code>$HOME/.config/marksman/config.toml</code> Linux default
+<pre toml>
+  [core]
+  # When set to true, level 1 headings will be treated as document titles
+  # (this includes an assumption of having a single title in the document).
+  # Setting this to false automatically changes the default wiki link
+  # completion style to a file-based one.
+  title_from_heading = false
+
+  # Use incremental resolution of project-wide references.
+  # This is much more efficient but is currently experimental
+  incremental_references = true
+
+  [completion]
+  # The style of wiki links completion.
+  # Other values include:
+  # * "file-stem" to complete using file name without an extension,
+  # * "file-path-stem" same as above but using file path.
+  wiki.style = "file-path-stem"
+</pre>
+
+</ul>
+<li>
+Table of Contents generation is non-obtrusive.
+
+<li>
+Does not conflict with Vimwiki.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

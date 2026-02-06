@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-07-02</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-07-02"><h1 id="Journal 2023-07-02" class="header"><a href="#Journal 2023-07-02">Journal 2023-07-02</a></h1></div>
+<p>
+<span id="Journal 2023-07-02-Linux"></span><span class="tag" id="Linux">Linux</span> <span id="Journal 2023-07-02-WSL"></span><span class="tag" id="WSL">WSL</span> <span id="Journal 2023-07-02-gpg"></span><span class="tag" id="gpg">gpg</span>
+</p>
+
+<pre bash>
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg \
+    -o /usr/share/keyrings/yarn-keyring.asc &amp;&amp;
+    sed -i '1s;^deb;deb [signed-by=/usr/share/keyrings/yarn-keyring.asc];' /etc/apt/sources.list.d/yarn.list
+</pre>
+
+<p>
+<a href="https://askubuntu.com/questions/1286545/what-commands-exactly-should-replace-the-deprecated-apt-key">What commands (exactly) should replace the deprecated apt-key?</a>
+</p>
+
+<pre bash>
+gpg --no-default-keyring --keyring /etc/apt/trusted.gpg --list-keys
+
+apt-key export A83090303C88AB38BC22F277A30C9470132D65CB |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-pengwin-base-keyring.gpg
+apt-key export D7C59C0CC52809AEACB2ACDF6B1EFAF9737C6429 |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-pengwin-setup-keyring.gpg
+
+apt-key export 90F685494B52C0E96DA4B92500874F1710735619 |
+  sudo gpg --dearmor \
+    -o /usr/share/keyrings/whitewaterfoundry-wslu-keyring.gpg
+</pre>
+
+<p>
+<a href="/etc/apt/sources.list.d/whitewaterfoundry.list">file:/etc/apt/sources.list.d/whitewaterfoundry.list</a>
+</p>
+
+<pre>
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-pengwin-base-keyring.gpg] https://packagecloud.io/whitewaterfoundry/pengwin-base/debian/ bookworm main
+#deb-src https://packagecloud.io/whitewaterfoundry/pengwin-base/debian/ bookworm main
+
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-pengwin-setup-keyring.gpg] https://packagecloud.io/whitewaterfoundry/pengwin-setup/debian/ bookworm main
+#deb-src https://packagecloud.io/whitewaterfoundry/pengwin-setup/debian/ bookworm main
+
+deb [signed-by=/usr/share/keyrings/whitewaterfoundry-wslu-keyring.gpg] https://packagecloud.io/whitewaterfoundry/wslu/debian/ bullseye main
+#deb-src https://packagecloud.io/whitewaterfoundry/wslu/debian/ bullseye main
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-11-09</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-11-09"><h1 id="Journal 2023-11-09" class="header"><a href="#Journal 2023-11-09">Journal 2023-11-09</a></h1></div>
+
+<div id="Journal 2023-11-09-Windows Desktop Background"><h2 id="Windows Desktop Background" class="header"><a href="#Journal 2023-11-09-Windows Desktop Background">Windows Desktop Background</a></h2></div>
+<p>
+<span id="Journal 2023-11-09-Windows Desktop Background-Win11"></span><span class="tag" id="Win11">Win11</span> <span id="Journal 2023-11-09-Windows Desktop Background-desktop"></span><span class="tag" id="desktop">desktop</span> <span id="Journal 2023-11-09-Windows Desktop Background-wallpaper"></span><span class="tag" id="wallpaper">wallpaper</span> <span id="Journal 2023-11-09-Windows Desktop Background-background"></span><span class="tag" id="background">background</span> <span id="Journal 2023-11-09-Windows Desktop Background-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-19.html">Journal 2023-11-19</a> creates script module <code>Copy-Wallpaper</code>.
+
+<li>
+<a href="https://answers.microsoft.com/en-us/windows/forum/all/how-to-save-windows-spotlight-images-for-your/6415a7e1-dc0d-4f53-9b38-1942c02d0d9d">How to save Windows Spotlight images for your wallpaper or phone</a>
+
+<li>
+<code>PowerShell 7</code> requires <code>Join-Path</code> because it doesn't drop the path from
+  <code>\(_</code> automatically, unlike <code>Windows PowerShell 5.1</code>. <code>\)_.FullName</code> may be
+  required for the source.
+<pre powershell>
+# $Destination = "$HOME\Desktop\Wallpaper"
+$Destination = "$env:OneDrive\Desktop\Wallpaper"
+New-Item -Path $Destination -Type Directory -ErrorAction SilentlyContinue
+Get-ChildItem "$env:LOCALAPPDATA\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets\" |
+  ForEach-Object -Process {
+  Copy-Item $_ (Join-Path "$Destination" "$($_.Name).jpg") -Verbose -Whatif
+}
+</pre>
+
+</ul>
+<div id="Journal 2023-11-09-Bibliography Setup"><h2 id="Bibliography Setup" class="header"><a href="#Journal 2023-11-09-Bibliography Setup">Bibliography Setup</a></h2></div>
+<p>
+<span id="Journal 2023-11-09-Bibliography Setup-citeproc"></span><span class="tag" id="citeproc">citeproc</span> <span id="Journal 2023-11-09-Bibliography Setup-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2023-11-09-Bibliography Setup-Zettelkasten"></span><span class="tag" id="Zettelkasten">Zettelkasten</span> <span id="Journal 2023-11-09-Bibliography Setup-vim-zettel"></span><span class="tag" id="vim-zettel">vim-zettel</span> <span id="Journal 2023-11-09-Bibliography Setup-biblatex"></span><span class="tag" id="biblatex">biblatex</span> <span id="Journal 2023-11-09-Bibliography Setup-BibTeX"></span><span class="tag" id="BibTeX">BibTeX</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-09-22.html#Bibliography Setup">Journal 2023-09-22 Bibliography Setup</a>
+
+<li>
+<a href="2023-09-27.html#Bibliography Setup">Journal 2023-09-27 Bibliography Setup</a>
+
+<li>
+<a href="../../zk/20231019-0701.html">@TSTF_476_Ar12007</a> to test <code>Pandoc #expand_citeproc</code>.
+<pre vim>
+# expand_citations|markdown-citations --citeproc
+#  --metadata='link-citations:true' --from=markdown+wikilinks_title_after_pipe
+#  --standalone
+:Pandoc #expand_citations
+Error detected while processing function pandoc#command#Pandoc:
+line    4:
+</pre>
+<pre bash>
+pandoc --to=markdown-citations \
+  --citeproc \
+  --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe \
+  --standalone \
+  20231019-0701.md
+</pre>
+
+</ul>
+<p>
+The version of pandoc impacts <code>pandoc --list-extensions</code> output.
+</p>
+
+<pre vim>
+Error detected while processing function redir#Redir[20]..pandoc#command#Pandoc:
+line    4:
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "/home/jdfen/.dotfiles/config/vim/vimfiles/pack/python/start/vim-pandoc/python3/vim_pandoc/command.py", line 72, in __call__
+    if self.pandoc_info.is_valid_output_format(c_vars['output_format']) \
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jdfen/.dotfiles/config/vim/vimfiles/pack/python/start/vim-pandoc/python3/vim_pandoc/helpparser.py", line 99, in is_valid_output_format
+    return re.match(identifier+"(([+-]("+"|".join(self.extensions)+"))+)?$", identifier)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;snip&gt;
+    raise source.error("nothing to repeat",
+re.error: nothing to repeat at position 40
+</pre>
+
+<p>
+The error in <code>self.extensions</code> is caused by <a href="https://github.com/vim-pandoc/vim-pandoc/blob/d4fc6f8234c37eef16b6de8055c5fe53b7d7316a/python3/vim_pandoc/helpparser.py#L82">get_extensions()</a>
+not parsing <code>pandoc --list-extensions</code> because the space is missing before + or
+-. For backwards compatibility with versions requiring the space, use Regex to
+replace either pattern with an empty string.
+</p>
+
+<pre dep3patch>
+M python3/vim_pandoc/helpparser.py
+@@ -80,8 +80,8 @@ class PandocInfo(object):
+         return list(chain.from_iterable([v.names for v in self.options]))
+
+     def get_extensions(self):
+-        data = self.__raw_output('--list-extensions').\
+-            replace(' +', '').replace(' -', '')
++        data = self.__raw_output('--list-extensions')
++        data = re.sub('(^ |^)[\+-]', '', data, flags=re.MULTILINE)
+         return data.splitlines()
+
+     def get_input_formats(self):
+</pre>
+
+<p>
+<a href="https://github.com/vim-pandoc/vim-pandoc/issues/457">Github vim-pandoc Issue #457</a>
+describes the problem, and <a href="https://github.com/vim-pandoc/vim-pandoc/pull/458">Pull Request #458</a> proposes the solution.
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-10-13</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-10-13"><h1 id="Journal 2023-10-13" class="header"><a href="#Journal 2023-10-13">Journal 2023-10-13</a></h1></div>
+
+<div id="Journal 2023-10-13-Vimwiki and CoC Keymap Conflict"><h2 id="Vimwiki and CoC Keymap Conflict" class="header"><a href="#Journal 2023-10-13-Vimwiki and CoC Keymap Conflict">Vimwiki and CoC Keymap Conflict</a></h2></div>
+<p>
+<span id="Journal 2023-10-13-Vimwiki and CoC Keymap Conflict-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2023-10-13-Vimwiki and CoC Keymap Conflict-CoC"></span><span class="tag" id="CoC">CoC</span> <span id="Journal 2023-10-13-Vimwiki and CoC Keymap Conflict-keymap"></span><span class="tag" id="keymap">keymap</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-11.html#Vimwiki and CoC Keymap Conflict">Journal 2023-11-11</a>
+
+<li>
+Vimwiki recursively insert maps <code>&lt;CR&gt;</code> to <code>VimwikiReturn</code>, which confuses
+  Conquer of Completion (CoC) completion.
+<pre vim>
+  i  &lt;CR&gt;        *@coc#pum#visible() ? coc#pum#confirm(): "\&lt;C-]&gt;\&lt;Esc&gt;:VimwikiReturn 1 5\&lt;CR&gt;\&lt;C-G&gt;u\&lt;C-R&gt;=coc#on_enter()\&lt;CR&gt;"
+  i  &lt;CR&gt;        * coc#pum#visible() ? coc#pum#confirm(): "\&lt;C-G&gt;u\&lt;CR&gt;\&lt;C-R&gt;=coc#on_enter()\&lt;CR&gt;"
+</pre>
+
+<li>
+<a href="https://superuser.com/a/1678536">How do I resolve a keybinding conflict with coc for vim?</a>
+  remaps CoC to <code>&lt;C-End&gt;</code>.
+
+<li>
+CoC has default keymaps now that replicate the Vimwiki keymap.
+<pre vim>
+  " From non-Vimwiki buffer:
+  i  &lt;CR&gt;        * coc#pum#visible() ? '&lt;CR&gt;' : '&lt;C-]&gt;&lt;Esc&gt;:VimwikiReturn 1 5&lt;CR&gt;'
+    Last set from ~/.dotfiles/config/vim/vimfiles/pack/coc/opt/coc.nvim/autoload/coc/ui.vim line 20
+
+  " From Vimwiki buffer:
+  i  &lt;CR&gt;        *@pumvisible() ? '&lt;CR&gt;' : '&lt;C-]&gt;&lt;Esc&gt;:VimwikiReturn 1 5&lt;CR&gt;'
+    Last set from ~/.dotfiles/config/vim/vimfiles/pack/vimwiki/start/vimwiki/ftplugin/vimwiki.vim line 566
+  i  &lt;CR&gt;        * coc#pum#visible() ? '&lt;CR&gt;' : '&lt;C-]&gt;&lt;Esc&gt;:VimwikiReturn 1 5&lt;CR&gt;'
+    Last set from ~/.dotfiles/config/vim/vimfiles/pack/coc/opt/coc.nvim/autoload/coc/ui.vim line 20
+</pre>
+
+<li>
+Default Vimwiki &lt;CR&gt; inoremap breaks coc.nvim recommended &lt;CR&gt; mapping.
+  See <a href="https://github.com/vimwiki/vimwiki/issues/1093">https://github.com/vimwiki/vimwiki/issues/1093</a> for details.
+  Controlling which Vimwiki keymaps apply and setting them via autocommand is
+  another proposed fix, according to
+  <a href="https://github.com/vimwiki/vimwiki/issues/1093#issuecomment-876211106">anton-fomin</a>.
+<pre vim>
+  " disable table mappings
+  let g:vimwiki_key_mappings = {
+              \ 'all_maps': 1,
+              \ 'global': 1,
+              \ 'headers': 1,
+              \ 'text_objs': 1,
+              \ 'table_format': 1,
+              \ 'table_mappings': 0,
+              \ 'lists': 1,
+              \ 'links': 1,
+              \ 'html': 1,
+              \ 'mouse': 0,
+              \ }
+  augroup VimwikiRemaps
+      autocmd!
+      " unmap tab in insert mode
+      autocmd Filetype vimwiki silent! iunmap &lt;buffer&gt; &lt;Tab&gt;
+      " remap table tab mappings to M-n M-p
+      autocmd Filetype vimwiki inoremap &lt;silent&gt;&lt;expr&gt;&lt;buffer&gt; &lt;M-n&gt; vimwiki#tbl#kbd_tab()
+      autocmd Filetype vimwiki inoremap &lt;silent&gt;&lt;expr&gt;&lt;buffer&gt; &lt;M-p&gt; vimwiki#tbl#kbd_shift_tab()
+      " on enter if completion is open, complete first element otherwise use
+      " default vimwiki mapping
+      autocmd Filetype vimwiki inoremap &lt;silent&gt;&lt;expr&gt;&lt;buffer&gt; &lt;cr&gt; pumvisible() ? coc#_select_confirm()
+                                \: "&lt;C-]&gt;&lt;Esc&gt;:VimwikiReturn 1 5&lt;CR&gt;"
+  augroup end
+</pre>
+
+<li>
+<code>mswin.vim</code> conflicts with completion, so curate settings in <code>keymap.vim</code>.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

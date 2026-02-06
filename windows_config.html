@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="rss.xml"
+    />
+    <title>windows_config</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="index.html">Index</a> |
+    <a href="diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Microsoft Windows Configuration"><h1 id="Microsoft Windows Configuration" class="header"><a href="#Microsoft Windows Configuration">Microsoft Windows Configuration</a></h1></div>
+<p>
+<span id="Microsoft Windows Configuration-Win10"></span><span class="tag" id="Win10">Win10</span> <span id="Microsoft Windows Configuration-Win11"></span><span class="tag" id="Win11">Win11</span>
+</p>
+
+<ul>
+<li>
+<a href="windows_config.html#Microsoft Windows Configuration">#Microsoft Windows Configuration</a>
+
+<ul>
+<li>
+<a href="windows_config.html#Windows Update Fails">#Windows Update Fails</a>
+
+<li>
+<a href="windows_config.html#NumLock on Startup">#NumLock on Startup</a>
+
+<li>
+<a href="windows_config.html#Explorer Quick Access">#Explorer Quick Access</a>
+
+<li>
+<a href="windows_config.html#Chocolatey">#Chocolatey</a>
+
+<ul>
+<li>
+<a href="windows_config.html#Improving choco list with options to show dependencies and sort by date (and more) -1276">#Improving choco list with options to show dependencies and sort by date (and more) #1276</a>
+
+</ul>
+<li>
+<a href="windows_config.html#Vim Installation and Update">#Vim Installation and Update</a>
+
+<li>
+<a href="windows_config.html#Windows Subsystem for Linux">#Windows Subsystem for Linux</a>
+
+<ul>
+<li>
+<a href="windows_config.html#Share Environment Vars between WSL and Windows">#Share Environment Vars between WSL and Windows</a>
+
+<li>
+<a href="windows_config.html#WSL Configuration">#WSL Configuration</a>
+
+<li>
+<a href="windows_config.html#Access WSL Files from Windows">#Access WSL Files from Windows</a>
+
+<li>
+<a href="windows_config.html#Configure SSH in each WSL Distro">#Configure SSH in each WSL Distro</a>
+
+<li>
+<a href="windows_config.html#Windows Firewall Rules for SSH">#Windows Firewall Rules for SSH</a>
+
+<ul>
+<li>
+<a href="windows_config.html#Verify ssh key access with KeePass and KeeAgent">#Verify ssh key access with KeePass and KeeAgent</a>
+
+<li>
+<a href="windows_config.html#Add Unix socket access to Windows OpenSSH for KeeAgent">#Add Unix socket access to Windows OpenSSH for KeeAgent</a>
+
+<li>
+<a href="windows_config.html#Automatically Start WSL sshd">#Automatically Start WSL sshd</a>
+
+</ul>
+<li>
+<a href="windows_config.html#WSL X11 Setup">#WSL X11 Setup</a>
+
+<li>
+<a href="windows_config.html#Git Credentials">#Git Credentials</a>
+
+<li>
+<a href="windows_config.html#Git lfs">#Git lfs</a>
+
+<li>
+<a href="windows_config.html#Whitewater Foundry Fedora Remix">#Whitewater Foundry Fedora Remix</a>
+
+<li>
+<a href="windows_config.html#Whitewater Foundry Pengwin">#Whitewater Foundry Pengwin</a>
+
+<li>
+<a href="windows_config.html#WSL Troubleshooting">#WSL Troubleshooting</a>
+
+<ul>
+<li>
+<a href="windows_config.html#Server execution failed">#Server execution failed</a>
+
+</ul>
+</ul>
+<li>
+<a href="windows_config.html#Windows Terminal">#Windows Terminal</a>
+
+<li>
+<a href="windows_config.html#Console Colorscheme">#Console Colorscheme</a>
+
+<li>
+<a href="windows_config.html#Google Chrome">#Google Chrome</a>
+
+<li>
+<a href="windows_config.html#Symlinks">#Symlinks</a>
+
+<li>
+<a href="windows_config.html#HP Envy BIOS Settings">#HP Envy BIOS Settings</a>
+
+</ul>
+</ul>
+<div id="Microsoft Windows Configuration-Windows Update Fails"><h2 id="Windows Update Fails" class="header"><a href="#Microsoft Windows Configuration-Windows Update Fails">Windows Update Fails</a></h2></div>
+
+<ul>
+<li>
+Windows 10 Insider Preview 10.0.17738.1000 (RS5_RELEASE)
+  <a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-update/windows-10-insider-preview-100177381000-rs5release/33da6c23-c9db-4096-8d68-38ee39d51b89">Install Error-SOLVED</a>
+
+<ul>
+<li>
+Open cmd.exe as Administrator
+<pre  dos>
+Sfc.exe /Scannow
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
+Dism.exe /online /Cleanup-Image /restorehealth
+</pre>
+
+<li>
+restart the computer
+
+</ul>
+<li>
+<a href="https://answers.microsoft.com/en-us/windows/forum/windows_10-update/failed-to-install-2017-07-cumulative-update-for/de8fb22d-e611-4a2e-89f9-6944b78aa01b?auth=1">Microsoft Answers</a>
+  recommends repairing the Windows Update database, which may need to be run
+  several times until no errors are found:
+
+<li>
+Open Windows <code>powershell (Admin)</code>:
+<pre  powershell>
+cd $env:windir\diagnostics\system\windowsupdate\
+Get-TroubleshootingPack  .  |  Invoke-TroubleshootingPack  -Result  $env:TEMP
+</pre>
+
+<li>
+Open <code>cmd.exe</code> with admin. rights:
+<pre  DOS>
+net stop wuauserv
+del /f /s /q C:\Windows\SoftwareDistribution\DataStore\*.*
+del /f /s /q C:\Windows\SoftwareDistribution\Download\*.*
+net start wuauserv
+wuauclt /detectnow /reportnow
+</pre>
+
+<li>
+If Windows Update becomes stuck in a re-boot and install loop, upgrade to a
+  later ISO from
+  <a href="https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewadvanced">Windows Insider Preview Downloads</a>.
+
+</ul>
+<div id="Microsoft Windows Configuration-NumLock on Startup"><h2 id="NumLock on Startup" class="header"><a href="#Microsoft Windows Configuration-NumLock on Startup">NumLock on Startup</a></h2></div>
+
+<ol>
+<li>
+On the Logon/Lock screen, press the NumLock key on the keyboard to turn it on.
+
+<li>
+The Login screen contains a power button in the bottom right corner. Use it to reboot Windows.
+
+<li>
+If that does not work:
+
+<ol>
+<li>
+Win-R regedit
+
+<li>
+<code>HKEY_USERS\.DEFAULT\Control Panel\Keyboard</code>
+
+<li>
+Default InitialKeyboardIndicators should be <code>2147483658</code> (<code>0x8000000A</code>).
+
+<li>
+Set InitialKeyboardIndicators to <code>2147483650</code> i.e., <code>0x80000002</code> if Windows
+     does not save NumLock status after reboot.
+
+<li>
+<code>HKEY_CURRENT_USER\Control Panel\Keyboard</code> does the following:
+<table>
+<thead>
+<tr>
+<th>
+InitialKeyboardIndicators value
+</th>
+<th>
+Purpose
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+0
+</td>
+<td>
+Turn all indicators off (NumLock, CapsLock, ScrollLock)
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Turn CapsLock on
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Turn NumLock on
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+Turn CapsLock and NumLock on
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+Turn ScrollLock on
+</td>
+</tr>
+<tr>
+<td>
+5
+</td>
+<td>
+Turn CapsLock and ScrollLock on
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+Turn NumLock and ScrollLock on
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Turn all indicators on (NumLock, CapsLock, ScrollLock)
+</td>
+</tr>
+</tbody>
+</table>
+
+</ol>
+</ol>
+<div id="Microsoft Windows Configuration-Explorer Quick Access"><h2 id="Explorer Quick Access" class="header"><a href="#Microsoft Windows Configuration-Explorer Quick Access">Explorer Quick Access</a></h2></div>
+
+<p>
+There are situations where nothing would work and invalid pinned shortcut in
+Quick access get stuck and not removable. According to <a href="http://www.winhelponline.com/blog/fix-quick-access-reset-pinned-shortcuts-stuck-not-working-windows-10/">winhelponline</a>,
+deleting the following file will reset the Quick Access menu to its default
+pinned folders.
+</p>
+
+<pre  DOS>
+cmd.exe /c del "%AppData%\Microsoft\Windows\Recent\AutomaticDestinations\f01b4d95cf55d32a.automaticDestinations-ms"
+</pre>
+
+<div id="Microsoft Windows Configuration-Chocolatey"><h2 id="Chocolatey" class="header"><a href="#Microsoft Windows Configuration-Chocolatey">Chocolatey</a></h2></div>
+<p>
+<span id="Microsoft Windows Configuration-Chocolatey-choco"></span><span class="tag" id="choco">choco</span>
+</p>
+
+<p>
+<a href="https://chocolatey.org/">Chocolatey</a> can serve as a package manager for Windows. The package
+<a href="https://chocolatey.org/packages/choco-package-list-backup">choco-package-list-backup</a> creates the packages.config file after
+configuring where to save the backup by editing variables
+in <a href="/c/Users/jdfen/OneDrive/Documents/vimwiki_home/C:/ProgramData/chocolatey/bin/choco-package-list-backup.bat">choco-package-list-backup.bat</a> to select a backup location.
+If any --params were passed to choco install, these need to be manually added
+(note the script overwrites the file without prompting, so save to a different
+location).  <a href="https://github.com/chocolatey/choco/wiki/CommandsInstall">https://github.com/chocolatey/choco/wiki/CommandsInstall</a> describes the packageParameters
+key that would need to be added to packages.config to replicate the previous
+installation.
+</p>
+
+<div id="Microsoft Windows Configuration-Chocolatey-Improving choco list with options to show dependencies and sort by date (and more) #1276"><h3 id="Improving choco list with options to show dependencies and sort by date (and more) #1276" class="header"><a href="#Microsoft Windows Configuration-Chocolatey-Improving choco list with options to show dependencies and sort by date (and more) #1276">Improving choco list with options to show dependencies and sort by date (and more) #1276</a></h3></div>
+<p>
+<span id="Microsoft Windows Configuration-Chocolatey-Improving choco list with options to show dependencies and sort by date (and more) #1276-choco"></span><span class="tag" id="choco">choco</span> <span id="Microsoft Windows Configuration-Chocolatey-Improving choco list with options to show dependencies and sort by date (and more) #1276-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/chocolatey/choco/issues/1276#issuecomment-754642856">Improving choco list with options to show dependencies and sort by date (and more) #1276</a>
+<pre powershell>
+$packages = Get-ChildItem C:\ProgramData\chocolatey\lib\ -Recurse  *.nuspec | select fullname,name
+foreach($p in $packages){
+        [XML]$xml=get-content $p.fullname
+        $dependencies = $xml.package.metadata.dependencies.dependency
+        foreach($d in $dependencies){
+	        $obj = New-Object -TypeName psobject
+	        $obj | Add-Member -MemberType NoteProperty -name package  -Value $xml.package.metadata.id
+	        $obj | Add-Member -MemberType NoteProperty -name packageversion  -Value $xml.package.metadata.version
+	        $obj | Add-Member -MemberType NoteProperty -name dependency  -Value  $d.id
+	        $obj | Add-Member -MemberType NoteProperty -name dependencyversion  -Value  $d.version
+	        $obj
+        }
+}
+</pre>
+
+</ul>
+<div id="Microsoft Windows Configuration-Vim Installation and Update"><h2 id="Vim Installation and Update" class="header"><a href="#Microsoft Windows Configuration-Vim Installation and Update">Vim Installation and Update</a></h2></div>
+<p>
+<span id="Microsoft Windows Configuration-Vim Installation and Update-vim"></span><span class="tag" id="vim">vim</span> <span id="Microsoft Windows Configuration-Vim Installation and Update-install"></span><span class="tag" id="install">install</span>
+</p>
+
+<p>
+Depending on access to an elevated shell, perform the following.
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/vim/vim-win32-installer/releases">Vim Win32 Installer</a> includes 64 bit vim with <code>python3_dynamic</code>.
+
+<ul>
+<li>
+Move the old version to, e.g., <code>$env:USERPROFILE\vim\vim82.old</code>.
+
+<li>
+Unzip to <code>$env:USERPROFILE\vim</code>.
+
+<li>
+Delete the old version if the new one works.
+
+</ul>
+<li>
+From an elevated shell install with <code>Choclatey</code>, which should register
+  <code>gvimext.dll</code>. <code>choco install vim /RestartExplorer</code>
+
+<li>
+<a href="https://github.com/jfishe/vimfiles">Personal and work vim 8 configuration with submodules</a>
+  provides instructions for registering <code>gvimext.dll</code> manually.
+
+<li>
+The default batch files do not activate a compatible python38 environment.
+  <a href="https://github.com/jfishe/vimfiles">Personal and work vim 8 configuration with submodules</a>
+  provides a conda environment.yml to create the python38 environment.
+
+<li>
+It also provides <code>:call condaactivate#AddConda2Vim()</code> to activate <code>python38</code>
+  by updating <code>$env:LOCALAPPDATA\Microsoft\WindowsApps\*vim*.bat</code> Copy the
+  files from <code>C:\Tools\vim\vim82\*vim*.bat</code> if they don't already exist.
+  Choclatey overwrites the existing batch files with every update.
+
+</ul>
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux"><h2 id="Windows Subsystem for Linux" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux">Windows Subsystem for Linux</a></h2></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL"></span><span class="tag" id="WSL">WSL</span> <span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Ubuntu"></span><span class="tag" id="Ubuntu">Ubuntu</span> <span id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL2"></span><span class="tag" id="WSL2">WSL2</span>
+</p>
+
+<ol>
+<li>
+Microsoft Documents provides
+   <a href="https://aka.ms/wsl2-install">Installation Instructions for WSL 2</a>.
+   For information on key differences with WSL 2 refer to Microsoft
+   Documentation for <a href="https://aka.ms/wsl2">WSL 2</a>.
+
+<li>
+Create/update <code>/etc/wsl.conf</code> per <a href="windows_config.html#WSL Configuration">WSL Configuration</a>.
+
+<li>
+Set <code>root</code> password.
+
+<li>
+Setup <code>$WSLENV</code> per <a href="windows_config.html#Share Environment Vars between WSL and Windows">Share Environment Vars between WSL and Windows</a>.
+
+<li>
+Install <code>rc file (dotfile) management</code> and clone/update <code>~/.dotfiles</code> per <a href="https://github.com/jfishe/dotfiles">https://github.com/jfishe/dotfiles</a>
+
+<li>
+Configure <code>sshd_config</code> per <a href="windows_config.html#Configure SSH in each WSL Distro">Configure SSH in each WSL Distro</a>:
+
+<ol>
+<li>
+Open private network access with <a href="windows_config.html#Windows Firewall Rules for SSH">Windows Firewall Rules for SSH</a>.
+
+<li>
+<a href="windows_config.html#Add Unix socket access to Windows OpenSSH for KeeAgent">Add Unix socket access to Windows OpenSSH for KeeAgent</a>.
+
+<li>
+<a href="windows_config.html#Automatically Start WSL sshd">Automatically Start WSL sshd</a>.
+
+</ol>
+</ol>
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Share Environment Vars between WSL and Windows"><h3 id="Share Environment Vars between WSL and Windows" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Share Environment Vars between WSL and Windows">Share Environment Vars between WSL and Windows</a></h3></div>
+
+<p>
+<a href="https://blogs.msdn.microsoft.com/commandline/2017/12/22/share-environment-vars-between-wsl-and-windows/">Share Environment Vars between WSL and Windows</a>
+The following is useful to link vim, git and other settings files on the
+Windows side.
+</p>
+
+
+<p>
+<code>WT_SESSION:USERPROFILE/p:APPDATA/p:LOCALAPPDATA/p:TMP/p:WT_PROFILE_ID</code>
+</p>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Configuration"><h3 id="WSL Configuration" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Configuration">WSL Configuration</a></h3></div>
+
+<p>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/wsl-config">Advanced settings configuration in WSL</a>
+provides guidance on <code>/etc/wsl.conf</code>.
+Changes to wsl.conf do not take affect until reboot or
+<code>wsl --shutdown</code>.
+</p>
+
+<p>
+Umask may be set in <code>~/.profile</code> to reasonable values for user created files.
+</p>
+
+<p>
+UID and GID should be set per the user, so that files are not owned by root.
+</p>
+
+<p>
+fmask should be abbreviated form to avoid a bug in some WSL versions that
+convert 0011 into 0111. Case should be off so that Windows programs can be
+executed from WSL.
+</p>
+
+<pre  ini>
+[automount]
+enabled = true
+# Docker requires mounting under /c. Symlink /mnt/c to /c.
+# root = /mnt/
+options = "metadata,uid=1000,gid=1000,umask=22,fmask=11,case=off"
+mountFsTab = true
+
+[network]
+generateHosts = true
+generateResolvConf = true
+
+[filesystem]
+umask = 0022
+
+[interop]
+enabled=true
+# appendWindowsPath=true
+
+[boot]
+systemd=true
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Access WSL Files from Windows"><h3 id="Access WSL Files from Windows" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Access WSL Files from Windows">Access WSL Files from Windows</a></h3></div>
+
+<p>
+Linux files for a running WSL distro are located at <code>\\wsl$\&lt;distro_name&gt;</code>.
+</p>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Configure SSH in each WSL Distro"><h3 id="Configure SSH in each WSL Distro" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Configure SSH in each WSL Distro">Configure SSH in each WSL Distro</a></h3></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Configure SSH in each WSL Distro-ssh"></span><span class="tag" id="ssh">ssh</span>
+</p>
+
+<p>
+The file -- /etc/ssh/sshd_config -- will need to be edited to add/change the
+following:
+</p>
+
+<ul>
+<li>
+Change - PermitRootLogin no
+
+<li>
+Add -    AllowUsers yourusername
+
+<li>
+Change - PasswordAuthentication yes # setup ssh keys and change to no
+
+<li>
+Change - ListenAddress 0.0.0.0
+
+<li>
+Add -    UsePrivilegeSeparation no # can be left at yes
+
+<li>
+Add -
+
+<ul>
+<li>
+Port 2200 # for Ubuntu
+
+<li>
+Port 2201 # for Pengwin
+
+<li>
+Port 2202 # for fedoraremix
+<pre  bash>
+sudo service ssh --full-restart
+</pre>
+
+</ul>
+</ul>
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH"><h3 id="Windows Firewall Rules for SSH" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH">Windows Firewall Rules for SSH</a></h3></div>
+
+<p>
+<a href="https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/">Enable Port 22 in Windows Firewall</a>
+provides the steps. Other directions from the website maybe dated for more
+recent versions of WSL.
+</p>
+
+<ol>
+<li>
+Open Windows Firewall Advance Settings.
+
+<li>
+Click on New Rule… under Inbound Rules to create a new firewall rule.
+
+<li>
+Under Rule Type select Port.
+
+<li>
+Click Next to Continue.
+
+<li>
+Under Protocol and Ports select Specific local Ports and enter
+   <code>2200,2201,2202</code>, depending on the WSL distros installed. Do not include Port 22; the rule `OpenSSH
+   SSH Server (sshd)` manages Port 22 on Windows.
+
+<li>
+Click Next to Continue.
+
+<li>
+Under Action select Allow the connection
+
+<li>
+Under Profile make sure to only select Domain and Private.
+
+<li>
+Click Next to Continue.
+
+<li>
+Under Name:
+
+<ol>
+<li>
+Name: WSL SSH
+
+<li>
+Description: Open SSH ports for Windows and WSL
+
+<li>
+Click Finish
+
+</ol>
+</ol>
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Verify ssh key access with KeePass and KeeAgent"><h4 id="Verify ssh key access with KeePass and KeeAgent" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Verify ssh key access with KeePass and KeeAgent">Verify ssh key access with KeePass and KeeAgent</a></h4></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Verify ssh key access with KeePass and KeeAgent-ssh"></span><span class="tag" id="ssh">ssh</span> <span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Verify ssh key access with KeePass and KeeAgent-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<p>
+OpenSSH uses the same command on PowerShell and Linux.
+</p>
+
+<p>
+Open KeePass and enter the following to list available private ssh keys. It
+should work in WSL if socat and npiperelay are working.
+</p>
+
+<pre  bash>
+ssh-add -l
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Add Unix socket access to Windows OpenSSH for KeeAgent"><h4 id="Add Unix socket access to Windows OpenSSH for KeeAgent" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Add Unix socket access to Windows OpenSSH for KeeAgent">Add Unix socket access to Windows OpenSSH for KeeAgent</a></h4></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Add Unix socket access to Windows OpenSSH for KeeAgent-ssh"></span><span class="tag" id="ssh">ssh</span>
+</p>
+
+<p>
+At the moment WSL cannot access Windows named pipes, so <a href="https://github.com/dlech/KeeAgent/issues/159#issuecomment-409512544">Philipp Scheit</a>
+proposed using <code>socat</code> and <a href="https://github.com/jstarks/npiperelay">John Starks</a> created <code>npiperelay</code> with the following
+build instructions, modified for my use. <code>~/.dotfiles/install.sh</code> automates,
+removing the dependency on the symlink to <code>%USERPROFILE%</code>, but requiring
+<code>%WSLENV%</code> to include <code>USERPROFILE/p</code>.
+</p>
+
+<pre  bash>
+# Perform once to create npiperelay.exe in %USERPROFILE%\go\bin.
+GOOS=windows go get -d github.com/jstarks/npiperelay
+GOOS=windows go build -o $HOME/userprofile/go/bin/npiperelay.exe \
+  github.com/jstarks/npiperelay
+
+# Perform once on each WSL distro.
+sudo ln -s $HOME/userprofile/go/bin/npiperelay.exe \
+  /usr/local/bin/npiperelay.exe
+
+# Add to ~/.profile
+if [ ! -S /tmp/ssh-agent-pipe ]; then
+  (socat UNIX-LISTEN:/tmp/ssh-agent-pipe,fork,group="$USER",umask=007 \
+    EXEC:"npiperelay.exe -ep -s //./pipe/openssh-ssh-agent",nofork &amp;)
+  export SSH_AUTH_SOCK=/tmp/ssh-agent-pipe
+fi
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Automatically Start WSL sshd"><h4 id="Automatically Start WSL sshd" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Automatically Start WSL sshd">Automatically Start WSL sshd</a></h4></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Windows Firewall Rules for SSH-Automatically Start WSL sshd-ssh"></span><span class="tag" id="ssh">ssh</span>
+</p>
+
+<p>
+WSL does not support <code>systemd</code>, so <code>sshd</code> does not start automatically on boot.
+<a href="https://github.com/WhitewaterFoundry/Pengwin">WhitewaterFoundry / Pengwin</a> provides a solution by starting <code>sshd</code> in
+the login scripts. This requires no password <code>sudo</code> for <code>sshd</code> to avoid
+entering a password every time the login scripts run.
+</p>
+
+<ol>
+<li>
+Create <code>/usr/bin/start-ssh</code> with the following content.
+<pre  bash>
+#!/bin/bash
+
+sshd_status=$(service ssh status)
+if [ ${sshd_status} = *"is not running"* ]; then
+ service ssh --full-restart &gt; /dev/null 2&gt;&amp;1
+fi
+</pre>
+
+<li>
+Create <code>/etc/profile.d/start-ssh</code> with the following content.
+<pre  bash>
+sudo /usr/bin/start-ssh
+</pre>
+
+<li>
+Allow users to start <code>sshd</code> without <code>sudo</code> password, by creating
+   <code>/etc/sudoers.d/start-ssh</code> with the following content.
+<pre  bash>
+sudo /usr/bin/start-ssh
+</pre>
+
+<li>
+Set permissions and owner.
+<pre  bash>
+sudo chmod 700 /usr/bin/start-ssh
+sudo chmod 644 /etc/profile.d/start-ssh.sh
+sudo chmod 0440 /etc/sudoers.d/start-ssh
+sudo chown root.root /usr/bin/start-ssh
+sudo chown root.root /etc/profile.d/start-ssh.sh
+sudo chown root.root /etc/sudoers.d/start-ssh
+</pre>
+
+</ol>
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL X11 Setup"><h3 id="WSL X11 Setup" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-WSL X11 Setup">WSL X11 Setup</a></h3></div>
+
+<p>
+Note clipboard may not share immediately with Windows. Workaround: copy
+something into clipboard from X11; then sharing should work.
+</p>
+
+<p>
+From
+<a href="https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx">graphical programs on windows subsystem on linux aspx</a>
+do the following to get X11 on WSL:
+</p>
+
+<p>
+From WSL Ubuntu:
+</p>
+
+<pre  bash>
+sudo apt-get remove  openssh-server
+sudo apt-get install  openssh-server
+</pre>
+
+<p>
+Install X410 from Microsoft Store or Xming.
+</p>
+
+<p>
+For Xming, from Windows PowerShell (Admin):
+</p>
+
+<pre  powershell>
+choco install Xming -y
+</pre>
+
+<p>
+From Windows Start-Menu, start Xming. When Windows Defender prompts, grant
+access to private networks.
+</p>
+
+<p>
+To start on login, <code>Win-R shell:startup</code> opens the startup folder and drag the
+Xming/X410 icon to the startup folder. Link should appear in the icon when it
+is over the startup folder.
+</p>
+
+<p>
+From WSL Ubuntu:
+</p>
+
+<pre  bash>
+sudo apt-get install x11-apps
+
+if [ ! -z "$WSL_INTEROP" ] ; then
+  # For WSL2, determine the IP address of the Hyper-V VM.
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+else
+  # Otherwise localhost works.
+  export DISPLAY=:0
+fi
+
+xeyes # to test
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Git Credentials"><h3 id="Git Credentials" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Git Credentials">Git Credentials</a></h3></div>
+
+<p>
+The git-credential configuration for Linux requires support servers which don't
+seem to run on WSL. However <a href="https://stackoverflow.com/questions/45925964/how-to-use-git-credential-store-on-wsl-ubuntu-on-windows#comment81823871_47350274">Stack Overflow</a> provides the following solution.
+</p>
+
+<pre  bash>
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Git lfs"><h3 id="Git lfs" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Git lfs">Git lfs</a></h3></div>
+
+<p>
+Default Ubuntu doesn't support git-lfs. It can be installed from
+<a href="https://github.com/git-lfs/git-lfs/wiki/Installation">git lfs Installation</a>.
+</p>
+
+<pre  bash>
+sudo apt-get install software-properties-common to install add-apt-repository (or sudo apt-get install python-software-properties if you are on Ubuntu &lt;= 12.04)
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+git lfs install
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Fedora Remix"><h3 id="Whitewater Foundry Fedora Remix" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Fedora Remix">Whitewater Foundry Fedora Remix</a></h3></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Fedora Remix-Fedora"></span><span class="tag" id="Fedora">Fedora</span>
+</p>
+
+<p>
+If the <code>gpg</code> keys do not work with <code>dnf</code>:
+</p>
+
+<pre  bash>
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Pengwin"><h3 id="Whitewater Foundry Pengwin" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Pengwin">Whitewater Foundry Pengwin</a></h3></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Pengwin-Debian"></span><span class="tag" id="Debian">Debian</span> <span id="Microsoft Windows Configuration-Windows Subsystem for Linux-Whitewater Foundry Pengwin-Pengwin"></span><span class="tag" id="Pengwin">Pengwin</span>
+</p>
+
+<p>
+If the <code>gpg</code> keys do not work with <code>apt-get</code>:
+</p>
+
+<pre  bash>
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys &lt;PUBKEY&gt;
+</pre>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Troubleshooting"><h3 id="WSL Troubleshooting" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Troubleshooting">WSL Troubleshooting</a></h3></div>
+<p>
+<span id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Troubleshooting-troubleshooting"></span><span class="tag" id="troubleshooting">troubleshooting</span>
+</p>
+
+<div id="Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Troubleshooting-Server execution failed"><h4 id="Server execution failed" class="header"><a href="#Microsoft Windows Configuration-Windows Subsystem for Linux-WSL Troubleshooting-Server execution failed">Server execution failed</a></h4></div>
+
+<p>
+<a href="https://answers.microsoft.com/en-us/windows/forum/all/error-server-execution-failed-when-trying-to-run/1e834b62-8106-4fc3-8bbf-9ab1b1218388">Error "Server execution failed" when trying to run bash command</a>:
+</p>
+
+<pre  text>
+Press Windows key + R
+Type: optionalfeatures.exe
+Hit Enter
+
+Scroll to the bottom
+
+Uncheck Windows Subsystem for Linux
+Click OK
+
+Restart if prompted
+
+Press Windows key + R
+Type: optionalfeatures.exe
+Hit Enter
+
+Scroll to the bottom
+
+Check Windows Subsystem for Linux
+Click OK
+</pre>
+
+<p>
+Restart if prompted
+</p>
+
+<p>
+Check if it now works.
+</p>
+
+<div id="Microsoft Windows Configuration-Windows Terminal"><h2 id="Windows Terminal" class="header"><a href="#Microsoft Windows Configuration-Windows Terminal">Windows Terminal</a></h2></div>
+
+<div id="Microsoft Windows Configuration-Console Colorscheme"><h2 id="Console Colorscheme" class="header"><a href="#Microsoft Windows Configuration-Console Colorscheme">Console Colorscheme</a></h2></div>
+
+<ul>
+<li>
+<a href="https://github.com/Microsoft/Console/tree/master/tools/ColorTool">Microsoft Console ColorTool</a>
+  contains the source for ColorTool. Visual Studio is needed to compile.
+
+<li>
+<a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2 Color Schemes</a>
+  contains the itermcolors files used below.
+
+<li>
+Set PSReadlineOption for <code>Number</code> and <code>Member</code> <code>ForegroundColor</code> to <code>Black</code>.
+  The default is white on white.
+
+<li>
+ColorTool doesn't change Default colors. Set manually.
+
+<li>
+Put ColorTool.exe and <code>Solarized Dark Higher Contrast.itermcolors</code> and
+  <code>Solarized Light.itermcolors</code> in <code>Documents\Windowspowershell</code>.
+
+</ul>
+<div id="Microsoft Windows Configuration-Google Chrome"><h2 id="Google Chrome" class="header"><a href="#Microsoft Windows Configuration-Google Chrome">Google Chrome</a></h2></div>
+
+<p>
+To prevent Chrome from auto-launching on login, open Settings-System-Continue running background apps when Google Chrome is closed. The no startup window switch doesn't appear to work.
+</p>
+
+<pre  DOS>
+copy
+REG QUERY HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v GoogleChromeAutoLaunch*
+Alt-R
+regedit
+Delete Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\GoogleChromeAutoLaunch_*
+</pre>
+
+<pre  powershell>
+$RegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
+$RegProperty = "GoogleChromeAutoLaunch*"
+Get-ItemProperty -Path $RegPath -Name $RegProperty
+Remove-ItemProperty -Path $RegPath -Name $RegProperty -Confirm
+</pre>
+
+<ul>
+<li>
+Get-Help Registry
+
+<li>
+<a href="https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows">https://www.wikihow.com/Block-an-Application-or-.EXE-from-Running-in-Windows</a>
+
+<li>
+<a href="https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/">https://www.howtogeek.com/241752/how-to-stop-windows-10-apps-from-running-in-the-background/</a>
+
+</ul>
+<div id="Microsoft Windows Configuration-Symlinks"><h2 id="Symlinks" class="header"><a href="#Microsoft Windows Configuration-Symlinks">Symlinks</a></h2></div>
+<p>
+<span id="Microsoft Windows Configuration-Symlinks-mklink"></span><span class="tag" id="mklink">mklink</span> <span id="Microsoft Windows Configuration-Symlinks-SeCreateSymbolicLinkPrivilege"></span><span class="tag" id="SeCreateSymbolicLinkPrivilege">SeCreateSymbolicLinkPrivilege</span> <span id="Microsoft Windows Configuration-Symlinks-symlinkevaluation"></span><span class="tag" id="symlinkevaluation">symlinkevaluation</span>
+</p>
+
+<p>
+Windows reserves certain file extensions, like .COM, .PRN, etc. This can
+create problems with symlinks being misunderstood from <code>cmd.exe</code> and
+Explorer. Solve by ending the link name with <code>.</code> when using mklink. The <code>.</code>
+does not show up in the actual link name so bash, etc. are not impacted.
+</p>
+
+<pre  DOS>
+mklink /D remodel_richland.droppages.com. C:\Users\fishe\Dropbox\Apps\My.DropPages\remodel_richland.droppages.com
+</pre>
+
+<p>
+<a href="https://github.com/Isiweb/7zBackup/issues/11#issuecomment-371811252">mklink</a> may respond
+<code>You do not have sufficient privilege to perform this operation.</code>
+<code>/J</code> or <code>/H</code> usually are less restrictive but won't work with WSL symbolic
+links or OneDrive.
+<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links">Microsoft</a>
+provides additional detail regarding <span id="Microsoft Windows Configuration-Symlinks-SeCreateSymbolicLinkPrivilege"></span><span class="tag" id="SeCreateSymbolicLinkPrivilege">SeCreateSymbolicLinkPrivilege</span>
+</p>
+
+<ul>
+<li>
+Run <code>gpedit.msc</code>
+
+<li>
+Navigate to Computer configuration → Windows Settings → Security Settings →
+  Local Policies → User Rights Assignment → Create symbolic links
+
+<li>
+Here you can set which users can create symbolic links.
+
+<li>
+You may need to change <span id="Microsoft Windows Configuration-Symlinks-symlinkevaluation"></span><span class="tag" id="symlinkevaluation">symlinkevaluation</span> for OneDrive or corporate network
+  locations. The defaults work in most cases.
+<pre powershell>
+fsutil behavior query symlinkevaluation
+</pre>
+<pre text>
+Local-to-local symbolic link evaluation is: ENABLED
+Local-to-remote symbolic link evaluation is: ENABLED
+Remote-to-local symbolic link evaluation is: DISABLED
+Remote-to-remote symbolic link evaluation is: DISABLED
+</pre>
+
+</ul>
+<div id="Microsoft Windows Configuration-HP Envy BIOS Settings"><h2 id="HP Envy BIOS Settings" class="header"><a href="#Microsoft Windows Configuration-HP Envy BIOS Settings">HP Envy BIOS Settings</a></h2></div>
+<p>
+<span id="Microsoft Windows Configuration-HP Envy BIOS Settings-BIOS"></span><span class="tag" id="BIOS">BIOS</span> <span id="Microsoft Windows Configuration-HP Envy BIOS Settings-HP"></span><span class="tag" id="HP">HP</span>
+</p>
+
+<p>
+Press <code>F10</code> repeatedly during boot.
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

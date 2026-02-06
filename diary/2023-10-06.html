@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-10-06</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-10-06"><h1 id="Journal 2023-10-06" class="header"><a href="#Journal 2023-10-06">Journal 2023-10-06</a></h1></div>
+
+<div id="Journal 2023-10-06-Bibliography Setup"><h2 id="Bibliography Setup" class="header"><a href="#Journal 2023-10-06-Bibliography Setup">Bibliography Setup</a></h2></div>
+<p>
+<span id="Journal 2023-10-06-Bibliography Setup-biblatex"></span><span class="tag" id="biblatex">biblatex</span> <span id="Journal 2023-10-06-Bibliography Setup-bibtool"></span><span class="tag" id="bibtool">bibtool</span> <span id="Journal 2023-10-06-Bibliography Setup-BibTeX"></span><span class="tag" id="BibTeX">BibTeX</span> <span id="Journal 2023-10-06-Bibliography Setup-fzf-bibtex"></span><span class="tag" id="fzf-bibtex">fzf-bibtex</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-09-27.html">Journal 2023-09-27</a> uses <code>pandoc</code> and <code>python</code> to parse
+  <code>BibTeX</code> files.
+
+<li>
+<a href="https://github.com/msprev/fzf-bibtex">github msprev / fzf-bibtex</a>
+
+<li>
+<a href="https://stackoverflow.com/a/54416455/22003636">Getting GOPATH error "go: cannot use path@version syntax in GOPATH mode" in Ubuntu 16.04</a>
+<pre bash>
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-ls
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-markdown
+go install github.com/msprev/fzf-bibtex/cmd/bibtex-cite
+</pre>
+
+<li>
+<code>after/ftplugin/vimwiki.vim</code>
+<pre vim>
+function s:get_bibfiles() abort
+  let save_dir = chdir(expand('%:p:h'))
+  let bibfiles = pandoc#bibliographies#Find_Bibliographies()
+  call chdir(save_dir)
+  let bibfiles = join(bibfiles, ' ')
+  return bibfiles
+endfunction
+
+function! s:bibtex_ls() abort
+  if exists('b:pandoc_biblio_bibs')
+    let source_cmd = 'bibtex-ls '..&lt;sid&gt;get_bibfiles()
+    return source_cmd
+  " let bibfiles = (
+  "     \ globpath('.', '*.bib', v:true, v:true) +
+  "     \ globpath('..', '*.bib', v:true, v:true) +
+  "     \ globpath('*/', '*.bib', v:true, v:true)
+  "     \ )
+  endif
+endfunction
+
+function! s:bibtex_markdown_sink(lines) abort
+  let r=system("bibtex-markdown "..&lt;sid&gt;get_bibfiles(), a:lines)
+  execute ':normal! a' . r
+endfunction
+
+function! s:bibtex_cite_sink_insert(lines) abort
+  let r=system("bibtex-cite ", a:lines)
+  execute ':normal! a' . r
+  call feedkeys('a', 'n')
+endfunction
+
+inoremap &lt;silent&gt;&lt;buffer&gt; @@ &lt;c-g&gt;u&lt;c-o&gt;:call fzf#run({
+      \ 'source': &lt;sid&gt;bibtex_ls(),
+      \ 'sink*': function('&lt;sid&gt;bibtex_cite_sink_insert'),
+      \ 'up': '40%',
+      \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite&gt; "'})&lt;CR&gt;
+
+nnoremap &lt;silent&gt;&lt;buffer&gt; &lt;leader&gt;m :call fzf#run({
+      \ 'source': &lt;sid&gt;bibtex_ls(),
+      \ 'sink*': function('&lt;sid&gt;bibtex_markdown_sink'),
+      \ 'up': '40%',
+      \ 'options': '--ansi --layout=reverse-list --multi --prompt "Markdown&gt; "'})&lt;CR&gt;
+</pre>
+
+<li>
+<code>bibtex-cite</code> is able to use <code>bibtool</code> without <code>pandoc-citeproc</code>, unlike
+  <code>vim-pandoc</code>.
+
+<li>
+<code>bibtex-markdown</code> citations do not support <a href="2023-09-27.html#CSL">CSL</a>.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>
