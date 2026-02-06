@@ -236,6 +236,9 @@
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
+=== chai ===
+- [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
+
 === changelog ===
 - [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
@@ -475,6 +478,9 @@
 === mexican ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 - [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
+
+=== milk ===
+- [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
 
 === miniconda3 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
@@ -757,6 +763,7 @@
 
 === stew ===
 - [[Soup#Soup and Stew#Brunswick Stew]]
+- [[Soup#Soup and Stew#Root Vegetable Stew]]
 - [[Soup#Soup and Stew]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
@@ -789,6 +796,9 @@
 
 === taskwiki ===
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
+
+=== tea ===
+- [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
 
 === telescope ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
@@ -844,6 +854,7 @@
 - [[diary/2025-02-15#Journal 2025-02-15#Astral uv init options]]
 
 === vegetable ===
+- [[Soup#Soup and Stew#Root Vegetable Stew]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
 === vim ===
