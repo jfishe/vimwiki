@@ -5,7 +5,6 @@
 - [[Git#Git#Developer Settings]]
 
 === BIOS ===
-- [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
 - [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
 === BibTeX ===
@@ -29,7 +28,6 @@
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 
 === Debian ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 
@@ -39,7 +37,6 @@
 
 === Fedora ===
 - [[Linux#Linux Notes#Fedora and Red Hat]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Fedora Remix]]
 
 === GitHub ===
@@ -48,7 +45,6 @@
 - [[diary/2024-12-14#Journal 2024-12-14#Sync Forked Github Repository and Branches]]
 
 === HP ===
-- [[Windows 10 Configuration#Windows 10 Configuration#HP Envy BIOS Settings]]
 - [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
 === LaTeX ===
@@ -83,7 +79,6 @@
 
 === Pengwin ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
@@ -93,6 +88,7 @@
 === PowerShellCore ===
 - [[PowerShell#PowerShellCore]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
+- [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 
 === RHEL ===
 - [[Linux#Linux Notes#Fedora and Red Hat]]
@@ -101,14 +97,11 @@
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 
 === SeCreateSymbolicLinkPrivilege ===
-- [[Windows 10 Configuration#SeCreateSymbolicLinkPrivilege]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 - [[windows_config#Microsoft Windows Configuration#Symlinks]]
 - [[windows_config#SeCreateSymbolicLinkPrivilege]]
 
 === Ubuntu ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
@@ -121,19 +114,16 @@
 
 === WSL ===
 - [[Linux#Linux Notes]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2023-07-02#Journal 2023-07-02]]
 - [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
 - [[diary/2024-11-26#Journal 2024-11-26#Windows Subsystem for Linux Stuck During Installation]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === WSL2 ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux]]
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === Win10 ===
-- [[Windows 10 Configuration#Windows 10 Configuration]]
 - [[diary/2023-05-21#Journal 2023-05-21]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
@@ -200,13 +190,10 @@
 - [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes]]
-- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
-- [[main#John D. Fisher's home wiki#Cooking#Ranch Style Beans]]
 
 === beef ===
 - [[cooking#Cooking#Döner Kebab]]
 - [[cooking#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === biblatex ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
@@ -222,9 +209,6 @@
 - [[diary/2023-09-27#Journal 2023-09-27#Bibliography Setup]]
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
 
-=== bluetooth ===
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
-
 === breakfast ===
 - [[cooking#Cooking#Bakade Ägg (Baked Eggs)]]
 - [[cooking#Cooking#Dutch Baby]]
@@ -237,6 +221,7 @@
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
 === chai ===
+- [[Drinks#Drink Recipes#Tea#Karak Chai]]
 - [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
 
 === changelog ===
@@ -247,14 +232,11 @@
 
 === chile ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
-- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === chili ===
 - [[Beans#Dried Beans Recipes#Chili]]
 
 === choco ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey]]
@@ -318,7 +300,6 @@
 
 === diy ===
 - [[index#John D. Fisher's Home Wiki#DIY]]
-- [[main#John D. Fisher's home wiki#DIY]]
 
 === doner ===
 - [[cooking#Cooking#Döner Kebab]]
@@ -339,6 +320,9 @@
 
 === futhorc ===
 - [[diary/2024-09-27#Journal 2024-09-27#Anglo-Saxon runes (ᚠᚢᚦᚩᚱ/Futhorc/Fuþorc)]]
+
+=== fzf ===
+- [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 
 === fzf-bibtex ===
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
@@ -361,7 +345,6 @@
 === git ===
 - [[Git#Git#Pull Rebase]]
 - [[Git#Git#Remove Secrets from Git History]]
-- [[Git#Git#Remove Submodule]]
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 - [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
@@ -397,7 +380,6 @@
 - [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
 
 === install ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
 - [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === jabref ===
@@ -460,6 +442,9 @@
 === martini ===
 - [[Drinks#Drink Recipes#Martini]]
 
+=== masala ===
+- [[Drinks#Drink Recipes#Tea#Karak Chai]]
+
 === math ===
 - [[diary/2025-08-23#Journal 2025-08-23#Mathematics Note-Taking]]
 - [[diary/2025-09-07#Journal 2025-09-07]]
@@ -477,9 +462,12 @@
 
 === mexican ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
-- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
+
+=== mignonette ===
+- [[cooking#Cooking#Mignonette Pepper]]
 
 === milk ===
+- [[Drinks#Drink Recipes#Tea#Karak Chai]]
 - [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
 
 === miniconda3 ===
@@ -488,14 +476,10 @@
 - [[diary/2023-12-05#Journal 2023-12-05#Python Module Search Path]]
 
 === mklink ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
 - [[windows_config#Microsoft Windows Configuration#Symlinks]]
 
 === mocha ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
-
-=== motorola ===
-- [[main#John D. Fisher's home wiki#Electronics#Motorola H17 Bluetooth Headset]]
 
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]
@@ -532,7 +516,6 @@
 
 === nytimes ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
-- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === oats ===
 - [[cooking#Cooking#Uunipuuro (Finnish Oven Porridge)]]
@@ -582,7 +565,6 @@
 
 === pepper ===
 - [[cooking#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
 
 === pico ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
@@ -606,12 +588,11 @@
 === powershell ===
 - [[PowerShell#PowerShell and pwsh#Powershell Commands]]
 - [[PowerShell#PowerShell and pwsh]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 - [[diary/2023-07-28#Journal 2023-07-28#Miniconda Installer for Windows]]
 - [[diary/2023-07-28#Journal 2023-07-28#Removing Stray Conda Environments]]
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
+- [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
@@ -687,7 +668,6 @@
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
-- [[diary/2024-11-14#Journal 2024-11-14#Cheesy Green Chile Bean Bake]]
 
 === recipes ===
 - [[cooking#Cooking]]
@@ -707,6 +687,9 @@
 === richland ===
 - [[index#John D. Fisher's Home Wiki#City of Richland]]
 
+=== ripgrep ===
+- [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
+
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
@@ -714,7 +697,6 @@
 === rub ===
 - [[cooking#Cooking#Santa Maria Rub]]
 - [[cooking#Cooking#Smoked Pork Top Loin]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === salsa ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
@@ -734,8 +716,6 @@
 - [[cooking#Cooking#Mignonette Pepper]]
 - [[cooking#Cooking#Santa Maria Rub]]
 - [[cooking#Cooking#Smoked Pork Top Loin]]
-- [[main#John D. Fisher's home wiki#Cooking#Mignonette Pepper]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === sembr ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
@@ -752,10 +732,6 @@
 
 === ssh ===
 - [[PowerShell#PowerShell and pwsh#OpenSSH]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Configure SSH in each WSL Distro]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Add Unix socket access to Windows OpenSSH for KeeAgent]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Automatically Start WSL sshd]]
@@ -767,12 +743,7 @@
 - [[Soup#Soup and Stew]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
 
-=== submodule ===
-- [[Git#Git#Remove Submodule]]
-
 === symlinkevaluation ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Symlinks]]
-- [[Windows 10 Configuration#symlinkevaluation]]
 - [[windows_config#Microsoft Windows Configuration#Symlinks]]
 - [[windows_config#symlinkevaluation]]
 
@@ -798,6 +769,7 @@
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
 
 === tea ===
+- [[Drinks#Drink Recipes#Tea]]
 - [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
 
 === telescope ===
@@ -837,10 +809,8 @@
 
 === tritip ===
 - [[cooking#Cooking#Santa Maria Rub]]
-- [[main#John D. Fisher's home wiki#Cooking#Santa Maria Rub]]
 
 === troubleshooting ===
-- [[Windows 10 Configuration#Windows 10 Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
 
 === twine ===
@@ -859,7 +829,6 @@
 
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
-- [[Windows 10 Configuration#Windows 10 Configuration#Vim Installation and Update]]
 - [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
@@ -869,6 +838,7 @@
 - [[diary/2024-12-01#vim]]
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
 - [[diary/2024-12-15#Journal 2024-12-15#Papis Command-line Bibliography Manager]]
+- [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === vim-fugitive ===

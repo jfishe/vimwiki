@@ -2,12 +2,26 @@
 
 == Contents ==
 - [[#Drink Recipes]]
+  - [[#Margarita]]
   - [[#Martini]]
     - [[#Dry Martini]]
     - [[#Perfect Martini]]
     - [[#White Lady]]
-  - [[#Margarita]]
+  - [[#Tea]]
+    - [[#Karak Chai]]
   - [[#Backlinks]]
+
+== Margarita ==
+:margarita:
+
+Adapted from
+[[https://www.simplyrecipes.com/recipes/classic_margarita/|Classic Margarita]].
+The proportions doubled to fit my cocktail glass. The lime juice doubled again
+to balance the añejo tequila.
+
+- 3 oz tequila
+- 2 oz Cointreau
+- 2 oz lime juice
 
 == Martini ==
 :martini:
@@ -39,19 +53,42 @@
 Shake for 10 seconds with ice and garnish with pomegranate arils or orange
 peel.
 
-== Margarita ==
-:margarita:
+== Tea ==
+:tea:
 
-Adapted from
-[[https://www.simplyrecipes.com/recipes/classic_margarita/|Classic Margarita]].
-The proportions doubled to fit my cocktail glass. The lime juice doubled again
-to balance the añejo tequila.
+CTC:: crush, tear, curl is black tea processing method.
 
-- 3 oz tequila
-- 2 oz Cointreau
-- 2 oz lime juice
+=== Karak Chai ===
+:chai:milk:masala:
+
+Derived from [[https://www.youtube.com/watch?v=nFWgmhIxSKY|The Secret INGREDIENT Chaiwala Karak Chai]].
+Scaled for 2900 ml (No. 10 can) coconut milk, substituted for milk.
+
+*Ingredients*:
+
+- Milk – 2900 ml
+- Water – 2200 ml
+- Cardamom – 15 pods
+- Cloves – 15 pieces
+- Ginger – 4 small slice (1 Tb [[https://www.penzeys.com/online-catalog/penzeys-minced-ginger/c-24/p-1024/pd-s|Penzeys Minced Ginger]])
+- Cinnamon – 4 small stick
+- [[cooking#Mignonette Pepper|Mignonette Pepper]] – 1 Tb
+- CTC black tea – 1 cup
+- Sugar – 1 cup
+
+*Instructions*:
+
+1. Crack cardamom pods.
+2. Lightly crush remaining spices.
+3. Add water and spices to 10 qt stock pot.
+4. Bring to a boil over medium heat.
+5. Lower the heat and add black tea, cardamom, and cloves.
+6. Let it simmer gently for 5 minutes. Avoid boiling to prevent bitterness.
+7. Add milk and simmer on low heat for 10 minutes.
+8. Add sugar to taste.
+9. Strain into serving teapot.
 
 == Backlinks ==
+- [[/index|John D. Fisher's Home Wiki]]
 - [[/Topic_Index|Topic_Index]]
 - [[/cooking|Cooking]]
-- [[/index|John D. Fisher's home wiki]]

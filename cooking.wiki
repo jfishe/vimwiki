@@ -23,7 +23,6 @@
   - [[#Tortillas de Harina]]
   - [[#Tacos al Pastor]]
   - [[#Döner Kebab]]
-  - [[#Backlinks]]
 
 == Hot Sauce and BBQ Sauce ==
 :hot_sauce:
@@ -157,7 +156,7 @@ Directions:
 6. Cook a few minutes until gravy thickens. Whisk in more milk for a thinner gravy.
 
 == Mignonette Pepper ==
-:pepper:seasoning:
+:pepper:seasoning:mignonette:
 
 Most mignonette pepper recipes include all spice berries and only include white
 and black peppercorns. This is based on the ground pepper available as
@@ -562,7 +561,3 @@ Sliced onions and tomatoes
 Pickles
 Lettuce
 Hot sauce
-
-== Backlinks ==
-- [[/Topic_Index|Topic_Index]]
-- [[/index|John D. Fisher's home wiki]]

@@ -1,6 +1,13 @@
 = Linux Notes =
 :Linux:WSL:
 
+== Contents ==
+- [[#Linux Notes]]
+  - [[#Ubuntu, Debian and Pengwin]]
+    - [[#Packages Not Upgraded]]
+  - [[#Fedora and Red Hat]]
+  - [[#Bash Shell Script]]
+
 == Ubuntu, Debian and Pengwin ==
 :Ubuntu:Pengwin:
 
@@ -62,8 +69,8 @@ sudo apt install --only-upgrade <package name>
 {{{bash
 declare -a toinstall
 for key in "${!package_to_install[@]}"; do
-  if [[ $(command -v $key) ]]; then
-    IO:debug "${package_to_install[$key]} is already installed."
+  if [ $(command -v "$key") ]; then
+    IO:debug "${package_to_install["$key"]} is already installed."
   else
     toinstall=(${toinstall[@]} ${package_to_install["$key"]})
   fi

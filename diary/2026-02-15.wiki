@@ -1,0 +1,12 @@
+= Journal 2026-02-15 =
+
+== FZF with PowerShell ==
+:vim:fzf:ripgrep:PowerShellCore:powershell:
+
+{{{vim
+  if &shell =~? 'cmd'
+    let winpath = split(system('for %A in ("'.a:path.'") do @echo %~sA'), "\n")[0]
+  elseif &shell =~? 'powershell\|pwsh'
+    let winpath = split(system('(New-Object -ComObject Scripting.FileSystemObject).GetFile(' .. shellescape(a:path) .. ').ShortPath'))[0]
+  endif
+}}}
