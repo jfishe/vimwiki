@@ -1,7 +1,7 @@
 = Microsoft Windows Configuration =
 :Win10:Win11:
 
-%% == Contents ==
+== Contents ==
 - [[#Microsoft Windows Configuration]]
   - [[#Windows Update Fails]]
   - [[#NumLock on Startup]]
@@ -219,6 +219,13 @@ enabled=true
 
 [boot]
 systemd=true
+}}}
+
+==== Windows Firewall Configuration ====
+
+{{{powershell
+Get-NetFirewallRule -DisplayGroup "Remote Desktop" |
+  Set-NetFirewallRule -Enabled True
 }}}
 
 === Access WSL Files from Windows ===
