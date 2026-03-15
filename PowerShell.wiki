@@ -51,6 +51,9 @@ Import-Module oh-my-posh
 Set-Theme Honukai
 }}}
 
+https://devblogs.microsoft.com/powershell/optimizing-your-profile/
+Get-ArgumentCompleter.ps1
+
 == PowerShell Modules and Scripts ==
 
 === Required by PROFILE ===

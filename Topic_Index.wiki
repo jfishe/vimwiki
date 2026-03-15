@@ -765,8 +765,15 @@
 === task_lists ===
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 
+=== taskopen ===
+- [[diary/2026-02-27#Journal 2026-02-27#Taskwiki Taskwarrior Annotations]]
+
+=== taskwarrior ===
+- [[diary/2026-02-27#Journal 2026-02-27#Taskwiki Taskwarrior Annotations]]
+
 === taskwiki ===
 - [[diary/2023-09-02#Journal 2023-09-02#Taskwiki ImportError]]
+- [[diary/2026-02-27#Journal 2026-02-27#Taskwiki Taskwarrior Annotations]]
 
 === tea ===
 - [[Drinks#Drink Recipes#Tea]]
