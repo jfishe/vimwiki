@@ -77,6 +77,10 @@ CTC:: crush, tear, curl is black tea processing method.
 Derived from [[https://www.youtube.com/watch?v=nFWgmhIxSKY|The Secret INGREDIENT Chaiwala Karak Chai]].
 Scaled for 2900 ml (No. 10 can) coconut milk, substituted for milk.
 
+If using nut milk, gently warm or chill to match tea temperature.
+Add nut milk after tea is prepared;
+do not cook nut milk because it may break the emulsion.
+
 *Ingredients*:
 
 - Milk – 2900 ml
@@ -86,8 +90,8 @@ Scaled for 2900 ml (No. 10 can) coconut milk, substituted for milk.
 - Ginger – 4 small slice (1 Tb [[https://www.penzeys.com/online-catalog/penzeys-minced-ginger/c-24/p-1024/pd-s|Penzeys Minced Ginger]])
 - Cinnamon – 4 small stick
 - [[cooking#Mignonette Pepper|Mignonette Pepper]] – 1 Tb
-- CTC black tea – 1 cup
-- Sugar – 1 cup
+- CTC black tea – 1 cup (100 g)
+- Sugar – 1 cup (200 g)
 
 *Instructions*:
 
@@ -95,9 +99,11 @@ Scaled for 2900 ml (No. 10 can) coconut milk, substituted for milk.
 2. Lightly crush remaining spices.
 3. Add water and spices to 10 qt stock pot.
 4. Bring to a boil over medium heat.
-5. Lower the heat and add black tea, cardamom, and cloves.
+5. Lower the heat and add black tea.
 6. Let it simmer gently for 5 minutes. Avoid boiling to prevent bitterness.
-7. Add milk and simmer on low heat for 10 minutes.
+7. If using dairy or coconut milk,
+   add milk and simmer on low heat,
+   for 10 minutes.
 8. Add sugar to taste.
 9. Strain into serving teapot.
 
