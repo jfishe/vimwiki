@@ -33,13 +33,14 @@ repos:
         stages:
           - pre-commit
         verbose: true
+        files: \.wiki$
   - repo: local
     hooks:
       - id: ghp-import
         name: Update Github Pages
-        entry: .pre_commit_hooks/gh-pages.sh
-        language: script
+        language: unsupported_script
         require_serial: true
         stages:
           - pre-push
         verbose: true
+        entry: .pre_commit_hooks/gh-pages.sh
