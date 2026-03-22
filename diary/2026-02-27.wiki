@@ -11,16 +11,31 @@
 - Associate fully editable note files with tasks
 - Provide a visual indication within Vimwiki when a task is annotated
 
+=== Installation ===
+
 Install [[https://nim-lang.org/install_unix.html|`Nim` compiler]].
 
 {{{bash
-git clone https://github.com/jschlatow/taskopen.git
-cd taskopen
-
-# Default xdg-open in WSL uses Windows file type association.
-# For text file types, use $EDITOR
-make OPEN='xdg-open-cli' clean manpages all
-sudo make install
+TMP="$(mktemp -d)"
+function install_taskopen () {
+  hash pixi || return 1
+  pushd "$TMP"
+  git clone https://github.com/jschlatow/taskopen.git
+  pixi global install nim
+  sudo apt install xdg-utils
+  cd taskopen
+  if [ -z "${XDG_DATA_HOME}" ]; then
+    export XDG_DATA_HOME="${HOME}/.local/share"
+  fi
+  mkdir -p "${XDG_DATA_HOME}"
+  if [ -z "${XDG_CONFIG_HOME}" ]; then
+    export XDG_CONFIG_HOME="${HOME}/.config"
+  fi
+  mkdir -p "${XDG_CONFIG_HOME}"
+  make OPEN='xdg-open-cli' PREFIX="$XDG_DATA_HOME/taskopen/scripts:/usr/local" all manpages
+  sudo make install
+  popd
+}
 }}}
 
 === Taskopen Error Messages ===
@@ -74,8 +89,13 @@ wiki.modes="batch,any,normal"
 
 shortpath.target=annotations
 shortpath.labelregex="^(wiki)"
-# shortpath.regex="/mnt/c/Users/(jfishe|JFISHE)/OneDrive - Energy Northwest/Documents/(.*)"
 shortpath.regex="/(mnt/|)c/Users/(?i:jdfen)/OneDrive/Documents/(.*)"
 shortpath.command="""shortpath "$LABEL: $FILE" $LABEL': ~/'$LAST_MATCH"""
 shortpath.modes="batch,any,normal"
 }}}
+
+=== Usage ===
+
+`taskopen batch --include=shortpath -A`
+`taskopen any --active-tasks='+WAITING'`
+`task <id|uid> annotate -- url: <https://www.site.com>`
