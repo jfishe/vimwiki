@@ -180,6 +180,9 @@
 === bash ===
 - [[Linux#Linux Notes#Bash Shell Script]]
 
+=== bat ===
+- [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+
 === bbq ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
@@ -226,6 +229,9 @@
 
 === changelog ===
 - [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
+
+=== chezmoi ===
+- [[diary/2026-03-29#Journal 2026-03-29#Chezmoi Dotfiles Management]]
 
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
@@ -312,6 +318,9 @@
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
 
+=== fd ===
+- [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+
 === fetch ===
 - [[Git#Git#Pull Rebase]]
 
@@ -323,6 +332,7 @@
 
 === fzf ===
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
+- [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
 
 === fzf-bibtex ===
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
@@ -593,6 +603,7 @@
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
+- [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
@@ -626,6 +637,7 @@
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 - [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
 - [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
+- [[diary/2026-04-05#Journal 2026-04-05#PyScaffold]]
 
 === pyspark ===
 - [[diary/2023-05-29#Journal 2023-05-29]]
@@ -656,9 +668,11 @@
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 - [[diary/2025-02-15#Journal 2025-02-15#Astral uv init options]]
+- [[diary/2026-04-05#Journal 2026-04-05#PyScaffold]]
 
 === rcm ===
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
+- [[diary/2026-03-29#Journal 2026-03-29#Chezmoi Dotfiles Management]]
 
 === rebase ===
 - [[Git#Git#Pull Rebase]]
@@ -689,6 +703,7 @@
 
 === ripgrep ===
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
+- [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
 
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -919,6 +934,9 @@
 
 === window ===
 - [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
+
+=== winget ===
+- [[diary/2026-03-27#Journal 2026-03-27#Windows Package Manager]]
 
 === zsh ===
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]

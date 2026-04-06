@@ -1,0 +1,39 @@
+= Journal 2026-03-29 =
+
+== FZF with PowerShell ==
+:fzf:ripgrep:bat:fd:powershell:
+
+- [[/diary/2026-02-15#FZF with PowerShell]] demonstrates Vim integration
+  for `cmd` and PowerShell.
+- [[https://dev.to/kevinnitro/fzf-advanced-integration-in-powershell-53p0|Fzf advanced integration in PowerShell]]
+
+{{{powershell
+fd --type file --follow --hidden --exclude .git --exclude '*tmp*' |
+    fzf --prompt 'Files> ' `
+      --header-first `
+      --header 'CTRL-S: Switch between Files/Directories' `
+      --bind 'ctrl-s:transform:if not "%FZF_PROMPT%"=="Files> " (echo ^change-prompt^(Files^> ^)^+^reload^(fd --type file^)) else (echo ^change-prompt^(Directory^> ^)^+^reload^(fd --type directory^))' `
+      --preview 'if "%FZF_PROMPT%"=="Files> " (bat --color=always {}) else (eza -T --colour=always --icons=always {})'
+}}}
+
+- [[https://www.powershellgallery.com/packages/PSFzf|PSGallery / PSFzf]] is a PowerShell wrapper for `fzf`.
+
+== Chezmoi Dotfiles Management ==
+:chezmoi:rcm:
+
+Manage your dotfiles across multiple diverse machines, securely.
+
+chezmoi's documentation [[https://chezmoi.io/]]
+- Migrate existing dotsfiles:
+  - [[https://github.com/twpayne/chezmoi/discussions/2330|chezmoi discussions #2330]]
+
+{{{bash
+pixi global install chezmoi
+
+git clone https://github.com/jfishe/dotfiles.git $HOME/.local/share/chezmoi
+chezmoi cd
+mkdir home
+echo home > .chezmoiroot
+chezmoi add --follow ~/.bashrc
+rm .bashrc
+}}}

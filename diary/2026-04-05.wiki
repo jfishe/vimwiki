@@ -1,0 +1,30 @@
+= Journal 2026-04-05 =
+
+== PyScaffold ==
+:python:pyscaffold:
+
+{{{cfg
+# PyScaffold's configuration file, see:
+# https://pyscaffold.org/en/latest/configuration.html
+#
+# Accepted in `metadata`: author, author_email and license.
+# Accepted in `pyscaffold`: extensions (and associated opts).
+[metadata]
+license = MIT
+[pyscaffold]
+version = 4.6
+extensions =
+    dsproject
+    github_actions
+    markdown
+    no_skeleton
+    pre_commit
+    pre_commit_ruff
+dsproject_version = 0.7.2
+}}}
+
+{{{bash
+putup -v --description 'Add a short description here!' \
+  --save-config './project_dir/.pyscaffold.cfg' \
+  project_dir
+}}}

@@ -1,0 +1,40 @@
+= Journal 2026-03-27 =
+
+== Windows Package Manager ==
+:winget:
+
+{{{powershell
+winget install --exact Git.Git --source winget --scope user `
+  --location "$env:LOCALAPPDATA\Programs\Git" `
+  --custom /LOADINF="$(Resolve-Path git_options.ini)" `
+  --interactive
+}}}
+
+[[https://gitforwindows.org/silent-or-unattended-installation.html|Git for Windows silent or unattended installation]] explains
+`git_options.ini`.
+
+{{{ini
+# git_options.ini
+[Setup]
+Lang=default
+# Dir=C:\Program Files\Git
+Group=Git
+NoIcons=0
+SetupType=default
+Components=ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh,windowsterminal,scalar
+Tasks=
+EditorOption=VIM
+CustomEditorPath=
+DefaultBranchOption=main
+PathOption=CmdTools
+SSHOption=OpenSSH
+TortoiseOption=false
+CURLOption=WinSSL
+CRLFOption=LFOnly
+BashTerminalOption=MinTTY
+GitPullBehaviorOption=Rebase
+UseCredentialManager=Enabled
+PerformanceTweaksFSCache=Enabled
+EnableSymlinks=Enabled
+EnableFSMonitor=Disabled
+}}}
