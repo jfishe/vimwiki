@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-11-26</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-11-26"><h1 id="Journal 2024-11-26" class="header"><a href="#Journal 2024-11-26">Journal 2024-11-26</a></h1></div>
+
+<div id="Journal 2024-11-26-Windows Subsystem for Linux Stuck During Installation"><h2 id="Windows Subsystem for Linux Stuck During Installation" class="header"><a href="#Journal 2024-11-26-Windows Subsystem for Linux Stuck During Installation">Windows Subsystem for Linux Stuck During Installation</a></h2></div>
+<p>
+<span id="Journal 2024-11-26-Windows Subsystem for Linux Stuck During Installation-WSL"></span><span class="tag" id="WSL">WSL</span> <span id="Journal 2024-11-26-Windows Subsystem for Linux Stuck During Installation-CFG"></span><span class="tag" id="CFG">CFG</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/microsoft/WSL/issues/6405">WSL distro installation stuck</a>
+
+<ol>
+<li>
+Open "Windows Security"
+
+<li>
+Open "App &amp; Browser control"
+
+<li>
+Click "Exploit protection settings" at the bottom
+
+<li>
+Switch to "Program settings" tab
+
+<li>
+Add/Locate <code>Hyper-V Host Compute Service</code>:
+     <code>C:\WINDOWS\System32\vmcompute.exe</code> in the list and expand it
+
+<li>
+Click "Edit"
+
+<li>
+Scroll down to "Code flow guard (<code>CFG</code>)" and check "Override system
+     settings" (<code>CFG</code> must be ON for this app!)
+
+<li>
+Check "Use strict <code>CFG</code>".
+
+<li>
+Click "Apply".
+
+<li>
+Reboot
+
+</ol>
+</ul>
+<div id="Journal 2024-11-26-Backup and Restore Whitewater Foundry `Pengwin`"><h2 id="Backup and Restore Whitewater Foundry `Pengwin`" class="header"><a href="#Journal 2024-11-26-Backup and Restore Whitewater Foundry `Pengwin`">Backup and Restore Whitewater Foundry <code>Pengwin</code></a></h2></div>
+<p>
+<span id="Journal 2024-11-26-Backup and Restore Whitewater Foundry `Pengwin`-WSL"></span><span class="tag" id="WSL">WSL</span> <span id="Journal 2024-11-26-Backup and Restore Whitewater Foundry `Pengwin`-Pengwin"></span><span class="tag" id="Pengwin">Pengwin</span> <span id="Journal 2024-11-26-Backup and Restore Whitewater Foundry `Pengwin`-VHD"></span><span class="tag" id="VHD">VHD</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/WhitewaterFoundry/Pengwin/issues/598#top">Proper way to backup/restore Pengwin #598</a>
+
+<li>
+Determine archive location, and update <code>$FileName</code>.
+
+<li>
+Determine previous installation location, and update <code>$InstallLocation</code>.
+
+<li>
+To avoid error messages, <code>wsl --unregister WLinux</code>.
+<pre powershell>
+# wsl --export &lt;Distro&gt; &lt;FileName[.tar|.vhdx]&gt; [--vhd]
+# VHD (Virtual Hard Disk) is a file-based virtual disk that represents a Linux
+# file system.
+$FileName = "$env:USERPROFILE\Downloads\WLinux.vhdx"
+wsl --export WLinux "$FileName" --vhd
+
+# wsl --import &lt;Distro&gt; &lt;InstallLocation&gt; &lt;FileName&gt; [Options]
+#   [--version &lt;1|2&gt;]
+#   [--vhd]
+$InstallLocation = Get-Item -Path ("$env:LOCALAPPDATA\" +
+  "Packages\WhitewaterFoundryLtd.Co.16571368D6CFF_kd1vv0z0vy70w\LocalState\")
+$FileName = Get-Item -Path "$env:USERPROFILE\Downloads\WLinux.vhdx"
+
+wsl --import WLinux "$InstallLocation" "$FileName" --version 2 --vhd
+pengwin.exe config --default-user jdfen
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

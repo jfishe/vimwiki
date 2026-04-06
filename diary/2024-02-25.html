@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-02-25</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-02-25"><h1 id="Journal 2024-02-25" class="header"><a href="#Journal 2024-02-25">Journal 2024-02-25</a></h1></div>
+
+<div id="Journal 2024-02-25-Pandoc v3.1.3 and v3.1.12"><h2 id="Pandoc v3.1.3 and v3.1.12" class="header"><a href="#Journal 2024-02-25-Pandoc v3.1.3 and v3.1.12">Pandoc v3.1.3 and v3.1.12</a></h2></div>
+<p>
+<span id="Journal 2024-02-25-Pandoc v3.1.3 and v3.1.12-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-02-25-Pandoc v3.1.3 and v3.1.12-panvimwiki"></span><span class="tag" id="panvimwiki">panvimwiki</span>
+</p>
+
+<pre bash>
+# pandoc 3.1.3
+# Features: +server +lua
+# Scripting engine: Lua 5.4
+printf 'Messina ([2007](#ref-TSTF-475-Ar1))\n\n([[#ref-TSTF-475-Ar1|2007]])' |
+pandoc \
+  --from=markdown+wikilinks_title_after_pipe-task_lists \
+  --to=markdown \
+  --standalone \
+  --wrap=none
+Messina ([2007](#ref-TSTF-475-Ar1))
+
+# pandoc 3.1.12.1
+# Features: +server +lua
+# Scripting engine: Lua 5.4
+echo 'Messina ([2007](#ref-TSTF-475-Ar1))' | pandoc \
+--from=markdown+wikilinks_title_after_pipe-task_lists \
+--to=gfm \
+--standalone \
+--wrap=none
+Error at (line 1, column 11):
+unexpected '2'
+Messina ([2007](#ref-TSTF-475-Ar1))
+</pre>
+
+<p>
+<a href="https://github.com/jgm/pandoc/issues/9510#issue-2152867988">wikilinks_title_after_pipe unexpected '2' Error mixed markdown and wikilinks #9510</a>
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

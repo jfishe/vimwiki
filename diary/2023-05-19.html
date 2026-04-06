@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-05-19</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-05-19"><h1 id="Journal 2023-05-19" class="header"><a href="#Journal 2023-05-19">Journal 2023-05-19</a></h1></div>
+
+<div id="Journal 2023-05-19-Vimwiki2HTML with ghp-import"><h2 id="Vimwiki2HTML with ghp-import" class="header"><a href="#Journal 2023-05-19-Vimwiki2HTML with ghp-import">Vimwiki2HTML with ghp-import</a></h2></div>
+<p>
+<span id="Journal 2023-05-19-Vimwiki2HTML with ghp-import-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2023-05-19-Vimwiki2HTML with ghp-import-ghp-import"></span><span class="tag" id="ghp-import">ghp-import</span> <span id="Journal 2023-05-19-Vimwiki2HTML with ghp-import-gh-pages"></span><span class="tag" id="gh-pages">gh-pages</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/c-w/ghp-import#github-pages-import">Github Pages Import</a>
+
+<li>
+<a href="https://pages.github.com/">Github Pages</a>
+
+<li>
+Add to <code>.git/hooks/pre-commit</code>:
+<pre bash>
+  # Update gh-pages
+  if test "$(git config --bool ghppages.push || echo false)" = true
+  then
+    pathhtml=$(git config ghppages.pathhtml || echo "$GIT_WORK_TREE/docs")
+    say 'Pushing html to gh-pages...'
+    ghp-import -n -o -p -f "$pathhtml"
+    say_done
+  fi
+</pre>
+
+<li>
+Update git config to enable:
+<pre bash>
+  git config ghppages.push true
+  # g:vimwiki_list[1]['path_html']
+  git config ghppages.pathhtml "$HOME/vimwiki_home/docs"
+</pre>
+
+<li>
+To test start a webserver on the local network and open
+  <a href="http://laptop-pif179dt:8000/">http://laptop-pif179dt:8000/</a>. Update the
+  <code>hostname</code> and allow <code>python</code> to access the network, in Windows
+  Security: Firewall &amp; network protection.
+  <a href="https://pythonbasics.org/webserver/">Create a Python Web Server</a> provides
+  details.
+<pre powershell>
+python -m http.server --bind 0.0.0.0 8000 --dir $HOME/vimwiki_home/docs
+</pre>
+
+<li>
+Template updates recommended by Ruslan Osipov in
+  <a href="https://www.rosipov.com/blog/custom-templates-in-vimwiki/">Custom templates in vimwiki</a>.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

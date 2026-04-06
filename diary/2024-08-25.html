@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-08-25</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-08-25"><h1 id="Journal 2024-08-25" class="header"><a href="#Journal 2024-08-25">Journal 2024-08-25</a></h1></div>
+
+<div id="Journal 2024-08-25-VimwikiSearchTags Default"><h2 id="VimwikiSearchTags Default" class="header"><a href="#Journal 2024-08-25-VimwikiSearchTags Default">VimwikiSearchTags Default</a></h2></div>
+
+<pre vim>
+/
+\%(^\|\s\)
+\@&lt;=\%(:\)
+\%(\%([^:'[:space:]]\+\)\%(:\)\)*
+AppendixR
+\%(\%(:\)\%([^:'[:space:]]\+\)\)*
+\%(:\)
+\%(\s\|$\)
+\@=
+/
+</pre>
+
+<div id="Journal 2024-08-25-VimwikiSearchTags Markdown Hashtag"><h2 id="VimwikiSearchTags Markdown Hashtag" class="header"><a href="#Journal 2024-08-25-VimwikiSearchTags Markdown Hashtag">VimwikiSearchTags Markdown Hashtag</a></h2></div>
+
+<p>
+<code>vimwiki#tags#search_tags</code> generates a Vim regex based on
+<code>g:vimwiki_tag_format</code> and <code>vimwiki#vars#get_syntaxlocal('tag_format')</code>.
+</p>
+
+<pre vim>
+/
+\%(^\|\s\)
+\@&lt;=\%(\W#\w\@=\)
+\%(\%([^#:[:space:]]\+\)\%([#[:space:]]\+\)\)*
+AppendixR
+\%(\%([#[:space:]]\+\)\%([^#:[:space:]]\+\)\)*
+\%(\)
+\%(\s\|$\)
+\@=
+/
+</pre>
+
+<p>
+Modify the preceding for compatibility with <code>ripgrep</code> <code>pcre2</code> regex syntax.
+</p>
+
+<pre text>
+(^|\s)(?&lt;=(\W#\w))(?=(([^#:[:space:]]+)([#[:space:]]+)))*
+</pre>
+
+<pre text>
+ #EnergyNorthwest #PFSS #AppendixR #GNF3 #TRACG-LOCA #EPU
+ #AppendixR
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

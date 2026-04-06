@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-12-05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-12-05"><h1 id="Journal 2024-12-05" class="header"><a href="#Journal 2024-12-05">Journal 2024-12-05</a></h1></div>
+
+<div id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages"><h2 id="Pre-Commit Lint Git Commit Messages" class="header"><a href="#Journal 2024-12-05-Pre-Commit Lint Git Commit Messages">Pre-Commit Lint Git Commit Messages</a></h2></div>
+<p>
+<span id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages-pre-commit"></span><span class="tag" id="pre-commit">pre-commit</span> <span id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages-git"></span><span class="tag" id="git">git</span> <span id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages-commitizen"></span><span class="tag" id="commitizen">commitizen</span>
+</p>
+
+<ul>
+<li>
+<a href="2024-12-01.html#gitlint">Journal 2024-12-01</a> GitLint
+
+<li>
+<code>cz commit</code> populates the commit message using a dialog and selection format,
+  much less efficient that <span id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages-UltiSnips"></span><span class="tag" id="UltiSnips">UltiSnips</span> and <span id="Journal 2024-12-05-Pre-Commit Lint Git Commit Messages-vim-fugitive"></span><span class="tag" id="vim-fugitive">vim-fugitive</span>
+
+<li>
+If pre-commit hooks are selected, <code>cz init</code> modifies and reorders
+  <code>.pre-commit-config.yaml</code>, strips comments, and installs <code>.git/hooks/</code>
+  scripts. The less readable format is not consistent with the typical
+  structure, e.g., <a href="https://commitizen-tools.github.io/commitizen/getting_started/#integration-with-pre-commit">Commitizen Integration with Pre-Commit</a>.
+  Leave that option blank during <code>cz init</code>.
+
+<li>
+<code>cz bump</code> creates a <code>bump:</code> commit, only if previous commit messages include
+  <code>feat:</code>, <code>fix:</code>, etc. <code>build:</code>, e.g, does not. The extraneous <code>bump:</code>
+  clutters the git history.
+
+<li>
+In project root, initialize <a href="https://commitizen-tools.github.io/">Commitizen</a> with <code>cz init</code>.
+
+<ul>
+<li>
+Please choose a supported config file:  pyproject.toml
+
+<li>
+Please choose a cz (commit rule): (default: cz_conventional_commits) cz_conventional_commits
+
+<li>
+Choose the source of the version: pep621: Get and set version from pyproject.toml:project.version field
+
+<li>
+Choose version scheme:  semver2
+
+<li>
+Please enter the correct version format: (default: "$version")
+
+<li>
+Create changelog automatically on bump Yes
+
+<li>
+Keep major version zero (0.x) during breaking changes Yes
+
+<li>
+What types of pre-commit hook you want to install? (Leave blank if you don't want to install)
+
+</ul>
+<li>
+Select dialog options to update <code>pyproject.toml</code>:
+<pre toml>
+  [tool.commitizen]
+  name = "cz_conventional_commits"
+  tag_format = "$version"
+  version_scheme = "semver2"
+  version_provider = "scm"
+  update_changelog_on_bump = true
+  major_version_zero = true
+</pre>
+
+<li>
+<a href="https://commitizen-tools.github.io/commitizen/getting_started/#integration-with-pre-commit">Commitizen Integration with Pre-Commit</a> recommends manually installing
+  <code>commit-msg</code> and <code>pre-push</code> hooks; improve reproducibility by adding
+  <code>stages:</code> to <code>.pre-commit-config.yaml</code>:
+<pre yaml>
+  # Commitzen
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.0.0
+    hooks:
+      - id: commitizen
+        stages:
+          - commit-msg
+      - id: commitizen-branch
+        stages:
+          - pre-push
+</pre>
+
+<li>
+Update pre-commit hooks and install:
+<pre bash>
+  pre-commit autoupdate
+  pre-commit install --install-hooks
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

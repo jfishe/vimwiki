@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-02-27</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-02-27"><h1 id="Journal 2026-02-27" class="header"><a href="#Journal 2026-02-27">Journal 2026-02-27</a></h1></div>
+
+<div id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations"><h2 id="Taskwiki Taskwarrior Annotations" class="header"><a href="#Journal 2026-02-27-Taskwiki Taskwarrior Annotations">Taskwiki Taskwarrior Annotations</a></h2></div>
+<p>
+<span id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-taskopen"></span><span class="tag" id="taskopen">taskopen</span> <span id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-taskwiki"></span><span class="tag" id="taskwiki">taskwiki</span> <span id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-taskwarrior"></span><span class="tag" id="taskwarrior">taskwarrior</span>
+</p>
+
+<p>
+<a href="https://github.com/tbabej/taskwiki/discussions/386">Task attachments perfected! #386</a> integrates
+<a href="https://github.com/jschlatow/taskopen">taskopen</a> into <code>taskwiki</code>.
+</p>
+
+<ul>
+<li>
+Associate URLs with tasks
+
+<li>
+Associate files with tasks
+
+<li>
+Associate fully editable note files with tasks
+
+<li>
+Provide a visual indication within Vimwiki when a task is annotated
+
+</ul>
+<div id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Installation"><h3 id="Installation" class="header"><a href="#Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Installation">Installation</a></h3></div>
+
+<p>
+Install [[<a href="https://nim-lang.org/install_unix.html|">https://nim-lang.org/install_unix.html|</a><code>Nim</code> compiler]].
+</p>
+
+<pre bash>
+TMP="$(mktemp -d)"
+function install_taskopen () {
+  hash pixi || return 1
+  pushd "$TMP"
+  git clone https://github.com/jschlatow/taskopen.git
+  pixi global install nim
+  sudo apt install xdg-utils
+  cd taskopen
+  if [ -z "${XDG_DATA_HOME}" ]; then
+    export XDG_DATA_HOME="${HOME}/.local/share"
+  fi
+  mkdir -p "${XDG_DATA_HOME}"
+  if [ -z "${XDG_CONFIG_HOME}" ]; then
+    export XDG_CONFIG_HOME="${HOME}/.config"
+  fi
+  mkdir -p "${XDG_CONFIG_HOME}"
+  make OPEN='xdg-open-cli' PREFIX="$XDG_DATA_HOME/taskopen/scripts:/usr/local" all manpages
+  sudo make install
+  popd
+}
+</pre>
+
+<div id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Taskopen Error Messages"><h3 id="Taskopen Error Messages" class="header"><a href="#Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Taskopen Error Messages">Taskopen Error Messages</a></h3></div>
+
+<pre bash>
+taskopen --All any
+
+# parsejson.nim(518)       raiseParseErr
+# Error: unhandled exception: (1, 0) Error: { expected [JsonParsingError]
+</pre>
+
+<p>
+<code>taskopen</code> does not parse deleted tasks.
+<code>$XDG_CONFIG_HOME/taskopen/taskopenrc</code> can prevent <code>task</code> exporting
+deleted tasks.
+</p>
+
+<pre ini>
+[General]
+taskargs="-DELETED"
+</pre>
+
+<div id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Taskopen Configuration"><h3 id="Taskopen Configuration" class="header"><a href="#Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Taskopen Configuration">Taskopen Configuration</a></h3></div>
+
+<p>
+<code>$XDG_CONFIG_HOME/taskopen/taskopenrc</code>
+</p>
+
+<pre ini>
+[General]
+EDITOR=vim
+taskbin=task
+taskargs="-DELETED"
+no_annotation_hook="addnote $ID"
+task_attributes="priority,project,tags,description"
+--sort:"urgency-,annot"
+--active-tasks:"+PENDING"
+# --active-tasks:"(+ANNOTATED and (+WAITING or +PENDING))"
+# --active-tasks:"(+WAITING or +PENDING)"
+# path_ext=/usr/local/share/taskopen/scripts
+path_ext=/home/jdfen/.local/share/taskopen/scripts
+
+[Actions]
+files.target=annotations
+files.labelregex="^(?!wiki).*"
+files.regex="^[\\.\\/~]+.*\\.(.*)"
+files.command="xdg-open $FILE"
+files.modes="batch,any,normal"
+
+wiki.target=annotations
+wiki.labelregex="^(wiki)"
+wiki.regex="^[\\.\\/~]+.*\\.(.*)"
+wiki.command="xdg-open-cli $FILE"
+wiki.modes="batch,any,normal"
+
+shortpath.target=annotations
+shortpath.labelregex="^(wiki)"
+shortpath.regex="/(mnt/|)c/Users/(?i:jdfen)/OneDrive/Documents/(.*)"
+shortpath.command="""shortpath "$LABEL: $FILE" $LABEL': ~/'$LAST_MATCH"""
+shortpath.modes="batch,any,normal"
+</pre>
+
+<div id="Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Usage"><h3 id="Usage" class="header"><a href="#Journal 2026-02-27-Taskwiki Taskwarrior Annotations-Usage">Usage</a></h3></div>
+
+<p>
+<code>taskopen batch --include=shortpath -A</code>
+<code>taskopen any --active-tasks='+WAITING'</code>
+<code>task &lt;id|uid&gt; annotate -- url: &lt;https://www.site.com&gt;</code>
+</p>
+</div>
+    <p><small>Page created on 2026-03-22</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

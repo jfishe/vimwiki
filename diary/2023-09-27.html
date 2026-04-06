@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-09-27</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-09-27"><h1 id="Journal 2023-09-27" class="header"><a href="#Journal 2023-09-27">Journal 2023-09-27</a></h1></div>
+
+<div id="Journal 2023-09-27-Bibliography Setup"><h2 id="Bibliography Setup" class="header"><a href="#Journal 2023-09-27-Bibliography Setup">Bibliography Setup</a></h2></div>
+<p>
+<span id="Journal 2023-09-27-Bibliography Setup-biblatex"></span><span class="tag" id="biblatex">biblatex</span> <span id="Journal 2023-09-27-Bibliography Setup-bibtool"></span><span class="tag" id="bibtool">bibtool</span> <span id="Journal 2023-09-27-Bibliography Setup-BibTeX"></span><span class="tag" id="BibTeX">BibTeX</span> <span id="Journal 2023-09-27-Bibliography Setup-CSL"></span><span class="tag" id="CSL">CSL</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-09.html#Bibliography Setup">Journal 2023-11-09 Bibliography Setup</a>
+
+<li>
+<a href="https://citationstyles.org/authors/#/finding-and-installing-styles">https://citationstyles.org/authors/#/finding-and-installing-styles</a>
+  recommends finding CSL styles using <a href="https://www.zotero.org/styles?q=ieee">Zotero Style Repository</a>
+<pre bash>
+pandoc --citeproc \
+  --bibliography=zk.bib \
+  --metadata='link-citations:true' \
+  --from=markdown+wikilinks_title_after_pipe \
+  --standalone \
+  --to=markdown-citations \
+  --wrap=none \
+  20231019-0701.md |
+  python dude.py
+</pre>
+<pre markdown>
+::: {#refs .references .csl-bib-body .hanging-indent}
+::: {#ref-bloggs-jones .csl-entry}
+Bloggs, A. J., and X. Y. Jones. 1959. "Title Title Title Title Title Title Title Title Title Title." *Journal Journal Journal*.
+:::
+
+::: {#ref-chomsky-73 .csl-entry}
+Chomsky, N. 1973. "Conditions on Transformations." In *A Festschrift for Morris Halle*, edited by S. R. Anderson and P. Kiparsky. New York: Holt, Rinehart &amp; Winston.
+:::
+:::
+</pre>
+<pre python>
+import sys
+import re
+
+def GetTheSentences():
+  for result in re.findall('::: {#ref-(.*?):::', sys.stdin.read(), re.S):
+     entry = result.split("\n")
+     reference = f"[#{entry[0].split()[0]}]:"
+     citation = "\n".join(entry[1:])
+     print(f"{reference} {citation}")
+
+if __name__ == "__main__":
+    GetTheSentences()
+</pre>
+
+<li>
+<a href="2023-10-06.html#fzf-bibtex">fzf-bibtex</a> uses <code>bibtool</code> to parse <code>BibTeX</code>.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-02-11</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-02-11"><h1 id="Journal 2024-02-11" class="header"><a href="#Journal 2024-02-11">Journal 2024-02-11</a></h1></div>
+
+<div id="Journal 2024-02-11-Github Pages Pre-Commit"><h2 id="Github Pages Pre-Commit" class="header"><a href="#Journal 2024-02-11-Github Pages Pre-Commit">Github Pages Pre-Commit</a></h2></div>
+<p>
+<span id="Journal 2024-02-11-Github Pages Pre-Commit-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-02-11-Github Pages Pre-Commit-pre-commit"></span><span class="tag" id="pre-commit">pre-commit</span> <span id="Journal 2024-02-11-Github Pages Pre-Commit-gh-pages"></span><span class="tag" id="gh-pages">gh-pages</span> <span id="Journal 2024-02-11-Github Pages Pre-Commit-ghp-import"></span><span class="tag" id="ghp-import">ghp-import</span>
+</p>
+
+<ul>
+<li>
+Adapt <a href="https://github.com/sstallion/vimwiki-cli/blob/master/scripts/pre-commit.sh">sstallion/vimwiki-cli/scripts/pre-commit.sh</a>
+  to run ghp-import as a pre-push hook.
+
+<li>
+<code>.pre-commit-config.yaml</code>:
+<pre yaml>
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+
+repos:
+  - repo: local
+    hooks:
+      - id: ghp-import
+        name: Update Github Pages
+        entry: .pre_commit_hooks/gh-pages.sh
+        language: script
+        require_serial: true
+        stages:
+          - pre-push
+</pre>
+
+<li>
+<code>.pre_commit_hooks/gh-pages.sh</code>:
+<pre bash>
+#!/usr/bin/env bash
+# pre-commit hook using ghp-import to push HTML to Github Pages.
+# Assumes:
+#		HTML exists in docs folder.
+#		ghp-import in PATH, e.g., `python -m pip install ghp-import`.
+#		`git config ghppages.pathhtml &lt;absolute path&gt;/docs`. Defaults to
+#		"$GIT_WORK_TREE/docs".
+#		`git config ghppages.push true`. Otherwise skip publishing.
+
+if git config --get-colorbool color.interactive
+then
+	# See https://github.com/vimwiki/vimwiki/blob/master/doc/logo.svg
+	say_prefix='\e[90mghp\e[92m|\e[37mimport\e[0m'
+else
+	say_prefix='ghp-import'
+fi
+
+say () {
+	printf '%b: %s' "$say_prefix" "$*"
+}
+
+say_done () {
+	printf 'done.\n'
+}
+
+# Exit if no changes staged for commit
+if git diff --cached --diff-filter=tuxb --quiet
+then
+	exit 0
+fi
+
+# Stash untracked changes
+git stash push --keep-index --include-untracked --quiet &gt;/dev/null 2&gt;&amp;1
+
+trap 'git stash pop --quiet &gt;/dev/null 2&gt;&amp;1' 0
+trap 'exit 1' 1 2 3 15
+
+# Update gh-pages
+if test "$(git config --bool ghppages.push || echo false)" = true
+then
+	pathhtml=$(git config ghppages.pathhtml || echo "$GIT_WORK_TREE/docs")
+	say 'Pushing html to gh-pages...'
+	ghp-import -n -o -p -f "$pathhtml"
+	say_done
+fi
+</pre>
+
+</ul>
+<div id="Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc"><h2 id="Convert Vimwiki Wikilinks to Markdown with Pandoc" class="header"><a href="#Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc">Convert Vimwiki Wikilinks to Markdown with Pandoc</a></h2></div>
+<p>
+<span id="Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc-wikilinks_title_after_pipe"></span><span class="tag" id="wikilinks_title_after_pipe">wikilinks_title_after_pipe</span> <span id="Journal 2024-02-11-Convert Vimwiki Wikilinks to Markdown with Pandoc-vimwiki-todo-lists"></span><span class="tag" id="vimwiki-todo-lists">vimwiki-todo-lists</span>
+</p>
+
+<p>
+[[2024-01-20#Convert Vimwiki Tasks to Markdown <code>mdformat-myst</code>|Convert Vimwiki Tasks to Markdown <code>mdformat myst</code>]]
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

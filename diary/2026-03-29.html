@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-03-29</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-03-29"><h1 id="Journal 2026-03-29" class="header"><a href="#Journal 2026-03-29">Journal 2026-03-29</a></h1></div>
+
+<div id="Journal 2026-03-29-FZF with PowerShell"><h2 id="FZF with PowerShell" class="header"><a href="#Journal 2026-03-29-FZF with PowerShell">FZF with PowerShell</a></h2></div>
+<p>
+<span id="Journal 2026-03-29-FZF with PowerShell-fzf"></span><span class="tag" id="fzf">fzf</span> <span id="Journal 2026-03-29-FZF with PowerShell-ripgrep"></span><span class="tag" id="ripgrep">ripgrep</span> <span id="Journal 2026-03-29-FZF with PowerShell-bat"></span><span class="tag" id="bat">bat</span> <span id="Journal 2026-03-29-FZF with PowerShell-fd"></span><span class="tag" id="fd">fd</span> <span id="Journal 2026-03-29-FZF with PowerShell-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<ul>
+<li>
+<a href="2026-02-15.html#FZF with PowerShell">/diary/2026-02-15#FZF with PowerShell</a> demonstrates Vim integration
+  for <code>cmd</code> and PowerShell.
+
+<li>
+<a href="https://dev.to/kevinnitro/fzf-advanced-integration-in-powershell-53p0">Fzf advanced integration in PowerShell</a>
+<pre powershell>
+fd --type file --follow --hidden --exclude .git --exclude '*tmp*' |
+    fzf --prompt 'Files&gt; ' `
+      --header-first `
+      --header 'CTRL-S: Switch between Files/Directories' `
+      --bind 'ctrl-s:transform:if not "%FZF_PROMPT%"=="Files&gt; " (echo ^change-prompt^(Files^&gt; ^)^+^reload^(fd --type file^)) else (echo ^change-prompt^(Directory^&gt; ^)^+^reload^(fd --type directory^))' `
+      --preview 'if "%FZF_PROMPT%"=="Files&gt; " (bat --color=always {}) else (eza -T --colour=always --icons=always {})'
+</pre>
+
+<li>
+<a href="https://www.powershellgallery.com/packages/PSFzf">PSGallery / PSFzf</a> is a PowerShell wrapper for <code>fzf</code>.
+
+</ul>
+<div id="Journal 2026-03-29-Chezmoi Dotfiles Management"><h2 id="Chezmoi Dotfiles Management" class="header"><a href="#Journal 2026-03-29-Chezmoi Dotfiles Management">Chezmoi Dotfiles Management</a></h2></div>
+<p>
+<span id="Journal 2026-03-29-Chezmoi Dotfiles Management-chezmoi"></span><span class="tag" id="chezmoi">chezmoi</span> <span id="Journal 2026-03-29-Chezmoi Dotfiles Management-rcm"></span><span class="tag" id="rcm">rcm</span>
+</p>
+
+<p>
+Manage your dotfiles across multiple diverse machines, securely.
+</p>
+
+<p>
+chezmoi's documentation <a href="https://chezmoi.io/">https://chezmoi.io/</a>
+</p>
+<ul>
+<li>
+Migrate existing dotsfiles:
+
+<ul>
+<li>
+<a href="https://github.com/twpayne/chezmoi/discussions/2330">chezmoi discussions #2330</a>
+<pre bash>
+pixi global install chezmoi
+
+git clone https://github.com/jfishe/dotfiles.git $HOME/.local/share/chezmoi
+chezmoi cd
+mkdir home
+echo home &gt; .chezmoiroot
+chezmoi add --follow ~/.bashrc
+rm .bashrc
+</pre>
+
+</ul>
+</ul>
+</div>
+    <p><small>Page created on 2026-04-05</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

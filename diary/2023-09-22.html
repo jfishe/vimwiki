@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-09-22</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-09-22"><h1 id="Journal 2023-09-22" class="header"><a href="#Journal 2023-09-22">Journal 2023-09-22</a></h1></div>
+
+<div id="Journal 2023-09-22-Bibliography Setup"><h2 id="Bibliography Setup" class="header"><a href="#Journal 2023-09-22-Bibliography Setup">Bibliography Setup</a></h2></div>
+<p>
+<span id="Journal 2023-09-22-Bibliography Setup-biblatex"></span><span class="tag" id="biblatex">biblatex</span> <span id="Journal 2023-09-22-Bibliography Setup-bibtool"></span><span class="tag" id="bibtool">bibtool</span> <span id="Journal 2023-09-22-Bibliography Setup-BibTeX"></span><span class="tag" id="BibTeX">BibTeX</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-09.html#Bibliography Setup">Journal 2023-11-09 Bibliography Setup</a>
+
+<li>
+<a href="https://github.com/vim-pandoc/vim-pandoc-syntax">vim-pandoc-syntax</a> recommends:
+<pre vim>
+  augroup pandoc_syntax
+    autocmd! FileType vimwiki set syntax=markdown.pandoc
+  augroup END
+</pre>
+
+<li>
+This would conflict with Vimwiki syntax in non-markdown files.
+
+<li>
+<a href="https://github.com/patashish704/pandoc-complete#pre-requisites">Pandoc-Complete: Your completion buddy for editing Pandoc-style markdown files</a>
+  displays the title from the BibTeX database. However, it doesn't parse the
+  Cite Keys from the testing database. The Regex assumes the keys are words
+  without hyphens. Matching non-space characters and ending on comma seems to
+  work better.
+<pre gitcommit>
+  index 2c87935..b6e41ff 100644
+  --- a/autoload/PandocComplete.vim
+  +++ b/autoload/PandocComplete.vim
+  @@ -95,7 +95,7 @@ fun! s:FetchBibItems()
+                       \ l:bibkeys,
+                       \ s:MatchFile(
+                           \ l:bibfile,
+  -                        \ '^\s*@\w\+{\zs\w\+'
+  +                        \ '^\s*@\w\+{\zs\S\+\ze,'
+                           \ )
+                       \ )
+</pre>
+
+<li>
+<a href="https://ctan.math.utah.edu/ctan/tex-archive/biblio/bibtex/contrib/test/test.bib">CTAN test.bib</a> provides a sample BibTeX database.
+
+<li>
+<a href="https://gist.github.com/fmoralesc/1203698/8dba921b45ff5464ea4d87433f9fadb0276cc2fa">Fmoralesc</a> provides a minimal regex based BibTex parser in python.
+
+<li>
+<code>bibtool</code>
+
+<li>
+<a href="https://en.m.wikipedia.org/wiki/JabRef">JabRef</a> is available from Debian.
+  Switch the <code>X410</code> to Floating Desktop mode or the screen will be blank.
+<pre vim>
+let g:pandoc#biblio#bibs = [expand('~/zk/default.bib')]
+let g:pandoc#completion#bib#mode = 'fallback'
+</pre>
+
+<li>
+<a href="https://pandoc.org/MANUAL.html#citation-syntax">https://pandoc.org/MANUAL.html#citation-syntax</a>
+<pre bash>
+pandoc --bibliography=$HOME/zk/default.bib \
+  --citeproc --standalone \
+  --to markdown-citations \
+  --metadata link-citations \
+  -o test.md \
+  ~/.dotfiles/README.md
+</pre>
+<pre yaml>
+bibliography: /home/jdfen/zk/default.bib
+link-citations: true
+link-bibliography: true
+</pre>
+<pre bash>
+pandoc -o test.md \
+  --citeproc --standalone \
+  --to markdown-citations \
+  --metadata link-citations \
+  ~/.dotfiles/README.md
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

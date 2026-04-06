@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-02-23</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-02-23"><h1 id="Journal 2024-02-23" class="header"><a href="#Journal 2024-02-23">Journal 2024-02-23</a></h1></div>
+
+<div id="Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)"><h2 id="Panvimwiki Github Flavored Markdown (GFM)" class="header"><a href="#Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)">Panvimwiki Github Flavored Markdown (GFM)</a></h2></div>
+<p>
+<span id="Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)-panvimwiki"></span><span class="tag" id="panvimwiki">panvimwiki</span> <span id="Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)-markdownlint"></span><span class="tag" id="markdownlint">markdownlint</span> <span id="Journal 2024-02-23-Panvimwiki Github Flavored Markdown (GFM)-gfm"></span><span class="tag" id="gfm">gfm</span>
+</p>
+
+<ul>
+<li>
+<a href="2024-02-17.html">Journal 2024-02-17</a> selected <code>gfm</code> for <code>citeproc</code> output
+  because <code>markdownlint</code> recognizes the anchors, whereas the default pandoc
+  anchors would require disabling <code>MD051/link-fragments</code>.
+
+<li class="done1">
+Defines tests for <code>task_lists</code> behavior.
+
+<li>
+If a <code>task_lists</code>  contains blank lines, pandoc will split every item in
+  adjacent unordered lists with a blank line. Break with a comment or other
+  text to split the list.
+
+<li>
+Pandoc coerces asterisk unordered list-markers to hyphens and escapes
+  octothorpes (<code>#</code>), which breaks <code>Taskwiki</code> syntax.
+
+<li>
+Github and Myst have different implicit heading links:
+
+<ul>
+<li>
+Myst: <code>#g-panvimwiki-settings</code>
+
+<li>
+Github: <code>#gpanvimwiki_settings</code>
+<pre markdown>
+  See [g:panvimwiki_settings].
+
+  ## g:panvimwiki_settings
+
+  To link here.
+
+  &lt;!-- markdownlint-disable MD051 --&gt;
+  [g:panvimwiki_settings]: #g-panvimwiki-settings
+</pre>
+
+</ul>
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

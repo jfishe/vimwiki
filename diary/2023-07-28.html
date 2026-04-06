@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-07-28</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-07-28"><h1 id="Journal 2023-07-28" class="header"><a href="#Journal 2023-07-28">Journal 2023-07-28</a></h1></div>
+
+<div id="Journal 2023-07-28-Miniconda Installer for Windows"><h2 id="Miniconda Installer for Windows" class="header"><a href="#Journal 2023-07-28-Miniconda Installer for Windows">Miniconda Installer for Windows</a></h2></div>
+<p>
+<span id="Journal 2023-07-28-Miniconda Installer for Windows-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2023-07-28-Miniconda Installer for Windows-python"></span><span class="tag" id="python">python</span> <span id="Journal 2023-07-28-Miniconda Installer for Windows-Win10"></span><span class="tag" id="Win10">Win10</span> <span id="Journal 2023-07-28-Miniconda Installer for Windows-Win11"></span><span class="tag" id="Win11">Win11</span> <span id="Journal 2023-07-28-Miniconda Installer for Windows-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<ul>
+<li>
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html#installing-on-windows">installing Miniconda3 on windows</a>
+
+<li>
+<a href="https://conda.io/en/latest/miniconda_hashes.html">latest miniconda_hashes</a>
+<pre powershell>
+$Uri = "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
+$OutFile = Join-Path "$HOME\Downloads" (Split-Path $Uri -Leaf)
+Invoke-WebRequest -Uri $Uri -OutFile $OutFile
+
+$compareOptions = @{
+  # Obtain sha256 hash from https://conda.io/en/latest/miniconda_hashes.html
+  ReferenceObject = '00e8370542836862d4c790aa8966f1d7344a8addd4b766004febcb23f40e2914'
+  DifferenceObject = (Get-FileHash $OutFile -Algorithm SHA256).Hash
+}
+$CompareHash = Compare-Object @compareOptions
+
+if ($CompareHash) {
+   Write-Verbose "Hashes do not match for ${OutFile}"
+   Write-Verbose "Obtain sha256 hash from https://conda.io/en/latest/miniconda_hashes.html"
+   $CompareHash | Out-String | Write-Verbose
+} else {
+  # start /wait "" $OutFile /InstallationType=JustMe /RegisterPython=1 /S /D=%UserProfile%\Miniconda3
+  $processOptions = @{
+    FilePath = "$OutFile"
+    ArgumentList = "/InstallationType=JustMe /RegisterPython=1 /D=$HOME\Miniconda3"
+    Wait = $true
+  }
+  Start-Process  @processOptions
+}
+
+# Update conda
+(&amp; "$HOME\miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String |
+  ?{$_} | Invoke-Expression
+conda info --envs
+conda update conda -n base
+conda info --envs
+</pre>
+
+</ul>
+<div id="Journal 2023-07-28-Removing Stray Conda Environments"><h2 id="Removing Stray Conda Environments" class="header"><a href="#Journal 2023-07-28-Removing Stray Conda Environments">Removing Stray Conda Environments</a></h2></div>
+<p>
+<span id="Journal 2023-07-28-Removing Stray Conda Environments-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2023-07-28-Removing Stray Conda Environments-python"></span><span class="tag" id="python">python</span> <span id="Journal 2023-07-28-Removing Stray Conda Environments-Win10"></span><span class="tag" id="Win10">Win10</span> <span id="Journal 2023-07-28-Removing Stray Conda Environments-Win11"></span><span class="tag" id="Win11">Win11</span> <span id="Journal 2023-07-28-Removing Stray Conda Environments-powershell"></span><span class="tag" id="powershell">powershell</span>
+</p>
+
+<pre powershell>
+$childOptions = @{
+  # Obtain from `conda info --envs`.
+  Path = 'C:\Users\jdfen\Github\pyedna\.tox'
+  Exclude 'log', '.tmp', 'dist'
+}
+Get-ChildItem @childOptions |
+  ForEach-Object -Process {
+    conda env remove -p $_.FullName
+  }
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

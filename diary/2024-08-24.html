@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-08-24</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-08-24"><h1 id="Journal 2024-08-24" class="header"><a href="#Journal 2024-08-24">Journal 2024-08-24</a></h1></div>
+
+<div id="Journal 2024-08-24-Vimwiki Markdown Hashtags"><h2 id="Vimwiki Markdown Hashtags" class="header"><a href="#Journal 2024-08-24-Vimwiki Markdown Hashtags">Vimwiki Markdown Hashtags</a></h2></div>
+<p>
+<span id="Journal 2024-08-24-Vimwiki Markdown Hashtags-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2024-08-24-Vimwiki Markdown Hashtags-Obsidian"></span><span class="tag" id="Obsidian">Obsidian</span> <span id="Journal 2024-08-24-Vimwiki Markdown Hashtags-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-08-24-Vimwiki Markdown Hashtags-tags"></span><span class="tag" id="tags">tags</span> <span id="Journal 2024-08-24-Vimwiki Markdown Hashtags-vimwiki_tags"></span><span class="tag" id="vimwiki_tags">vimwiki_tags</span>
+</p>
+
+<pre vim>
+cfdo VimwikiMarkdownFormat |
+%s/^#\(\w\)/ #\1/ |
+%s/-\{72\}/----/
+
+Rg ^:
+</pre>
+
+<pre bash>
+sed -i '/^$/{
+  $!{ N
+    s/^---$/----/M
+  }
+}' 2*.md
+</pre>
+
+<pre bash>
+sed -i '/^:/{
+  $!{
+    s/:/ #/g
+    s/ #$//
+  }
+}' 2*.md
+</pre>
+
+<pre vim>
+let g:vimwiki_tag_format = {
+      \ 'pre_mark': '\W#\w\@=',
+      \ 'post_mark': '',
+      \ 'sep': '[#[:space:]]\+',
+      \ 'in': '[^#:[:space:]]\+'
+      \ }
+</pre>
+
+<pre gitconfig>
+[vimwiki]
+  options = --count=3 --editor=vim
+  taglinkspage = Topic_Index
+  linkspage = index
+  generatelinks = true
+  generatediarylinks = false
+  generatetaglinks = true
+  rebuildtags = true
+</pre>
+
+<p>
+{'pre_mark': '\%(:\)', 'sep': '\%(:\)', 'cchar': '', 'post_mark': '\%(:\)', 'conceal': 0, 'post': '\%(\s\|$\)', 'in': '\%([<sup><small>:''[:space:]]\+\)', 'pre': '\%(</small></sup>\|\s\)'}
+{'pre_mark': '\%(\W#\w\@=\)', 'sep': '\%([#[:space:]]\+\)', 'conceal': 0, 'post_mark': '\%(\)', 'cchar': '', 'post': '\%(\s\|$\)', 'in': '\%([<sup><small>#:[:space:]]\+\)', 'pre': '\%(</small></sup>\|\s\)'}
+</p>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

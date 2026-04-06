@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-01-20</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-01-20"><h1 id="Journal 2024-01-20" class="header"><a href="#Journal 2024-01-20">Journal 2024-01-20</a></h1></div>
+<p>
+<span id="Journal 2024-01-20-pandoc"></span><span class="tag" id="pandoc">pandoc</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-05.html#Convert Vimwiki Format to Obsidian Markdown with Pandoc">Convert Vimwiki Format to Obsidian Markdown with Pandoc</a>
+
+</ul>
+<div id="Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc"><h2 id="Convert Vimwiki Wikilinks to Markdown with Pandoc" class="header"><a href="#Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc">Convert Vimwiki Wikilinks to Markdown with Pandoc</a></h2></div>
+<p>
+<span id="Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc-wikilinks_title_after_pipe"></span><span class="tag" id="wikilinks_title_after_pipe">wikilinks_title_after_pipe</span> <span id="Journal 2024-01-20-Convert Vimwiki Wikilinks to Markdown with Pandoc-vimwiki-todo-lists"></span><span class="tag" id="vimwiki-todo-lists">vimwiki-todo-lists</span>
+</p>
+
+<pre vim>
+Pandoc markdown --from=markdown-task_lists+wikilinks_title_after_pipe
+  \ --standalone
+</pre>
+
+<div id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc"><h2 id="Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc" class="header"><a href="#Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc">Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc</a></h2></div>
+<p>
+<span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-vimwiki-syntax-links"></span><span class="tag" id="vimwiki-syntax-links">vimwiki-syntax-links</span> <span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-vimwiki-todo-lists"></span><span class="tag" id="vimwiki-todo-lists">vimwiki-todo-lists</span>
+<span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-task_lists"></span><span class="tag" id="task_lists">task_lists</span> <span id="Journal 2024-01-20-Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc-wikilinks_title_after_pipe"></span><span class="tag" id="wikilinks_title_after_pipe">wikilinks_title_after_pipe</span>
+</p>
+
+<ul>
+<li>
+With the default, <code>--from=markdown</code>, pandoc lower cases finished tasks and
+  escapes the brackets for in progress tasks, which conflict with Vimwiki
+  syntax.
+
+<li>
+With <code>--from=markdown-task_lists</code>, pandoc escapes all the brackets, which
+  conflicts with Vimwiki syntax.
+
+<li>
+With <code>--to=markdown-task_lists</code>, pandoc escapes all the brackets, which
+  conflicts with Vimwiki syntax.
+
+<ul>
+<li>
+Unfinished tasks convert to ☐ and finished to ☒, which is not
+    reversible.
+
+<li>
+In progress tasks escape the brackets.
+
+<li>
+<code>--from=markdown-task_lists</code> disables the <code>--to=</code> extension.
+
+<li>
+Unordered list space after the bullet is two, rather than the expected one
+    space.
+
+</ul>
+<li>
+<a href="https://pandoc.org/MANUAL.html#extension-wikilinks_title_after_pipe">Extension: wikilinks_title_after_pipe</a>
+
+<li>
+Pandoc <a href="https://pandoc.org/MANUAL.html#links-1">Links</a> includes "wikilinks"
+  as a link title.
+
+<li>
+<code>VimwikiFollowLink</code> creates the wrong destination file with "wikilinks"
+  appended to the file base name.
+
+<li>
+Vimwiki doesn't recognize <code>\\</code> in links because pandoc also escapes syntax
+  characters, like <code>'</code>.
+<pre vim>
+# Do not change vimwiki-todo-lists and vimwiki-syntax-links.
+Pandoc markdown+wikilinks_title_after_pipe
+  \ --from=markdown
+  \ --standalone
+
+# Escape brackets in vimwiki-todo-lists and vimwiki-syntax-links.
+# Without -task_lists pandoc only escapes in-progress todos and links.
+Pandoc markdown --from=markdown-task_lists --standalone
+
+# Escape brackets and ' character.
+# Convert
+Pandoc markdown --from=markdown-task_lists+wikilinks_title_after_pipe
+  \ --standalone --wrap=none
+%substitute/\v\\\[(\S|\s)\\]/[\1]/
+</pre>
+<pre bash>
+echo "
+- [ ] task 1
+- [X] task 2
+- [.] task 3
+  - [.] task 3.1
+  - [.] task 3.2
+" |
+pandoc \
+  --from=markdown-task_lists+wikilinks_title_after_pipe \
+  --to=markdown \
+  --standalone \
+  --wrap=none
+-   \[ \] task 1
+-   \[X\] task 2
+-   \[.\] task 3
+    -   \[.\] task 3.1
+    -   \[.\] task 3.2
+</pre>
+<pre bash>
+echo "
+- [ ] task 1
+- [X] task 2
+- [.] task 3
+  - [.] task 3.1
+  - [.] task 3.2
+" |
+pandoc \
+  --from=markdown+wikilinks_title_after_pipe \
+  --to=markdown-task_lists \
+  --standalone \
+  --wrap=none
+-   ☐ task 1
+-   ☒ task 2
+-   \[.\] task 3
+    -   \[.\] task 3.1
+    -   \[.\] task 3.2
+</pre>
+
+</ul>
+<div id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`"><h2 id="Convert Vimwiki Tasks to Markdown `mdformat-myst`" class="header"><a href="#Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`">Convert Vimwiki Tasks to Markdown <code>mdformat-myst</code></a></h2></div>
+<p>
+<span id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`-myst"></span><span class="tag" id="myst">myst</span> <span id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`-mdformat"></span><span class="tag" id="mdformat">mdformat</span> <span id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`-mdformat-myst"></span><span class="tag" id="mdformat-myst">mdformat-myst</span> <span id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span>
+<span id="Journal 2024-01-20-Convert Vimwiki Tasks to Markdown `mdformat-myst`-mystmd"></span><span class="tag" id="mystmd">mystmd</span>
+</p>
+
+<ul>
+<li>
+<a href="2025-06-27.html#mdformat-myst">Journal 2025-06-27 MyST Markdown with mdformat</a>
+
+<li>
+<a href="https://pre-commit.com/">pre-commit</a>
+
+<li>
+<a href="https://github.com/executablebooks/mdformat-myst">Mdformat plugin for MyST compatibility</a>
+<pre yaml>
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17 # Use the ref you want to point at
+    hooks:
+      - id: mdformat
+        args:
+          - "--number"
+        # Optionally add plugins
+        additional_dependencies:
+          # - mdformat-gfm
+          - mdformat-myst
+          - mdformat-pyproject
+          - mdformat-ruff
+          - mdformat-shfmt
+          - mdformat-simple-breaks
+          # - mdformat-black
+</pre>
+
+<li>
+<a href="2025-04-27.html#mystmd">Journal 2025-04-27</a> MyST Markdown
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

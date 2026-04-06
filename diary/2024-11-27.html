@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-11-27</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-11-27"><h1 id="Journal 2024-11-27" class="header"><a href="#Journal 2024-11-27">Journal 2024-11-27</a></h1></div>
+
+<div id="Journal 2024-11-27-Windows Terminal Configuration"><h2 id="Windows Terminal Configuration" class="header"><a href="#Journal 2024-11-27-Windows Terminal Configuration">Windows Terminal Configuration</a></h2></div>
+<p>
+<span id="Journal 2024-11-27-Windows Terminal Configuration-Win11"></span><span class="tag" id="Win11">Win11</span> <span id="Journal 2024-11-27-Windows Terminal Configuration-Win10"></span><span class="tag" id="Win10">Win10</span> <span id="Journal 2024-11-27-Windows Terminal Configuration-WindowsTerminal"></span><span class="tag" id="WindowsTerminal">WindowsTerminal</span>
+</p>
+
+<ul>
+<li>
+<code>%USERPROFILE%\Documents\PowerShell\WindowsTerminal\settings.json</code>
+
+<li>
+<code>%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json</code>
+
+<li>
+<a href="https://freshman.tech/windows-terminal-guide/">Freshman A Guide to Customising the Windows Terminal</a>
+
+<ul>
+<li>
+Launch default Windows Terminal profile shortcut, e.g., <code>Win+2</code>, depending
+    on <code>Taskbar</code> order.
+
+</ul>
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions">Windows Terminal json fragment extensions</a>
+
+<ul>
+<li>
+<code>%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json</code>
+
+<li>
+<code>%USERPROFILE%\Documents\PowerShell\WindowsTerminal\settings_fragment.json</code>
+
+<li>
+<a href="https://learn.microsoft.com/en-us/windows/terminal/json-fragment-extensions#microsoft-store-applications">Microsoft Store applications</a>
+    require declaring an app extension.
+    <a href="https://github.com/microsoft/terminal/issues/10970">Windows Terminal Issue #10970</a>
+    may result in an example workflow.
+<pre powershell>
+$fragmentJson = (
+    Split-Path $PROFILE.CurrentUserCurrentHost |
+    Join-Path -ChildPath "WindowsTerminal\settings_fragment.json" |
+    Get-Item
+)
+
+$AppName = "myFragments"
+$FileName = "settings"
+
+# C:\Users\&lt;user&gt;\AppData\Local\Microsoft\Windows Terminal\Fragments\
+#   {app-name}\{file-name}.json
+$fragmentPath = (
+    Join-Path -Path "$env:LOCALAPPDATA\Microsoft\Windows Terminal\" `
+        -ChildPath "Fragments\$AppName"
+)
+New-Item -ItemType Directory -Path "$fragmentPath" -ErrorAction SilentlyContinue
+
+$fragmentPath = Join-Path -Path $fragmentPath -ChildPath "${FileName}.json"
+Copy-Item "$fragmentJson" "$fragmentPath"
+</pre>
+
+</ul>
+</ul>
+<div id="Journal 2024-11-27-Change Log and GitHub Release Notes"><h2 id="Change Log and GitHub Release Notes" class="header"><a href="#Journal 2024-11-27-Change Log and GitHub Release Notes">Change Log and GitHub Release Notes</a></h2></div>
+<p>
+<span id="Journal 2024-11-27-Change Log and GitHub Release Notes-GitHub"></span><span class="tag" id="GitHub">GitHub</span> <span id="Journal 2024-11-27-Change Log and GitHub Release Notes-panvimwiki"></span><span class="tag" id="panvimwiki">panvimwiki</span> <span id="Journal 2024-11-27-Change Log and GitHub Release Notes-changelog"></span><span class="tag" id="changelog">changelog</span> <span id="Journal 2024-11-27-Change Log and GitHub Release Notes-release"></span><span class="tag" id="release">release</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/marketplace/actions/create-release-notes-from-changelog">GitHub Marketplace actions create release notes from ChangeLog</a>
+
+<li>
+<a href="https://github.com/jfishe/panvimwiki/blob/main/.github/workflows/ci.yml">https://github.com/jfishe/panvimwiki/blob/main/.github/workflows/ci.yml</a>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

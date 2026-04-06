@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-04-05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-04-05"><h1 id="Journal 2026-04-05" class="header"><a href="#Journal 2026-04-05">Journal 2026-04-05</a></h1></div>
+
+<div id="Journal 2026-04-05-PyScaffold"><h2 id="PyScaffold" class="header"><a href="#Journal 2026-04-05-PyScaffold">PyScaffold</a></h2></div>
+<p>
+<span id="Journal 2026-04-05-PyScaffold-python"></span><span class="tag" id="python">python</span> <span id="Journal 2026-04-05-PyScaffold-pyscaffold"></span><span class="tag" id="pyscaffold">pyscaffold</span>
+</p>
+
+<pre cfg>
+# PyScaffold's configuration file, see:
+# https://pyscaffold.org/en/latest/configuration.html
+#
+# Accepted in `metadata`: author, author_email and license.
+# Accepted in `pyscaffold`: extensions (and associated opts).
+[metadata]
+license = MIT
+[pyscaffold]
+version = 4.6
+extensions =
+    dsproject
+    github_actions
+    markdown
+    no_skeleton
+    pre_commit
+    pre_commit_ruff
+dsproject_version = 0.7.2
+</pre>
+
+<pre bash>
+putup -v --description 'Add a short description here!' \
+  --save-config './project_dir/.pyscaffold.cfg' \
+  project_dir
+</pre>
+</div>
+    <p><small>Page created on 2026-04-05</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

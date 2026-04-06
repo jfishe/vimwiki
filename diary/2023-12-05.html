@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-12-05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-12-05"><h1 id="Journal 2023-12-05" class="header"><a href="#Journal 2023-12-05">Journal 2023-12-05</a></h1></div>
+
+<div id="Journal 2023-12-05-Python Module Search Path"><h2 id="Python Module Search Path" class="header"><a href="#Journal 2023-12-05-Python Module Search Path">Python Module Search Path</a></h2></div>
+<p>
+<span id="Journal 2023-12-05-Python Module Search Path-python"></span><span class="tag" id="python">python</span> <span id="Journal 2023-12-05-Python Module Search Path-miniconda3"></span><span class="tag" id="miniconda3">miniconda3</span> <span id="Journal 2023-12-05-Python Module Search Path-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2023-12-05-Python Module Search Path-PEP-668"></span><span class="tag" id="PEP-668">PEP-668</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-09-10.html">Journal 2023-09-10</a> covers initial attempts to work around.
+
+<li>
+<a href="2023-10-14.html">Journal 2023-10-14</a> covers an attempt to use <code>AppImage</code>.
+
+<li>
+<a href="../../vimwiki/diary/2024-02-26.html#PEP-668">Journal 2024-02-26</a> covers application to Ubuntu and python 3.10.
+
+<li>
+<code>AppImage</code> crashes X11 randomly, leaving detached gvim processes, usually
+  when Windows sleeps.
+
+<li>
+<a href="https://stackoverflow.com/questions/9387928/whats-the-difference-between-dist-packages-and-site-packages">Stackoverflow questions, What's the difference between dist-packages and site-packages?</a>
+  points to a solution that works with the Debian version of vim: Use the
+  embedded python3 in vim to add the missing site-packages path.
+<pre vim>
+if !has('nvim') &amp;&amp; !empty($CONDA_PREFIX) &amp;&amp; has('linux')
+  let s:conda_env = '/miniconda3/envs/vim-python/lib/python3.11/site-packages'
+  if isdirectory(expand("$LOCALAPPDATA" .. s:conda_env))
+    let s:conda_env = expand("$LOCALAPPDATA" .. s:conda_env)
+  elseif isdirectory(expand("$HOME" .. s:conda_env))
+    let s:conda_env = expand("$HOME" .. s:conda_env)
+  endif
+  let s:conda_env = 'python3 site.addsitedir("' .. s:conda_env .. '")'
+  python3 import site
+  execute s:conda_env
+endif
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

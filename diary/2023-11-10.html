@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-11-10</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-11-10"><h1 id="Journal 2023-11-10" class="header"><a href="#Journal 2023-11-10">Journal 2023-11-10</a></h1></div>
+
+<div id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax"><h2 id="Vimwiki Markdown Tag Syntax" class="header"><a href="#Journal 2023-11-10-Vimwiki Markdown Tag Syntax">Vimwiki Markdown Tag Syntax</a></h2></div>
+<p>
+<span id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax-Obsidian"></span><span class="tag" id="Obsidian">Obsidian</span> <span id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax-vimwiki"></span><span class="tag" id="vimwiki">vimwiki</span> <span id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax-tags"></span><span class="tag" id="tags">tags</span> <span id="Journal 2023-11-10-Vimwiki Markdown Tag Syntax-vimwiki_tags"></span><span class="tag" id="vimwiki_tags">vimwiki_tags</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-11-05.html#Convert Vimwiki Format to Obsidian Markdown with Pandoc">Convert Vimwiki Format to Obsidian Markdown with Pandoc</a>
+  developed a <code>Makefile</code> to convert <code>Vimwiki</code> native format to <code>Markdown</code> and
+  convert the tags to <code>#tag</code> style.
+
+<li>
+Partially working solution. <code>VimwikiRebuildTags</code> fails.
+<pre vim>
+let g:vimwiki_syntaxlocal_vars.markdown.tag_format = {
+  \ 'pre_mark': '\%(:\)',
+  \ 'sep': '\%(:\)',
+  \ 'cchar': '',
+  \ 'post_mark': '\%(:\)',
+  \ 'conceal': 0,
+  \ 'post': '\%(\s\|$\)',
+  \ 'in': '\%([^:''[:space:]]\+\)',
+  \ 'pre': '\%(^\|\s\)'
+  \ }
+" tags: tag1 tag2
+" let g:vimwiki_tag_format = { 'pre': '\(^[ -]*tags\s*: .*\)\@&lt;=', 'pre_mark': '', 'post_mark': '', 'sep': ' ' }
+let g:vimwiki_tag_format = {
+  \ 'pre': '\(^tags: .*\)\@&lt;=',
+  \ 'pre_mark': '',
+  \ 'post_mark': '',
+  \ 'sep': ' ',
+  \ 'in': ''
+  \ }
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

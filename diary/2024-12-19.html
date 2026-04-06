@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-12-19</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-12-19"><h1 id="Journal 2024-12-19" class="header"><a href="#Journal 2024-12-19">Journal 2024-12-19</a></h1></div>
+
+<ul>
+<li>
+Panvimwiki <code>reference_citation</code> creates reference links <code>[#ref-name]: URL</code> instead of <code>[#name]: URL</code> in markdown.
+<pre bash>
+  pandoc --citeproc --metadata='link-citations:true' \
+    --from=markdown+wikilinks_title_after_pipe-task_lists \
+    --standalone --wrap=auto \
+    --to=markdown-citations \
+    expand_citeproc.md | reference_citation  &gt; out/expand_citeproc-markdown.md
+</pre>
+  Pandoc produces the following markdown references:
+<pre markdown>
+  ::::: {#refs .references .csl-bib-body .hanging-indent entry-spacing="0"}
+  ::: {#ref-bloggs-jones .csl-entry}
+  Bloggs, A. J., and X. Y. Jones. 1959. "Title Title Title Title Title
+  Title Title Title Title Title." *Journal Journal Journal*.
+  :::
+
+  ::: {#ref-chomsky-73 .csl-entry}
+  Chomsky, N. 1973. "Conditions on Transformations." In *A Festschrift for
+  Morris Halle*, edited by S. R. Anderson and P. Kiparsky. New York: Holt,
+  Rinehart &amp; Winston.
+  :::
+  :::::
+</pre>
+  The <code>reference_citation</code> filter converts the pandoc output to:
+<pre markdown>
+  [#ref-bloggs-jones]: Bloggs, A. J., and X. Y. Jones. 1959. "Title Title Title Title Title
+  Title Title Title Title Title." *Journal Journal Journal*.
+
+  [#ref-chomsky-73]: Chomsky, N. 1973. "Conditions on Transformations." In *A Festschrift for
+  Morris Halle*, edited by S. R. Anderson and P. Kiparsky. New York: Holt,
+  Rinehart &amp; Winston.
+</pre>
+  The leading <code>#</code> should not appear in <code>ref-bloggs-jones</code>, etc.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

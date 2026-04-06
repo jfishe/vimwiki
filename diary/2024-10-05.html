@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2024-10-05</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2024-10-05"><h1 id="Journal 2024-10-05" class="header"><a href="#Journal 2024-10-05">Journal 2024-10-05</a></h1></div>
+
+<div id="Journal 2024-10-05-Install Astral uv Python CLI tools"><h2 id="Install Astral uv Python CLI tools" class="header"><a href="#Journal 2024-10-05-Install Astral uv Python CLI tools">Install Astral uv Python CLI tools</a></h2></div>
+<p>
+<span id="Journal 2024-10-05-Install Astral uv Python CLI tools-jupyter"></span><span class="tag" id="jupyter">jupyter</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-python"></span><span class="tag" id="python">python</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-uv"></span><span class="tag" id="uv">uv</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-tox"></span><span class="tag" id="tox">tox</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-pyscaffold"></span><span class="tag" id="pyscaffold">pyscaffold</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-rich"></span><span class="tag" id="rich">rich</span>
+<span id="Journal 2024-10-05-Install Astral uv Python CLI tools-ini2toml"></span><span class="tag" id="ini2toml">ini2toml</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-pls"></span><span class="tag" id="pls">pls</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-pre-commit"></span><span class="tag" id="pre-commit">pre-commit</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-tox"></span><span class="tag" id="tox">tox</span> <span id="Journal 2024-10-05-Install Astral uv Python CLI tools-tox-uv"></span><span class="tag" id="tox-uv">tox-uv</span>
+</p>
+
+<ul>
+<li>
+<a href="https://docs.astral.sh/uv/getting-started/installation/#installation-methods">Installing uv</a>
+
+<li>
+<a href="https://github.com/tox-dev/tox-uv#how-to-use">How To Use tox-uv</a>
+
+<li>
+<a href="https://github.com/tox-dev/pre-commit-uv/">pre-commit-uv</a>
+<pre powershell>
+$URL = 'https://astral.sh/uv/install.ps1'
+powershell -ExecutionPolicy ByPass -c `
+  "Invoke-RestMethod "$URL" | Invoke-Expression"
+uv tool install tox --with tox-uv # use uv to install
+tox --version # validate you are using the installed tox
+
+uv tool install 'ini2toml[full]'
+uv tool install 'pyscaffold[all]'
+uv tool install jupyter-book
+uv tool install pls
+uv tool install pre-commit --with pre-commit-uv
+uv tool install rich-cli
+</pre>
+
+</ul>
+<p>
+<code>putup --dsproject --markdown --pre-commit --interactive &lt;project&gt;</code>
+defaults to <code>autoflake</code>, <code>isort</code>, <code>black</code>, <code>blacken-docs</code>, and <code>flake8</code>.
+Update <code>.pre-commit-config.yaml</code> to add <code>ruff</code> and
+enable <code>pyupgrade</code> and <code>codespell</code>.
+</p>
+
+<pre yaml>
+exclude: |
+  (?x)(
+    ^docs/conf.py|
+    ^docs/.*.md$|
+    ^.*/out/.*$
+  )
+
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: check-added-large-files
+  - id: check-ast
+  - id: check-json
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: check-xml
+  - id: check-yaml
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args: ['--fix=lf']  # replace 'auto' with 'lf' to enforce Linux/Mac line endings or 'crlf' for Windows
+  - id: name-tests-test
+    args: ["--pytest-test-first"]
+  - id: requirements-txt-fixer
+  - id: trailing-whitespace
+
+# ruff-pre-commit
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.6.9
+  hooks:
+    # Run the linter.
+    - id: ruff
+      types_or: [ python, pyi ]
+      args: [ --fix ]
+    # Run the formatter.
+    - id: ruff-format
+      types_or: [ python, pyi ]
+## If you want to automatically "modernize" your Python code:
+- repo: https://github.com/asottile/pyupgrade
+  rev: v3.17.0
+  hooks:
+  - id: pyupgrade
+    args: ['--py38-plus']
+
+## Check for misspells in documentation files:
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.3.0
+  hooks:
+  - id: codespell
+
+## Markdown Lint
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.42.0
+  hooks:
+  - id: markdownlint-fix
+    args:
+      - "--ignore"
+      - "tests/**/*.md"
+</pre>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

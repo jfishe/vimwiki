@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2023-09-10</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2023-09-10"><h1 id="Journal 2023-09-10" class="header"><a href="#Journal 2023-09-10">Journal 2023-09-10</a></h1></div>
+
+<div id="Journal 2023-09-10-Python Module Search Path"><h2 id="Python Module Search Path" class="header"><a href="#Journal 2023-09-10-Python Module Search Path">Python Module Search Path</a></h2></div>
+<p>
+<span id="Journal 2023-09-10-Python Module Search Path-python"></span><span class="tag" id="python">python</span> <span id="Journal 2023-09-10-Python Module Search Path-miniconda3"></span><span class="tag" id="miniconda3">miniconda3</span> <span id="Journal 2023-09-10-Python Module Search Path-conda"></span><span class="tag" id="conda">conda</span> <span id="Journal 2023-09-10-Python Module Search Path-PEP-668"></span><span class="tag" id="PEP-668">PEP-668</span>
+</p>
+
+<ul>
+<li>
+<a href="2023-10-14.html">Journal 2023-10-14</a> replaces gvim with gvim.appimage and
+  updates vimrc to load python3 dynamically.
+
+<li>
+<code>/usr/share/doc/python3.11/README.venv</code>
+
+<li>
+<a href="https://peps.python.org/pep-0668/">PEP 668</a>
+
+<li>
+Debian 12 implementation of PEP 668 doesn't load <code>site-packages</code> in a
+  <code>Miniconda3</code> environment but does from <code>venv</code> virtual environment.
+<pre pyenv.cfg>
+home = /usr/bin
+include-system-site-packages = true
+version = 3.11.2
+executable = /usr/bin/python3.11
+command = /usr/bin/python3 -m venv --system-site-packages --upgrade-deps ~/jdfen/.venvs/vim_python
+</pre>
+<pre bash>
+sudo apt install \
+  python3-full \
+  pipx \
+  python3-tasklib \
+  ripgrep \
+  task \
+  texlive-fonts-extra \
+  texlive-latex-extra \
+  texlive-xetex latexmk \
+  universal-ctags \
+  vim-gtk3
+  wslu
+
+pipx install vimwiki-cli
+
+venvs="$HOME/.venvs"
+venv_name="$venvs/vim_python"
+venv_options='--system-site-packages --upgrade-deps'
+
+mkdir -p $venvs
+python3 -m venv $venv_options $venv_name
+
+$venv_name/bin/python -m pip install panvimwiki
+
+unset venv_name
+
+condax install nodejs
+condax install pandoc
+condax install starship
+</pre>
+
+</ul>
+</div>
+    <p><small>Page created on 2026-01-25</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>
