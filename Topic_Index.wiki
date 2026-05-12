@@ -242,6 +242,9 @@
 === chili ===
 - [[Beans#Dried Beans Recipes#Chili]]
 
+=== chip ===
+- [[Cookies#Cookies#Chocolate Chip Cookies]]
+
 === choco ===
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
@@ -249,6 +252,7 @@
 
 === chocolate ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve#Chocolate Sauce]]
+- [[Cookies#Cookies#Chocolate Chip Cookies]]
 
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
@@ -290,6 +294,9 @@
 - [[Beans#Dried Beans Recipes]]
 - [[cooking#Cooking]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
+
+=== cookie ===
+- [[Cookies#Cookies]]
 
 === cooking ===
 - [[cooking#Cooking]]

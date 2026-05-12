@@ -65,6 +65,7 @@
 == Generated Links ==
 - [[Beans]]
 - [[Coffee]]
+- [[Cookies]]
 - [[Drinks]]
 - [[Git]]
 - [[Health_Fitness]]

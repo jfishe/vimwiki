@@ -1,11 +1,12 @@
 = Cooking =
 :cookery:cooking:recipes:
 
-- [[https://coolconversion.com/cooking-volume-weight/|CoolConversion Ingredients Volume To Weight]]
-- [[Coffee]]
 - [[Beans|Dried Beans Recipes]]
+- [[Coffee]]
+- [[Cookies]]
 - [[Drinks]]
 - [[Soup|Soup and Stew]]
+- [[https://coolconversion.com/cooking-volume-weight/|CoolConversion Ingredients Volume To Weight]]
 
 == Contents ==
 - [[#Cooking]]
