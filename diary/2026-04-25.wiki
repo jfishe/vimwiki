@@ -1,0 +1,63 @@
+= Journal 2026-04-25 =
+
+== `pixi` Data Science Project Template ==
+:cookiecutter:dsproject:python:pixi:
+
+- Alternative project scaffold template tools
+  - [[/diary/2026-04-05#dsproject|PyScaffold]]
+  - [[/diary/2020-10-24#dsproject|Cookiecutter Conda Project Template]]
+- [[https://prefix.dev/tools/pixi|Prefix.dev Pixi]]
+
+{{{bash
+cookiecutter gh:jfishe/cookiecutter-uv-dsproject
+
+cd <my-ds-project>
+pixi init
+pixi workspace platform add "win-64"
+pixi install
+}}}
+
+=== pixi-cookiecutter ===
+:act:direnv:GitHub-CLI:pixi:ruff:ty:pytest:pre-commit:codecov:Github:
+
+[[https://github.com/jevandezande/pixi-cookiecutter|jevandezande / pixi-cookiecutter]]
+  Cookiecutter for setting up python projects with `pixi` that just work
+
+- [X] Packaging with [pixi](https://prefix.dev/)
+- [X] Environment loading with [direnv](https://direnv.net/)
+- [X] Formatting and linting with [ruff](https://github.com/charliermarsh/ruff)
+- [X] Static typing with [ty](https://github.com/astral-sh/ty)
+- [X] Testing with [pytest](https://docs.pytest.org/en/latest/)
+- [X] Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
+- [X] Continuous integration with [GitHub Actions](https://github.com/features/actions)
+- [X] Code coverage with [Codecov](https://docs.codecov.com/docs)
+- [[https://github.com/jevandezande/pixi-cookiecutter/blob/master/notes.md#notes|notes.md]] lists optional dependencies:
+  - [ ] [[https://github.com/nektos/act|act]] runs GitHub Actions locally.
+  - [X] [[https://pixi.sh/latest/integration/third_party/direnv|direnv]] can auto magically load environment variables and the `pixi` shell.
+        👎 `direnv` is not optional.
+  - [.] [[https://cli.github.com/|GitHub-CLI]] can create and manage a GitHub repository.
+        [[/diary/2026-05-01|Journal 2026-05-01]] evaluates `GitHub-CLI`.
+{{{text
+OSError: direnv is not installed; install with `pixi global install direnv`
+}}}
+- 👎 `tests/` includes `__init__.py`.
+- 👎 The python package is not isolated in `src/`.
+- 👎 Platform does not include "win-64".
+- 👍 Performs linting, formatting, type checking, and testing,
+  using `pre-commit`, with `repo: local`.
+- 👍 Replace `Makefile` with pixi tasks.
+
+{{{bash
+pixi global install direnv
+
+cookiecutter gh:jevandezande/pixi-cookiecutter
+
+pixi task remove --feature=dev test &&
+pixi task add --feature=dev test "pytest --cov --cov-report=term-missing"
+}}}
+
+== Universal-Ctags Configuration for Pixi ==
+:ctags:pixi:
+
+Ctags looks for configuration in `$XDG_CONFIG_HOME` and
+`$HOME/.config`.

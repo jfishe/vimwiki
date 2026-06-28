@@ -1,7 +1,9 @@
 = Journal 2026-04-05 =
 
 == PyScaffold ==
-:python:pyscaffold:
+:python:pyscaffold:dsproject:
+
+- [[/diary/2026-04-25#dsproject|Pixi project template]]
 
 {{{cfg
 # PyScaffold's configuration file, see:
@@ -24,7 +26,10 @@ dsproject_version = 0.7.2
 }}}
 
 {{{bash
-putup -v --description 'Add a short description here!' \
+putup --verbose \
+  --description 'Add a short description here!' \
   --save-config './project_dir/.pyscaffold.cfg' \
   project_dir
+
+ini2toml setup.cfg > pyproject.toml
 }}}

@@ -1,0 +1,26 @@
+= Journal 2026-05-01 =
+
+== GitHub-CLI ==
+:GitHub-CLI:
+
+- [[/diary/2026-04-25#GitHub-CLI|GitHub CLI]] is used by `pixi-cookiecutter`.
+- `pengwin-setup` install AI tools.
+
+{{{text
+System keychain unavailable. Store token in plaintext config file?
+}}}
+
+{{{bash
+sudo apt update
+sudo apt install -y \
+  gnome-keyring \
+  libsecret-1-0 \
+  libsecret-tools \
+  seahorse
+
+systemctl --user enable gnome-keyring-daemon
+systemctl --user start gnome-keyring-daemon
+
+gh auth login
+copilot login
+}}}
