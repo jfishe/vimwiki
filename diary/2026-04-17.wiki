@@ -1,0 +1,386 @@
+= Journal 2026-04-17 =
+
+== Contents ==
+- [[#Journal 2026-04-17]]
+  - [[#Guide for Nuclear Engineering Analysis with AI]]
+    - [[#`markdownlint` configuration]]
+  - [[#VimwikiConvert Error]]
+
+== Guide for Nuclear Engineering Analysis with AI ==
+:nuclear:AI:analysis:calculation:jupyter:python:
+
+{{{markdown
+
+# AI Copilot Usage for a Nuclear Engineer
+
+This document provides a **prescriptive, safety-aware workflow**
+for using **GitHub Copilot** and **Microsoft 365 Copilot**
+in a **regulatory-heavy nuclear engineering environment**,
+specifically for a workflow centered on **Jupyter + Python**,
+with **Vim** and **VS Code** as editors.
+
+---
+
+## 1. Clear role assignment (critical for QA and audits)
+
+### GitHub Copilot → analysis code assistant
+
+**Where to use**
+
+- Jupyter notebooks (`.ipynb`)
+- Python modules and scripts
+- Test harnesses
+- Data parsing and plotting code
+
+**Mental model**
+
+> An extremely fast junior analyst
+> with excellent Python syntax knowledge
+> and zero regulatory authority.
+
+**Use it for**
+
+- Boilerplate generation
+- Vectorized NumPy / Pandas operations
+- Refactoring for clarity (no math changes)
+- Defensive checks and validation
+- Test scaffolding
+
+**Do not use it for**
+
+- Nuclear constants, limits, or safety criteria
+- Physics assumptions
+- Regulatory interpretation
+
+---
+
+### Microsoft 365 Copilot → engineering synthesis and documentation
+
+**Where to use**
+
+- Word (calculation packages, safety evaluations)
+- Excel (results summaries)
+- OneNote (design notes)
+- Teams / Outlook (meetings, reviews)
+
+**Mental model**
+
+> A technical editor, meeting scribe,
+> and analyst-to-regulator translator.
+
+**Use it for**
+
+- Drafting and polishing narratives
+- Maintaining tone (formal, non-conclusive)
+- Summarizing results and meetings
+- Producing audit-ready artifacts
+
+---
+
+## 2. GitHub Copilot safe usage patterns (Jupyter + Python)
+
+### Governing rules
+
+- ✅ Use for **structure**, not physics
+- ✅ Treat generated code as **draft**
+- ✅ Require explicit assumptions and comments
+- ❌ Never rely on it for authoritative nuclear content
+
+---
+
+### Recommended prompt patterns
+
+#### A. Translating math to code
+
+```python
+# Write a Python/Numpy implementation of the following equation:
+# axial_peaking = max(power_i) / mean(power_i)
+# Input is a 1D numpy array of nodal powers.
+```
+
+_Why this is safe_:
+You provide the physics and math;
+Copilot handles syntax only.
+
+---
+
+#### B. Making code QA-friendly
+
+```python
+# Refactor this function for clarity only.
+# Add explicit variable names and intermediate steps.
+# Do not change the math.
+```
+
+High value for reviews
+and long-term maintainability.
+
+---
+
+#### C. Defensive programming
+
+```python
+# Add input validation:
+# - Ensure array is non-empty
+# - Ensure all values are positive
+# - Raise descriptive exceptions
+```
+
+---
+
+### What to avoid prompting
+
+```python
+# Calculate DNBR using standard assumptions
+```
+
+This invites hallucination
+and creates audit risk.
+
+---
+
+### Editor guidance
+
+- **Vim**
+  Accept suggestions line by line.
+- **VS Code**
+  Restrict batch edits to refactors with identical behavior.
+
+---
+
+## 3. Microsoft 365 Copilot high-ROI use cases
+
+### Calculation package narratives (Word / Copilot Chat)
+
+> Summarize the assumptions, inputs,
+> and outputs of this calculation package
+> in formal engineering language
+> suitable for QA review.
+> Do not introduce new assumptions.
+
+---
+
+### Results translation
+
+(Excel → Word)
+
+1.  **Excel Copilot**
+
+    > Summarize noteworthy trends
+    > and outliers in this dataset.
+    > Do not interpret regulatory significance.
+
+2.  **Word Copilot**
+
+    > Rewrite this summary
+    > in a neutral, non-conclusive tone
+    > suitable for a licensing document.
+
+---
+
+### Meeting traceability
+
+(critical for NRC and DOE audits)
+
+> Summarize this meeting listing:
+>
+> - Technical concerns raised
+> - Decisions made
+> - Open action items with owners
+>
+> Maintain neutral language.
+
+Creates immediate,
+defensible records.
+
+---
+
+## 4. Regulatory guardrails
+
+(explicit and defensible)
+
+### Allowed uses
+
+- Drafting and rewriting text
+- Summarizing _your_ analyses
+- Formatting and consistency enforcement
+- Meeting and decision summaries
+
+### Prohibited uses
+
+- Selecting safety limits or criteria
+- Interpreting regulations
+- Generating final numerical results
+- Acting as an authoritative source
+
+**Recommended statement for QA**
+
+> AI tools were used for drafting and summarization;
+> all technical content was independently verified
+> by the responsible engineer.
+
+---
+
+## 5. Recommended end-to-end workflow
+
+1.  **Compute**
+    - Python + Jupyter
+    - GitHub Copilot assists with code structure
+2.  **Verify**
+    - Engineer validates math, physics, and units
+3.  **Analyze**
+    - Excel Copilot summarizes results (no judgments)
+4.  **Document**
+    - Word Copilot drafts narratives
+5.  **Review and sign-off**
+    - Human engineering authority
+
+This preserves a clean separation
+between **automation**,
+**interpretation**,
+and **responsibility**.
+
+---
+
+## Bottom line
+
+For a **Jupyter-heavy**,
+**regulatory-bound nuclear engineer**:
+
+- ✅ **GitHub Copilot**
+  reduces keystrokes
+  and improves code quality
+- ✅ **Microsoft 365 Copilot**
+  dramatically reduces documentation
+  and audit overhead
+- ❌ Neither replaces
+  engineering judgment
+  or accountability
+}}}
+
+=== `markdownlint` configuration ===
+
+{{{yaml
+# markdownlint configuration
+# Suitable for regulated engineering and safety-critical documentation
+
+# Default rules enabled unless explicitly overridden
+default: true
+
+# --------------------------------------------------------------------
+# Core formatting and structure
+# --------------------------------------------------------------------
+
+# Headings must increment by one level at a time
+MD001: true
+
+# Use ATX-style headings only (#, ##, ###)
+MD003:
+  style: atx
+
+# Unordered lists must use a single marker
+MD004:
+  style: dash
+
+# Prevent inconsistent list indentation
+MD005: true
+
+# Enforce consistent indentation for nested lists
+MD007:
+  indent: 2
+
+# No trailing whitespace
+MD009:
+  br_spaces: 0
+  list_item_empty_lines: false
+  strict: true
+
+# Disallow hard tabs
+MD010: true
+
+# Limit consecutive blank lines
+MD012:
+  maximum: 1
+
+# Line length rule disabled to allow semantic linebreaks
+MD013: false
+
+# Require space after heading markers
+MD018: true
+MD019: true
+
+# Headings must be surrounded by blank lines
+MD022: true
+
+# Only one H1 permitted
+MD025:
+  level: 1
+
+# No trailing punctuation in headings
+MD026:
+  punctuation: .,;:!?
+
+# Ordered lists must use incremental numbers
+MD029: true
+
+# Require consistent spacing after list markers
+MD030:
+  ul_single: 1
+  ol_single: 1
+  ul_multi: 1
+  ol_multi: 1
+
+# Horizontal rule style must be consistent
+MD035:
+  style: '---'
+
+# No spaces inside inline code spans
+MD038: true
+
+# Fenced code blocks must specify a language
+MD040: true
+
+# Code blocks must not be indented
+MD046: true
+
+# Use fenced code blocks, not indented ones
+MD048:
+  style: backtick
+
+# Enforce consistent heading capitalization
+MD049:
+  style: sentence
+
+MD050:
+  style: sentence
+
+# --------------------------------------------------------------------
+# Safety and documentation hygiene
+# --------------------------------------------------------------------
+
+# Prevent inline HTML (hard to audit, bad for Pandoc)
+MD033:
+  allowed_elements: []
+
+# Require proper emphasis formatting
+MD036: true
+
+# No empty links or images
+MD042: true
+
+# Images must have alt text (accessibility and audits)
+MD045: true
+}}}
+
+== VimwikiConvert Error ==
+
+{{{powershell
+Get-Content diary/2026-04-17.wiki |
+delete_bullet_star |
+delete_task_pending.exe |
+pandoc --from=vimwiki --to=docx `
+  --filter=delete_tag_lines `
+  --filter=delete_taskwiki_heading `
+  --filter=delete_empty_heading `
+  --output C:\Users\jdfen\Documents\vimwiki_home\docx\diary\2026-04-17.docx
+}}}

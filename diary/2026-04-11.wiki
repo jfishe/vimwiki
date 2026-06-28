@@ -1,0 +1,52 @@
+= Journal 2026-04-11 =
+
+== Workflow Modernization Checklist ==
+
+=== Versioning & Security ===
+- Pin all actions to major versions or SHAs
+- Remove deprecated actions (`set-output`, `add-path`, etc.)
+- Enable Dependabot or Renovate for automated updates
+- Add `actionlint` to CI
+
+=== Performance ===
+- Use `actions/cache@v3` for dependencies
+- Prefer `setup-*` actions with built‑in caching (Node, Python, Go)
+- Use matrix builds instead of duplicated jobs
+- Avoid unnecessary `checkout` steps
+
+=== Maintainability ===
+- Convert repeated logic into reusable workflows
+- Use `concurrency:` to prevent overlapping runs
+- Add `permissions:` blocks to minimize token scope
+- Split CI, build, deploy, and security scans into separate workflows
+
+=== Observability ===
+- Add job‑level timeouts
+- Add artifact uploads for logs or test results
+- Use `if:` conditions to skip unnecessary jobs
+
+== Migration Plan for Reusable Workflows ==
+
+=== Phase 1 — Inventory & Extraction ===
+- Identify repeated workflow patterns across repos
+- Extract common steps (build, test, lint, deploy)
+- Create a repo or folder for reusable workflows
+- Add versioning strategy (`v1`, `v2`, etc.)
+
+=== Phase 2 — Build the Reusable Workflows ===
+- Parameterize inputs (language version, build flags, environment)
+- Add outputs for downstream jobs
+- Add strict `permissions:` blocks
+- Add `actionlint` and test with sample repos
+
+=== Phase 3 — Incremental Rollout ===
+- Migrate 1–2 low‑risk repos first
+- Validate behavior and performance
+- Update documentation and usage examples
+- Roll out to all repos in batches
+
+=== Phase 4 — Governance ===
+- Lock down write access to the reusable workflow repo
+- Enable Dependabot for that repo
+- Require approvals for version bumps
+- Add automated tests for workflow changes
