@@ -2,6 +2,7 @@
 :pandoc:
 
 - [[2023-11-05#Convert Vimwiki Format to Obsidian Markdown with Pandoc|Convert Vimwiki Format to Obsidian Markdown with Pandoc]]
+- [[/diary/2026-05-08#Vim Pandoc Compiler|Vim Pandoc Compiler]]
 
 == Convert Vimwiki Wikilinks to Markdown with Pandoc ==
 :vimwiki:pandoc:wikilinks_title_after_pipe:vimwiki-todo-lists:

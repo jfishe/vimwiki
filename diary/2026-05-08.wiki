@@ -1,0 +1,73 @@
+= Journal 2026-05-08 =
+
+== Vim Pandoc Compiler ==
+:pandoc:compiler:vim:
+
+[[https://github.com/vim-pandoc/vim-pandoc|vim-pandoc]] provides compiler settings for Vim.
+
+[[https://github.com/vim-pandoc/vim-pandoc|vim-pandoc]] defines and sets a
+'compiler' pandoc
+that can be started by ':make' or ':lmake' and
+compiles the current file by pandoc.
+
+The `:Pandoc` command uses
+`g:pandoc#compiler#command` and
+`g:pandoc#compiler#arguments`.
+
+- [[/diary/2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc|Convert Vimwiki Wikilinks to Markdown with Pandoc]]
+- [[/diary/2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc|Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
+- [[/diary/2024-01-20#Convert Vimwiki Tasks to Markdown `mdformat-myst`|Convert Vimwiki Tasks to Markdown `mdformat myst`]]
+
+=== `:compiler pandoc` review ===
+
+In this setup, **`:compiler pandoc` resolves to the user package version
+from `vim-pandoc`**, not the Vim 9.1 system compiler, because
+`vimfiles/pack/python/start/vim-pandoc` appears on `runtimepath` before
+`/usr/share/vim/vim91`.
+
+| Source                                                                              | Behavior                                                                                                                       |
+|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| **System Vim 9.1** `/usr/share/vim/vim91/compiler/pandoc.vim`                       | Full-featured compiler wrapper with filetype detection, title/lang metadata, output extension handling, and extra-arg support. |
+| **Active user package** `vimfiles/pack/python/start/vim-pandoc/compiler/pandoc.vim` | Minimal wrapper that sets `makeprg` to `pandoc` plus configured arguments and uses a pandoc-friendly `errorformat`.            |
+
+==== System Vim 9.1 features ====
+
+- Runs `pandoc --standalone`.
+- Infers `--from=` from the current buffer filetype.
+  Special cases include `pandoc -> markdown`, `tex -> latex`,
+  `xml -> jats`, and unknown or empty types falling back to `markdown`.
+- Lets `:make` choose the output extension, such as `:make html` or
+  `:make pdf`.
+- Writes output to the current file stem with the requested extension:
+  `%:r.$*`.
+- Adds a title automatically unless the buffer already has a Pandoc title
+  block or YAML `title:`.
+- Can add `--metadata lang=...` from `b:pandoc_compiler_lang`, or from the
+  first two letters of `spelllang` when spell checking is on.
+- Accepts extra flags through `b:pandoc_compiler_args` or
+  `g:pandoc_compiler_args`.
+- Parses pandoc diagnostics with `"%f", line %l: %m`.
+
+==== Active user-package features ====
+
+- Sets `makeprg` to `g:pandoc#compiler#command` if defined, otherwise
+  `pandoc`, plus `g:pandoc#compiler#arguments`.
+- Uses the same pandoc-style `errorformat` as the system compiler.
+- Does **not** provide the Vim 9.1 conveniences for automatic input format
+  mapping, automatic title/lang metadata, `:make html` or `:make pdf`
+  output-file templating, or automatic current-file insertion.
+
+==== Repo-specific customization ====
+
+This repo sets:
+
+```vim
+let g:pandoc#compiler#arguments =
+      \ '--to=markdown'
+      \ .. ' --from=markdown-header_attributes+wikilinks_title_after_pipe-task_lists'
+      \ .. ' --wrap=preserve --standalone'
+```
+
+So here, `:compiler pandoc` effectively prepares `:make` to run pandoc as a
+**Markdown-to-Markdown reformatter or converter**, not the richer system
+`vim91` compiler workflow.
