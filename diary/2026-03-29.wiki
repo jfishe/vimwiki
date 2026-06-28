@@ -6,6 +6,8 @@
 - [[/diary/2026-02-15#FZF with PowerShell]] demonstrates Vim integration
   for `cmd` and PowerShell.
 - [[https://dev.to/kevinnitro/fzf-advanced-integration-in-powershell-53p0|Fzf advanced integration in PowerShell]]
+- [[https://www.powershellgallery.com/packages/PSFzf|PSGallery / PSFzf]] is a PowerShell wrapper for `fzf`.
+  - [[/diary/2026-06-13|Journal 2026-06-13]]
 
 {{{powershell
 fd --type file --follow --hidden --exclude .git --exclude '*tmp*' |
@@ -14,9 +16,27 @@ fd --type file --follow --hidden --exclude .git --exclude '*tmp*' |
       --header 'CTRL-S: Switch between Files/Directories' `
       --bind 'ctrl-s:transform:if not "%FZF_PROMPT%"=="Files> " (echo ^change-prompt^(Files^> ^)^+^reload^(fd --type file^)) else (echo ^change-prompt^(Directory^> ^)^+^reload^(fd --type directory^))' `
       --preview 'if "%FZF_PROMPT%"=="Files> " (bat --color=always {}) else (eza -T --colour=always --icons=always {})'
-}}}
 
-- [[https://www.powershellgallery.com/packages/PSFzf|PSGallery / PSFzf]] is a PowerShell wrapper for `fzf`.
+rg --column --line-number --no-heading --color=always --smart-case
+
+$env:PSFZF_RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case"
+$env:FD_OPTIONS=@(
+    '--hidden',
+    '--follow',
+    '--exclude',
+    '.git',
+    '--exclude',
+    "'*tmp*'"
+) -join ' '
+
+$env:FZF_DEFAULT_OPTS = @(
+  '--height=80%',
+  '--layout=reverse',
+  '--border',
+  '--info=inline',
+  '--preview-window=right:60%'
+) -join ' '
+}}}
 
 == Chezmoi Dotfiles Management ==
 :chezmoi:rcm:
@@ -37,3 +57,6 @@ echo home > .chezmoiroot
 chezmoi add --follow ~/.bashrc
 rm .bashrc
 }}}
+
+Minimal benefit for increased complexity vs. `rcm`,
+which is already working.

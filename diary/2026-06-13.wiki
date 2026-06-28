@@ -1,0 +1,27 @@
+= Journal 2026-06-13 =
+
+== FZF with PowerShell ==
+:fzf:ripgrep:bat:fd:powershell:
+
+- [[/diary/2026-03-29#FZF with PowerShell]]
+- [[https://www.powershellgallery.com/packages/PSFzf|PSGallery / PSFzf]] is a PowerShell wrapper for `fzf`.
+  - [[https://github.com/kelleyma49/PSFzf|kelleyma49 PSFzf]]
+  - [[https://github.com/kelleyma49/PSFzf#helper-functions|Helper Functions]]
+
+{{{powershell
+# replace 'Ctrl+t' and 'Ctrl+r' with your preferred bindings:
+Set-PsFzfOption `
+  -PSReadlineChordProvider 'Ctrl+t' `
+  -PSReadlineChordReverseHistory 'Ctrl+r'
+
+Set-PSReadLineKeyHandler `
+  -Key Tab `
+  -ScriptBlock { Invoke-FzfTabCompletion }
+Set-PsFzfOption -TabExpansion
+}}}
+
+- PSReadline History (default chord: `Alt+a`)
+- Selected Directory (default chord: `Alt+c`)
+- `Ctrl+/` is broken per
+  [[https://github.com/kelleyma49/PSFzf/issues/380|Preview fails with Go 'fork/exec invalid argument' error #380]].
+- EnableFd prepends the current directory to absolute paths.

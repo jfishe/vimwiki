@@ -10,3 +10,5 @@
     let winpath = split(system('(New-Object -ComObject Scripting.FileSystemObject).GetFile(' .. shellescape(a:path) .. ').ShortPath'))[0]
   endif
 }}}
+
+- [[/diary/2026-03-29#FZF with PowerShell]]
