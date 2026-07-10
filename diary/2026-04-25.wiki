@@ -32,10 +32,10 @@ pixi install
 - [X] Continuous integration with [GitHub Actions](https://github.com/features/actions)
 - [X] Code coverage with [Codecov](https://docs.codecov.com/docs)
 - [[https://github.com/jevandezande/pixi-cookiecutter/blob/master/notes.md#notes|notes.md]] lists optional dependencies:
-  - [ ] [[https://github.com/nektos/act|act]] runs GitHub Actions locally.
+  - [X] [[https://github.com/nektos/act|act]] runs GitHub Actions locally.
   - [X] [[https://pixi.sh/latest/integration/third_party/direnv|direnv]] can auto magically load environment variables and the `pixi` shell.
         👎 `direnv` is not optional.
-  - [.] [[https://cli.github.com/|GitHub-CLI]] can create and manage a GitHub repository.
+  - [X] [[https://cli.github.com/|GitHub-CLI]] can create and manage a GitHub repository.
         [[/diary/2026-05-01|Journal 2026-05-01]] evaluates `GitHub-CLI`.
 {{{text
 OSError: direnv is not installed; install with `pixi global install direnv`
