@@ -4,6 +4,9 @@
 === 2FA ===
 - [[Git#Git#Developer Settings]]
 
+=== AI ===
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
+
 === BIOS ===
 - [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
@@ -43,6 +46,13 @@
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 - [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 - [[diary/2024-12-14#Journal 2024-12-14#Sync Forked Github Repository and Branches]]
+
+=== GitHub-CLI ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+- [[diary/2026-05-01#Journal 2026-05-01#GitHub-CLI]]
+
+=== Github ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
 
 === HP ===
 - [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
@@ -159,8 +169,14 @@
 === Zotero ===
 - [[diary/2023-09-28#Journal 2023-09-28#`Zotero` on WSL]]
 
+=== act ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+
 === anaconda ===
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
+
+=== analysis ===
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
 
 === ancho ===
 - [[Beans#Dried Beans Recipes#Chili]]
@@ -182,6 +198,7 @@
 
 === bat ===
 - [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+- [[diary/2026-06-13#Journal 2026-06-13#FZF with PowerShell]]
 
 === bbq ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
@@ -220,6 +237,12 @@
 === brunswick ===
 - [[Soup#Soup and Stew#Brunswick Stew]]
 
+=== buffalo ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Left Wing, Right Wing and Buffalo Wings]]
+
+=== calculation ===
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
+
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
@@ -232,6 +255,9 @@
 
 === chezmoi ===
 - [[diary/2026-03-29#Journal 2026-03-29#Chezmoi Dotfiles Management]]
+
+=== chicken ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Left Wing, Right Wing and Buffalo Wings]]
 
 === chicory ===
 - [[Coffee#Coffee#Chicory Coffee]]
@@ -266,6 +292,9 @@
 === cocoa ===
 - [[cooking#Cooking#Cocoa Gravy]]
 
+=== codecov ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+
 === coffee ===
 - [[Coffee#Coffee#French Press Coffee]]
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
@@ -274,7 +303,11 @@
 === commitizen ===
 - [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
 
+=== compiler ===
+- [[diary/2026-05-08#Journal 2026-05-08#Vim Pandoc Compiler]]
+
 === conda ===
+- [[diary/2020-10-24#Journal 2020-10-24#`Cookiecutter` Conda Project Template]]
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]
 - [[diary/2021-12-23#Journal 2021-12-23#Windows 11 Vim Configuration]]
 - [[diary/2021-12-24#Journal 2021-12-24#Windows 11 Vim Configuration]]
@@ -298,6 +331,10 @@
 === cookie ===
 - [[Cookies#Cookies]]
 
+=== cookiecutter ===
+- [[diary/2020-10-24#Journal 2020-10-24#`Cookiecutter` Conda Project Template]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template]]
+
 === cooking ===
 - [[cooking#Cooking]]
 
@@ -305,17 +342,28 @@
 - [[diary/2023-05-26#Journal 2023-05-26]]
 - [[diary/2023-05-27#Journal 2023-05-27]]
 
+=== ctags ===
+- [[diary/2026-04-25#Journal 2026-04-25#Universal-Ctags Configuration for Pixi]]
+
 === ctan ===
 - [[diary/2024-12-15#Journal 2024-12-15#coBib - the Console Bibliography]]
 
 === desktop ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
 
+=== direnv ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+
 === diy ===
 - [[index#John D. Fisher's Home Wiki#DIY]]
 
 === doner ===
 - [[cooking#Cooking#Döner Kebab]]
+
+=== dsproject ===
+- [[diary/2020-10-24#Journal 2020-10-24#`Cookiecutter` Conda Project Template]]
+- [[diary/2026-04-05#Journal 2026-04-05#PyScaffold]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template]]
 
 === eggs ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
@@ -327,6 +375,7 @@
 
 === fd ===
 - [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+- [[diary/2026-06-13#Journal 2026-06-13#FZF with PowerShell]]
 
 === fetch ===
 - [[Git#Git#Pull Rebase]]
@@ -340,6 +389,7 @@
 === fzf ===
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+- [[diary/2026-06-13#Journal 2026-06-13#FZF with PowerShell]]
 
 === fzf-bibtex ===
 - [[diary/2023-10-06#Journal 2023-10-06#Bibliography Setup]]
@@ -412,6 +462,7 @@
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
 - [[diary/2023-09-09#Journal 2023-09-09#Jupyter-Book]]
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
 
 === jupyterbook ===
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
@@ -531,6 +582,9 @@
 === notebook ===
 - [[Python#Python Notes#Jupyter]]
 
+=== nuclear ===
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
+
 === nytimes ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
 
@@ -562,6 +616,7 @@
 - [[diary/2025-05-31#Journal 2025-05-31#MyST Markdown and Pandoc Markdown]]
 - [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
 - [[diary/2025-06-27#Journal 2025-06-27#MyST Markdown with mdformat]]
+- [[diary/2026-05-08#Journal 2026-05-08#Vim Pandoc Compiler]]
 
 === panvimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
@@ -585,6 +640,11 @@
 
 === pico ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+
+=== pixi ===
+- [[diary/2026-04-25#Journal 2026-04-25#Universal-Ctags Configuration for Pixi]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template]]
 
 === plaster ===
 - [[PowerShell#PowerShell and pwsh#Template]]
@@ -611,6 +671,7 @@
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+- [[diary/2026-06-13#Journal 2026-06-13#FZF with PowerShell]]
 - [[windows_config#Microsoft Windows Configuration#Chocolatey#Improving choco list with options to show dependencies and sort by date (and more) #1276]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Windows Firewall Rules for SSH#Verify ssh key access with KeePass and KeeAgent]]
 
@@ -621,6 +682,7 @@
 - [[diary/2024-10-13#Journal 2024-10-13#Pyscaffold Pre-Commit Configuration]]
 - [[diary/2024-12-01#Journal 2024-12-01#Pre-Commit Lint Git Commit Messages]]
 - [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
 
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
@@ -652,11 +714,13 @@
 === pytest ===
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
 
 === python ===
 - [[Python#Python Notes#Pandas DataFrames and Plotting]]
 - [[Python#Python Notes#Vim Python Plugin]]
 - [[Python#Python Notes]]
+- [[diary/2020-10-24#Journal 2020-10-24#`Cookiecutter` Conda Project Template]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2021-05-02#Journal 2021-05-02#PyScaffold]]
 - [[diary/2021-05-09#Journal 2021-05-09#PyScaffold]]
@@ -676,6 +740,8 @@
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 - [[diary/2025-02-15#Journal 2025-02-15#Astral uv init options]]
 - [[diary/2026-04-05#Journal 2026-04-05#PyScaffold]]
+- [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template]]
 
 === rcm ===
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
@@ -711,6 +777,7 @@
 === ripgrep ===
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[diary/2026-03-29#Journal 2026-03-29#FZF with PowerShell]]
+- [[diary/2026-06-13#Journal 2026-06-13#FZF with PowerShell]]
 
 === rows ===
 - [[diary/2023-05-26#Journal 2023-05-26]]
@@ -720,12 +787,16 @@
 - [[cooking#Cooking#Santa Maria Rub]]
 - [[cooking#Cooking#Smoked Pork Top Loin]]
 
+=== ruff ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+
 === salsa ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 
 === sauce ===
 - [[cooking#Cooking#Cocoa Gravy]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Teriyaki Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
 === script ===
@@ -764,6 +835,9 @@
 - [[Soup#Soup and Stew#Root Vegetable Stew]]
 - [[Soup#Soup and Stew]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
+
+=== stirfry ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Teriyaki Sauce]]
 
 === symlinkevaluation ===
 - [[windows_config#Microsoft Windows Configuration#Symlinks]]
@@ -808,6 +882,9 @@
 - [[PowerShell#PowerShell and pwsh#Template]]
 - [[diary/2023-11-19#Journal 2023-11-19#Plaster Module Template]]
 
+=== teriyaki ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Teriyaki Sauce]]
+
 === timesyncd ===
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 
@@ -845,6 +922,9 @@
 === twine ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
 
+=== ty ===
+- [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
+
 === typst ===
 - [[diary/2024-03-31#Journal 2024-03-31#Typst as a LaTeX Replacement]]
 
@@ -858,7 +938,6 @@
 
 === vim ===
 - [[Python#Python Notes#Vim Python Plugin]]
-- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-06-04#Journal 2021-06-04#Vim compiler pytest runner]]
 - [[diary/2021-06-06#Journal 2021-06-06#Vim compiler pytest runner]]
 - [[diary/2021-12-17#Journal 2021-12-17#Windows 11 Vim Configuration]]
@@ -868,6 +947,7 @@
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
 - [[diary/2024-12-15#Journal 2024-12-15#Papis Command-line Bibliography Manager]]
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
+- [[diary/2026-05-08#Journal 2026-05-08#Vim Pandoc Compiler]]
 - [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === vim-fugitive ===
@@ -881,7 +961,6 @@
 - [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
 
 === vimwiki ===
-- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
 - [[diary/2023-04-15#Journal 2023-04-15#Vimwiki2HTML with Pandoc]]
 - [[diary/2023-05-19#Journal 2023-05-19#Vimwiki2HTML with ghp-import]]
@@ -916,7 +995,6 @@
 - [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 
 === vimwiki_docx ===
-- [[diary/2020-10-24#Journal 2020-10-24#vimwiki_docx]]
 - [[diary/2021-05-01#Journal 2021-05-01]]
 
 === vimwiki_tags ===
@@ -944,6 +1022,9 @@
 
 === winget ===
 - [[diary/2026-03-27#Journal 2026-03-27#Windows Package Manager]]
+
+=== wings ===
+- [[cooking#Cooking#Hot Sauce and BBQ Sauce#Left Wing, Right Wing and Buffalo Wings]]
 
 === zsh ===
 - [[diary/2021-05-09#Journal 2021-05-09#conda completion]]

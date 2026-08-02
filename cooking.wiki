@@ -13,6 +13,8 @@
   - [[#Hot Sauce and BBQ Sauce]]
     - [[#Mustard Based Carolina BBQ Sauce]]
     - [[#Vinegar Based Carolina BBQ Sauce]]
+    - [[#Teriyaki Sauce]]
+    - [[#Left Wing, Right Wing and Buffalo Wings]]
   - [[#Bakade Ägg (Baked Eggs)]]
   - [[#Uunipuuro (Finnish Oven Porridge)]]
   - [[#Cocoa Gravy]]
@@ -102,6 +104,57 @@ Directions:
 1. Dissolve vinegar, brown sugar and salt in a sauce pan and bring to boil.
 2. Add other ingredients and simmer for 15 minutes.
 3. Adjust salt and sugar to taste.
+
+=== Teriyaki Sauce ===
+:teriyaki:sauce:stirfry:
+
+Derived from:
+
+- [[https://www.cookwell.com/recipe/teriyaki-and-snap-pea-noodles|Cook Well, Co., Recipe Teriyaki and Snap Pea Noodles]]
+- [[https://www.traeger.com/recipes/teriyaki-wings|Traeger Teriyaki Wings]]
+
+Ingredients:
+
+- Cooking oil
+- Garlic, minced
+- Ginger, minced
+- 1x soy sauce
+- 1x Mirin or pineapple juice
+- 1x sake
+- sugar
+- 1 Tb cornstarch
+- 2 Tb water
+
+Directions:
+
+1. In a sauce pot over medium heat, drizzle oil, and
+   bloom ginger and garlic for a minute.
+2. Add soy sauce, mirin and sake.
+3. Simmer and reduce for 6 minutes.
+4. Add splash of cornstarch slurry and simmer.
+5. Repeat as needed for thickness.
+
+=== Left Wing, Right Wing and Buffalo Wings ===
+:wings:chicken:buffalo:
+
+Ingredients:
+
+- 8 lb chicken wings (2x Costco organic wings)
+- 2 Tb cornstarch
+- Traeger Chicken Rub or Taco Seasoning
+- Kosher salt
+- After grilling, toss the wings in a sauce made from
+- 1 c Frank's RedHot
+- ½ c Dijon mustard
+- 170 g unsalted butter
+
+Directions:
+
+1. Dry wings thoroughly and coat with cornstarch, salt and rub.
+2. Smoke: Cook at 375°F for 35 minutes (flip halfway).
+3. Sauce: Combine hot sauce, mustard, and melted butter.
+4. Warm sauce while the chicken smokes.
+5. Toss wings with sauce.
 
 == Bakade Ägg (Baked Eggs) ==
 :eggs:breakfast:
