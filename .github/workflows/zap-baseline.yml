@@ -1,0 +1,26 @@
+name: ZAP Baseline Scan
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan jfishe.github.io/vimwiki
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@de8ad967d3548d44ef623df22cf95c3b0baf8b25 # v0.15.0
+        with:
+          target: "https://jfishe.github.io/vimwiki/"
+          fail_action: false
