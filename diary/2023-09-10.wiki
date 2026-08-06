@@ -15,7 +15,7 @@ home = /usr/bin
 include-system-site-packages = true
 version = 3.11.2
 executable = /usr/bin/python3.11
-command = /usr/bin/python3 -m venv --system-site-packages --upgrade-deps ~/jdfen/.venvs/vim_python
+command = /usr/bin/python3 -m venv --system-site-packages --upgrade-deps ~/anon/.venvs/vim_python
 }}}
 
 {{{bash

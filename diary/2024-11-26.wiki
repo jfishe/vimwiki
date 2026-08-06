@@ -40,5 +40,5 @@ $InstallLocation = Get-Item -Path ("$env:LOCALAPPDATA\" +
 $FileName = Get-Item -Path "$env:USERPROFILE\Downloads\WLinux.vhdx"
 
 wsl --import WLinux "$InstallLocation" "$FileName" --version 2 --vhd
-pengwin.exe config --default-user jdfen
+pengwin.exe config --default-user anon
 }}}

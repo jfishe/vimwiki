@@ -25,7 +25,7 @@
 {{{vim
 " Vim compiler file
 " Compiler:	MyST (MyST Markdown)
-" Maintainer:   jdfenw@gmail.com
+" Maintainer:   dude@abides.here
 " Last Change:	2025 May 01
 
 " if exists("current_compiler") | finish | endif

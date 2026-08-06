@@ -1,0 +1,12 @@
+= Journal 2026-08-06 =
+
+== Security Audit for Personal Vimwiki Site ==
+:security:supply-chain:privacy-exposure:info-disclosure:
+
+- privacy-exposure:
+  - Avoid email address on public site.
+  - No robots.txt or noindex meta so diary is indexable.
+  - Avoid personalized URLs.
+- info-disclosure:
+  - Avoid exposing local file system paths.
+  - Avoid exposing internal LAN host name.

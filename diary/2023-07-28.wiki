@@ -46,7 +46,7 @@ conda info --envs
 {{{powershell
 $childOptions = @{
   # Obtain from `conda info --envs`.
-  Path = 'C:\Users\jdfen\Github\pyedna\.tox'
+  Path = 'C:\Users\anon\Github\pyedna\.tox'
   Exclude 'log', '.tmp', 'dist'
 }
 Get-ChildItem @childOptions |

@@ -50,7 +50,7 @@ mdformat --number *.md
   MyST does not convert to a link.
 - Include external files as download links, e.g:
   {{{markdown
-  [Volume 10 Issue 7](/c/Users/jdfen/Downloads/vol10_iss7_web.pdf)
+  [Volume 10 Issue 7](/c/Users/anon/Downloads/vol10_iss7_web.pdf)
   is rendered as
   [Volume 10 Issue 7](http://localhost:3100/vol10_iss7_web-d78d1d47b1d91fcc2e3ded640dbbb51d.pdf)
   }}}

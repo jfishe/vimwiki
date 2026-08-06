@@ -56,7 +56,7 @@ pandoc --bibliography=$HOME/zk/default.bib \
 }}}
 
 {{{yaml
-bibliography: /home/jdfen/zk/default.bib
+bibliography: /home/anon/zk/default.bib
 link-citations: true
 link-bibliography: true
 }}}

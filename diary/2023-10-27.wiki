@@ -9,7 +9,7 @@
 {{{text
 Error detected while processing function vimwiki#base#check_links:
 line   91:
-E716: Key not present in Dictionary: "C:\Users\jdfen\OneDrive\Documents\vimwiki_home/index.wiki"
+E716: Key not present in Dictionary: "index.wiki"
 }}}
 
 [[https://github.com/vimwiki/vimwiki/issues/1022|VimwikiCheckLinks is broken on Windows #1022]].

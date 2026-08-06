@@ -27,7 +27,7 @@
   }}}
 
 - To test start a webserver on the local network and open
-  [[http://laptop-pif179dt:8000/|http://laptop-pif179dt:8000/]]. Update the
+  [[http://localhost:8000/|http://localhost:8000/]]. Update the
   `hostname` and allow `python` to access the network, in Windows
   Security: Firewall & network protection.
   [[https://pythonbasics.org/webserver/|Create a Python Web Server]] provides

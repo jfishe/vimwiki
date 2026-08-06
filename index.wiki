@@ -18,7 +18,7 @@
 
 - [[cooking|Cooking]]
 - [[Git]]
-- [[Health_Fitness|Health and_Fitness]]
+- [[Health_Fitness|Health and Fitness]]
 - [[Linux]]
 - [[Oh-my-zsh]]
 - [[PowerShell]]

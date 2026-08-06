@@ -382,5 +382,5 @@ pandoc --from=vimwiki --to=docx `
   --filter=delete_tag_lines `
   --filter=delete_taskwiki_heading `
   --filter=delete_empty_heading `
-  --output C:\Users\jdfen\Documents\vimwiki_home\docx\diary\2026-04-17.docx
+  --output $env:OneDrive\Documents\vimwiki_home\docx\diary\2026-04-17.docx
 }}}

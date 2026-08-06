@@ -72,7 +72,7 @@ task_attributes="priority,project,tags,description"
 # --active-tasks:"(+ANNOTATED and (+WAITING or +PENDING))"
 # --active-tasks:"(+WAITING or +PENDING)"
 # path_ext=/usr/local/share/taskopen/scripts
-path_ext=/home/jdfen/.local/share/taskopen/scripts
+path_ext=/home/anon/.local/share/taskopen/scripts
 
 [Actions]
 files.target=annotations
@@ -89,7 +89,7 @@ wiki.modes="batch,any,normal"
 
 shortpath.target=annotations
 shortpath.labelregex="^(wiki)"
-shortpath.regex="/(mnt/|)c/Users/(?i:jdfen)/OneDrive/Documents/(.*)"
+shortpath.regex="/(mnt/|)c/Users/(?i:anon)/OneDrive/Documents/(.*)"
 shortpath.command="""shortpath "$LABEL: $FILE" $LABEL': ~/'$LAST_MATCH"""
 shortpath.modes="batch,any,normal"
 }}}

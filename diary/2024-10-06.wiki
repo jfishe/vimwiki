@@ -44,7 +44,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "dude"
 description = "Add a short description here!"
-authors = [{name = "John D. Fisher", email = "jdfenw@gmail.com"}]
+authors = [{name = "The Dude Abides", email = "dude@abides.here"}]
 license = {text = "MIT"}
 classifiers = [
     "Development Status :: 4 - Beta",

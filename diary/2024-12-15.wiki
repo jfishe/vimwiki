@@ -17,10 +17,10 @@
 
   {{{ini
   [settings]
-  default-library = jdfen
+  default-library = anon
 
-  [jdfen]
-  dir = /c/Users/jdfen/OneDrive/Documents/papis
+  [anon]
+  dir = /c/Users/anon/OneDrive/Documents/papis
   opentool = wslview
   editor = vim
   use-git = True
