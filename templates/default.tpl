@@ -26,6 +26,10 @@
     <title>%title%</title>
     <meta http-equiv="Content-Type" content="text/html; charset=%encoding%" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'sha256-B6k1+FIOIc5pD1GV7X6Hf+Y4864uul3QKyZd20iR9oI='; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';"
+    />
   </head>
   <body>
     <a href="%root_path%index.html">Index</a> |

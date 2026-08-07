@@ -23,4 +23,5 @@ jobs:
         uses: zaproxy/action-baseline@de8ad967d3548d44ef623df22cf95c3b0baf8b25 # v0.15.0
         with:
           target: "https://jfishe.github.io/vimwiki/"
+          rules_file_name: ".zap/rules.tsv"
           fail_action: false
