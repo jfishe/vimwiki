@@ -9,3 +9,4 @@
 10098	IGNORE	(Cross-Domain Misconfiguration - GitHub Pages serves all static content with ACAO: * globally, not configurable, no sensitive/authenticated data exposed)
 10099	IGNORE	(Source Code Disclosure - ActiveVFP - false positive on static HTML with no server-side script syntax)
 90004	IGNORE	(Cross-Origin-Embedder-Policy / Cross-Origin-Opener-Policy Header Missing - GitHub Pages does not support custom response headers)
+10055	IGNORE	(CSP: Failure to Define Directive with No Fallback - fires only on the bare jfishe.github.io root, GitHub's own 404 page for a non-existent user site, not part of or controllable by this repo)

@@ -442,6 +442,9 @@
 === hot_sauce ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce]]
 
+=== info-disclosure ===
+- [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
+
 === ini2toml ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
 - [[diary/2024-10-06#Journal 2024-10-06#Pyscaffold Pre-Commit Configuration]]
@@ -684,6 +687,9 @@
 - [[diary/2024-12-05#Journal 2024-12-05#Pre-Commit Lint Git Commit Messages]]
 - [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
 
+=== privacy-exposure ===
+- [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
+
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
 
@@ -762,9 +768,6 @@
 === release ===
 - [[diary/2024-11-27#Journal 2024-11-27#Change Log and GitHub Release Notes]]
 
-=== remodel ===
-- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
-
 === rice ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 
@@ -810,11 +813,11 @@
 - [[cooking#Cooking#Santa Maria Rub]]
 - [[cooking#Cooking#Smoked Pork Top Loin]]
 
+=== security ===
+- [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
+
 === sembr ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
-
-=== shades ===
-- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === soup ===
 - [[Soup#Soup and Stew]]
@@ -838,6 +841,9 @@
 
 === stirfry ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Teriyaki Sauce]]
+
+=== supply-chain ===
+- [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
 
 === symlinkevaluation ===
 - [[windows_config#Microsoft Windows Configuration#Symlinks]]
@@ -1016,9 +1022,6 @@
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc]]
 - [[diary/2024-01-20#Journal 2024-01-20#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
 - [[diary/2024-02-11#Journal 2024-02-11#Convert Vimwiki Wikilinks to Markdown with Pandoc]]
-
-=== window ===
-- [[diary/2020-12-21#Journal 2020-12-21#Blackout Shades]]
 
 === winget ===
 - [[diary/2026-03-27#Journal 2026-03-27#Windows Package Manager]]

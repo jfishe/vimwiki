@@ -10,3 +10,10 @@
 - info-disclosure:
   - Avoid exposing local file system paths.
   - Avoid exposing internal LAN host name.
+<<<<<<< Updated upstream
+Zed Attack Proxy (ZAP)
+
+||||||| Stash base
+=======
+Zed Attack Proxy (ZAP)
+>>>>>>> Stashed changes
