@@ -1,8 +1,6 @@
 name: ZAP Baseline Scan
 
 on:
-  push:
-    branches: [gh-pages]
   schedule:
     - cron: "0 6 * * 1"
   workflow_dispatch:
@@ -10,7 +8,6 @@ on:
 permissions:
   contents: read
   issues: write
-  pages: read
 
 jobs:
   zap_scan:
@@ -19,23 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-
-      - name: Wait for GitHub Pages build to complete
-        if: github.event_name == 'push'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          # gh-pages.sh force-pushes this branch at commit time, ahead of
-          # the site actually being rebuilt/published by GitHub Pages and
-          # ahead of the CDN edge cache (max-age=600) expiring the old
-          # response. Wait for the build to finish so the scan below sees
-          # the content this push actually produced, not a stale copy.
-          for _ in $(seq 1 20); do
-            status=$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq .status)
-            echo "Pages build status: $status"
-            [ "$status" = "built" ] && break
-            sleep 15
-          done
 
       - name: ZAP Baseline Scan
         uses: zaproxy/action-baseline@de8ad967d3548d44ef623df22cf95c3b0baf8b25 # v0.15.0
