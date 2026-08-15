@@ -10,3 +10,5 @@
 10099	IGNORE	(Source Code Disclosure - ActiveVFP - false positive on static HTML with no server-side script syntax)
 90004	IGNORE	(Cross-Origin-Embedder-Policy / Cross-Origin-Opener-Policy Header Missing - GitHub Pages does not support custom response headers)
 10055	IGNORE	(CSP: Failure to Define Directive with No Fallback - fires only on the bare jfishe.github.io root, GitHub's own 404 page for a non-existent user site, not part of or controllable by this repo)
+10027	IGNORE	(Information Disclosure - Suspicious Comments - fires exclusively on jfishe.github.io/Richland_prefab_2br/*, a sibling GitHub Pages project reached via an outbound link in index.wiki, not vimwiki's own content; false positives in vendored third-party JS (JSZip, SweetHome3D-JS) and pandoc's own generated CSS boilerplate)
+10109	IGNORE	(Modern Web Application - informational classification only, not a vulnerability; fires on the same sibling project's JS-heavy 3D floor-plan viewer page)
