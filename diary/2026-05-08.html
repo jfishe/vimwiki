@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+      integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-05-08</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'sha256-B6k1+FIOIc5pD1GV7X6Hf+Y4864uul3QKyZd20iR9oI='; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';"
+    />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-05-08"><h1 id="Journal 2026-05-08" class="header"><a href="#Journal 2026-05-08">Journal 2026-05-08</a></h1></div>
+
+<div id="Journal 2026-05-08-Vim Pandoc Compiler"><h2 id="Vim Pandoc Compiler" class="header"><a href="#Journal 2026-05-08-Vim Pandoc Compiler">Vim Pandoc Compiler</a></h2></div>
+<p>
+<span id="Journal 2026-05-08-Vim Pandoc Compiler-pandoc"></span><span class="tag" id="pandoc">pandoc</span> <span id="Journal 2026-05-08-Vim Pandoc Compiler-compiler"></span><span class="tag" id="compiler">compiler</span> <span id="Journal 2026-05-08-Vim Pandoc Compiler-vim"></span><span class="tag" id="vim">vim</span>
+</p>
+
+<p>
+<a href="https://github.com/vim-pandoc/vim-pandoc">vim-pandoc</a> provides compiler settings for Vim.
+</p>
+
+<p>
+<a href="https://github.com/vim-pandoc/vim-pandoc">vim-pandoc</a> defines and sets a
+'compiler' pandoc
+that can be started by ':make' or ':lmake' and
+compiles the current file by pandoc.
+</p>
+
+<p>
+The <code>:Pandoc</code> command uses
+<code>g:pandoc#compiler#command</code> and
+<code>g:pandoc#compiler#arguments</code>.
+</p>
+
+<ul>
+<li>
+<a href="2024-01-20.html#Convert Vimwiki Wikilinks to Markdown with Pandoc">Convert Vimwiki Wikilinks to Markdown with Pandoc</a>
+
+<li>
+<a href="2024-01-20.html#Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc">Convert Vimwiki Todo Lists Wiki Lints to Markdown with Pandoc</a>
+
+<li>
+[[/diary/2024-01-20#Convert Vimwiki Tasks to Markdown <code>mdformat-myst</code>|Convert Vimwiki Tasks to Markdown <code>mdformat myst</code>]]
+
+</ul>
+<div id="Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review"><h3 id="`:compiler pandoc` review" class="header"><a href="#Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review"><code>:compiler pandoc</code> review</a></h3></div>
+
+<p>
+In this setup, **<code>:compiler pandoc</code> resolves to the user package version
+from <code>vim-pandoc</code>**, not the Vim 9.1 system compiler, because
+<code>vimfiles/pack/python/start/vim-pandoc</code> appears on <code>runtimepath</code> before
+<code>/usr/share/vim/vim91</code>.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>
+Source
+</th>
+<th>
+Behavior
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+*<span id="Journal 2026-05-08-Vim Pandoc Compiler-<code>:compiler pandoc</code> review-System Vim 9.1"></span><strong id="System Vim 9.1">System Vim 9.1</strong>* <code>/usr/share/vim/vim91/compiler/pandoc.vim</code>
+</td>
+<td>
+Full-featured compiler wrapper with filetype detection, title/lang metadata, output extension handling, and extra-arg support.
+</td>
+</tr>
+<tr>
+<td>
+*<span id="Journal 2026-05-08-Vim Pandoc Compiler-<code>:compiler pandoc</code> review-Active user package"></span><strong id="Active user package">Active user package</strong>* <code>vimfiles/pack/python/start/vim-pandoc/compiler/pandoc.vim</code>
+</td>
+<td>
+Minimal wrapper that sets <code>makeprg</code> to <code>pandoc</code> plus configured arguments and uses a pandoc-friendly <code>errorformat</code>.
+</td>
+</tr>
+</tbody>
+</table>
+
+<div id="Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-System Vim 9.1 features"><h4 id="System Vim 9.1 features" class="header"><a href="#Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-System Vim 9.1 features">System Vim 9.1 features</a></h4></div>
+
+<ul>
+<li>
+Runs <code>pandoc --standalone</code>.
+
+<li>
+Infers <code>--from=</code> from the current buffer filetype.
+  Special cases include <code>pandoc -&gt; markdown</code>, <code>tex -&gt; latex</code>,
+  <code>xml -&gt; jats</code>, and unknown or empty types falling back to <code>markdown</code>.
+
+<li>
+Lets <code>:make</code> choose the output extension, such as <code>:make html</code> or
+  <code>:make pdf</code>.
+
+<li>
+Writes output to the current file stem with the requested extension:
+  <code>%:r.$*</code>.
+
+<li>
+Adds a title automatically unless the buffer already has a Pandoc title
+  block or YAML <code>title:</code>.
+
+<li>
+Can add <code>--metadata lang=...</code> from <code>b:pandoc_compiler_lang</code>, or from the
+  first two letters of <code>spelllang</code> when spell checking is on.
+
+<li>
+Accepts extra flags through <code>b:pandoc_compiler_args</code> or
+  <code>g:pandoc_compiler_args</code>.
+
+<li>
+Parses pandoc diagnostics with <code>"%f", line %l: %m</code>.
+
+</ul>
+<div id="Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-Active user-package features"><h4 id="Active user-package features" class="header"><a href="#Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-Active user-package features">Active user-package features</a></h4></div>
+
+<ul>
+<li>
+Sets <code>makeprg</code> to <code>g:pandoc#compiler#command</code> if defined, otherwise
+  <code>pandoc</code>, plus <code>g:pandoc#compiler#arguments</code>.
+
+<li>
+Uses the same pandoc-style <code>errorformat</code> as the system compiler.
+
+<li>
+Does *<span id="Journal 2026-05-08-Vim Pandoc Compiler-<code>:compiler pandoc</code> review-Active user-package features-not"></span><strong id="not">not</strong>* provide the Vim 9.1 conveniences for automatic input format
+  mapping, automatic title/lang metadata, <code>:make html</code> or <code>:make pdf</code>
+  output-file templating, or automatic current-file insertion.
+
+</ul>
+<div id="Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-Repo-specific customization"><h4 id="Repo-specific customization" class="header"><a href="#Journal 2026-05-08-Vim Pandoc Compiler-`:compiler pandoc` review-Repo-specific customization">Repo-specific customization</a></h4></div>
+
+<p>
+This repo sets:
+</p>
+
+<p>
+```vim
+let g:pandoc#compiler#arguments =
+</p>
+<pre><code>\ '--to=markdown'
+\ .. ' --from=markdown-header_attributes+wikilinks_title_after_pipe-task_lists'
+\ .. ' --wrap=preserve --standalone'
+</code></pre>
+<p>
+```
+</p>
+
+<p>
+So here, <code>:compiler pandoc</code> effectively prepares <code>:make</code> to run pandoc as a
+*<span id="Journal 2026-05-08-Vim Pandoc Compiler-<code>:compiler pandoc</code> review-Repo-specific customization-Markdown-to-Markdown reformatter or converter"></span><strong id="Markdown-to-Markdown reformatter or converter">Markdown-to-Markdown reformatter or converter</strong>*, not the richer system
+<code>vim91</code> compiler workflow.
+</p>
+</div>
+    <p><small>Page created on 2026-08-07</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+      integrity="sha512-bgHRAiTjGrzHzLyKOnpFvaEpGzJet3z4tZnXGjpsCcqOnAH6VGUx9frc5bcIhKTVLEiCO6vEhNAgx5jtLUYrfA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>

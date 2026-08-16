@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+      integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-04-25</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'sha256-B6k1+FIOIc5pD1GV7X6Hf+Y4864uul3QKyZd20iR9oI='; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';"
+    />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-04-25"><h1 id="Journal 2026-04-25" class="header"><a href="#Journal 2026-04-25">Journal 2026-04-25</a></h1></div>
+
+<div id="Journal 2026-04-25-`pixi` Data Science Project Template"><h2 id="`pixi` Data Science Project Template" class="header"><a href="#Journal 2026-04-25-`pixi` Data Science Project Template"><code>pixi</code> Data Science Project Template</a></h2></div>
+<p>
+<span id="Journal 2026-04-25-`pixi` Data Science Project Template-cookiecutter"></span><span class="tag" id="cookiecutter">cookiecutter</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-dsproject"></span><span class="tag" id="dsproject">dsproject</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-python"></span><span class="tag" id="python">python</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi"></span><span class="tag" id="pixi">pixi</span>
+</p>
+
+<ul>
+<li>
+Alternative project scaffold template tools
+
+<ul>
+<li>
+<a href="2026-04-05.html#dsproject">PyScaffold</a>
+
+<li>
+<a href="2020-10-24.html#dsproject">Cookiecutter Conda Project Template</a>
+
+</ul>
+<li>
+<a href="https://prefix.dev/tools/pixi">Prefix.dev Pixi</a>
+<pre bash>
+cookiecutter gh:jfishe/cookiecutter-uv-dsproject
+
+cd &lt;my-ds-project&gt;
+pixi init
+pixi workspace platform add "win-64"
+pixi install
+</pre>
+
+</ul>
+<div id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter"><h3 id="pixi-cookiecutter" class="header"><a href="#Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter">pixi-cookiecutter</a></h3></div>
+<p>
+<span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-act"></span><span class="tag" id="act">act</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-direnv"></span><span class="tag" id="direnv">direnv</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-GitHub-CLI"></span><span class="tag" id="GitHub-CLI">GitHub-CLI</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-pixi"></span><span class="tag" id="pixi">pixi</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-ruff"></span><span class="tag" id="ruff">ruff</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-ty"></span><span class="tag" id="ty">ty</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-pytest"></span><span class="tag" id="pytest">pytest</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-pre-commit"></span><span class="tag" id="pre-commit">pre-commit</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-codecov"></span><span class="tag" id="codecov">codecov</span> <span id="Journal 2026-04-25-`pixi` Data Science Project Template-pixi-cookiecutter-Github"></span><span class="tag" id="Github">Github</span>
+</p>
+
+<p>
+<a href="https://github.com/jevandezande/pixi-cookiecutter">jevandezande / pixi-cookiecutter</a>
+  Cookiecutter for setting up python projects with <code>pixi</code> that just work
+</p>
+
+<ul>
+<li class="done4">
+Packaging with [pixi](<a href="https://prefix.dev/)">https://prefix.dev/)</a>
+
+<li class="done4">
+Environment loading with [direnv](<a href="https://direnv.net/)">https://direnv.net/)</a>
+
+<li class="done4">
+Formatting and linting with [ruff](<a href="https://github.com/charliermarsh/ruff)">https://github.com/charliermarsh/ruff)</a>
+
+<li class="done4">
+Static typing with [ty](<a href="https://github.com/astral-sh/ty)">https://github.com/astral-sh/ty)</a>
+
+<li class="done4">
+Testing with [pytest](<a href="https://docs.pytest.org/en/latest/)">https://docs.pytest.org/en/latest/)</a>
+
+<li class="done4">
+Git hooks that run all the above with [pre-commit](<a href="https://pre-commit.com/)">https://pre-commit.com/)</a>
+
+<li class="done4">
+Continuous integration with [GitHub Actions](<a href="https://github.com/features/actions)">https://github.com/features/actions)</a>
+
+<li class="done4">
+Code coverage with [Codecov](<a href="https://docs.codecov.com/docs)">https://docs.codecov.com/docs)</a>
+
+<li>
+<a href="https://github.com/jevandezande/pixi-cookiecutter/blob/master/notes.md#notes">notes.md</a> lists optional dependencies:
+
+<ul>
+<li class="done4">
+<a href="https://github.com/nektos/act">act</a> runs GitHub Actions locally.
+
+<li class="done4">
+<a href="https://pixi.sh/latest/integration/third_party/direnv">direnv</a> can auto magically load environment variables and the <code>pixi</code> shell.
+        👎 <code>direnv</code> is not optional.
+
+<li class="done4">
+<a href="https://cli.github.com/">GitHub-CLI</a> can create and manage a GitHub repository.
+        <a href="2026-05-01.html">Journal 2026-05-01</a> evaluates <code>GitHub-CLI</code>.
+<pre text>
+OSError: direnv is not installed; install with `pixi global install direnv`
+</pre>
+
+</ul>
+<li>
+👎 <code>tests/</code> includes <code>__init__.py</code>.
+
+<li>
+👎 The python package is not isolated in <code>src/</code>.
+
+<li>
+👎 Platform does not include "win-64".
+
+<li>
+👍 Performs linting, formatting, type checking, and testing,
+  using <code>pre-commit</code>, with <code>repo: local</code>.
+
+<li>
+👍 Replace <code>Makefile</code> with pixi tasks.
+<pre bash>
+pixi global install direnv
+
+cookiecutter gh:jevandezande/pixi-cookiecutter
+
+pixi task remove --feature=dev test &amp;&amp;
+pixi task add --feature=dev test "pytest --cov --cov-report=term-missing"
+</pre>
+
+</ul>
+<div id="Journal 2026-04-25-Universal-Ctags Configuration for Pixi"><h2 id="Universal-Ctags Configuration for Pixi" class="header"><a href="#Journal 2026-04-25-Universal-Ctags Configuration for Pixi">Universal-Ctags Configuration for Pixi</a></h2></div>
+<p>
+<span id="Journal 2026-04-25-Universal-Ctags Configuration for Pixi-ctags"></span><span class="tag" id="ctags">ctags</span> <span id="Journal 2026-04-25-Universal-Ctags Configuration for Pixi-pixi"></span><span class="tag" id="pixi">pixi</span>
+</p>
+
+<p>
+Ctags looks for configuration in <code>$XDG_CONFIG_HOME</code> and
+<code>$HOME/.config</code>.
+</p>
+</div>
+    <p><small>Page created on 2026-08-07</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+      integrity="sha512-bgHRAiTjGrzHzLyKOnpFvaEpGzJet3z4tZnXGjpsCcqOnAH6VGUx9frc5bcIhKTVLEiCO6vEhNAgx5jtLUYrfA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>
