@@ -180,6 +180,7 @@
 
 === ancho ===
 - [[Beans#Dried Beans Recipes#Chili]]
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
 
 === anglo-saxon ===
 - [[diary/2024-09-27#Journal 2024-09-27#Anglo-Saxon runes (ᚠᚢᚦᚩᚱ/Futhorc/Fuþorc)]]
@@ -210,10 +211,12 @@
 - [[Beans#Dried Beans Recipes#Chili]]
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes]]
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
 
 === beef ===
 - [[cooking#Cooking#Döner Kebab]]
 - [[cooking#Cooking#Santa Maria Rub]]
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
 
 === biblatex ===
 - [[diary/2023-09-22#Journal 2023-09-22#Bibliography Setup]]
@@ -243,6 +246,9 @@
 === calculation ===
 - [[diary/2026-04-17#Journal 2026-04-17#Guide for Nuclear Engineering Analysis with AI]]
 
+=== cascabel ===
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
+
 === cat ===
 - [[Sisal_Rope#Cat Scratching Pole Sisal Rope Replacement]]
 
@@ -267,6 +273,7 @@
 
 === chili ===
 - [[Beans#Dried Beans Recipes#Chili]]
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
 
 === chip ===
 - [[Cookies#Cookies#Chocolate Chip Cookies]]
@@ -427,6 +434,9 @@
 === gravy ===
 - [[cooking#Cooking#Cocoa Gravy]]
 
+=== guajillo ===
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
+
 === gui ===
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim#NeoVim GUI Choices]]
 
@@ -551,6 +561,9 @@
 
 === mocha ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve]]
+
+=== morita ===
+- [[diary/2026-08-15#Journal 2026-08-15#Beef and Bean Chili]]
 
 === msysgit ===
 - [[diary/2021-06-13#Journal 2021-06-13#Git plain text conversion]]

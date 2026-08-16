@@ -5,15 +5,8 @@
 
 - privacy-exposure:
   - Avoid email address on public site.
-  - No robots.txt or noindex meta so diary is indexable.
+  - No robots.txt or noindex meta so diary is indexible.
   - Avoid personalized URLs.
 - info-disclosure:
   - Avoid exposing local file system paths.
   - Avoid exposing internal LAN host name.
-<<<<<<< Updated upstream
-Zed Attack Proxy (ZAP)
-
-||||||| Stash base
-=======
-Zed Attack Proxy (ZAP)
->>>>>>> Stashed changes
