@@ -783,6 +783,7 @@
 
 === rice ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
+- [[Beans#Dried Beans Recipes#Spanish Rice]]
 
 === rich ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]

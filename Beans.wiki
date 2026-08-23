@@ -10,6 +10,7 @@
   - [[#Baked Eggs and Beans on Toast]]
   - [[#Chili]]
   - [[#Red Beans and Rice]]
+  - [[#Spanish Rice]]
   - [[#Cheesy Green Chile Bean Bake]]
   - [[#Backlinks]]
 
@@ -353,6 +354,31 @@ _Rice_
 1. Rinse rice.
 2. Combine rice, coconut milk and water.
 3. Cook on rice setting and quick release when done.
+
+== Spanish Rice ==
+:rice:
+
+*Ingredients*:
+
+- 4 Tb bacon drippings
+- 2 c bell pepper
+- 2 c onions
+- 4 cloves garlic, minced (2 tsp roasted garlic powder)
+- 4 c tomatoes, diced
+- 4 c rice
+- 7 c chicken broth
+- 2 tsp paprika
+- 1 tsp salt
+- 1 tsp Mignonette pepper
+
+*Directions*:
+
+1. Brown onions and bell peppers over medium heat.
+2. Sauté garlic.
+3. Divide between two 9x13 pans.
+4. Coat the rice in each pan.
+5. Add broth, paprika, salt, and pepper.
+6. Stir and bake covered, at 350 °F, for 25 minutes.
 
 == Cheesy Green Chile Bean Bake ==
 :recipe:mexican:nytimes:chile:beans:
