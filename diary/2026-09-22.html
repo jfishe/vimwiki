@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+      integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-09-22</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'sha256-B6k1+FIOIc5pD1GV7X6Hf+Y4864uul3QKyZd20iR9oI='; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';"
+    />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-09-22"><h1 id="Journal 2026-09-22" class="header"><a href="#Journal 2026-09-22">Journal 2026-09-22</a></h1></div>
+
+<div id="Journal 2026-09-22-Installing Vim 9.2 on Debian 13 Trixie"><h2 id="Installing Vim 9.2 on Debian 13 Trixie" class="header"><a href="#Journal 2026-09-22-Installing Vim 9.2 on Debian 13 Trixie">Installing Vim 9.2 on Debian 13 Trixie</a></h2></div>
+<p>
+<span id="Journal 2026-09-22-Installing Vim 9.2 on Debian 13 Trixie-Debian"></span><span class="tag" id="Debian">Debian</span> <span id="Journal 2026-09-22-Installing Vim 9.2 on Debian 13 Trixie-vim"></span><span class="tag" id="vim">vim</span> <span id="Journal 2026-09-22-Installing Vim 9.2 on Debian 13 Trixie-vimtex"></span><span class="tag" id="vimtex">vimtex</span>
+</p>
+
+<ol>
+<li>
+Enable testing, pinned so it won't touch anything else
+  Your <code>/etc/apt/sources.list</code> already has a commented-out testing line.
+  Turn it on and add the same components as your stable line:
+<pre bash>
+  sudo sed -i \
+    's|^# deb https://deb.debian.org/debian testing main$|deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware|' \
+    /etc/apt/sources.list
+</pre>
+  <code>/etc/apt/sources.list</code>:
+<pre debsources>
+  deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware
+</pre>
+  Now add a pin file so testing (and unstable, added preemptively) sit
+  below stable's default priority (500).
+  This means apt upgrade/apt full-upgrade will never silently pull from them —
+  only an explicit -t testing request will:
+<pre bash>
+  sudo tee /etc/apt/preferences.d/99-pin-testing-unstable &gt;/dev/null &lt;&lt;'EOF'
+  Package: *
+  Pin: release a=testing
+  Pin-Priority: 100
+
+  Package: *
+  Pin: release a=unstable
+  Pin-Priority: 50
+  EOF
+
+  sudo apt update
+</pre>
+
+<li>
+Check whether testing actually has vim 9.2
+  <code>apt-cache madison vim</code>
+  This lists every version apt can see across all configured suites.
+  If testing shows a 9.2.x build, you're set.
+  If it's still 9.1.x there, you'll need unstable too:
+<pre bash>
+  echo 'deb https://deb.debian.org/debian unstable main contrib non-free non-free-firmware' \
+    | sudo tee /etc/apt/sources.list.d/unstable.list
+  sudo apt update
+  apt-cache madison vim
+</pre>
+
+<li>
+Install explicitly from the suite that has it
+<pre bash>
+  sudo apt install -t testing vim
+  # or, if you needed unstable:
+  sudo apt install -t unstable vim
+</pre>
+  If apt reports unmet dependencies (vim 9.2 wanting a newer libc6/libtinfo6/etc. that's pinned away),
+  preview first with <code>apt-get install -t testing vim -s</code> (simulate, no changes)
+  before deciding whether to pull specific deps from testing too — avoid blanket-upgrading.
+
+<li>
+Lock it in place
+<pre bash>
+  apt-cache policy vim        # confirm installed version
+  sudo apt-mark hold vim      # optional: stops it moving during future apt upgrade/full-upgrade
+</pre>
+
+<li>
+To back out later
+<pre bash>
+  sudo apt-mark unhold vim
+  sudo apt install vim=2:9.1.1230-2   # or whatever stable's current version is then
+  sudo rm /etc/apt/preferences.d/99-pin-testing-unstable /etc/apt/sources.list.d/unstable.list
+  sudo sed -i 's|^deb https://deb.debian.org/debian testing main.*|# deb
+</pre>
+
+</ol>
+</div>
+    <p><small>Page created on 2026-09-26</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+      integrity="sha512-bgHRAiTjGrzHzLyKOnpFvaEpGzJet3z4tZnXGjpsCcqOnAH6VGUx9frc5bcIhKTVLEiCO6vEhNAgx5jtLUYrfA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>
