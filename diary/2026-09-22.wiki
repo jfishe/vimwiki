@@ -1,0 +1,83 @@
+= Journal 2026-09-22 =
+
+== Installing Vim 9.2 on Debian 13 Trixie ==
+:Debian:vim:vimtex:
+
+1. Enable testing, pinned so it won't touch anything else
+
+  Your `/etc/apt/sources.list` already has a commented-out testing line.
+  Turn it on and add the same components as your stable line:
+
+  {{{bash
+  sudo sed -i \
+    's|^# deb https://deb.debian.org/debian testing main$|deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware|' \
+    /etc/apt/sources.list
+  }}}
+
+  `/etc/apt/sources.list`:
+
+  {{{debsources
+  deb https://deb.debian.org/debian testing main contrib non-free non-free-firmware
+  }}}
+
+  Now add a pin file so testing (and unstable, added preemptively) sit
+  below stable's default priority (500).
+  This means apt upgrade/apt full-upgrade will never silently pull from them —
+  only an explicit -t testing request will:
+
+  {{{bash
+  sudo tee /etc/apt/preferences.d/99-pin-testing-unstable >/dev/null <<'EOF'
+  Package: *
+  Pin: release a=testing
+  Pin-Priority: 100
+
+  Package: *
+  Pin: release a=unstable
+  Pin-Priority: 50
+  EOF
+
+  sudo apt update
+  }}}
+
+2. Check whether testing actually has vim 9.2
+
+  `apt-cache madison vim`
+
+  This lists every version apt can see across all configured suites.
+  If testing shows a 9.2.x build, you're set.
+  If it's still 9.1.x there, you'll need unstable too:
+
+  {{{bash
+  echo 'deb https://deb.debian.org/debian unstable main contrib non-free non-free-firmware' \
+    | sudo tee /etc/apt/sources.list.d/unstable.list
+  sudo apt update
+  apt-cache madison vim
+  }}}
+
+3. Install explicitly from the suite that has it
+
+  {{{bash
+  sudo apt install -t testing vim
+  # or, if you needed unstable:
+  sudo apt install -t unstable vim
+  }}}
+
+  If apt reports unmet dependencies (vim 9.2 wanting a newer libc6/libtinfo6/etc. that's pinned away),
+  preview first with `apt-get install -t testing vim -s` (simulate, no changes)
+  before deciding whether to pull specific deps from testing too — avoid blanket-upgrading.
+
+4. Lock it in place
+
+  {{{bash
+  apt-cache policy vim        # confirm installed version
+  sudo apt-mark hold vim      # optional: stops it moving during future apt upgrade/full-upgrade
+  }}}
+
+5. To back out later
+
+  {{{bash
+  sudo apt-mark unhold vim
+  sudo apt install vim=2:9.1.1230-2   # or whatever stable's current version is then
+  sudo rm /etc/apt/preferences.d/99-pin-testing-unstable /etc/apt/sources.list.d/unstable.list
+  sudo sed -i 's|^deb https://deb.debian.org/debian testing main.*|# deb
+  }}}
