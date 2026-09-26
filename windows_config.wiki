@@ -12,6 +12,7 @@
   - [[#Windows Subsystem for Linux]]
     - [[#Share Environment Vars between WSL and Windows]]
     - [[#WSL Configuration]]
+      - [[#Windows Firewall Configuration]]
     - [[#Access WSL Files from Windows]]
     - [[#Configure SSH in each WSL Distro]]
     - [[#Windows Firewall Rules for SSH]]
@@ -24,6 +25,7 @@
     - [[#Whitewater Foundry Fedora Remix]]
     - [[#Whitewater Foundry Pengwin]]
     - [[#WSL Troubleshooting]]
+      - [[#wsl-pro-service and systemd]]
       - [[#Server execution failed]]
   - [[#Windows Terminal]]
   - [[#Console Colorscheme]]
@@ -436,7 +438,7 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*
 }}}
 
 === Whitewater Foundry Pengwin ===
-:Debian:Pengwin:
+:Debian:Pengwin:WLinux:
 
 If the `gpg` keys do not work with `apt-get`:
 
@@ -446,6 +448,30 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <PUBKEY>
 
 === WSL Troubleshooting ===
 :troubleshooting:
+
+==== wsl-pro-service and systemd ====
+:systemd:Ubuntu:
+
+Ubuntu does not automatically reinstall `wsl-pro-service`,
+which can cause `systemd` startup failure.
+
+{{{bash
+# wsl: Failed to start the systemd user session for 'username'.
+# See journalctl for more details`
+
+sudo systemctl restart user-runtime-dir@1000.service user@1000.service
+
+# Job for user@1000.service failed because of unavailable resources or
+# another system error.
+# See "systemctl status user@1000.service" and
+# "journalctl -xeu user@1000.service" for details.
+
+# Force update
+# sudo apt-get install --reinstall wsl-pro-service
+sudo apt-get remove wsl-pro-service
+# Restart WSL: wsl --shutdown
+# Reboot Windows
+}}}
 
 ==== Server execution failed ====
 
