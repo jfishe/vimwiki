@@ -32,6 +32,7 @@
 
 === Debian ===
 - [[diary/2021-05-11#Journal 2021-05-11#Debian dpkg error]]
+- [[diary/2026-09-22#Journal 2026-09-22#Installing Vim 9.2 on Debian 13 Trixie]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 
 === Excel ===
@@ -114,6 +115,7 @@
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin]]
 - [[diary/2021-05-08#Journal 2021-05-08#JabRef]]
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation]]
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting#wsl-pro-service and systemd]]
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux]]
 
 === UltiSnips ===
@@ -121,6 +123,9 @@
 
 === VHD ===
 - [[diary/2024-11-26#Journal 2024-11-26#Backup and Restore Whitewater Foundry `Pengwin`]]
+
+=== WLinux ===
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#Whitewater Foundry Pengwin]]
 
 === WSL ===
 - [[Linux#Linux Notes]]
@@ -190,6 +195,9 @@
 
 === apt ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin#Packages Not Upgraded]]
+
+=== arbol ===
+- [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === background ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
@@ -270,6 +278,7 @@
 
 === chile ===
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
+- [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === chili ===
 - [[Beans#Dried Beans Recipes#Chili]]
@@ -286,6 +295,9 @@
 === chocolate ===
 - [[Coffee#Coffee#Iced Meso Mocha Breve#Chocolate Sauce]]
 - [[Cookies#Cookies#Chocolate Chip Cookies]]
+
+=== cholula ===
+- [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
@@ -451,6 +463,7 @@
 
 === hot_sauce ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce]]
+- [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === info-disclosure ===
 - [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
@@ -653,6 +666,9 @@
 
 === pepper ===
 - [[cooking#Cooking#Mignonette Pepper]]
+
+=== pequin ===
+- [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === pico ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
@@ -866,6 +882,9 @@
 === syntax ===
 - [[diary/2025-09-07#Journal 2025-09-07]]
 
+=== systemd ===
+- [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting#wsl-pro-service and systemd]]
+
 === taco ===
 - [[cooking#Cooking#Tacos al Pastor]]
 
@@ -968,6 +987,7 @@
 - [[diary/2024-12-15#Journal 2024-12-15#Papis Command-line Bibliography Manager]]
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[diary/2026-05-08#Journal 2026-05-08#Vim Pandoc Compiler]]
+- [[diary/2026-09-22#Journal 2026-09-22#Installing Vim 9.2 on Debian 13 Trixie]]
 - [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === vim-fugitive ===
@@ -979,6 +999,9 @@
 === vim-zettel ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
 - [[diary/2025-05-31#Journal 2025-05-31#Zettelkasten VimWiki Addon (vim-zettel)]]
+
+=== vimtex ===
+- [[diary/2026-09-22#Journal 2026-09-22#Installing Vim 9.2 on Debian 13 Trixie]]
 
 === vimwiki ===
 - [[diary/2021-05-01#Journal 2021-05-01]]
