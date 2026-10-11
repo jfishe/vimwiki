@@ -217,6 +217,9 @@
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Mustard Based Carolina BBQ Sauce]]
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Vinegar Based Carolina BBQ Sauce]]
 
+=== bean ===
+- [[diary/2026-10-11#Journal 2026-10-11#U.S. Senate Bean Soup]]
+
 === beans ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 - [[Beans#Dried Beans Recipes#Cheesy Green Chile Bean Bake]]
@@ -859,6 +862,7 @@
 
 === soup ===
 - [[Soup#Soup and Stew]]
+- [[diary/2026-10-11#Journal 2026-10-11#U.S. Senate Bean Soup]]
 
 === sphinx ===
 - [[diary/2023-09-08#Journal 2023-09-08#Jupyter-Book]]
