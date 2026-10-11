@@ -79,5 +79,6 @@
   sudo apt-mark unhold vim
   sudo apt install vim=2:9.1.1230-2   # or whatever stable's current version is then
   sudo rm /etc/apt/preferences.d/99-pin-testing-unstable /etc/apt/sources.list.d/unstable.list
-  sudo sed -i 's|^deb https://deb.debian.org/debian testing main.*|# deb
+  sudo sed -i 's|^deb https://deb.debian.org/debian testing main.*|# deb https://deb.debian.org/debian testing main|' /etc/apt/sources.list
+  sudo apt update
   }}}
