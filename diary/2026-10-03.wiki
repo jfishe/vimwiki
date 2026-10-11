@@ -1,0 +1,29 @@
+= Journal 2026-10-03 =
+
+== Consistent Color Scheme for Windows Terminal, Vim, and Dircolors ==
+:vim:neovim:WindowsTerminal:dircolors:LS_COLORS:
+
+- [[https://github.com/EdenEast/nightfox.nvim|EdenEast nightfox.nvim]] does not support terminal Vim.
+  `ctermbg` and `ctermfg` use incompatible defaults.
+- [[https://github.com/tinted-theming/tinted-vim|tinted-theming / tinted-vim]] provides
+  [[https://tinted-theming.github.io/tinted-gallery/|Tinted Gallery]].
+  - `base16-oxocarbon-dark` and `base16-oxocarbon-light`
+  - `base24-solarized-dark-higher-contrast`
+  - `base24-solarized-dark-patched`
+  - `base24-builtin-solarized-dark` and `base24-builtin-solarized-light`
+  - `base24-tokyo-night-moon` and `base24-tokyo-night-light`
+- ~/.config/tinted-theming/tinty/tinted-dircolors/ is a local template repo:
+  - src/dircolors.in is the single file to edit. Colors are written as names (BLUE, RED, and so on) that map to scheme colors.
+  - gen-templates.sh turns that file into the base16/base24 and tinted8 templates.
+  - dircolors/ holds 582 built files, one per scheme. All of them pass dircolors -b without errors.
+  - README.md has the color table and rebuild steps.
+- Color groups: directories blue, executables bold green, links cyan, broken links red. Archives are red, packages bold red, images and video magenta, audio cyan, documents yellow, data/config files orange. Key and certificate files are brown, and backup/temp/log/build output is gray. Files like Makefile, README and pyproject.toml are bold underlined yellow.
+- Light schemes come out right automatically, because the colors are tied to roles like "background" rather than fixed values.
+- config.toml has a new tinted-dircolors entry. The original is saved as config.toml.bak.
+- ~/.zshrc has a block just before source $ZSH/oh-my-zsh.sh. Since ~/.zshrc is a symlink, the change is in ~/.dotfiles/zshrc, and there's a backup at ~/.zshrc.bak-tinted-dircolors. The block loads the current scheme's colors when the shell starts. It also wraps tinty so that apply, cycle and init update the colors in the current shell; other open shells change on their next start.
+
+Things to know:
+- Your terminal needs truecolor support. Windows Terminal has it.
+- The files don't rebuild themselves. After editing src/dircolors.in, or after tinty update adds new schemes, run ./gen-templates.sh && tinty build . in the repo.
+- Tinted8 brown: the normal brown was nearly invisible on your dark background (#69401d on #010409), so tinted8 schemes use the brighter brown variant instead.
+- I didn't remove the commented-out zsh-dircolors-solarized line in your .zshrc; you can delete it yourself.

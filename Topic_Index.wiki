@@ -58,6 +58,9 @@
 === HP ===
 - [[windows_config#Microsoft Windows Configuration#HP Envy BIOS Settings]]
 
+=== LS_COLORS ===
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
+
 === LaTeX ===
 - [[Python#Python Notes#LaTeX]]
 - [[diary/2024-03-31#Journal 2024-03-31#Typst as a LaTeX Replacement]]
@@ -164,6 +167,7 @@
 === WindowsTerminal ===
 - [[diary/2023-10-29#Journal 2023-10-29#Git Windows Terminal Integration]]
 - [[diary/2024-11-27#Journal 2024-11-27#Windows Terminal Configuration]]
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
 
 === Zettelkasten ===
 - [[diary/2023-09-16#Journal 2023-09-16#Zettelkasten Setup]]
@@ -369,6 +373,9 @@
 
 === desktop ===
 - [[diary/2023-11-09#Journal 2023-11-09#Windows Desktop Background]]
+
+=== dircolors ===
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
 
 === direnv ===
 - [[diary/2026-04-25#Journal 2026-04-25#`pixi` Data Science Project Template#pixi-cookiecutter]]
@@ -604,6 +611,7 @@
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim#NeoVim GUI Choices]]
 - [[diary/2024-12-14#Journal 2024-12-14#Neovide, NeoVim and Telescope-Nvim]]
 - [[diary/2025-02-17#Journal 2025-02-17#NeoVim]]
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
 
 === nested_syntaxes ===
 - [[diary/2024-11-23#Journal 2024-11-23#Vimwiki Temporary Wiki Nested Syntax]]
@@ -988,6 +996,7 @@
 - [[diary/2026-02-15#Journal 2026-02-15#FZF with PowerShell]]
 - [[diary/2026-05-08#Journal 2026-05-08#Vim Pandoc Compiler]]
 - [[diary/2026-09-22#Journal 2026-09-22#Installing Vim 9.2 on Debian 13 Trixie]]
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
 - [[windows_config#Microsoft Windows Configuration#Vim Installation and Update]]
 
 === vim-fugitive ===
