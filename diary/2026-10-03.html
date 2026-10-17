@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Include required JS files -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"
+      integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="text/javascript" src="../../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+    <link rel="Stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS"
+      href="../rss.xml"
+    />
+    <title>2026-10-03</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com 'sha256-B6k1+FIOIc5pD1GV7X6Hf+Y4864uul3QKyZd20iR9oI='; style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; img-src 'self' data:; font-src https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';"
+    />
+  </head>
+  <body>
+    <a href="../index.html">Index</a> |
+    <a href="../diary/diary.html">Diary</a>
+    <hr>
+    <div class="content">
+<div id="Journal 2026-10-03"><h1 id="Journal 2026-10-03" class="header"><a href="#Journal 2026-10-03">Journal 2026-10-03</a></h1></div>
+
+<div id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors"><h2 id="Consistent Color Scheme for Windows Terminal, Vim, and Dircolors" class="header"><a href="#Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors">Consistent Color Scheme for Windows Terminal, Vim, and Dircolors</a></h2></div>
+<p>
+<span id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors-vim"></span><span class="tag" id="vim">vim</span> <span id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors-neovim"></span><span class="tag" id="neovim">neovim</span> <span id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors-WindowsTerminal"></span><span class="tag" id="WindowsTerminal">WindowsTerminal</span> <span id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors-dircolors"></span><span class="tag" id="dircolors">dircolors</span> <span id="Journal 2026-10-03-Consistent Color Scheme for Windows Terminal, Vim, and Dircolors-LS_COLORS"></span><span class="tag" id="LS_COLORS">LS_COLORS</span>
+</p>
+
+<ul>
+<li>
+<a href="https://github.com/EdenEast/nightfox.nvim">EdenEast nightfox.nvim</a> does not support terminal Vim.
+  <code>ctermbg</code> and <code>ctermfg</code> use incompatible defaults.
+
+<li>
+<a href="https://github.com/tinted-theming/tinted-vim">tinted-theming / tinted-vim</a> provides
+  <a href="https://tinted-theming.github.io/tinted-gallery/">Tinted Gallery</a>.
+
+<ul>
+<li>
+<code>base16-oxocarbon-dark</code> and <code>base16-oxocarbon-light</code>
+
+<li>
+<code>base24-solarized-dark-higher-contrast</code>
+
+<li>
+<code>base24-solarized-dark-patched</code>
+
+<li>
+<code>base24-builtin-solarized-dark</code> and <code>base24-builtin-solarized-light</code>
+
+<li>
+<code>base24-tokyo-night-moon</code> and <code>base24-tokyo-night-light</code>
+
+</ul>
+<li>
+~/.config/tinted-theming/tinty/tinted-dircolors/ is a local template repo:
+
+<ul>
+<li>
+src/dircolors.in is the single file to edit. Colors are written as names (BLUE, RED, and so on) that map to scheme colors.
+
+<li>
+gen-templates.sh turns that file into the base16/base24 and tinted8 templates.
+
+<li>
+dircolors/ holds 582 built files, one per scheme. All of them pass dircolors -b without errors.
+
+<li>
+README.md has the color table and rebuild steps.
+
+</ul>
+<li>
+Color groups: directories blue, executables bold green, links cyan, broken links red. Archives are red, packages bold red, images and video magenta, audio cyan, documents yellow, data/config files orange. Key and certificate files are brown, and backup/temp/log/build output is gray. Files like Makefile, README and pyproject.toml are bold underlined yellow.
+
+<li>
+Light schemes come out right automatically, because the colors are tied to roles like "background" rather than fixed values.
+
+<li>
+config.toml has a new tinted-dircolors entry. The original is saved as config.toml.bak.
+
+<li>
+~/.zshrc has a block just before source $ZSH/oh-my-zsh.sh. Since ~/.zshrc is a symlink, the change is in ~/.dotfiles/zshrc, and there's a backup at ~/.zshrc.bak-tinted-dircolors. The block loads the current scheme's colors when the shell starts. It also wraps tinty so that apply, cycle and init update the colors in the current shell; other open shells change on their next start.
+
+</ul>
+<p>
+Things to know:
+</p>
+<ul>
+<li>
+Your terminal needs truecolor support. Windows Terminal has it.
+
+<li>
+The files don't rebuild themselves. After editing src/dircolors.in, or after tinty update adds new schemes, run ./gen-templates.sh &amp;&amp; tinty build . in the repo.
+
+<li>
+Tinted8 brown: the normal brown was nearly invisible on your dark background (#69401d on #010409), so tinted8 schemes use the brighter brown variant instead.
+
+<li>
+I didn't remove the commented-out zsh-dircolors-solarized line in your .zshrc; you can delete it yourself.
+
+</ul>
+</div>
+    <p><small>Page created on 2026-10-11</small></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+      integrity="sha512-bgHRAiTjGrzHzLyKOnpFvaEpGzJet3z4tZnXGjpsCcqOnAH6VGUx9frc5bcIhKTVLEiCO6vEhNAgx5jtLUYrfA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      document
+        .querySelectorAll("pre")
+        .forEach((block) => hljs.highlightElement(block));
+    </script>
+  </body>
+</html>
