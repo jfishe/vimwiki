@@ -197,6 +197,9 @@
 === appimage ===
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
+=== apple ===
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+
 === apt ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin#Packages Not Upgraded]]
 
@@ -305,6 +308,9 @@
 
 === cholula ===
 - [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
+
+=== cider ===
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
 
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
@@ -470,6 +476,9 @@
 
 === health ===
 - [[Health_Fitness#Health and Fitness]]
+
+=== herb ===
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
 
 === hot_sauce ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce]]
@@ -884,6 +893,9 @@
 === stirfry ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce#Teriyaki Sauce]]
 
+=== stock ===
+- [[diary/2026-10-17#Journal 2026-10-17#Turkey Bone Broth]]
+
 === supply-chain ===
 - [[diary/2026-08-06#Journal 2026-08-06#Security Audit for Personal Vimwiki Site]]
 
@@ -969,6 +981,10 @@
 
 === troubleshooting ===
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
+
+=== turkey ===
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+- [[diary/2026-10-17#Journal 2026-10-17#Turkey Bone Broth]]
 
 === twine ===
 - [[diary/2023-12-06#Journal 2023-12-06#Packaging Python Projects]]
