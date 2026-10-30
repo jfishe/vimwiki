@@ -951,6 +951,9 @@
 === timesyncd ===
 - [[diary/2023-09-02#Journal 2023-09-02#Windows Subsystem for Linux v2]]
 
+=== tinty ===
+- [[diary/2026-10-03#Journal 2026-10-03#Consistent Color Scheme for Windows Terminal, Vim, and Dircolors]]
+
 === toast ===
 - [[Beans#Dried Beans Recipes#Baked Eggs and Beans on Toast]]
 
