@@ -7,6 +7,7 @@
 - [[Drinks]]
 - [[Soup|Soup and Stew]]
 - [[https://coolconversion.com/cooking-volume-weight/|CoolConversion Ingredients Volume To Weight]]
+- [[diary/2026-10-17#French Apple and Herb Roasted Turkey with Spiced Apple Cider|French Apple and Herb Roasted Turkey with Spiced Apple Cider]]
 
 == Contents ==
 - [[#Cooking]]
@@ -26,11 +27,14 @@
   - [[#Tortillas de Harina]]
   - [[#Tacos al Pastor]]
   - [[#Döner Kebab]]
+  - [[#Rice Dishes]]
+    - [[#Spanish Rice]]
 
 == Hot Sauce and BBQ Sauce ==
 :hot_sauce:
 
 - [[https://pepperscale.com/hot-sauce-rankings/|PepperScale Hot Sauce Rankings]]
+- [[diary/2026-09-25#Recovering Cholula Hot Sauce|Recovering Cholula Hot Sauce]]
 
 === Mustard Based Carolina BBQ Sauce===
 :mustard:bbq:sauce:SC:
@@ -615,7 +619,6 @@ For the Sauce:
 Salt to taste
 1 clove garlic, grated
 
-
 To Serve:
 
 Pita bread or flatbread
@@ -623,3 +626,32 @@ Sliced onions and tomatoes
 Pickles
 Lettuce
 Hot sauce
+
+== Rice Dishes ==
+:rice:
+
+- [[diary/2026-11-01#Arroz con Leche|Arroz con Leche]]
+
+=== Spanish Rice ===
+
+*Ingredients*:
+
+- 4 Tb bacon drippings
+- 2 c bell pepper
+- 2 c onions
+- 4 cloves garlic, minced (2 tsp roasted garlic powder)
+- 4 c tomatoes, diced
+- 4 c rice
+- 7 c chicken broth
+- 2 tsp paprika
+- 1 tsp salt
+- 1 tsp Mignonette pepper
+
+*Directions*:
+
+1. Brown onions and bell peppers over medium heat.
+2. Sauté garlic.
+3. Divide between two 9x13 pans.
+4. Coat the rice in each pan.
+5. Add broth, paprika, salt, and pepper.
+6. Stir and bake covered, at 350 °F, for 25 minutes.

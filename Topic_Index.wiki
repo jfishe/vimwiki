@@ -1,4 +1,4 @@
-= Topic_Index =
+
 
 == Generated Tags ==
 === 2FA ===
@@ -198,7 +198,7 @@
 - [[diary/2023-10-14#Journal 2023-10-14#Python Module Search Path]]
 
 === apple ===
-- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple and Herb Roasted Turkey with Spiced Apple Cider]]
 
 === apt ===
 - [[Linux#Linux Notes#Ubuntu, Debian and Pengwin#Packages Not Upgraded]]
@@ -310,7 +310,7 @@
 - [[diary/2026-09-25#Journal 2026-09-25#Recovering Cholula Hot Sauce]]
 
 === cider ===
-- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple and Herb Roasted Turkey with Spiced Apple Cider]]
 
 === citeproc ===
 - [[diary/2023-11-09#Journal 2023-11-09#Bibliography Setup]]
@@ -478,7 +478,7 @@
 - [[Health_Fitness#Health and Fitness]]
 
 === herb ===
-- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple and Herb Roasted Turkey with Spiced Apple Cider]]
 
 === hot_sauce ===
 - [[cooking#Cooking#Hot Sauce and BBQ Sauce]]
@@ -827,7 +827,7 @@
 
 === rice ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
-- [[Beans#Dried Beans Recipes#Spanish Rice]]
+- [[cooking#Cooking#Rice Dishes]]
 - [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
 
 === rich ===
@@ -995,7 +995,7 @@
 - [[windows_config#Microsoft Windows Configuration#Windows Subsystem for Linux#WSL Troubleshooting]]
 
 === turkey ===
-- [[diary/2026-10-17#Journal 2026-10-17#French Apple __LinkUrl__ Herb Roasted Turkey with Spiced Apple Cider]]
+- [[diary/2026-10-17#Journal 2026-10-17#French Apple and Herb Roasted Turkey with Spiced Apple Cider]]
 - [[diary/2026-10-17#Journal 2026-10-17#Turkey Bone Broth]]
 
 === twine ===
