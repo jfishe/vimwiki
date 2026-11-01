@@ -11,47 +11,61 @@
 - [[https://eathealthy365.com/the-ultimate-homemade-cholula-hot-sauce-clone-recipe/|The Ultimate Homemade Cholula Hot Sauce Clone Recipe]]
 - [[https://recipesreverie.com/cholula-hot-sauce/|Cholula Hot Sauce Recipe: Perfect Your Own Fiery Blend]]
 - [[https://spicetosauce.com/cholula-hot-sauce-recipe/|Homemade Cholula Hot Sauce Recipe: Enjoy the Authentic Mexican Flavor]]
+- [[https://rusticrootsliving.com/how-to-rehydrate-chili-peppers/|Rustic Roots Living, How to Rehydrate Chili Peppers: 3 Easy Methods]]
 
 === Ingredients ===
 
-- 1 cups water
-- ¼ cup white vinegar
+- 1-¼ cups water
 - ¾ cup apple cider vinegar
-- 20 g dried chiles de árbol, stems and seeds removed
-- 4 g dried Pequín peppers (or more, to taste)
-- 1 Tb ground paprika
+- 17 g dried chiles de árbol, stems removed
+- 3 g dried Pequín peppers (or more, to taste)
+- ½ Tb ground sweet Hungarian paprika
 - 1 tsp roasted garlic powder
 - ½ tsp toasted onion powder
 - ⅛ tsp cumin
 - ¼ tsp Mexican oregano
 - ¼ tsp black pepper
-- 12 g salt
+- 15 g salt
 - 0.1–0.2 wt-% xanthan gum
 
 === Directions ===
 
-1. Preheat a dry skillet over medium heat.
-2. Toast the dried peppers for 20–30 seconds per side.
-3. Transfer to a sauce pan.
-4. Add water, vinegar and spices.
-5. Soak until peppers soften.
-6. Heat over medium heat to 180 °F (82 °C);
-   keep it at that temperature for about 10 minutes.
-7. Cool slightly, vent blender, and blend until smooth.
-8. Strain and weigh sauce.
-9. Return to blender on low and slowly sprinkle 0.1 wt-% xanthan gum.
-10. Wait 30 minutes and adjust thickness, if needed,
+1. Rinse chiles.
+2. Cut with scissors into large pieces.
+3. Combine ingredients in a pint mason jar.
+4. Soak until peppers soften (~8 hours).
+5. Heat over medium (6) heat to 180 °F (82 °C);
+   keep it at that temperature (5, stirring gently) for about 10 minutes.
+6. Cover and cool, until no longer scalding hot.
+8. Open windows and blend chiles with a small amount of liquid, until smooth.
+9. Blend with remaining liquid.
+10. Strain and weigh sauce.
+11. Return to blender on low and slowly sprinkle 0.1 wt-% xanthan gum.
+12. Wait 30 minutes and adjust thickness, if needed,
     with 0.1–0.2 g xanthan gum.
-11. Reheat to 180 °F (82 °C), pour into sterilized bottles, cap right away, and
+13. Reheat to 180 °F (82 °C), pour into sterilized bottles, cap right away, and
     turn the bottle upside down for a couple of minutes.
-12. Refrigerate.
+14. Refrigerate.
 
 === Notes ===
 
-- 1,000–3,600 Scoville Heat Units (SHU)
+- Target 1,000 Scoville Heat Units (SHU)
 - Yield is 450–500 g.
 - 50/50 white and cider vinegar lacked vinegar flavor.
   Reduce water and shift to apple cider forward.
 - Toasted chiles were darker than Cholula and spicier.
   Reduce Pequín, skip toasting, and remove seeds.
-  Order fresh árbol.
+  Order fresh chiles de árbol.
+- [[https://rusticrootsliving.com/how-to-rehydrate-chili-peppers/|Rustic Roots Living]]
+  recommends steeping chiles at room temperature and not boiling
+  to retain volatile oils.
+  Ten minute hold at 180 °F along with all ingredients should work.
+  Consider steeping with all ingredients to merge flavors and hydrate spices.
+- Try 2 g Pequín chiles and
+  1 cup apple cider vinegar,
+  without white vinegar. Still too hot.
+- Return chile ratio to 20/4
+  and reduce chiles to target 1,000 SHU.
+  Increase salt to 15 g, closer to Cholula estimated, 29 g.
+  Reduce paprika and switch to sweet
+  to retain balance with chiles.
