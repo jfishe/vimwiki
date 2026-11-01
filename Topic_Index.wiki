@@ -527,6 +527,9 @@
 === lamb ===
 - [[cooking#Cooking#Döner Kebab]]
 
+=== leche ===
+- [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
+
 === license ===
 - [[diary/2025-01-19#Journal 2025-01-19#Ubuntu 24.04 Clean Installation#Using Miniconda with Conda-Forge to Avoid Anaconda Licensing Issues]]
 
@@ -582,6 +585,7 @@
 === milk ===
 - [[Drinks#Drink Recipes#Tea#Karak Chai]]
 - [[diary/2026-02-06#Journal 2026-02-06#Adani Milk Tea (Shay Adani)]]
+- [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
 
 === miniconda3 ===
 - [[diary/2023-09-10#Journal 2023-09-10#Python Module Search Path]]
@@ -742,6 +746,9 @@
 === prose ===
 - [[diary/2024-03-08#Journal 2024-03-08#Ventilated Prose and Semantic Line Breaks]]
 
+=== pudding ===
+- [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
+
 === pull ===
 - [[Git#Git#Pull Rebase]]
 
@@ -810,6 +817,7 @@
 - [[Beans#Dried Beans Recipes]]
 - [[Coffee#Coffee]]
 - [[diary/2024-02-29#Journal 2024-02-29#Root Vegetable Stew]]
+- [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
 
 === recipes ===
 - [[cooking#Cooking]]
@@ -820,6 +828,7 @@
 === rice ===
 - [[Beans#Dried Beans Recipes#Red Beans and Rice]]
 - [[Beans#Dried Beans Recipes#Spanish Rice]]
+- [[diary/2026-11-01#Journal 2026-11-01#Arroz con Leche]]
 
 === rich ===
 - [[diary/2024-10-05#Journal 2024-10-05#Install Astral uv Python CLI tools]]
