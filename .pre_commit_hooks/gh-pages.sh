@@ -2,7 +2,7 @@
 # pre-commit hook using ghp-import to push HTML to Github Pages.
 # Assumes:
 #   HTML exists in docs folder.
-#   ghp-import in PATH, e.g., `python -m pip install ghp-import`.
+#   ghp-import in PATH, e.g., `uv tool install ghp-import`.
 #   `git config ghppages.pathhtml <absolute path>/docs`. Defaults to
 #   "$GIT_WORK_TREE/docs".
 #   `git config ghppages.push true`. Otherwise skip publishing.
