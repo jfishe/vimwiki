@@ -36,6 +36,16 @@ repos:
         files: \.wiki$
   - repo: local
     hooks:
+      - id: encode-html-anchors
+        name: Percent-encode HTML href fragments
+        language: unsupported_script
+        entry: .pre_commit_hooks/encode-html-anchors.py
+        stages:
+          - pre-commit
+        # docs/*.html is gitignored, so no staged files would ever match.
+        always_run: true
+        pass_filenames: false
+        require_serial: true
       - id: ghp-import
         name: Update Github Pages
         language: unsupported_script
